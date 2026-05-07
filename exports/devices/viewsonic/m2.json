@@ -1,0 +1,77 @@
+{
+  "name": "ViewSonic M2 Lamp Free Smart Theater",
+  "manufacturer": "ViewSonic",
+  "model": "M2",
+  "category": "projection",
+  "metadata": {
+    "power": [
+      {
+        "draw_watts": 0,
+        "voltage": "100-240V AC",
+        "connector_type": "DC IN",
+        "circuit_required": "13A standard UK plug"
+      }
+    ],
+    "connectivity": {
+      "inputs": [
+        {
+          "protocol": "HDMI",
+          "version": "2.2",
+          "quantity": 1,
+          "connector": "HDMI-A",
+          "signal_type": "video",
+          "label": "HDMI",
+          "hdcp_version": "2.0"
+        },
+        {
+          "protocol": "USB-C",
+          "quantity": 1,
+          "signal_type": "av",
+          "label": "USB-C1"
+        },
+        {
+          "protocol": "Micro SD",
+          "quantity": 1,
+          "signal_type": "data",
+          "label": "MICRO SD"
+        },
+        {
+          "protocol": "USB",
+          "quantity": 1,
+          "connector": "USB-A",
+          "signal_type": "data",
+          "label": "USB A (5V/2A Out)"
+        },
+        {
+          "protocol": "Audio Out",
+          "quantity": 1,
+          "connector": "3.5mm jack",
+          "signal_type": "audio"
+        }
+      ],
+      "outputs": [],
+      "network": [
+        "Wi-Fi"
+      ],
+      "control": [
+        "IR"
+      ]
+    },
+    "physical": {
+      "weight_kg": 0,
+      "dimensions_mm": {
+        "w": 0,
+        "h": 0,
+        "d": 0
+      },
+      "mounting": "tabletop or ceiling mount"
+    },
+    "environment": {
+      "operating_temp_c": {
+        "min": 5,
+        "max": 25
+      }
+    },
+    "notes": "Supports USB-C for video transmission and power supply.  Brightness limited to 50% (Full) or 30% (Eco) when powered by USB-C power bank.  Supports HDCP 2.0/HDMI 2.2.  Micro SD up to 64GB. USB-A port provides 5V/2A output.  Harmon/Kardon speakers built-in.  Auto V. keystone, Auto Focus, Bluetooth, Wi-Fi connectivity.  Internal storage: 16GB (12GB available)."
+  }
+}
