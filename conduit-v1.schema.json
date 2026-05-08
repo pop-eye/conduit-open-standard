@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://conduit-standard.org/schema/conduit-v1.schema.json",
-  "title": "Conduit Open Standard — Device Profile",
-  "description": "A universal, machine-readable description of any connected hardware device: its ports, signal types, protocols, power requirements, and physical properties. Version conduit/v1-draft.",
+  "title": "CONDUIT Open Standard Device Profile",
+  "description": "A universal, machine-readable description of any connected hardware device: its ports, signal types, protocols, power requirements, physical properties, and typed capability blocks. Version conduit/v1.",
   "type": "object",
   "required": [
     "schema_version",
@@ -21,7 +21,7 @@
         "conduit/v1"
       ],
       "examples": [
-        "conduit/v1-draft"
+        "conduit/v1"
       ]
     },
     "manufacturer": {
@@ -104,15 +104,35 @@
         4
       ]
     },
+    "environment": {
+      "$ref": "#/$defs/EnvironmentalSpec"
+    },
+    "reliability": {
+      "$ref": "#/$defs/ReliabilitySpec"
+    },
     "power": {
       "$ref": "#/$defs/PowerRequirements"
     },
     "ports": {
       "type": "array",
-      "description": "All physical ports on this device. Each port has a signal type, connector type, and direction.",
+      "description": "All physical ports on this device. Each port has a primary signal type and optional signal_modes for multi-mode connectors.",
       "minItems": 1,
       "items": {
         "$ref": "#/$defs/Port"
+      }
+    },
+    "operational_modes": {
+      "type": "array",
+      "description": "Mutually exclusive port configurations this device supports. Use when a set of ports can only be used in one configuration at a time (e.g. '4x HD-SDI OR 2x 3G-SDI'). Each mode names the ports active in that configuration.",
+      "items": {
+        "$ref": "#/$defs/OperationalMode"
+      }
+    },
+    "capabilities": {
+      "type": "array",
+      "description": "Typed capability blocks providing device-class-specific technical depth beyond what ports alone describe. Each block has a 'type' discriminator. Parsers MUST ignore unknown capability types.",
+      "items": {
+        "$ref": "#/$defs/CapabilityBlock"
       }
     },
     "protocols": {
@@ -190,8 +210,22 @@
     },
     "extensions": {
       "type": "object",
-      "description": "Domain-specific extension data. Keys should be namespaced (e.g. 'conduit:lighting', 'conduit:video'). Parsers MUST ignore unknown extension keys.",
+      "description": "Freeform extension data for domain-specific fields not yet covered by typed capability blocks. Keys should be namespaced (e.g. 'conduit:lighting', 'vendor:acme'). Parsers MUST ignore unknown extension keys.",
       "additionalProperties": true
+    },
+    "slots": {
+      "type": "array",
+      "description": "Card slots for modular frame-based devices (intercom matrices, openGear frames, broadcast routers, etc.).",
+      "items": {
+        "$ref": "#/$defs/CardSlot"
+      }
+    },
+    "related_devices": {
+      "type": "array",
+      "description": "Other devices that are sold separately but are part of the same system (panels, frames, PSUs, etc.).",
+      "items": {
+        "$ref": "#/$defs/RelatedDevice"
+      }
     }
   },
   "$defs": {
@@ -235,7 +269,13 @@
         "power-distribution",
         "ups",
         "computer",
-        "other"
+        "other",
+        "intercom-matrix",
+        "intercom-panel",
+        "intercom-beltpack",
+        "rf-distribution",
+        "antenna-combiner",
+        "wireless-system"
       ]
     },
     "FormFactor": {
@@ -276,9 +316,157 @@
       },
       "additionalProperties": false
     },
+    "EnvironmentalSpec": {
+      "type": "object",
+      "description": "Operating and storage environmental envelope for this device.",
+      "additionalProperties": false,
+      "properties": {
+        "operating_temp_min_c": {
+          "type": "number",
+          "description": "Minimum operating temperature in degrees Celsius.",
+          "examples": [
+            0,
+            -20
+          ]
+        },
+        "operating_temp_max_c": {
+          "type": "number",
+          "description": "Maximum operating temperature in degrees Celsius.",
+          "examples": [
+            40,
+            50,
+            70
+          ]
+        },
+        "storage_temp_min_c": {
+          "type": "number",
+          "description": "Minimum storage temperature in degrees Celsius.",
+          "examples": [
+            -20,
+            -40
+          ]
+        },
+        "storage_temp_max_c": {
+          "type": "number",
+          "description": "Maximum storage temperature in degrees Celsius.",
+          "examples": [
+            60,
+            70,
+            85
+          ]
+        },
+        "humidity_max_percent": {
+          "type": "number",
+          "description": "Maximum relative humidity percentage (non-condensing unless stated).",
+          "minimum": 0,
+          "maximum": 100,
+          "examples": [
+            85,
+            90,
+            95
+          ]
+        },
+        "humidity_condensing": {
+          "type": "boolean",
+          "description": "Whether the humidity rating includes condensing conditions. Defaults to false (non-condensing).",
+          "default": false
+        },
+        "altitude_max_m": {
+          "type": "number",
+          "description": "Maximum operating altitude in metres.",
+          "minimum": 0,
+          "examples": [
+            2000,
+            3000,
+            5000
+          ]
+        },
+        "ip_rating": {
+          "type": "string",
+          "description": "IEC 60529 Ingress Protection rating (e.g. 'IP65', 'IP20').",
+          "pattern": "^IP[0-9X][0-9KSMWXx]?$",
+          "examples": [
+            "IP20",
+            "IP44",
+            "IP65",
+            "IP67"
+          ]
+        },
+        "audible_noise_dba": {
+          "type": "number",
+          "description": "Audible noise level in dB(A) at standard operating conditions.",
+          "minimum": 0,
+          "examples": [
+            34,
+            37,
+            42
+          ]
+        },
+        "heat_dissipation_btu_hr": {
+          "type": "number",
+          "description": "Heat dissipation in BTU/hr at maximum load. Important for HVAC and rack thermal planning.",
+          "minimum": 0,
+          "examples": [
+            1689,
+            3071
+          ]
+        }
+      }
+    },
+    "ReliabilitySpec": {
+      "type": "object",
+      "description": "Reliability and lifecycle specifications.",
+      "additionalProperties": false,
+      "properties": {
+        "mtbf_hours": {
+          "type": "number",
+          "description": "Mean Time Between Failures in hours.",
+          "minimum": 0,
+          "examples": [
+            93800,
+            500000
+          ]
+        },
+        "mtbf_conditions": {
+          "type": "string",
+          "description": "Conditions under which MTBF is specified (e.g. 'Ground Benign at 25°C').",
+          "examples": [
+            "Ground Benign 25°C",
+            "45°C ambient"
+          ]
+        },
+        "eol_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Manufacturer's stated end-of-life or end-of-production date (ISO 8601).",
+          "examples": [
+            "2036-01-01",
+            "2030-12-31"
+          ]
+        },
+        "warranty_years": {
+          "type": "number",
+          "description": "Standard warranty period in years.",
+          "minimum": 0,
+          "examples": [
+            1,
+            2,
+            3
+          ]
+        },
+        "warranty_notes": {
+          "type": "string",
+          "description": "Additional warranty terms or conditions.",
+          "examples": [
+            "Three years or 20,000 hours on illumination system"
+          ]
+        }
+      }
+    },
     "PowerRequirements": {
       "type": "object",
       "description": "Power supply and consumption requirements for this device.",
+      "additionalProperties": false,
       "properties": {
         "voltage_v": {
           "oneOf": [
@@ -291,7 +479,7 @@
               "items": {
                 "type": "number"
               },
-              "description": "Range or dual-voltage [min, max] (e.g. [100, 240])"
+              "description": "Range [min, max] (e.g. [100, 240])"
             }
           ]
         },
@@ -337,6 +525,17 @@
           "description": "Peak inrush current on power-on, in amperes. Important for circuit breaker sizing.",
           "minimum": 0
         },
+        "poe_budget_w": {
+          "type": "number",
+          "description": "For PoE switches and injectors: total available PoE power budget in watts across all PSE ports. Separate from device's own consumption.",
+          "minimum": 0,
+          "examples": [
+            300,
+            720,
+            1440,
+            2880
+          ]
+        },
         "connector_type": {
           "$ref": "#/$defs/ConnectorType"
         },
@@ -358,13 +557,16 @@
         "redundant_psu": {
           "type": "boolean",
           "description": "Whether the device supports or ships with redundant PSU."
+        },
+        "notes": {
+          "type": "string",
+          "description": "Freeform notes about power — wiring configuration, breaker sizing, phasing, sequencing requirements."
         }
-      },
-      "additionalProperties": false
+      }
     },
     "Port": {
       "type": "object",
-      "description": "A single physical port on the device.",
+      "description": "A single physical port on the device. Use signal_modes for connectors that carry multiple signal types (e.g. USB-C, SFP).",
       "required": [
         "id",
         "label",
@@ -376,7 +578,7 @@
       "properties": {
         "id": {
           "type": "string",
-          "description": "Unique identifier for this port within the device profile. Used for referencing in compatibility rules and signal graphs.",
+          "description": "Unique identifier for this port within the device profile.",
           "pattern": "^[a-z0-9_-]+$",
           "examples": [
             "hdmi_out_1",
@@ -386,7 +588,7 @@
         },
         "label": {
           "type": "string",
-          "description": "Human-readable label as it appears (or should appear) on the device panel.",
+          "description": "Human-readable label as it appears on the device panel.",
           "examples": [
             "HDMI OUT 1",
             "DMX A",
@@ -394,7 +596,15 @@
           ]
         },
         "signal_type": {
-          "$ref": "#/$defs/SignalType"
+          "$ref": "#/$defs/SignalType",
+          "description": "Primary signal type carried on this port. For multi-mode ports, this is the default or most common mode — list all modes in signal_modes."
+        },
+        "signal_modes": {
+          "type": "array",
+          "description": "All signal modes this port can carry. Use for multi-mode connectors (USB-C carrying USB + DP alt mode + power; SFP carrying copper or fibre). Each mode specifies when it applies.",
+          "items": {
+            "$ref": "#/$defs/SignalMode"
+          }
         },
         "connector_type": {
           "$ref": "#/$defs/ConnectorType"
@@ -408,11 +618,11 @@
             "power-in",
             "power-out"
           ],
-          "description": "Signal flow direction relative to this device. 'bidirectional' for ports that can operate in both directions (e.g. MIDI thru, Ethernet). 'power-in' and 'power-out' for power ports."
+          "description": "Signal flow direction relative to this device."
         },
         "count": {
           "type": "integer",
-          "description": "Number of identical ports sharing this definition (e.g. 8x DMX universe outputs). If omitted, assumed to be 1.",
+          "description": "Number of identical ports sharing this definition. If omitted, assumed to be 1.",
           "minimum": 1,
           "default": 1
         },
@@ -434,6 +644,13 @@
           "description": "Left-to-right or top-to-bottom index of this port on its panel face, starting at 1.",
           "minimum": 1
         },
+        "management_port": {
+          "type": "boolean",
+          "description": "For network ports: whether this is a dedicated out-of-band management port (distinct from data/media network ports).",
+          "examples": [
+            true
+          ]
+        },
         "universe": {
           "type": "integer",
           "description": "For DMX, Art-Net, or sACN ports: the universe number assigned to this port.",
@@ -447,27 +664,184 @@
             2,
             8,
             16,
+            32,
             56,
             64
           ]
         },
-        "sample_rate_hz": {
+        "channel_count_in": {
           "type": "integer",
-          "description": "For digital audio ports: supported or fixed sample rate in Hz.",
+          "description": "For asymmetric bidirectional audio ports (e.g. Dante): number of receive channels. Use alongside channel_count_out.",
+          "minimum": 1,
           "examples": [
-            44100,
+            24,
+            32,
+            64
+          ]
+        },
+        "channel_count_out": {
+          "type": "integer",
+          "description": "For asymmetric bidirectional audio ports (e.g. Dante): number of transmit channels.",
+          "minimum": 1,
+          "examples": [
+            24,
+            32,
+            64
+          ]
+        },
+        "sample_rate_hz": {
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            }
+          ],
+          "description": "For digital audio ports: supported sample rate(s) in Hz. Array if multiple rates are supported.",
+          "examples": [
             48000,
-            96000,
-            192000
+            [
+              44100,
+              48000,
+              88200,
+              96000
+            ]
           ]
         },
         "bit_depth": {
-          "type": "integer",
-          "description": "For digital audio ports: bit depth.",
+          "oneOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            }
+          ],
+          "description": "For digital audio or video ports: supported bit depth(s). Array if multiple are supported.",
           "examples": [
-            16,
             24,
-            32
+            [
+              16,
+              24,
+              32
+            ]
+          ]
+        },
+        "gain_range_db": {
+          "type": "array",
+          "description": "For analogue audio inputs: available gain range as [min_dB, max_dB]. Negative values indicate attenuation.",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2,
+          "examples": [
+            [
+              -6,
+              66
+            ],
+            [
+              0,
+              60
+            ]
+          ]
+        },
+        "nominal_level_dbu": {
+          "type": "number",
+          "description": "For analogue audio ports: nominal operating level in dBu.",
+          "examples": [
+            4,
+            -10,
+            0
+          ]
+        },
+        "max_level_dbu": {
+          "type": "number",
+          "description": "For analogue audio ports: maximum level before clipping in dBu.",
+          "examples": [
+            24,
+            30,
+            18
+          ]
+        },
+        "noise_floor_dbu": {
+          "type": "number",
+          "description": "For analogue audio inputs: equivalent input noise (EIN) or residual output noise floor in dBu. Lower is better.",
+          "examples": [
+            -128,
+            -100,
+            -90
+          ]
+        },
+        "dynamic_range_db": {
+          "type": "number",
+          "description": "For audio ports: dynamic range in dB.",
+          "minimum": 0,
+          "examples": [
+            108,
+            112,
+            120
+          ]
+        },
+        "thd_percent": {
+          "type": "number",
+          "description": "For analogue audio ports: Total Harmonic Distortion percentage at rated output.",
+          "minimum": 0,
+          "examples": [
+            0.05,
+            0.003
+          ]
+        },
+        "frequency_response_hz": {
+          "type": "array",
+          "description": "For audio ports: usable frequency response as [min_hz, max_hz].",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2,
+          "examples": [
+            [
+              20,
+              20000
+            ],
+            [
+              20,
+              40000
+            ]
+          ]
+        },
+        "phantom_power": {
+          "type": "boolean",
+          "description": "For XLR microphone inputs: whether +48V DC phantom power is available on this port.",
+          "examples": [
+            true
+          ]
+        },
+        "phantom_power_v": {
+          "type": "number",
+          "description": "Phantom power voltage if non-standard (default is 48V).",
+          "examples": [
+            12,
+            24,
+            48
+          ]
+        },
+        "latency_ms": {
+          "type": "number",
+          "description": "Signal processing latency through this port in milliseconds. For audio ports this is the codec/conversion latency; for video the processing delay.",
+          "minimum": 0,
+          "examples": [
+            0.25,
+            1,
+            3
           ]
         },
         "impedance_ohm": {
@@ -477,16 +851,35 @@
             75,
             110,
             120,
-            600
+            600,
+            7500
           ]
         },
         "max_resolution": {
           "$ref": "#/$defs/VideoResolution",
           "description": "For video ports: maximum supported resolution and frame rate."
         },
+        "pixel_clock_mhz": {
+          "type": "number",
+          "description": "For video input ports: maximum supported pixel clock in MHz.",
+          "minimum": 0,
+          "examples": [
+            162,
+            600
+          ]
+        },
         "hdcp": {
           "type": "boolean",
           "description": "For video ports: whether HDCP copy protection is supported."
+        },
+        "hdcp_version": {
+          "type": "string",
+          "description": "HDCP version(s) supported (e.g. '1.4', '2.2', '1.4/2.2').",
+          "examples": [
+            "1.4",
+            "2.2",
+            "1.4/2.2"
+          ]
         },
         "poe_class": {
           "type": "string",
@@ -502,6 +895,14 @@
             "8"
           ],
           "description": "For PoE ports: IEEE 802.3 power class. Class 4 = 30W (PoE+), Class 8 = 90W (PoE++)."
+        },
+        "poe_role": {
+          "type": "string",
+          "enum": [
+            "pse",
+            "pd"
+          ],
+          "description": "For PoE-capable ports: PSE (Power Sourcing Equipment — provides power) or PD (Powered Device — consumes power)."
         },
         "voltage_v": {
           "type": "number",
@@ -528,22 +929,1008 @@
         },
         "loopthrough": {
           "type": "boolean",
-          "description": "Whether this port supports passive loop-through (e.g. SDI loop-out, DMX thru) without active processing."
+          "description": "Whether this port supports loop-through output."
         },
         "passive_loop": {
           "type": "boolean",
-          "description": "True if loopthrough is entirely passive (no reclocking or regeneration). False if actively regenerated."
+          "description": "True if loopthrough is entirely passive. False if actively regenerated/reclocked."
         },
         "notes": {
           "type": "string",
           "description": "Freeform notes specific to this port — known quirks, configuration requirements, or compatibility caveats."
+        },
+        "output_power_w": {
+          "type": "array",
+          "description": "Output power ratings at different load impedances. For amplifier speaker outputs.",
+          "items": {
+            "type": "object",
+            "required": [
+              "impedance_ohm",
+              "watts"
+            ],
+            "properties": {
+              "impedance_ohm": {
+                "type": "number",
+                "description": "Load impedance in ohms"
+              },
+              "watts": {
+                "type": "number",
+                "description": "Maximum continuous output power in watts"
+              },
+              "bridged": {
+                "type": "boolean",
+                "description": "True if this rating is for bridged mono operation",
+                "default": false
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "requires_variant": {
+          "type": "array",
+          "description": "If set, this port only exists when the device model_variant matches one of these values.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "requires_option": {
+          "type": "array",
+          "description": "If set, this port requires a named optional module, card, or licence to be present.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "slot_id": {
+          "type": "string",
+          "description": "For ports on installed cards, references the CardSlot.id this port belongs to."
+        }
+      }
+    },
+    "SignalMode": {
+      "type": "object",
+      "description": "A single signal mode for a multi-mode port. Describes one of the signal types the port can carry and when it applies.",
+      "required": [
+        "signal_type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "signal_type": {
+          "$ref": "#/$defs/SignalType"
+        },
+        "condition": {
+          "type": "string",
+          "description": "Human-readable description of when this mode is active or available.",
+          "examples": [
+            "USB 3.2 data mode",
+            "DisplayPort 1.4 Alt Mode",
+            "USB Power Delivery (charging)",
+            "Thunderbolt 4 mode",
+            "Copper SFP installed",
+            "Fibre SFP installed"
+          ]
+        },
+        "mutually_exclusive": {
+          "type": "boolean",
+          "description": "Whether this mode is mutually exclusive with other modes on the same port (cannot be active simultaneously).",
+          "default": false
+        },
+        "notes": {
+          "type": "string",
+          "description": "Additional notes about this signal mode."
+        }
+      }
+    },
+    "OperationalMode": {
+      "type": "object",
+      "description": "A named configuration in which a specific set of ports is active. Use for devices where port groups are mutually exclusive (e.g. '4x HD-SDI OR 2x 3G-SDI on the same physical connectors').",
+      "required": [
+        "id",
+        "label",
+        "active_port_ids"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9_-]+$",
+          "examples": [
+            "4x_hdsdi",
+            "2x_3gsdi",
+            "dante_primary_only"
+          ]
+        },
+        "label": {
+          "type": "string",
+          "description": "Human-readable name for this mode.",
+          "examples": [
+            "4× HD-SDI",
+            "2× 3G-SDI",
+            "Dante primary only"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "description": "Further explanation of this operational mode."
+        },
+        "active_port_ids": {
+          "type": "array",
+          "description": "IDs of ports that are active in this operational mode. Must reference port ids defined in the ports array.",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1
+        }
+      }
+    },
+    "CapabilityBlock": {
+      "type": "object",
+      "description": "A typed capability block providing device-class-specific technical depth. The 'type' field discriminates which capability sub-schema applies.",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "description": "Capability block type identifier.",
+          "enum": [
+            "display",
+            "compute",
+            "network-switch",
+            "led-processor",
+            "audio-io",
+            "intercom"
+          ]
+        }
+      },
+      "oneOf": [
+        {
+          "$ref": "#/$defs/DisplayCapability"
+        },
+        {
+          "$ref": "#/$defs/ComputeCapability"
+        },
+        {
+          "$ref": "#/$defs/NetworkSwitchCapability"
+        },
+        {
+          "$ref": "#/$defs/LedProcessorCapability"
+        },
+        {
+          "$ref": "#/$defs/AudioIOCapability"
+        },
+        {
+          "$ref": "#/$defs/IntercomCapability"
+        }
+      ]
+    },
+    "DisplayCapability": {
+      "type": "object",
+      "description": "Capability block for projection and display devices (projectors, LED walls, monitors). Required type: 'display'.",
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "display"
+          ]
+        },
+        "native_resolution": {
+          "$ref": "#/$defs/VideoResolution",
+          "description": "Native panel or DMD resolution of the display, independent of input signal resolution."
+        },
+        "brightness_iso_lm": {
+          "type": "number",
+          "description": "Peak brightness in ISO lumens (measured to ISO 21118).",
+          "minimum": 0,
+          "examples": [
+            8400,
+            15000,
+            30000
+          ]
+        },
+        "brightness_ansi_lm": {
+          "type": "number",
+          "description": "Peak brightness in ANSI lumens.",
+          "minimum": 0,
+          "examples": [
+            7500,
+            12000
+          ]
+        },
+        "contrast_ratio_full": {
+          "type": "number",
+          "description": "Full on/off contrast ratio.",
+          "minimum": 1,
+          "examples": [
+            300000,
+            1000000
+          ]
+        },
+        "contrast_ratio_dynamic": {
+          "type": "number",
+          "description": "Dynamic contrast ratio.",
+          "minimum": 1,
+          "examples": [
+            6000,
+            50000
+          ]
+        },
+        "display_technology": {
+          "type": "string",
+          "enum": [
+            "dlp-1chip",
+            "dlp-3chip",
+            "lcd",
+            "lcos",
+            "laser-phosphor",
+            "rgb-laser",
+            "led-direct",
+            "oled",
+            "microled",
+            "other"
+          ],
+          "description": "Core display or projection technology."
+        },
+        "light_source_type": {
+          "type": "string",
+          "enum": [
+            "laser-phosphor",
+            "rgb-laser",
+            "rgbb-led",
+            "rgb-led",
+            "uhp-lamp",
+            "xenon-lamp",
+            "other"
+          ],
+          "description": "Light source type."
+        },
+        "light_source_life_hours": {
+          "type": "number",
+          "description": "Rated light source life in hours, typically to 50% brightness.",
+          "minimum": 0,
+          "examples": [
+            20000,
+            30000,
+            50000
+          ]
+        },
+        "light_source_life_condition": {
+          "type": "string",
+          "description": "Condition at which light source life is rated (e.g. 'to 50% brightness', 'L70').",
+          "examples": [
+            "to 50% brightness",
+            "L70",
+            "normal mode"
+          ]
+        },
+        "throw_ratio_min": {
+          "type": "number",
+          "description": "Minimum throw ratio (shortest throw lens). Lower = wider angle / shorter distance.",
+          "minimum": 0,
+          "examples": [
+            0.36,
+            0.75
+          ]
+        },
+        "throw_ratio_max": {
+          "type": "number",
+          "description": "Maximum throw ratio (longest throw lens).",
+          "minimum": 0,
+          "examples": [
+            5.5,
+            7
+          ]
+        },
+        "lens_shift_v_percent": {
+          "type": "number",
+          "description": "Vertical lens shift range as a percentage of image height (±).",
+          "examples": [
+            100,
+            50
+          ]
+        },
+        "lens_shift_h_percent": {
+          "type": "number",
+          "description": "Horizontal lens shift range as a percentage of image width (±).",
+          "examples": [
+            30,
+            50
+          ]
+        },
+        "keystone_v_degrees": {
+          "type": "number",
+          "description": "Vertical keystone correction range in degrees (±).",
+          "examples": [
+            40,
+            15
+          ]
+        },
+        "keystone_h_degrees": {
+          "type": "number",
+          "description": "Horizontal keystone correction range in degrees (±).",
+          "examples": [
+            40,
+            15
+          ]
+        },
+        "built_in_warp": {
+          "type": "boolean",
+          "description": "Whether the device has built-in geometric warp processing (no external warper needed)."
+        },
+        "built_in_blend": {
+          "type": "boolean",
+          "description": "Whether the device has built-in edge blending."
+        },
+        "pixel_clock_mhz": {
+          "type": "number",
+          "description": "Maximum pixel clock in MHz.",
+          "minimum": 0,
+          "examples": [
+            162,
+            600
+          ]
+        },
+        "h_sync_range_khz": {
+          "type": "array",
+          "description": "Horizontal sync frequency range as [min_kHz, max_kHz].",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2,
+          "examples": [
+            [
+              15,
+              91
+            ]
+          ]
+        },
+        "v_sync_range_hz": {
+          "type": "array",
+          "description": "Vertical sync / frame rate range as [min_Hz, max_Hz].",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2,
+          "examples": [
+            [
+              24,
+              120
+            ],
+            [
+              24,
+              250
+            ]
+          ]
+        },
+        "hdr_formats": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "HDR10",
+              "HDR10+",
+              "HLG",
+              "Dolby-Vision",
+              "HDR-Vivid"
+            ]
+          },
+          "description": "Supported HDR formats."
+        },
+        "colour_spaces": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Supported colour spaces.",
+          "examples": [
+            [
+              "Rec.709",
+              "DCI-P3",
+              "Rec.2020"
+            ]
+          ]
+        }
+      }
+    },
+    "ComputeCapability": {
+      "type": "object",
+      "description": "Capability block for compute-bearing devices (media servers, show controllers, embedded computers, LED processors). Required type: 'compute'.",
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "compute"
+          ]
+        },
+        "cpu_model": {
+          "type": "string",
+          "description": "CPU model name.",
+          "examples": [
+            "Intel Xeon W-2245",
+            "Broadcom BCM2712",
+            "Apple M2 Pro"
+          ]
+        },
+        "cpu_cores": {
+          "type": "integer",
+          "description": "Number of CPU cores.",
+          "minimum": 1,
+          "examples": [
+            4,
+            8,
+            16
+          ]
+        },
+        "cpu_frequency_ghz": {
+          "type": "number",
+          "description": "Base or maximum CPU clock frequency in GHz.",
+          "minimum": 0,
+          "examples": [
+            2.4,
+            3.7,
+            4.5
+          ]
+        },
+        "cpu_architecture": {
+          "type": "string",
+          "description": "CPU instruction set architecture.",
+          "examples": [
+            "x86-64",
+            "ARM64",
+            "ARM Cortex-A76"
+          ]
+        },
+        "gpu_model": {
+          "type": "string",
+          "description": "GPU model name.",
+          "examples": [
+            "NVIDIA RTX A5000",
+            "VideoCore VII",
+            "AMD Radeon Pro W6600"
+          ]
+        },
+        "gpu_vram_gb": {
+          "type": "number",
+          "description": "GPU video RAM in gigabytes.",
+          "minimum": 0,
+          "examples": [
+            8,
+            16,
+            24
+          ]
+        },
+        "gpu_api_support": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Supported GPU APIs.",
+          "examples": [
+            [
+              "OpenGL ES 3.1",
+              "Vulkan 1.2"
+            ],
+            [
+              "DirectX 12",
+              "OpenGL 4.6",
+              "Vulkan 1.3"
+            ]
+          ]
+        },
+        "ram_gb": {
+          "type": "number",
+          "description": "System RAM in gigabytes.",
+          "minimum": 0,
+          "examples": [
+            4,
+            16,
+            64
+          ]
+        },
+        "ram_type": {
+          "type": "string",
+          "description": "RAM technology type.",
+          "examples": [
+            "LPDDR4X",
+            "DDR4",
+            "DDR5",
+            "ECC DDR4"
+          ]
+        },
+        "storage_os_gb": {
+          "type": "number",
+          "description": "OS / system storage in gigabytes.",
+          "minimum": 0,
+          "examples": [
+            16,
+            80,
+            256
+          ]
+        },
+        "storage_media_tb": {
+          "type": "number",
+          "description": "Media / project storage in terabytes. Separate from OS storage.",
+          "minimum": 0,
+          "examples": [
+            0.5,
+            2,
+            8
+          ]
+        },
+        "storage_type": {
+          "type": "string",
+          "enum": [
+            "ssd-nvme",
+            "ssd-sata",
+            "hdd",
+            "emmc",
+            "microsd",
+            "sd"
+          ],
+          "description": "Primary storage technology."
+        },
+        "os": {
+          "type": "string",
+          "description": "Operating system (version and edition if relevant).",
+          "examples": [
+            "Windows 10 IoT Enterprise LTSB",
+            "Ubuntu 24.04 LTS",
+            "macOS Sonoma"
+          ]
+        },
+        "rtc": {
+          "type": "boolean",
+          "description": "Whether the device has a hardware real-time clock (RTC)."
+        }
+      }
+    },
+    "NetworkSwitchCapability": {
+      "type": "object",
+      "description": "Capability block for managed and unmanaged network switches. Required type: 'network-switch'.",
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "network-switch"
+          ]
+        },
+        "switching_fabric_gbps": {
+          "type": "number",
+          "description": "Total non-blocking switching fabric capacity in Gbps.",
+          "minimum": 0,
+          "examples": [
+            20,
+            60,
+            240,
+            320
+          ]
+        },
+        "forwarding_mpps": {
+          "type": "number",
+          "description": "Maximum forwarding rate in millions of packets per second (Mpps) at 64-byte frames.",
+          "minimum": 0,
+          "examples": [
+            14.88,
+            44.64,
+            178.56
+          ]
+        },
+        "mac_table_size": {
+          "type": "integer",
+          "description": "MAC address table size in entries.",
+          "minimum": 0,
+          "examples": [
+            4096,
+            16384
+          ]
+        },
+        "vlan_count": {
+          "type": "integer",
+          "description": "Maximum number of simultaneous VLANs (802.1Q).",
+          "minimum": 0,
+          "examples": [
+            256,
+            1024,
+            4093
+          ]
+        },
+        "igmp_group_limit": {
+          "type": "integer",
+          "description": "Maximum number of IGMP multicast groups supported simultaneously.",
+          "minimum": 0,
+          "examples": [
+            256,
+            1024,
+            4096
+          ]
+        },
+        "packet_buffer_mb": {
+          "type": "number",
+          "description": "Total packet buffer memory in megabytes.",
+          "minimum": 0,
+          "examples": [
+            4,
+            16,
+            32
+          ]
+        },
+        "latency_us": {
+          "type": "number",
+          "description": "Typical forwarding latency in microseconds (64-byte frames, store-and-forward).",
+          "minimum": 0,
+          "examples": [
+            0.84,
+            1.17,
+            2.27
+          ]
+        },
+        "managed": {
+          "type": "boolean",
+          "description": "Whether the switch is managed (configurable via CLI/GUI/SNMP)."
+        },
+        "layer": {
+          "type": "integer",
+          "enum": [
+            2,
+            3,
+            4
+          ],
+          "description": "Highest OSI layer at which the switch operates (L2, L3, or L4)."
+        },
+        "av_profiles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Pre-configured AV-over-IP profiles supported (e.g. Dante, AES67, NDI, AVB, Q-SYS, SVSI).",
+          "examples": [
+            [
+              "Dante",
+              "AES67",
+              "AVB",
+              "NDI",
+              "Q-SYS"
+            ]
+          ]
+        },
+        "avb_support": {
+          "type": "boolean",
+          "description": "Whether the switch supports Audio Video Bridging (IEEE 802.1BA)."
+        },
+        "ptp_support": {
+          "type": "boolean",
+          "description": "Whether the switch supports IEEE 1588 Precision Time Protocol."
+        },
+        "ptp_mode": {
+          "type": "string",
+          "enum": [
+            "transparent-clock",
+            "boundary-clock",
+            "ordinary-clock"
+          ],
+          "description": "PTP operating mode."
+        },
+        "jumbo_frame_kb": {
+          "type": "number",
+          "description": "Maximum supported jumbo frame size in kilobytes.",
+          "minimum": 0,
+          "examples": [
+            9,
+            12
+          ]
+        },
+        "lag_count": {
+          "type": "integer",
+          "description": "Maximum number of Link Aggregation Groups (LAGs).",
+          "minimum": 0,
+          "examples": [
+            8,
+            32
+          ]
+        },
+        "lag_ports_per_group": {
+          "type": "integer",
+          "description": "Maximum ports per LAG group.",
+          "minimum": 0,
+          "examples": [
+            8,
+            16
+          ]
+        }
+      }
+    },
+    "LedProcessorCapability": {
+      "type": "object",
+      "description": "Capability block for LED video processors and controllers (Brompton, Novastar, Colorlight, etc.). Required type: 'led-processor'.",
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "led-processor"
+          ]
+        },
+        "max_canvas_width_px": {
+          "type": "integer",
+          "description": "Maximum canvas width in pixels.",
+          "minimum": 1,
+          "examples": [
+            16384,
+            32768
+          ]
+        },
+        "max_canvas_height_px": {
+          "type": "integer",
+          "description": "Maximum canvas height in pixels.",
+          "minimum": 1,
+          "examples": [
+            8192,
+            16384
+          ]
+        },
+        "max_output_pixels_total": {
+          "type": "integer",
+          "description": "Total maximum pixel output capacity across all outputs combined.",
+          "minimum": 1,
+          "examples": [
+            4200000,
+            10000000
+          ]
+        },
+        "pixels_per_1g_output": {
+          "type": "integer",
+          "description": "Nominal pixel capacity per 1G Ethernet output port at reference conditions (typically 8bpc, 60Hz).",
+          "minimum": 1,
+          "examples": [
+            525000,
+            650000
+          ]
+        },
+        "pixels_per_output_conditions": {
+          "type": "string",
+          "description": "Reference conditions for the pixels_per_1g_output figure.",
+          "examples": [
+            "8bpc, 60Hz",
+            "8bpc, 50Hz"
+          ]
+        },
+        "supported_bit_depths": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "description": "Supported output bit depths in bits per channel.",
+          "examples": [
+            [
+              8,
+              10,
+              12,
+              16
+            ]
+          ]
+        },
+        "supported_frame_rates_hz": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "description": "Supported output frame rates in Hz.",
+          "examples": [
+            [
+              23.98,
+              24,
+              25,
+              29.97,
+              30,
+              50,
+              59.94,
+              60,
+              120,
+              144
+            ]
+          ]
+        },
+        "hdr_support": {
+          "type": "boolean",
+          "description": "Whether the processor supports HDR output to LED fixtures."
+        },
+        "per_panel_calibration": {
+          "type": "boolean",
+          "description": "Whether the processor supports per-LED-panel calibration (e.g. Brompton DynaCal, Novastar NCTS)."
+        },
+        "genlock_support": {
+          "type": "boolean",
+          "description": "Whether the processor supports analogue genlock/sync reference input."
+        },
+        "redundancy_support": {
+          "type": "boolean",
+          "description": "Whether the processor supports hot-standby redundancy configuration."
+        }
+      }
+    },
+    "AudioIOCapability": {
+      "type": "object",
+      "description": "Capability block for audio interfaces, stageboxes, consoles, and processors. Captures device-level audio performance beyond individual port specs. Required type: 'audio-io'.",
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "audio-io"
+          ]
+        },
+        "analogue_input_count": {
+          "type": "integer",
+          "description": "Total number of analogue inputs.",
+          "minimum": 0,
+          "examples": [
+            8,
+            16,
+            32
+          ]
+        },
+        "analogue_output_count": {
+          "type": "integer",
+          "description": "Total number of analogue outputs.",
+          "minimum": 0,
+          "examples": [
+            8,
+            16
+          ]
+        },
+        "supported_sample_rates_hz": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "description": "All supported internal sample rates in Hz.",
+          "examples": [
+            [
+              44100,
+              48000,
+              88200,
+              96000
+            ]
+          ]
+        },
+        "ad_bit_depth": {
+          "type": "integer",
+          "description": "A/D converter bit depth.",
+          "examples": [
+            24,
+            32
+          ]
+        },
+        "da_bit_depth": {
+          "type": "integer",
+          "description": "D/A converter bit depth.",
+          "examples": [
+            24,
+            32
+          ]
+        },
+        "ad_oversampling": {
+          "type": "integer",
+          "description": "A/D converter oversampling multiplier.",
+          "examples": [
+            64,
+            128,
+            256
+          ]
+        },
+        "da_oversampling": {
+          "type": "integer",
+          "description": "D/A converter oversampling multiplier.",
+          "examples": [
+            64,
+            128,
+            256
+          ]
+        },
+        "dynamic_range_db": {
+          "type": "number",
+          "description": "Dynamic range in dB (system-level, input-to-output).",
+          "minimum": 0,
+          "examples": [
+            108,
+            112,
+            120
+          ]
+        },
+        "ein_dbu": {
+          "type": "number",
+          "description": "Equivalent Input Noise in dBu at maximum gain. Lower is better.",
+          "examples": [
+            -128,
+            -130
+          ]
+        },
+        "residual_noise_dbu": {
+          "type": "number",
+          "description": "Residual output noise in dBu with master off.",
+          "examples": [
+            -88,
+            -90
+          ]
+        },
+        "thd_percent": {
+          "type": "number",
+          "description": "Total Harmonic Distortion percentage at rated output level.",
+          "minimum": 0,
+          "examples": [
+            0.05,
+            0.003
+          ]
+        },
+        "crosstalk_db": {
+          "type": "number",
+          "description": "Channel crosstalk in dB at 1kHz (negative value). Lower is better (more negative).",
+          "examples": [
+            -100,
+            -110
+          ]
+        },
+        "signal_delay_ms": {
+          "type": "number",
+          "description": "Total signal delay input-to-output in milliseconds.",
+          "minimum": 0,
+          "examples": [
+            0.9,
+            1.5,
+            3
+          ]
+        },
+        "dante_channel_count_in": {
+          "type": "integer",
+          "description": "For Dante-equipped devices: total receivable Dante audio channels.",
+          "minimum": 0,
+          "examples": [
+            24,
+            32,
+            64,
+            128
+          ]
+        },
+        "dante_channel_count_out": {
+          "type": "integer",
+          "description": "For Dante-equipped devices: total transmittable Dante audio channels.",
+          "minimum": 0,
+          "examples": [
+            24,
+            32,
+            64,
+            128
+          ]
+        },
+        "gain_compensation": {
+          "type": "boolean",
+          "description": "Whether the device supports automatic digital gain compensation when analogue gain is adjusted remotely (e.g. Yamaha Gain Compensation)."
         }
       }
     },
     "SignalType": {
       "type": "string",
       "description": "Hierarchical signal type namespace. Use the most specific subtype available. Parsers encountering unknown values MUST treat them as opaque strings and must not error.",
-      "$comment": "Format: domain/protocol[/subtype]. Domain is the top-level signal category. Unknown future subtypes are valid — the enum is a known-good reference set, not an exhaustive list.",
+      "$comment": "Format: domain/protocol[/subtype]. Unknown future subtypes are valid — the enum is a known-good reference set, not an exhaustive list.",
       "enum": [
         "video/hdmi",
         "video/hdmi/1.4",
@@ -581,6 +1968,9 @@
         "video/thunderbolt/3",
         "video/thunderbolt/4",
         "video/usb-c-dp-alt",
+        "video/3d-sync",
+        "video/sync/analogue-bilevel",
+        "video/sync/analogue-trilevel",
         "audio/analogue/balanced",
         "audio/analogue/unbalanced",
         "audio/analogue/speaker",
@@ -657,10 +2047,21 @@
         "network/usb/2.0",
         "network/usb/3.2",
         "network/usb4",
+        "network/pcie/2.0",
+        "network/pcie/3.0",
+        "network/pcie/4.0",
+        "network/pcie/5.0",
+        "network/mipi/csi-2",
+        "network/mipi/dsi",
+        "network/sdcard",
         "network/wifi/2.4g",
         "network/wifi/5g",
         "network/wifi/6g",
         "network/bluetooth",
+        "network/bluetooth/4.0",
+        "network/bluetooth/4.2",
+        "network/bluetooth/5.0",
+        "network/bluetooth/5.3",
         "network/zigbee",
         "network/zwave",
         "network/thread",
@@ -680,7 +2081,24 @@
         "power/poe-plus-plus",
         "power/usb-pd",
         "power/hdbaset-poh",
-        "power/battery"
+        "power/battery",
+        "rf/antenna",
+        "rf/antenna/dvb-t",
+        "rf/antenna/dvb-t2",
+        "rf/antenna/dvb-s",
+        "rf/antenna/dvb-s2",
+        "rf/antenna/atsc",
+        "rf/antenna/isdb-t",
+        "rf/cable",
+        "control/tally",
+        "control/tally/contact-closure",
+        "control/tally/ip",
+        "audio/intercom/4-wire",
+        "audio/intercom/2-wire",
+        "audio/intercom/partyline",
+        "audio/intercom/voip",
+        "audio/madi/aes10",
+        "network/fibre/ring"
       ]
     },
     "ConnectorType": {
@@ -758,13 +2176,37 @@
         "sma",
         "tnc",
         "f-type",
+        "pcie-x1",
+        "pcie-x4",
+        "pcie-x8",
+        "pcie-x16",
+        "m2-m-key",
+        "m2-e-key",
+        "microsd",
+        "sd",
+        "fpc-15pin",
+        "fpc-22pin",
+        "gpio-header-40pin",
         "internal",
-        "wireless"
+        "wireless",
+        "toslink",
+        "euroblock-2pin",
+        "euroblock-3pin",
+        "euroblock-5pin",
+        "speakon-nl2fx",
+        "ethercon-cat5e",
+        "opticalcon-duo",
+        "opticalcon-quad",
+        "socapex-19pin",
+        "cacombo",
+        "pigtail-sma",
+        "slot"
       ]
     },
     "VideoResolution": {
       "type": "object",
       "description": "Video resolution and frame rate specification.",
+      "additionalProperties": false,
       "properties": {
         "width_px": {
           "type": "integer",
@@ -823,7 +2265,7 @@
         },
         "bit_depth": {
           "type": "integer",
-          "description": "Colour bit depth per channel at maximum resolution.",
+          "description": "Colour bit depth per channel.",
           "examples": [
             8,
             10,
@@ -842,10 +2284,9 @@
               "HDR-Vivid"
             ]
           },
-          "description": "Supported HDR formats at this port."
+          "description": "Supported HDR formats at this resolution."
         }
-      },
-      "additionalProperties": false
+      }
     },
     "Protocol": {
       "type": "object",
@@ -925,7 +2366,7 @@
         },
         "notes": {
           "type": "string",
-          "description": "Any important notes about this protocol implementation — e.g. known limitations, required configuration, AES67 compatibility mode."
+          "description": "Important notes about this protocol implementation — known limitations, required configuration, AES67 compatibility mode."
         }
       }
     },
@@ -958,6 +2399,49 @@
           "type": "boolean",
           "description": "Whether the device supports NFC for configuration or pairing."
         },
+        "companion_software": {
+          "type": "array",
+          "description": "Named companion software applications used to configure or control this device.",
+          "items": {
+            "type": "object",
+            "required": [
+              "name"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "Software application name.",
+                "examples": [
+                  "R Remote",
+                  "Tessera Remote",
+                  "Dante Controller",
+                  "Christie Twist"
+                ]
+              },
+              "platform": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "windows",
+                    "macos",
+                    "linux",
+                    "ios",
+                    "android",
+                    "web"
+                  ]
+                },
+                "description": "Platforms the companion software runs on."
+              },
+              "url": {
+                "type": "string",
+                "format": "uri",
+                "description": "Download or product page URL for the companion software."
+              }
+            }
+          }
+        },
         "custom_commands": {
           "type": "array",
           "description": "RS-232, RS-485, or TCP/IP command strings for common control operations.",
@@ -967,6 +2451,7 @@
               "action",
               "command"
             ],
+            "additionalProperties": false,
             "properties": {
               "action": {
                 "type": "string",
@@ -1004,8 +2489,7 @@
               "notes": {
                 "type": "string"
               }
-            },
-            "additionalProperties": false
+            }
           }
         }
       }
@@ -1042,25 +2526,254 @@
             "community",
             "automated"
           ],
-          "description": "Origin of this profile. 'manufacturer' = submitted by the device manufacturer. 'community' = user-contributed. 'automated' = extracted via datasheet scraping pipeline."
+          "description": "Origin of this profile."
         },
         "verified": {
           "type": "boolean",
-          "description": "Whether this profile has been verified against physical hardware or official documentation by a trusted reviewer."
+          "description": "Whether this profile has been verified against physical hardware or official documentation."
         },
         "license": {
           "type": "string",
-          "description": "License under which this profile is contributed.",
           "enum": [
             "CC-BY-4.0"
           ],
-          "default": "CC-BY-4.0"
+          "default": "CC-BY-4.0",
+          "description": "License under which this profile is contributed."
         },
         "cla_signed": {
           "type": "boolean",
           "description": "Whether the contributor signed the Conduit Contributor Licence Agreement at time of submission."
         }
       }
+    },
+    "CardSlot": {
+      "type": "object",
+      "description": "A physical card slot in a modular frame. May be empty or populated with a Card.",
+      "required": [
+        "id",
+        "label"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Slot identifier (e.g. \"bay-a\", \"slot-1\")"
+        },
+        "label": {
+          "type": "string",
+          "description": "Human-readable slot name (e.g. \"Bay A\", \"Client Slot 1\")"
+        },
+        "slot_type": {
+          "type": "string",
+          "enum": [
+            "controller",
+            "client",
+            "gpi",
+            "io",
+            "power",
+            "fan",
+            "network",
+            "generic"
+          ],
+          "description": "Functional category of this slot."
+        },
+        "accepts_card_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of card model identifiers that are compatible with this slot."
+        },
+        "installed_card": {
+          "description": "Card currently installed in this slot. Set to null or omit if slot is empty.",
+          "oneOf": [
+            {
+              "$ref": "#/$defs/InstalledCard"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "required": {
+          "type": "boolean",
+          "description": "If true, slot must be populated for the device to function.",
+          "default": false
+        },
+        "redundant_pair": {
+          "type": "string",
+          "description": "Slot ID of the redundant partner for this slot (e.g. controller A mirrors B)."
+        }
+      },
+      "additionalProperties": false
+    },
+    "InstalledCard": {
+      "type": "object",
+      "description": "A module card installed in a slot. May carry its own ports (which appear as if on the parent device).",
+      "required": [
+        "manufacturer",
+        "model"
+      ],
+      "properties": {
+        "manufacturer": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "model_variant": {
+          "type": "string"
+        },
+        "part_number": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "datasheet_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "ports": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Port"
+          },
+          "description": "Ports exposed by this card. Panel position should be relative to the card, or use slot_position on the port."
+        },
+        "capabilities": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/CapabilityBlock"
+          }
+        },
+        "protocols": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Protocol"
+          }
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "RelatedDevice": {
+      "type": "object",
+      "description": "Reference to a device that is functionally related (panel for a frame, PSU, antenna, etc.).",
+      "required": [
+        "relationship",
+        "manufacturer",
+        "model"
+      ],
+      "properties": {
+        "relationship": {
+          "type": "string",
+          "enum": [
+            "control-panel",
+            "frame",
+            "power-supply",
+            "antenna",
+            "expander",
+            "redundant-pair",
+            "accessory",
+            "replacement-part"
+          ],
+          "description": "Nature of the relationship to the parent device."
+        },
+        "manufacturer": {
+          "type": "string"
+        },
+        "model": {
+          "type": "string"
+        },
+        "model_variant": {
+          "type": "string"
+        },
+        "part_number": {
+          "type": "string"
+        },
+        "required_for_operation": {
+          "type": "boolean",
+          "description": "True if the parent device cannot operate without this unit."
+        },
+        "conduit_profile_url": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to a CONDUIT profile document for this related device."
+        },
+        "notes": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "IntercomCapability": {
+      "type": "object",
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "const": "intercom"
+        },
+        "matrix_size_max": {
+          "type": "object",
+          "properties": {
+            "inputs": {
+              "type": "integer"
+            },
+            "outputs": {
+              "type": "integer"
+            }
+          },
+          "additionalProperties": false,
+          "description": "Maximum non-blocking matrix dimensions this node can form part of."
+        },
+        "ports_per_frame": {
+          "type": "integer",
+          "description": "Maximum number of intercom ports this frame can carry."
+        },
+        "client_card_slots": {
+          "type": "integer"
+        },
+        "controller_card_slots": {
+          "type": "integer"
+        },
+        "gpi_card_slots": {
+          "type": "integer"
+        },
+        "hot_swap": {
+          "type": "boolean",
+          "description": "Whether cards can be swapped without powering down."
+        },
+        "redundant_controller": {
+          "type": "boolean"
+        },
+        "redundant_psu": {
+          "type": "boolean"
+        },
+        "fiber_ring": {
+          "type": "boolean",
+          "description": "Whether this node participates in a fibre ring network."
+        },
+        "max_nodes_in_ring": {
+          "type": "integer"
+        },
+        "max_node_distance_m": {
+          "type": "integer",
+          "description": "Maximum distance between nodes in metres."
+        },
+        "supported_protocols": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Intercom/audio protocols this matrix supports (e.g. AES67, MADI, Dante, AVB, VoIP, 4-wire)."
+        }
+      },
+      "additionalProperties": false
     }
   }
 }
