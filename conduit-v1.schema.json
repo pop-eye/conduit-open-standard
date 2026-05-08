@@ -226,6 +226,14 @@
       "items": {
         "$ref": "#/$defs/RelatedDevice"
       }
+    },
+    "sources": {
+      "type": "array",
+      "description": "Structured list of source documents used to create or verify this profile. Prefer this over the flat datasheet_url / manual_url fields.",
+      "items": {
+        "$ref": "#/$defs/DataSource"
+      },
+      "minItems": 0
     }
   },
   "$defs": {
@@ -2543,6 +2551,31 @@
         "cla_signed": {
           "type": "boolean",
           "description": "Whether the contributor signed the Conduit Contributor Licence Agreement at time of submission."
+        },
+        "verification_method": {
+          "type": "string",
+          "enum": [
+            "manufacturer-submitted",
+            "official-docs",
+            "official-docs-plus-physical",
+            "physical-only",
+            "community-aggregated",
+            "automated-extraction"
+          ],
+          "description": "How this profile was produced and verified."
+        },
+        "confidence": {
+          "type": "string",
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ],
+          "description": "Assessor confidence in profile accuracy. high = cross-checked against primary source; medium = single source, plausible; low = inferred or partially sourced."
+        },
+        "last_verified_against_version": {
+          "type": "string",
+          "description": "Firmware or hardware revision this profile was last verified against (e.g. \"FW 4.2.1\", \"Rev B PCB\")."
         }
       }
     },
@@ -2654,6 +2687,13 @@
         },
         "notes": {
           "type": "string"
+        },
+        "sources": {
+          "type": "array",
+          "description": "Source documents specific to this card module.",
+          "items": {
+            "$ref": "#/$defs/DataSource"
+          }
         }
       },
       "additionalProperties": false
@@ -2771,6 +2811,71 @@
             "type": "string"
           },
           "description": "Intercom/audio protocols this matrix supports (e.g. AES67, MADI, Dante, AVB, VoIP, 4-wire)."
+        }
+      },
+      "additionalProperties": false
+    },
+    "DataSource": {
+      "type": "object",
+      "description": "A single source document used to derive or verify information in this profile.",
+      "required": [
+        "url",
+        "type"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Direct URL to the source document or page."
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "datasheet",
+            "tech-specs-page",
+            "user-manual",
+            "installation-guide",
+            "quickstart",
+            "api-docs",
+            "firmware-notes",
+            "errata",
+            "third-party",
+            "physical-inspection"
+          ],
+          "description": "Classification of the source document."
+        },
+        "title": {
+          "type": "string",
+          "description": "Document title as it appears on the source (e.g. \"X4 4-Channel High-Performance Amplifier Platform\")."
+        },
+        "version": {
+          "type": "string",
+          "description": "Document version, revision, or edition (e.g. \"V1.6.0\", \"Rev C\", \"v2.0\")."
+        },
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Publication or last-updated date of the source document."
+        },
+        "retrieved_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date this URL was last accessed and verified to be live."
+        },
+        "page_ref": {
+          "type": "string",
+          "description": "Page number, section, or anchor within the document where key data was found (e.g. \"p.4\", \"§3.2 Rear Panel\", \"#specifications\")."
+        },
+        "fields_sourced": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "List of profile field paths this source specifically covers (e.g. [\"power.max_wattage\", \"ports[].signal_type\"]). Omit to imply general coverage."
+        },
+        "notes": {
+          "type": "string",
+          "description": "Freeform note about this source — e.g. limitations, known discrepancies, or why a third-party source was used."
         }
       },
       "additionalProperties": false
