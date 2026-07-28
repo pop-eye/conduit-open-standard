@@ -448,7 +448,10 @@
       "category": "media-player",
       "form_factor": "other",
       "description": "A credit card-sized computer with an ARM processor that can run Linux.",
-      "port_count": 8
+      "port_count": 8,
+      "tags": [
+        "Compact Linux, Media Player variant"
+      ]
     },
     {
       "id": "raspberry-pi/4-model-b-8gb-ram",

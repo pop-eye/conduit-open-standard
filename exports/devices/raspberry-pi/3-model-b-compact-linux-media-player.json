@@ -1,21 +1,4 @@
 {
-  "capabilities": [
-    {
-      "analogue_output_count": 2,
-      "type": "audio-io"
-    },
-    {
-      "cpu_architecture": "ARMv8 64bit",
-      "cpu_cores": 4,
-      "cpu_frequency_ghz": 1.4,
-      "cpu_model": "BCM2837B0",
-      "gpu_model": "VideoCore IV",
-      "os": "Snappy Ubuntu Core, Raspbian, Fedora, Arch Linux, Microsoft Windows 10 IoT Core",
-      "ram_gb": 1,
-      "storage_type": "microsd",
-      "type": "compute"
-    }
-  ],
   "ports": [
     {
       "connector_type": "hdmi-a",
@@ -44,7 +27,15 @@
       "direction": "bidirectional",
       "id": "port_wifi",
       "label": "dual-band wireless LAN",
-      "signal_type": "video/hdmi"
+      "signal_modes": [
+        {
+          "signal_type": "network/wifi/2.4g"
+        },
+        {
+          "signal_type": "network/wifi/5g"
+        }
+      ],
+      "signal_type": "network/wifi/2.4g"
     },
     {
       "connector_type": "wireless",
@@ -65,7 +56,7 @@
       "direction": "power-in",
       "id": "port_power_usb",
       "label": "micro USB connector",
-      "signal_type": "video/hdmi"
+      "signal_type": "power/dc/5v"
     },
     {
       "connector_type": "gpio-header-40pin",
@@ -74,6 +65,26 @@
       "label": "GPIO header",
       "signal_type": "power/dc"
     }
+  ],
+  "capabilities": [
+    {
+      "analogue_output_count": 2,
+      "type": "audio-io"
+    },
+    {
+      "cpu_architecture": "ARMv8 64bit",
+      "cpu_cores": 4,
+      "cpu_frequency_ghz": 1.4,
+      "cpu_model": "BCM2837B0",
+      "gpu_model": "VideoCore IV",
+      "os": "Snappy Ubuntu Core, Raspbian, Fedora, Arch Linux, Microsoft Windows 10 IoT Core",
+      "ram_gb": 1,
+      "storage_type": "microsd",
+      "type": "compute"
+    }
+  ],
+  "tags": [
+    "Compact Linux, Media Player variant"
   ],
   "category": "media-player",
   "description": "A credit card-sized computer with an ARM processor that can run Linux.",
@@ -86,18 +97,24 @@
     "operating_temp_max_c": 50,
     "operating_temp_min_c": 0
   },
+  "firmware": "October 2025",
   "form_factor": "other",
   "manufacturer": "Raspberry Pi Ltd",
   "model": "Raspberry Pi 3 Model B+",
+  "notes": "Length and width measurements are for the PCB only; several of the connectors extend past the edge of the board.",
   "power": {
     "connector_type": "usb-micro-b",
     "max_wattage": 12.5,
+    "notes": "Requires a 5 V power source with a micro USB connector that can source at least 2.5 A.",
     "voltage_v": 5
   },
   "reliability": {
+    "eol_date": "2028-01-01T00:00:00Z",
+    "mtbf_conditions": "Ground Benign",
     "mtbf_hours": 378000
   },
   "weight_kg": 0.05,
+  "image_url": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/cec0a62c-214a-4337-80e1-9f5b8c6a4ba7.__CR0,0,1200,1200_PT0_SX300_V1___.png",
   "schema_version": "conduit/v1",
   "sources": [
     {
