@@ -2,160 +2,129 @@
   "ports": [
     {
       "connector_type": "bnc",
+      "count": 1,
       "direction": "in",
-      "id": "port-1",
+      "id": "sdi-in-1",
       "label": "SDI Video Input",
       "signal_type": "video/sdi"
     },
     {
       "connector_type": "bnc",
+      "count": 2,
       "direction": "out",
-      "id": "port-2",
-      "label": "SDI Video Output 1",
+      "id": "sdi-out-1",
+      "label": "SDI Video Output",
       "signal_type": "video/sdi"
     },
     {
       "connector_type": "bnc",
+      "count": 1,
       "direction": "out",
-      "id": "port-3",
+      "id": "sdi-monitor-out",
       "label": "SDI Monitor Output",
       "signal_type": "video/sdi"
     },
     {
       "connector_type": "hdmi-a",
+      "count": 1,
       "direction": "in",
-      "id": "port-4",
+      "id": "hdmi-in-1",
       "label": "HDMI 2.0 Video Input",
       "signal_type": "video/hdmi/2.0"
     },
     {
       "connector_type": "hdmi-a",
+      "count": 1,
       "direction": "out",
-      "id": "port-5",
+      "id": "hdmi-out-1",
       "label": "HDMI 2.0 Video Output",
       "signal_type": "video/hdmi/2.0"
     },
     {
       "connector_type": "internal",
+      "count": 1,
       "direction": "out",
-      "id": "port-6",
+      "id": "speaker",
       "label": "Built in Speaker",
       "signal_type": "audio/analogue/speaker"
     },
     {
-      "connector_type": "trs-6.35mm",
+      "connector_type": "trs-3.5mm",
+      "count": 1,
       "direction": "out",
-      "id": "port-7",
+      "id": "headphone-jack",
       "label": "Audio Output",
-      "signal_type": "audio/analogue/balanced"
+      "notes": "6.35 mm headphone jack",
+      "signal_type": "audio/analogue/speaker"
     },
     {
-      "connector_type": "xlr-3m",
+      "connector_type": "xlr-3f",
+      "count": 1,
       "direction": "in",
-      "id": "port-8",
-      "label": "Timecode Input",
+      "id": "timecode-in",
+      "label": "Timecode In",
       "signal_type": "control/timecode/ltc"
     },
     {
       "connector_type": "xlr-3m",
+      "count": 1,
       "direction": "out",
-      "id": "port-9",
-      "label": "Timecode Output",
+      "id": "timecode-out",
+      "label": "Timecode Out",
       "signal_type": "control/timecode/ltc"
     },
     {
       "connector_type": "bnc",
+      "count": 1,
       "direction": "in",
-      "id": "port-10",
-      "label": "Reference Input",
+      "id": "ref-in",
+      "label": "Reference In",
       "signal_type": "video/sync/analogue-bilevel"
     },
     {
       "connector_type": "bnc",
+      "count": 1,
       "direction": "out",
-      "id": "port-11",
-      "label": "Reference Output",
+      "id": "ref-out",
+      "label": "Reference Out",
       "signal_type": "video/sync/analogue-bilevel"
     },
     {
-      "connector_type": "bnc",
+      "connector_type": "de-15",
+      "count": 1,
       "direction": "in",
-      "id": "port-12",
-      "label": "SDI Audio Input",
-      "signal_type": "audio/embedded/sdi"
+      "id": "rs422-in",
+      "label": "RS-422 In",
+      "signal_type": "control/rs422"
     },
     {
-      "connector_type": "bnc",
+      "connector_type": "de-15",
+      "count": 1,
       "direction": "out",
-      "id": "port-13",
-      "label": "SDI Audio Output",
-      "signal_type": "audio/embedded/sdi"
-    },
-    {
-      "connector_type": "hdmi-a",
-      "direction": "in",
-      "id": "port-14",
-      "label": "HDMI Audio Input",
-      "signal_type": "audio/embedded/hdmi"
-    },
-    {
-      "connector_type": "hdmi-a",
-      "direction": "out",
-      "id": "port-15",
-      "label": "HDMI Audio Output",
-      "signal_type": "audio/embedded/hdmi"
-    },
-    {
-      "connector_type": "rj45",
-      "direction": "in",
-      "id": "port-16",
-      "label": "Remote Control In",
+      "id": "rs422-out",
+      "label": "RS-422 Out",
       "signal_type": "control/rs422"
     },
     {
       "connector_type": "rj45",
-      "direction": "out",
-      "id": "port-17",
-      "label": "Remote Control Out",
-      "signal_type": "control/rs422"
-    },
-    {
-      "connector_type": "rj45",
+      "count": 1,
       "direction": "bidirectional",
-      "id": "port-18",
+      "id": "ethernet",
       "label": "Ethernet",
       "signal_type": "network/ethernet/1g"
     },
     {
       "connector_type": "usb-c",
+      "count": 1,
       "direction": "bidirectional",
-      "id": "port-19",
+      "id": "usb-c",
       "label": "Computer Interface",
-      "signal_type": "network/usb/3.0"
+      "notes": "USB Type-C 3.0 (up to 5Gb/s)",
+      "signal_type": "network/usb/3.2"
     }
   ],
   "tags": [
     "broadcast-deck, recording, media-player, rackmount"
-  ],
-  "capabilities": [
-    {
-      "ad_bit_depth": 24,
-      "analogue_input_count": 6,
-      "analogue_output_count": 0,
-      "da_bit_depth": 24,
-      "supported_sample_rates_hz": [
-        48000
-      ],
-      "type": "audio-io"
-    },
-    {
-      "os": "Blackmagic OS",
-      "storage_type": "ssd-nvme",
-      "type": "compute"
-    },
-    {
-      "type": "display"
-    }
   ],
   "protocols": [
     {
@@ -181,6 +150,26 @@
       "notes": "Supported for recording.",
       "transport": "proprietary",
       "version": "1.0"
+    }
+  ],
+  "capabilities": [
+    {
+      "ad_bit_depth": 24,
+      "analogue_input_count": 6,
+      "analogue_output_count": 0,
+      "da_bit_depth": 24,
+      "supported_sample_rates_hz": [
+        48000
+      ],
+      "type": "audio-io"
+    },
+    {
+      "os": "Blackmagic OS",
+      "storage_type": "ssd-nvme",
+      "type": "compute"
+    },
+    {
+      "type": "display"
     }
   ],
   "category": "media-player",

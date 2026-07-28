@@ -130,7 +130,7 @@
       "category": "media-player",
       "form_factor": "rackmount",
       "description": "A professional recording and media player device that supports various video standards including SD, HD, 2K DCI, Ultra HD, and 4K DCI.",
-      "port_count": 19,
+      "port_count": 15,
       "tags": [
         "broadcast-deck, recording, media-player, rackmount"
       ]
