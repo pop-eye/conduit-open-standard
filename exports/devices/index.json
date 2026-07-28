@@ -1,8 +1,274 @@
 {
   "schema_version": "conduit/v1",
-  "generated_at": "2026-07-21",
-  "count": 11,
+  "generated_at": "2026-07-28",
+  "count": 43,
   "devices": [
+    {
+      "id": "apple/tv-4k-1st-gen-original-4k-media-player",
+      "path": "apple/tv-4k-1st-gen-original-4k-media-player.json",
+      "manufacturer": "Apple",
+      "model": "Apple TV 4K",
+      "category": "media-player",
+      "form_factor": "other",
+      "description": "Apple TV 4 Media player",
+      "port_count": 6,
+      "tags": [
+        "4K, HDR, Apple TV, A15 Bionic, Wi-Fi 6, Thread"
+      ]
+    },
+    {
+      "id": "apple/tv-4k-2nd-gen-a12-bionic-media-player",
+      "path": "apple/tv-4k-2nd-gen-a12-bionic-media-player.json",
+      "manufacturer": "Apple",
+      "model": "Apple TV 4K",
+      "model_variant": "2nd generation",
+      "category": "media-player",
+      "subcategory": "streaming device",
+      "form_factor": "other",
+      "description": "The Apple TV (4k 2nd Gen) - MXH02LL/A was released in 2021 and features a 2.49GHz Apple A12 Bionic processor, 3GB of RAM, and 64GB of storage.",
+      "port_count": 5,
+      "tags": [
+        "4K, HDR, Dolby Vision, HLG, HEVC, A12 Bionic, Wi-Fi 6, Thread, Bluetooth 5.0"
+      ]
+    },
+    {
+      "id": "benq/th575i",
+      "path": "benq/th575i.json",
+      "manufacturer": "BenQ",
+      "model": "TH575",
+      "model_variant": "i",
+      "category": "projector",
+      "subcategory": "Home Cinema Projector",
+      "form_factor": "desktop",
+      "description": "Digital Projector with 3,800 ANSI Lumen High Brightness for Gaming and Game Mode with 16.67ms Input Lag.",
+      "port_count": 7,
+      "tags": [
+        "gaming, 3D, home cinema"
+      ]
+    },
+    {
+      "id": "blackmagic-design/atem-mini",
+      "path": "blackmagic-design/atem-mini.json",
+      "manufacturer": "Blackmagic Design",
+      "model": "ATEM Mini",
+      "category": "video-switcher",
+      "subcategory": "live switcher",
+      "form_factor": "desktop",
+      "description": "ATEM Mini features 4HDMI inputs and has an intuitive, easy to use design that makes it possible for anyone to live stream multi camera productions online via services and software such as YouTube Facebook Live or even Skype. Simply connect 4high quality HDMI inputs that can be used for live switching cameras, computers or even game consoles. Youget abuilt in DVE for exciting picture in picture effects, broadcast quality transitions, upstream keyers for removing blue and green screen background, adownstream keyer for superimposing custom graphics, audio inputs amixer, and more.",
+      "port_count": 7,
+      "tags": [
+        "live streaming",
+        "multi camera production",
+        "DVE",
+        "picture in picture",
+        "broadcast quality transitions",
+        "upstream keyers",
+        "downstream keyer",
+        "webcam"
+      ]
+    },
+    {
+      "id": "blackmagic-design/hyperdeck-studio-4k-pro",
+      "path": "blackmagic-design/hyperdeck-studio-4k-pro.json",
+      "manufacturer": "Blackmagic Design",
+      "model": "HyperDeck Studio Pro",
+      "category": "video-capture",
+      "form_factor": "rackmount",
+      "description": "For extreme power, the HyperDeck Studio 4K Pro has all the features of the HD models, combined with incredible processing for working in Ultra HD. This model’s SDI has been upgraded to full 12G-SDI with a loop 12G-SDI output.",
+      "port_count": 16,
+      "tags": [
+        "12G-SDI, Ultra HD, ProRes 4444, H.265, Redundant PSU"
+      ]
+    },
+    {
+      "id": "blackmagic-design/hyperdeck-studio-hd-mini",
+      "path": "blackmagic-design/hyperdeck-studio-hd-mini.json",
+      "manufacturer": "Blackmagic Design",
+      "model": "HyperDeck Studio HD Mini",
+      "category": "video-capture",
+      "subcategory": "media recorder",
+      "form_factor": "other",
+      "description": "A compact media recorder based on the Teranex Mini form factor, supporting 3G-SDI in/out, HDMI output, dual SD card media slots, and built-in sync and timecode generators.",
+      "port_count": 11,
+      "tags": [
+        "broadcast-deck, sd-card-recorder, uhs-ii, 3g-sdi, hdmi-out, timecode-generator"
+      ]
+    },
+    {
+      "id": "blackmagic/atem-mini-pro",
+      "path": "blackmagic/atem-mini-pro.json",
+      "manufacturer": "Blackmagic Design",
+      "model": "ATEM Mini Pro",
+      "category": "video-switcher",
+      "subcategory": "video-switcher",
+      "form_factor": "desktop",
+      "description": "ATEM Mini Pro is fast to set up and easy to use. It includes 4 standards converted HDMI inputs, USB webcam out, HDMI out, Fairlight audio mixer with EQ and dynamics, DVE for picture in picture, transition effects, green screen chroma key, 20 stills media pool for titles and free ATEM Software Control. ATEM Mini Pro also includes direct recording to USB flash disks in H.264 and direct streaming via Ethernet to YouTube Live and more. There's also a multiview with 4 cameras, media, preview and program plus status of recording, streaming and audio.",
+      "port_count": 9,
+      "tags": [
+        "live-streaming, multi-camera, broadcast-switcher, multiview, usb-webcam"
+      ]
+    },
+    {
+      "id": "blackmagic/hyperdeck-studio-hd-pro",
+      "path": "blackmagic/hyperdeck-studio-hd-pro.json",
+      "manufacturer": "Blackmagic Design",
+      "model": "HyperDeck Studio HD Pro",
+      "category": "media-player",
+      "form_factor": "rackmount",
+      "description": "A professional recording and media player device that supports various video standards including SD, HD, 2K DCI, Ultra HD, and 4K DCI.",
+      "port_count": 19,
+      "tags": [
+        "broadcast-deck, recording, media-player, rackmount"
+      ]
+    },
+    {
+      "id": "brightsign/ls423-standard-edition-media-player",
+      "path": "brightsign/ls423-standard-edition-media-player.json",
+      "manufacturer": "BrightSign",
+      "model": "LS423",
+      "category": "media-player",
+      "form_factor": "other",
+      "description": "Entry-Level Player... perfect for simple streaming applications, menu boards, video walls and large deployments of common content.",
+      "port_count": 6,
+      "tags": [
+        "entry-level, h265, html5, ip-streaming"
+      ]
+    },
+    {
+      "id": "brightsign/xd2246-high-performance-media-player",
+      "path": "brightsign/xd2246-high-performance-media-player.json",
+      "manufacturer": "BrightSign, LLC.",
+      "model": "BrightSign XD2246",
+      "category": "media-player",
+      "description": "Enhanced graphics and html5 performance",
+      "port_count": 8,
+      "tags": [
+        "4K, Dolby Vision, HDR10+, H.265, HEVC, HDMI 2.0a"
+      ]
+    },
+    {
+      "id": "crestron/nvx-100-av-over-ip-media-player",
+      "path": "crestron/nvx-100-av-over-ip-media-player.json",
+      "manufacturer": "Crestron Electronics, Inc.",
+      "model": "NVX-100",
+      "category": "media-player",
+      "subcategory": "AV over IP encoder/decoder",
+      "description": "A standards-based AV-over-IP solution that delivers flawless video, audio, USB and control over standard gigabit networks with Pixel Perfect Processing.",
+      "port_count": 12,
+      "tags": [
+        "4K60",
+        "4:4:4",
+        "HDR",
+        "AV over IP",
+        "AES67",
+        "USB 2.0",
+        "KVM"
+      ]
+    },
+    {
+      "id": "intel/nuc-11-core-i3-media-player",
+      "path": "intel/nuc-11-core-i3-media-player.json",
+      "manufacturer": "Intel",
+      "model": "NUC11PA[x]i3",
+      "category": "media-player",
+      "form_factor": "desktop",
+      "description": "Intel NUC 11 Performance Mini PC with Intel Core i3 processor.",
+      "port_count": 5
+    },
+    {
+      "id": "intel/nuc-12-pro-core-i5-media-player",
+      "path": "intel/nuc-12-pro-core-i5-media-player.json",
+      "manufacturer": "Intel",
+      "model": "Intel NUC 12 Pro",
+      "model_variant": "NUC12WSHi5/v5/v5L",
+      "category": "media-player",
+      "form_factor": "desktop",
+      "description": "Intel® NUC Board/Kit/Mini PC NUC12WS series.",
+      "port_count": 2
+    },
+    {
+      "id": "lg/32sm5km-compact-signage-television",
+      "path": "lg/32sm5km-compact-signage-television.json",
+      "manufacturer": "LG Electronics USA, Inc.",
+      "model": "32SM5J",
+      "category": "display",
+      "form_factor": "wall-mount",
+      "description": "LG webOS Standard Signage display with built-in speakers and smart platform.",
+      "port_count": 9
+    },
+    {
+      "id": "lg/55sm5km-high-brightness-television",
+      "path": "lg/55sm5km-high-brightness-television.json",
+      "manufacturer": "LG Electronics Inc.",
+      "model": "SM5KD",
+      "model_variant": "55SM5KD",
+      "category": "display",
+      "form_factor": "wall-mount",
+      "description": "Standard Performance Digital Signage - SM5KD Series with Smart Platform and Quad Core SoC.",
+      "port_count": 1,
+      "tags": [
+        "4K UHD, OLED, QNED, High Brightness, Smart TV, Gaming Ready"
+      ]
+    },
+    {
+      "id": "lg/55uh640p-commercial-signage-television",
+      "path": "lg/55uh640p-commercial-signage-television.json",
+      "manufacturer": "LG",
+      "model": "UR640S9UD Series",
+      "model_variant": "55UR640S9UD",
+      "category": "display",
+      "subcategory": "commercial signage",
+      "form_factor": "wall-mount",
+      "description": "Commercial signage monitor with webOS and SuperSign software support.",
+      "port_count": 10,
+      "tags": [
+        "Ultra HD",
+        "Signage",
+        "Smart TV"
+      ]
+    },
+    {
+      "id": "lg/55um7300-uhd-4k-television",
+      "path": "lg/55um7300-uhd-4k-television.json",
+      "manufacturer": "LG",
+      "model": "UF7300",
+      "category": "display",
+      "form_factor": "wall-mount",
+      "description": "4K UHD LED Smart TV w/ webOS™ 2.0",
+      "port_count": 9
+    },
+    {
+      "id": "lg/65uh75lr-professional-uhd-television",
+      "path": "lg/65uh75lr-professional-uhd-television.json",
+      "manufacturer": "LG Electronics",
+      "model": "65UH5J-H",
+      "category": "display",
+      "description": "Professional UHD Television with webOS Smart platform and IP5X certification.",
+      "port_count": 11
+    },
+    {
+      "id": "lg/bp250-basic-playback-blu-ray-player",
+      "path": "lg/bp250-basic-playback-blu-ray-player.json",
+      "manufacturer": "LG",
+      "model": "BP250",
+      "category": "media-player",
+      "form_factor": "desktop",
+      "description": "A slim Blu-ray player with a carbon fibre look that supports Blu-ray, DVD, Audio CD, and USB media playback.",
+      "port_count": 2
+    },
+    {
+      "id": "lg/oled55c1-gallery-design-television",
+      "path": "lg/oled55c1-gallery-design-television.json",
+      "manufacturer": "LG",
+      "model": "OLED55C14LB",
+      "model_variant": "Gallery Design",
+      "category": "display",
+      "description": "Next Generation of LG AI TV",
+      "port_count": 13,
+      "tags": [
+        "4K, OLED, Cinema HDR, Dolby Vision IQ, webOS, ThinQ, AI Processor, G-Sync, FreeSync Premium, VRR, ALLM, HGIG"
+      ]
+    },
     {
       "id": "lg/qned70a-43",
       "path": "lg/qned70a-43.json",
@@ -88,6 +354,54 @@
       "port_count": 13
     },
     {
+      "id": "panasonic/dmp-bd82-standard-hd-blu-ray-player",
+      "path": "panasonic/dmp-bd82-standard-hd-blu-ray-player.json",
+      "manufacturer": "Panasonic",
+      "model": "DMP-BD82",
+      "category": "media-player",
+      "description": "Blu-ray DiscTM Player",
+      "port_count": 3
+    },
+    {
+      "id": "philips/43bdl4520-slim-bezel-television",
+      "path": "philips/43bdl4520-slim-bezel-television.json",
+      "manufacturer": "Philips",
+      "model": "BDM4350UC/00",
+      "category": "display",
+      "description": "4K Ultra HD LCD display, 43-inch class professional Philips display.",
+      "port_count": 7
+    },
+    {
+      "id": "philips/55bdl4510-business-display-television",
+      "path": "philips/55bdl4510-business-display-television.json",
+      "manufacturer": "Philips",
+      "model": "55BDL4550D",
+      "model_variant": "Business Display",
+      "category": "display",
+      "subcategory": "Commercial Display",
+      "form_factor": "other",
+      "description": "Professional Display Solutions D Line Business Display.",
+      "port_count": 11,
+      "tags": [
+        "4K UHD",
+        "SmartPlayer",
+        "FailOver",
+        "CMND & Control",
+        "SmartPower"
+      ]
+    },
+    {
+      "id": "philips/65bdl4550-professional-uhd-television",
+      "path": "philips/65bdl4550-professional-uhd-television.json",
+      "manufacturer": "Philips",
+      "model": "65BDL4550D",
+      "category": "display",
+      "subcategory": "Signage Display",
+      "form_factor": "wall-mount",
+      "description": "Smart, fast 24/7 professional 4K UHD display with ADS wide-view panel and Android 8.0 OS.",
+      "port_count": 10
+    },
+    {
       "id": "philips/bdp2100",
       "path": "philips/bdp2100.json",
       "manufacturer": "Philips",
@@ -112,6 +426,32 @@
       ]
     },
     {
+      "id": "raspberry-pi/3-model-b-compact-linux-media-player",
+      "path": "raspberry-pi/3-model-b-compact-linux-media-player.json",
+      "manufacturer": "Raspberry Pi Ltd",
+      "model": "Raspberry Pi 3 Model B+",
+      "category": "media-player",
+      "form_factor": "other",
+      "description": "A credit card-sized computer with an ARM processor that can run Linux.",
+      "port_count": 8
+    },
+    {
+      "id": "raspberry-pi/4-model-b-8gb-ram",
+      "path": "raspberry-pi/4-model-b-8gb-ram.json",
+      "manufacturer": "Raspberry Pi",
+      "model": "Raspberry Pi 4 Model B",
+      "model_variant": "8GB RAM, Media Player variant",
+      "category": "media-player",
+      "form_factor": "other",
+      "description": "High-performance 64-bit quad-core processor, dual-display support at resolutions up to 4K via a pair of micro HDMI ports, hardware video decode at up to 4Kp60, up to 8GB of RAM, dual-band 2.4/5.0 GHz wireless LAN, Bluetooth 5.0, Gigabit Ethernet, USB 3.0, and PoE capability (via a separate PoE HAT add-on).",
+      "port_count": 12,
+      "tags": [
+        "Raspberry Pi",
+        "Single Board Computer",
+        "P4B"
+      ]
+    },
+    {
       "id": "samsung/au9000-55",
       "path": "samsung/au9000-55.json",
       "manufacturer": "Samsung",
@@ -121,6 +461,15 @@
       "form_factor": "wall-mount",
       "description": "55\" AU9000 Crystal UHD 4K Smart TV (2021)",
       "port_count": 9
+    },
+    {
+      "id": "samsung/bp90dv-uhd-4k-blu-ray-player",
+      "path": "samsung/bp90dv-uhd-4k-blu-ray-player.json",
+      "manufacturer": "Samsung",
+      "model": "BP90dv",
+      "category": "media-player",
+      "description": "UHD 4K, Blu-ray Player variant",
+      "port_count": 2
     },
     {
       "id": "samsung/f6000",
@@ -143,6 +492,68 @@
       "port_count": 4,
       "tags": [
         "QLED, 4K, Vision AI, Tizen OS, Matter Hub, SmartThings"
+      ]
+    },
+    {
+      "id": "samsung/qm32r-small-format-television",
+      "path": "samsung/qm32r-small-format-television.json",
+      "manufacturer": "Samsung",
+      "model": "QM32R",
+      "category": "display",
+      "description": "A high-quality yet affordable display with Full HD resolution and slim design for business messaging.",
+      "port_count": 7
+    },
+    {
+      "id": "viewsonic/cde43um-compact-series-television",
+      "path": "viewsonic/cde43um-compact-series-television.json",
+      "manufacturer": "ViewSonic",
+      "model": "CDE43G3-1C",
+      "category": "display",
+      "description": "OS-free 4K Commercial Display designed for secure, round-the-clock operation in mission-critical environments.",
+      "port_count": 12
+    },
+    {
+      "id": "viewsonic/cde65um-commercial-uhd-television",
+      "path": "viewsonic/cde65um-commercial-uhd-television.json",
+      "manufacturer": "ViewSonic",
+      "model": "CDE65UM",
+      "category": "display",
+      "form_factor": "wall-mount",
+      "description": "Commercial Display",
+      "port_count": 12,
+      "tags": [
+        "4K, UHD, Commercial Display, Portrait Mode, Android 11, USB-C PD 65W, 24/7 Operation"
+      ]
+    },
+    {
+      "id": "viewsonic/ifp110-110-4k-interactive-television",
+      "path": "viewsonic/ifp110-110-4k-interactive-television.json",
+      "manufacturer": "ViewSonic",
+      "model": "IFP110",
+      "category": "display",
+      "subcategory": "interactive display",
+      "form_factor": "wall-mount",
+      "description": "A massive 110\" touchscreen with 4K Ultra HD resolution, making it one of the largest and most immersive displays on the market. Perfect as an interactive video wall for large-scale presentations in museums, showrooms and training centers.",
+      "port_count": 24,
+      "tags": [
+        "4K, Interactive, Android 13, NFC, USB-C PD, EPEAT Silver"
+      ]
+    },
+    {
+      "id": "viewsonic/ifp86-interactive-display-television",
+      "path": "viewsonic/ifp86-interactive-display-television.json",
+      "manufacturer": "ViewSonic",
+      "model": "IFP8630",
+      "category": "display",
+      "subcategory": "interactive display",
+      "form_factor": "wall-mount",
+      "description": "A ViewBoard® 86\" 4K Interactive Display featuring Ultra Fine Touch Technology, myViewBoard® digital whiteboard software, and dual-pen writing capabilities.",
+      "port_count": 13,
+      "tags": [
+        "projective capacitive",
+        "PCAP",
+        "4K Ultra HD",
+        "bezel-less"
       ]
     },
     {
