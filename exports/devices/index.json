@@ -1,7 +1,7 @@
 {
   "schema_version": "conduit/v1",
   "generated_at": "2026-07-28",
-  "count": 44,
+  "count": 45,
   "devices": [
     {
       "id": "apple/tv-4k-1st-gen-original-4k-media-player",
@@ -468,6 +468,16 @@
         "Single Board Computer",
         "P4B"
       ]
+    },
+    {
+      "id": "raspberry-pi/zero-2-w-ultra-small-media-player",
+      "path": "raspberry-pi/zero-2-w-ultra-small-media-player.json",
+      "manufacturer": "Raspberry Pi Ltd",
+      "model": "Raspberry Pi Zero 2 W",
+      "category": "media-player",
+      "form_factor": "other",
+      "description": "A compact single-board computer and successor to the Raspberry Pi Zero W.",
+      "port_count": 6
     },
     {
       "id": "samsung/au9000-55",

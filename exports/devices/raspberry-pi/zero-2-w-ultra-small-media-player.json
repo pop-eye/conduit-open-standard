@@ -1,0 +1,127 @@
+{
+  "ports": [
+    {
+      "connector_type": "usb-a",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "usb-otg",
+      "label": "USB On-The-Go (OTG)",
+      "notes": "1 × USB 2.0 interface with OTG",
+      "signal_type": "network/usb/2.0"
+    },
+    {
+      "connector_type": "microsd",
+      "count": 1,
+      "direction": "in",
+      "id": "micro-sd",
+      "label": "microSD card slot",
+      "notes": "The board has a microSD card slot",
+      "signal_type": "network/sdcard"
+    },
+    {
+      "connector_type": "hdmi-c",
+      "count": 1,
+      "direction": "out",
+      "id": "mini-hdmi",
+      "label": "Mini HDMI port",
+      "notes": "Video output is via a mini HDMI port",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "fpc-15pin",
+      "count": 1,
+      "direction": "in",
+      "id": "csi-2",
+      "label": "CSI-2 camera connector",
+      "notes": "a CSI-2 camera connector",
+      "signal_type": "network/mipi/csi-2"
+    },
+    {
+      "connector_type": "gpio-header-40pin",
+      "count": 1,
+      "direction": "out",
+      "id": "gpio-header",
+      "label": "40-pin GPIO header footprint",
+      "notes": "an unpopulated footprint for a HAT-compatible 40-pin GPIO header",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "rca-composite",
+      "count": 1,
+      "direction": "out",
+      "id": "composite-video",
+      "label": "Composite video output",
+      "notes": "composite video output can easily be made available via test points if needed.",
+      "signal_type": "video/composite"
+    }
+  ],
+  "capabilities": [
+    {
+      "cpu_architecture": "ARMv8-A (64-bit)",
+      "cpu_cores": 4,
+      "cpu_frequency_ghz": 1.0,
+      "cpu_model": "BCM2710A1",
+      "gpu_model": "VideoCore IV",
+      "os": "Raspberry Pi OS",
+      "ram_gb": 0.512,
+      "ram_type": "LPDDR2",
+      "rtc": true,
+      "type": "compute"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "WLAN",
+      "notes": "2.4 GHz only",
+      "transport": "wifi",
+      "version": "802.11 b/g/n"
+    },
+    {
+      "name": "Bluetooth",
+      "transport": "bluetooth",
+      "version": "4.2 / BLE"
+    }
+  ],
+  "category": "media-player",
+  "description": "A compact single-board computer and successor to the Raspberry Pi Zero W.",
+  "dimensions": {
+    "depth_mm": 3.5,
+    "height_mm": 29,
+    "width_mm": 65
+  },
+  "environment": {
+    "operating_temp_max_c": 70,
+    "operating_temp_min_c": -20
+  },
+  "form_factor": "other",
+  "manufacturer": "Raspberry Pi Ltd",
+  "model": "Raspberry Pi Zero 2 W",
+  "notes": "The device does not support wired networking (Ethernet) out of the box. RAM is limited to 512MB, which may hamper web browsing and high-memory applications like Chromium.",
+  "power": {
+    "connector_type": "usb-micro-b",
+    "max_wattage": 3,
+    "typical_wattage": 0.7,
+    "voltage_v": 5
+  },
+  "reliability": {
+    "eol_date": "2030-01-01"
+  },
+  "weight_kg": 0.01,
+  "image_url": "https://i.ebayimg.com/images/g/p38AAOSwVVVlK87n/s-l225.jpg",
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://datasheets.raspberrypi.com/rpizero2/raspberry-pi-zero-2-w-product-brief.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-23",
+      "notes": "Ingested via batch"
+    },
+    {
+      "url": "https://picockpit.com/raspberry-pi/everything-about-raspberry-pi-zero-2-w/",
+      "type": "tech-specs-page",
+      "title": "Everything about Raspberry Pi Zero 2 W | PiCockpit",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    }
+  ]
+}
