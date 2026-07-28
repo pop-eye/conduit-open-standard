@@ -154,8 +154,9 @@
       "manufacturer": "BrightSign, LLC.",
       "model": "BrightSign XD2246",
       "category": "media-player",
+      "form_factor": "other",
       "description": "Enhanced graphics and html5 performance",
-      "port_count": 8,
+      "port_count": 10,
       "tags": [
         "4K, Dolby Vision, HDR10+, H.265, HEVC, HDMI 2.0a"
       ]
