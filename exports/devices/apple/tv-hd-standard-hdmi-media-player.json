@@ -1,0 +1,168 @@
+{
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "direction": "out",
+      "id": "port-1",
+      "label": "HDMI",
+      "signal_type": "video/hdmi/2.1"
+    },
+    {
+      "connector_type": "wireless",
+      "direction": "bidirectional",
+      "id": "port-2",
+      "label": "Wi-Fi",
+      "signal_type": "network/wifi/5g"
+    },
+    {
+      "connector_type": "wireless",
+      "direction": "bidirectional",
+      "id": "port-3",
+      "label": "Bluetooth",
+      "signal_type": "network/bluetooth/5.0"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "in",
+      "id": "port-4",
+      "label": "IR Receiver",
+      "signal_type": "control/ir"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "bidirectional",
+      "id": "port-5",
+      "label": "Gigabit Ethernet",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "wireless",
+      "direction": "bidirectional",
+      "id": "port-6",
+      "label": "Thread Networking",
+      "signal_type": "network/thread"
+    }
+  ],
+  "capabilities": [
+    {
+      "type": "audio-io"
+    },
+    {
+      "cpu_architecture": "64-bit architecture",
+      "cpu_model": "A8 chip",
+      "os": "tvOS (implied by Apple TV)",
+      "storage_os_gb": 32,
+      "type": "compute"
+    },
+    {
+      "hdr_formats": [
+        "HDR10+",
+        "HDR10",
+        "HLG"
+      ],
+      "native_resolution": {
+        "fps": 60,
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "type": "display"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "HDMI CEC",
+      "transport": "proprietary"
+    }
+  ],
+  "tags": [
+    "4K, HDR, Wi-Fi 6, Bluetooth 5.0, A15 Bionic"
+  ],
+  "category": "media-player",
+  "description": "A 4K streaming player that supports High Dynamic Range (HDR10 and Dolby Vision) and features the tvOS operating system.",
+  "dimensions": {
+    "depth_mm": 98,
+    "height_mm": 35,
+    "width_mm": 98
+  },
+  "environment": {
+    "altitude_max_m": 3000,
+    "humidity_condensing": false,
+    "humidity_max_percent": 95,
+    "operating_temp_max_c": 35,
+    "operating_temp_min_c": 0,
+    "storage_temp_max_c": 45,
+    "storage_temp_min_c": -20
+  },
+  "extensions": {
+    "conduit:unmapped": {
+      "/capabilities/notes": "Supports HEVC SDR up to 1080p, 30 fps"
+    }
+  },
+  "firmware": "tvOS 11.2",
+  "form_factor": "other",
+  "manufacturer": "Apple",
+  "model": "Apple TV HD",
+  "model_variant": "MQD22",
+  "notes": "The document describes both Apple TV 4K and Apple TV HD. Features specific to the 4K model (such as eARC and Dolby Atmos) were excluded from this profile.",
+  "power": {
+    "frequency_hz": [
+      50,
+      60
+    ],
+    "max_wattage": 6,
+    "notes": "Power supply efficiency: Average of the power supply’s measured efficiency when tested at 100 percent, 50 percent, and 20 percent of the power supply’s rated output current.",
+    "psu_type": "internal",
+    "standby_wattage": 0.35,
+    "typical_wattage": 6.07,
+    "voltage_v": [
+      100,
+      240
+    ]
+  },
+  "weight_kg": 0.425,
+  "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/ff/%E7%AC%AC%EF%BC%94%E4%B8%96%E4%BB%A3_AppleTV%E6%9C%AC%E4%BD%93_%E8%83%8C%E9%9D%A2.jpg",
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://fcc.report/FCC-ID/BCGA2843/6156832.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-23",
+      "notes": "Ingested via batch"
+    },
+    {
+      "url": "https://support.apple.com/en-us/111928",
+      "type": "tech-specs-page",
+      "title": "Apple TV HD - Technical Specifications - Apple Support",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.flatpanelshd.com/review.php?subaction=showfull&id=1507035457",
+      "type": "tech-specs-page",
+      "title": "Apple TV 4K review - FlatpanelsHD",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://support.apple.com/en-us/112428",
+      "type": "tech-specs-page",
+      "title": "Apple TV (2nd generation) - Technical Specifications - Apple Support",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.apple.com/apple-tv-4k/specs/",
+      "type": "tech-specs-page",
+      "title": "Apple TV 4K - Technical Specifications - Apple",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.apple.com/environment/pdf/products/appletv/Apple_TV_4K_PER_sept2017.pdf",
+      "type": "datasheet",
+      "title": "Apple TV 4K Environmental Report Apple and the Environment",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    }
+  ]
+}

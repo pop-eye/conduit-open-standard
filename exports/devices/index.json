@@ -1,7 +1,7 @@
 {
   "schema_version": "conduit/v1",
   "generated_at": "2026-07-28",
-  "count": 43,
+  "count": 44,
   "devices": [
     {
       "id": "apple/tv-4k-1st-gen-original-4k-media-player",
@@ -29,6 +29,20 @@
       "port_count": 5,
       "tags": [
         "4K, HDR, Dolby Vision, HLG, HEVC, A12 Bionic, Wi-Fi 6, Thread, Bluetooth 5.0"
+      ]
+    },
+    {
+      "id": "apple/tv-hd-standard-hdmi-media-player",
+      "path": "apple/tv-hd-standard-hdmi-media-player.json",
+      "manufacturer": "Apple",
+      "model": "Apple TV HD",
+      "model_variant": "MQD22",
+      "category": "media-player",
+      "form_factor": "other",
+      "description": "A 4K streaming player that supports High Dynamic Range (HDR10 and Dolby Vision) and features the tvOS operating system.",
+      "port_count": 6,
+      "tags": [
+        "4K, HDR, Wi-Fi 6, Bluetooth 5.0, A15 Bionic"
       ]
     },
     {
