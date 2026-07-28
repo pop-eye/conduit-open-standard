@@ -1,0 +1,234 @@
+{
+  "capabilities": [
+    {
+      "analogue_output_count": 2,
+      "type": "audio-io"
+    },
+    {
+      "cpu_architecture": "ARMv8",
+      "cpu_cores": 4,
+      "cpu_frequency_ghz": 1.5,
+      "cpu_model": "Quad core 64-bit ARM-Cortex A72",
+      "gpu_model": "VideoCore VI 3D Graphics",
+      "ram_gb": 8,
+      "ram_type": "LPDDR4 SDRAM",
+      "storage_type": "sd",
+      "type": "compute"
+    },
+    {
+      "display_technology": "other",
+      "light_source_type": "other",
+      "native_resolution": {
+        "fps": 60,
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "type": "display"
+    }
+  ],
+  "tags": [
+    "Raspberry Pi",
+    "Single Board Computer",
+    "P4B"
+  ],
+  "protocols": [
+    {
+      "name": "HDMI 2.0",
+      "notes": "Supports CEC and HDMI 2.0 with resolutions up to 4Kp60.",
+      "transport": "usb",
+      "version": "2.0"
+    },
+    {
+      "name": "PoE",
+      "notes": "Supports PoE with add-on PoE HAT.",
+      "transport": "proprietary",
+      "version": "1.0"
+    }
+  ],
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "count": 1,
+      "direction": "out",
+      "id": "port-hdmi-1",
+      "label": "HDMI Port 1",
+      "notes": "Supports CEC and HDMI 2.0 with resolutions up to 4Kp60.",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "count": 1,
+      "direction": "out",
+      "id": "port-hdmi-2",
+      "label": "HDMI Port 2",
+      "notes": "Supports CEC and HDMI 2.0 with resolutions up to 4Kp60.",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "usb-a",
+      "count": 2,
+      "direction": "bidirectional",
+      "id": "port-usb-3-1",
+      "label": "USB 3.0 Port 1",
+      "notes": "Downstream USB current is limited to approximately 1.1A in aggregate over the four sockets.",
+      "signal_type": "network/usb/3.2"
+    },
+    {
+      "connector_type": "usb-a",
+      "count": 2,
+      "direction": "bidirectional",
+      "id": "port-usb-3-2",
+      "label": "USB 3.0 Port 2",
+      "notes": "Downstream USB current is limited to approximately 1.1A in aggregate over the four sockets.",
+      "signal_type": "network/usb/3.2"
+    },
+    {
+      "connector_type": "usb-a",
+      "count": 2,
+      "direction": "bidirectional",
+      "id": "port-usb-2-1",
+      "label": "USB 2.0 Port 1",
+      "notes": "Downstream USB current is limited to approximately 1.1A in aggregate over the four sockets.",
+      "signal_type": "network/usb/2.0"
+    },
+    {
+      "connector_type": "usb-a",
+      "count": 2,
+      "direction": "bidirectional",
+      "id": "port-usb-2-2",
+      "label": "USB 2.0 Port 2",
+      "notes": "Downstream USB current is limited to approximately 1.1A in aggregate over the four sockets.",
+      "signal_type": "network/usb/2.0"
+    },
+    {
+      "connector_type": "rj45",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "port-ethernet",
+      "label": "Gigabit Ethernet port",
+      "notes": "Supports PoE with add-on PoE HAT.",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "sd",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "port-sdcard",
+      "label": "SD card socket",
+      "notes": "Supports 1.8V, DDR50 mode (at a peak bandwidth of 50 Megabytes/sec).",
+      "signal_type": "network/sdcard"
+    },
+    {
+      "connector_type": "trrs-3.5mm",
+      "count": 1,
+      "direction": "out",
+      "id": "port-audio-composite",
+      "label": "Audio and Composite TV Out",
+      "notes": "4-ring TRS 'A/V' jack. The analog audio output can drive 32 Ohm headphones directly.",
+      "signal_type": "audio/analogue/unbalanced"
+    },
+    {
+      "connector_type": "gpio-header-40pin",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "port-gpio",
+      "label": "GPIO Header",
+      "notes": "28us 28cmT211 GPIOs available via a standard Raspberry Pi-40 pin header.",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "fpc-15pin",
+      "count": 1,
+      "direction": "in",
+      "id": "port-mipi-csi",
+      "label": "Camera Port",
+      "notes": "Raspberry Pi 2-lane MIPI CSI Camera.",
+      "signal_type": "network/mipi/csi-2"
+    },
+    {
+      "connector_type": "fpc-15pin",
+      "count": 1,
+      "direction": "out",
+      "id": "port-mipi-dsi",
+      "label": "Display Port",
+      "notes": "Raspberry Pi 2-lane MIPI DSI Display.",
+      "signal_type": "network/mipi/dsi"
+    }
+  ],
+  "category": "media-player",
+  "description": "High-performance 64-bit quad-core processor, dual-display support at resolutions up to 4K via a pair of micro HDMI ports, hardware video decode at up to 4Kp60, up to 8GB of RAM, dual-band 2.4/5.0 GHz wireless LAN, Bluetooth 5.0, Gigabit Ethernet, USB 3.0, and PoE capability (via a separate PoE HAT add-on).",
+  "dimensions": {
+    "depth_mm": 85,
+    "height_mm": 49,
+    "width_mm": 56
+  },
+  "environment": {
+    "operating_temp_max_c": 85,
+    "operating_temp_min_c": 0
+  },
+  "extensions": {
+    "conduit:unmapped": {
+      "/capabilities/notes": "4-pole stereo audio and composite video port"
+    }
+  },
+  "firmware": "Release 1.1",
+  "form_factor": "other",
+  "manufacturer": "Raspberry Pi",
+  "model": "Raspberry Pi 4 Model B",
+  "model_variant": "8GB RAM, Media Player variant",
+  "power": {
+    "connector_type": "usb-c",
+    "max_wattage": 15,
+    "notes": "Power over Ethernet (PoE)–enabled (requires separate PoE HAT)",
+    "psu_type": "usb-pd",
+    "typical_wattage": 15,
+    "voltage_v": 5
+  },
+  "reliability": {
+    "eol_date": "2026-01-01"
+  },
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-product-brief.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-23",
+      "notes": "Ingested via batch"
+    },
+    {
+      "url": "https://datasheets.raspberrypi.com/rpi4/raspberry-pi-4-datasheet.pdf",
+      "type": "datasheet",
+      "title": "DATASHEET Raspberry Pi 4 Model B Release 1.1 March 2024",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://wiki.geekworm.com/Raspberry_Pi_4_Model_B",
+      "type": "tech-specs-page",
+      "title": "Raspberry Pi 4 Model B - Geekworm Wiki",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://52pi.com/products/52pi-raspberry-pi-4-model-b-with-2gb-4gb-8gb-ram-64bit-quadcore-1-5ghz",
+      "type": "tech-specs-page",
+      "title": "Raspberry Pi 4 Model B with 4GB/8GB RAM 64bit QuadCore 1.5GHz – 52Pi Store",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.canakit.com/raspberry-pi-4-4gb.html",
+      "type": "tech-specs-page",
+      "title": "Raspberry Pi 4 4GB Model B",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://chicagodist.com/products/raspberry-pi-4-model-b-8gb",
+      "type": "tech-specs-page",
+      "title": "Raspberry Pi 4 Model B 8GB — Chicago Electronic Distributors",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    }
+  ]
+}

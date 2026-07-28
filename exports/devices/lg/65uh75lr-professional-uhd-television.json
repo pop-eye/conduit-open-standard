@@ -1,0 +1,144 @@
+{
+  "capabilities": [
+    {
+      "brightness_iso_lm": 500,
+      "colour_spaces": [
+        "BT709"
+      ],
+      "contrast_ratio_full": 1100,
+      "display_technology": "lcd",
+      "native_resolution": {
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "type": "display"
+    },
+    {
+      "os": "webOS 6.0",
+      "ram_gb": 16,
+      "type": "compute"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "SNMP",
+      "transport": "udp",
+      "version": "v2c/v3"
+    }
+  ],
+  "ports": [
+    {
+      "connector_type": "displayport-a",
+      "direction": "in",
+      "id": "dp-in",
+      "label": "DP IN",
+      "signal_type": "video/displayport/1.4"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "hdmi-in-1",
+      "label": "HDMI IN 1",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "hdmi-in-2",
+      "label": "HDMI IN 2",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "dvi-d",
+      "direction": "in",
+      "id": "dvi-in",
+      "label": "DVI-D IN",
+      "signal_type": "video/dvi-d"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "in",
+      "id": "usb-1",
+      "label": "USB 2.0 IN",
+      "signal_type": "network/usb/2.0"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "in",
+      "id": "rs232-in",
+      "label": "RS-232C IN",
+      "signal_type": "control/rs232"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "out",
+      "id": "rs232-out",
+      "label": "RS-232C OUT",
+      "signal_type": "control/rs232"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "in",
+      "id": "audio-in",
+      "label": "AUDIO IN",
+      "signal_type": "audio/analogue/unbalanced"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "out",
+      "id": "audio-out",
+      "label": "AUDIO OUT",
+      "signal_type": "audio/analogue/unbalanced"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "bidirectional",
+      "id": "lan",
+      "label": "LAN",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "out",
+      "id": "hdmi-out",
+      "label": "HDMI Out",
+      "signal_type": "video/hdmi/2.0"
+    }
+  ],
+  "category": "display",
+  "control": {
+    "snmp": true
+  },
+  "description": "Professional UHD Television with webOS Smart platform and IP5X certification.",
+  "environment": {
+    "humidity_condensing": false,
+    "humidity_max_percent": 80,
+    "ip_rating": "IP5X",
+    "operating_temp_max_c": 40,
+    "operating_temp_min_c": 0
+  },
+  "manufacturer": "LG Electronics",
+  "model": "65UH5J-H",
+  "notes": "Includes features such as webRTC, Pro:Idiom, Tile Mode Setting (Max. 15x15), and Crestron Connected compatibility.",
+  "power": {
+    "frequency_hz": [
+      50,
+      60
+    ],
+    "max_wattage": 190,
+    "typical_wattage": 130,
+    "voltage_v": [
+      100,
+      240
+    ]
+  },
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.lg.com/us/business/download/resources/CT00001837/LG_SPEC-SHEET_UH5J%20Series_0423SK_LR%5B20230701_065503%5D.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-22",
+      "notes": "Ingested via batch"
+    }
+  ]
+}

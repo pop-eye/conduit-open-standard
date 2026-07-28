@@ -1,0 +1,62 @@
+{
+  "protocols": [
+    {
+      "name": "Dolby Audio",
+      "transport": "proprietary"
+    },
+    {
+      "name": "DTS",
+      "transport": "proprietary"
+    },
+    {
+      "name": "AVC",
+      "transport": "proprietary"
+    },
+    {
+      "name": "VC-1",
+      "transport": "proprietary"
+    }
+  ],
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "port-1",
+      "label": "HDMI IN (ARC)",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "out",
+      "id": "port-2",
+      "label": "HDMI OUT",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "in",
+      "id": "port-3",
+      "label": "USB port",
+      "signal_type": "network/usb/2.0"
+    }
+  ],
+  "category": "media-player",
+  "description": "Blu-ray DiscTM Player",
+  "manufacturer": "Panasonic",
+  "model": "DMP-BD82",
+  "power": {
+    "notes": "Power consumption in quick start (Quick Start: On) standby mode is approx. 3.5 W",
+    "standby_wattage": 0.5,
+    "typical_wattage": 11,
+    "voltage_v": 12
+  },
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://help.na.panasonic.com/wp-content/uploads/2023/04/DMPBD84PK_DMPBD90_TQBS0469-2_ENG.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-22",
+      "notes": "Ingested via batch"
+    }
+  ]
+}

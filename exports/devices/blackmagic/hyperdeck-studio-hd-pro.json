@@ -1,0 +1,299 @@
+{
+  "ports": [
+    {
+      "connector_type": "bnc",
+      "direction": "in",
+      "id": "port-1",
+      "label": "SDI Video Input",
+      "signal_type": "video/sdi"
+    },
+    {
+      "connector_type": "bnc",
+      "direction": "out",
+      "id": "port-2",
+      "label": "SDI Video Output 1",
+      "signal_type": "video/sdi"
+    },
+    {
+      "connector_type": "bnc",
+      "direction": "out",
+      "id": "port-3",
+      "label": "SDI Monitor Output",
+      "signal_type": "video/sdi"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "port-4",
+      "label": "HDMI 2.0 Video Input",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "out",
+      "id": "port-5",
+      "label": "HDMI 2.0 Video Output",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "out",
+      "id": "port-6",
+      "label": "Built in Speaker",
+      "signal_type": "audio/analogue/speaker"
+    },
+    {
+      "connector_type": "trs-6.35mm",
+      "direction": "out",
+      "id": "port-7",
+      "label": "Audio Output",
+      "signal_type": "audio/analogue/balanced"
+    },
+    {
+      "connector_type": "xlr-3m",
+      "direction": "in",
+      "id": "port-8",
+      "label": "Timecode Input",
+      "signal_type": "control/timecode/ltc"
+    },
+    {
+      "connector_type": "xlr-3m",
+      "direction": "out",
+      "id": "port-9",
+      "label": "Timecode Output",
+      "signal_type": "control/timecode/ltc"
+    },
+    {
+      "connector_type": "bnc",
+      "direction": "in",
+      "id": "port-10",
+      "label": "Reference Input",
+      "signal_type": "video/sync/analogue-bilevel"
+    },
+    {
+      "connector_type": "bnc",
+      "direction": "out",
+      "id": "port-11",
+      "label": "Reference Output",
+      "signal_type": "video/sync/analogue-bilevel"
+    },
+    {
+      "connector_type": "bnc",
+      "direction": "in",
+      "id": "port-12",
+      "label": "SDI Audio Input",
+      "signal_type": "audio/embedded/sdi"
+    },
+    {
+      "connector_type": "bnc",
+      "direction": "out",
+      "id": "port-13",
+      "label": "SDI Audio Output",
+      "signal_type": "audio/embedded/sdi"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "port-14",
+      "label": "HDMI Audio Input",
+      "signal_type": "audio/embedded/hdmi"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "out",
+      "id": "port-15",
+      "label": "HDMI Audio Output",
+      "signal_type": "audio/embedded/hdmi"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "in",
+      "id": "port-16",
+      "label": "Remote Control In",
+      "signal_type": "control/rs422"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "out",
+      "id": "port-17",
+      "label": "Remote Control Out",
+      "signal_type": "control/rs422"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "bidirectional",
+      "id": "port-18",
+      "label": "Ethernet",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "usb-c",
+      "direction": "bidirectional",
+      "id": "port-19",
+      "label": "Computer Interface",
+      "signal_type": "network/usb/3.0"
+    }
+  ],
+  "tags": [
+    "broadcast-deck, recording, media-player, rackmount"
+  ],
+  "capabilities": [
+    {
+      "ad_bit_depth": 24,
+      "analogue_input_count": 6,
+      "analogue_output_count": 0,
+      "da_bit_depth": 24,
+      "supported_sample_rates_hz": [
+        48000
+      ],
+      "type": "audio-io"
+    },
+    {
+      "os": "Blackmagic OS",
+      "storage_type": "ssd-nvme",
+      "type": "compute"
+    },
+    {
+      "type": "display"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "H.264",
+      "notes": "Supported for recording and playback; compatible with YouTube.",
+      "transport": "proprietary",
+      "version": "1.0"
+    },
+    {
+      "name": "H.265",
+      "notes": "Supported for Ultra HD recording on 4K Pro model.",
+      "transport": "proprietary",
+      "version": "1.0"
+    },
+    {
+      "name": "ProRes",
+      "notes": "Supports ProRes 4444 files with alpha channel (Plus and Pro models).",
+      "transport": "proprietary",
+      "version": "4444"
+    },
+    {
+      "name": "DNxHD",
+      "notes": "Supported for recording.",
+      "transport": "proprietary",
+      "version": "1.0"
+    }
+  ],
+  "category": "media-player",
+  "description": "A professional recording and media player device that supports various video standards including SD, HD, 2K DCI, Ultra HD, and 4K DCI.",
+  "dimensions": {
+    "width_mm": 482.6
+  },
+  "environment": {
+    "humidity_condensing": false,
+    "humidity_max_percent": 90,
+    "operating_temp_max_c": 40,
+    "operating_temp_min_c": 0,
+    "storage_temp_max_c": 60,
+    "storage_temp_min_c": -20
+  },
+  "extensions": {
+    "conduit:unmapped": {
+      "/capabilities/notes": "Built-in LCD shows video preview and status information such as video format, frame rate, record/playback modes, active media slot, timecode, and audio levels."
+    }
+  },
+  "firmware": "Blackmagic OS",
+  "form_factor": "rackmount",
+  "manufacturer": "Blackmagic Design",
+  "model": "HyperDeck Studio HD Pro",
+  "notes": "The HD Pro model specifically adds 2 SSD slots and a machined metal search dial with clutch, plus XLR timecode connections. It supports ProRes 4444 for fill and key playback.",
+  "power": {
+    "connector_type": "iec-c13",
+    "frequency_hz": [
+      50,
+      60
+    ],
+    "max_wattage": 100,
+    "psu_type": "internal",
+    "redundant_psu": true,
+    "voltage_v": [
+      100,
+      240
+    ]
+  },
+  "rack_units": 1,
+  "reliability": {
+    "warranty_years": 1
+  },
+  "image_url": "https://www.filmtools.com/media/catalog/product/b/l/blackmagic_design_hyperdeck_studio_4k_pro_1.jpg?optimize=medium&bg-color=255,255,255&fit=bounds&height=521&width=521&canvas=521:521",
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://documents.blackmagicdesign.com/UserManuals/HyperDeckManual.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-23",
+      "notes": "Ingested via batch"
+    },
+    {
+      "url": "https://www.blackmagicdesign.com/products/hyperdeckstudio/techspecs",
+      "type": "tech-specs-page",
+      "title": "HyperDeck Studio – Tech Specs | Blackmagic Design",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.blackmagicdesign.com/products/hyperdeckstudio",
+      "type": "tech-specs-page",
+      "title": "HyperDeck Studio | Blackmagic Design",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.blackmagicdesign.com/products/hyperdeckstudio/models/",
+      "type": "tech-specs-page",
+      "title": "HyperDeck Studio – Models | Blackmagic Design",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.blackmagicdesign.com/products/hyperdeckstudio/blackmagicos",
+      "type": "tech-specs-page",
+      "title": "HyperDeck Studio – Blackmagic OS | Blackmagic Design",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.blackmagicdesign.com/products/hyperdeckstudio/workflow",
+      "type": "tech-specs-page",
+      "title": "HyperDeck Studio – Workflow | Blackmagic Design",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.blackmagicdesign.com/developer/products/hyperdeck/techspecs",
+      "type": "tech-specs-page",
+      "title": "Developer – Tech Specs | Blackmagic Design",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.blackmagicdesign.com/products/hyperdeckextreme/techspecs",
+      "type": "tech-specs-page",
+      "title": "HyperDeck Extreme – Tech Specs | Blackmagic Design",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.blackmagicdesign.com/uk/store/record-capture-playback/recording-disk-storage/W-HYD-13",
+      "type": "tech-specs-page",
+      "title": "HyperDeck Studio HD Pro | Blackmagic Design Store",
+      "retrieved_date": "2026-07-23"
+    },
+    {
+      "url": "https://www.blackmagicdesign.com/developer/products/hyperdeck/resources",
+      "type": "tech-specs-page",
+      "title": "Developer | Blackmagic Design",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    }
+  ]
+}

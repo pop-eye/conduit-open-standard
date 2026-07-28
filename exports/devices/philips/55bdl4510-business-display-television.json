@@ -1,0 +1,226 @@
+{
+  "ports": [
+    {
+      "connector_type": "displayport-a",
+      "count": 1,
+      "direction": "in",
+      "id": "port-1",
+      "label": "DisplayPort 1.2 (x1)",
+      "signal_type": "video/displayport/1.2"
+    },
+    {
+      "connector_type": "dvi-i",
+      "count": 1,
+      "direction": "in",
+      "id": "port-2",
+      "label": "DVI-I (x 1)",
+      "signal_type": "video/dvi-i"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "count": 2,
+      "direction": "in",
+      "id": "port-3",
+      "label": "HDMI 2.0 (x2)",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "usb-a",
+      "count": 2,
+      "direction": "in",
+      "id": "port-4",
+      "label": "USB 2.0 (x2)",
+      "signal_type": "network/usb/2.0"
+    },
+    {
+      "connector_type": "displayport-a",
+      "count": 1,
+      "direction": "out",
+      "id": "port-5",
+      "label": "DisplayPort 1.2 (x1)",
+      "signal_type": "video/displayport/1.2"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "count": 1,
+      "direction": "out",
+      "id": "port-6",
+      "label": "HDMI 2.0 (x1)",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "count": 1,
+      "direction": "in",
+      "id": "port-7",
+      "label": "Audio input 3.5 mm jack",
+      "signal_type": "audio/analogue/microphone"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "count": 1,
+      "direction": "out",
+      "id": "port-8",
+      "label": "Audio output 3.5mm jack",
+      "signal_type": "audio/analogue/speaker"
+    },
+    {
+      "connector_type": "rj45",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "port-9",
+      "label": "External control RJ45",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "de-15",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "port-10",
+      "label": "RS232C (in/out)",
+      "signal_type": "control/rs232"
+    },
+    {
+      "connector_type": "internal",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "port-11",
+      "label": "IR (in/out)",
+      "signal_type": "control/ir"
+    }
+  ],
+  "tags": [
+    "4K UHD",
+    "SmartPlayer",
+    "FailOver",
+    "CMND & Control",
+    "SmartPower"
+  ],
+  "capabilities": [
+    {
+      "os": "Android",
+      "type": "compute"
+    },
+    {
+      "contrast_ratio_full": 5000,
+      "display_technology": "lcd",
+      "native_resolution": {
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "type": "display"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "AAC",
+      "transport": "proprietary"
+    },
+    {
+      "name": "HEAAC",
+      "transport": "proprietary"
+    },
+    {
+      "name": "MPEG",
+      "transport": "proprietary"
+    },
+    {
+      "name": "BMP",
+      "transport": "proprietary"
+    },
+    {
+      "name": "JPEG",
+      "transport": "proprietary"
+    },
+    {
+      "name": "PNG",
+      "transport": "proprietary"
+    },
+    {
+      "name": "MPEG",
+      "transport": "proprietary"
+    },
+    {
+      "name": "H.263",
+      "transport": "proprietary"
+    },
+    {
+      "name": "H.264",
+      "transport": "proprietary"
+    },
+    {
+      "name": "H.265",
+      "transport": "proprietary"
+    },
+    {
+      "name": "VP8",
+      "transport": "proprietary"
+    }
+  ],
+  "category": "display",
+  "description": "Professional Display Solutions D Line Business Display.",
+  "dimensions": {
+    "depth_mm": 63.6,
+    "height_mm": 712.6,
+    "width_mm": 1241.8
+  },
+  "environment": {
+    "altitude_max_m": 3000,
+    "humidity_condensing": false,
+    "humidity_max_percent": 80,
+    "operating_temp_max_c": 40,
+    "operating_temp_min_c": 0,
+    "storage_temp_max_c": 65,
+    "storage_temp_min_c": -20
+  },
+  "form_factor": "other",
+  "manufacturer": "Philips",
+  "model": "55BDL4550D",
+  "model_variant": "Business Display",
+  "notes": "Features CMND & Control for LAN-based monitoring and input control, FailOver for automatic input switching, and SmartPlayer for USB content scheduling.",
+  "power": {
+    "connector_type": "iec-c13",
+    "frequency_hz": [
+      50,
+      60
+    ],
+    "max_wattage": 180,
+    "notes": "SmartPower allows backlight intensity to be controlled and pre-set by the system to reduce power consumption by up to 50%.",
+    "psu_type": "internal",
+    "standby_wattage": 0.5,
+    "typical_wattage": 120,
+    "voltage_v": [
+      100,
+      240
+    ]
+  },
+  "reliability": {
+    "warranty_notes": "data subject to change without notice.",
+    "warranty_years": 3
+  },
+  "subcategory": "Commercial Display",
+  "weight_kg": 16.6,
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.documents.philips.com/assets/20230531/f2384bd95ef34eb2892cb01300f71b90.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-22",
+      "notes": "Ingested via batch"
+    },
+    {
+      "url": "https://store.midwich.com/products/details/PHI55BDL4511D",
+      "type": "tech-specs-page",
+      "title": "Midwich Ltd - Philips 55\" 55BDL4511D/00 Commercial Display (PHI55BDL4511D)",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.documents.philips.com/assets/20230530/8a302e70ecfa4eb6b414b01201299a22.pdf",
+      "type": "datasheet",
+      "title": "D-Line Display • 55\" • UHD (3840 x 2160) • 500cd/m² 55BDL4510D/00 Say more",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    }
+  ]
+}

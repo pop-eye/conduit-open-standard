@@ -1,0 +1,88 @@
+{
+  "capabilities": [
+    {
+      "display_technology": "lcd",
+      "light_source_type": "other",
+      "native_resolution": {
+        "height_px": 1080,
+        "width_px": 1920
+      },
+      "type": "display"
+    }
+  ],
+  "tags": [
+    "4K UHD, OLED, QNED, High Brightness, Smart TV, Gaming Ready"
+  ],
+  "protocols": [
+    {
+      "name": "NVIDIA G-SYNC",
+      "notes": "Supported for smooth, responsive gameplay.",
+      "transport": "proprietary",
+      "version": "1.0"
+    },
+    {
+      "name": "AMD FreeSync",
+      "notes": "Supported for smooth, responsive gameplay.",
+      "transport": "proprietary",
+      "version": "1.0"
+    }
+  ],
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "count": 4,
+      "direction": "in",
+      "id": "port-1",
+      "label": "HDMI Input",
+      "notes": "Supports HDMI 2.1 for gaming features like G-SYNC and FreeSync.",
+      "signal_type": "video/hdmi/2.1"
+    }
+  ],
+  "category": "display",
+  "description": "Standard Performance Digital Signage - SM5KD Series with Smart Platform and Quad Core SoC.",
+  "dimensions": {
+    "depth_mm": 53,
+    "height_mm": 714,
+    "width_mm": 1237
+  },
+  "environment": {
+    "humidity_max_percent": 80,
+    "operating_temp_max_c": 8,
+    "operating_temp_min_c": 0
+  },
+  "form_factor": "wall-mount",
+  "manufacturer": "LG Electronics Inc.",
+  "model": "SM5KD",
+  "model_variant": "55SM5KD",
+  "notes": "Supports webOS 3.0 signage platform with Quad Core SoC and built-in Wi-Fi/BLE.",
+  "power": {
+    "frequency_hz": [
+      50,
+      60
+    ],
+    "max_wattage": 100,
+    "psu_type": "internal",
+    "typical_wattage": 70,
+    "voltage_v": [
+      100,
+      240
+    ]
+  },
+  "weight_kg": 17.51,
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.lg.com/us/business/download/resources/BT00001837/LG_SPEC-SHEET_SM5KD_031834_PR%20(1).pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-22",
+      "notes": "Ingested via batch"
+    },
+    {
+      "url": "https://www.lg.com/us/collections/55-inch-tvs",
+      "type": "tech-specs-page",
+      "title": "55 Inch TVs | AI Smart OLED, QNED & UHD Smart TVs | LG USA",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    }
+  ]
+}

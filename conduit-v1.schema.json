@@ -163,6 +163,11 @@
       "format": "uri",
       "description": "URL to the official user manual."
     },
+    "image_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to a primary product image (photograph or render) of the device."
+    },
     "gdtf_fixture_type": {
       "oneOf": [
         {
@@ -2002,6 +2007,8 @@
         "audio/usb",
         "audio/bluetooth",
         "audio/bluetooth/a2dp",
+        "audio/embedded/hdmi",
+        "audio/embedded/sdi",
         "lighting/dmx512",
         "lighting/artnet",
         "lighting/artnet/rdm",
@@ -2025,6 +2032,8 @@
         "control/gpio/contact-closure",
         "control/gpio/relay",
         "control/gpio/ttl",
+        "control/ir",
+        "control/usb",
         "control/timecode/ltc",
         "control/timecode/mtc",
         "control/timecode/ptp",
@@ -2053,6 +2062,8 @@
         "network/thunderbolt/3",
         "network/thunderbolt/4",
         "network/usb/2.0",
+        "network/usb/3.0",
+        "network/usb/3.1",
         "network/usb/3.2",
         "network/usb4",
         "network/pcie/2.0",
@@ -2137,6 +2148,7 @@
         "displayport-mini",
         "dvi-d",
         "dvi-i",
+        "de-9",
         "de-15",
         "rca-composite",
         "bnc-composite",
@@ -2208,6 +2220,7 @@
         "socapex-19pin",
         "cacombo",
         "pigtail-sma",
+        "rp-sma",
         "slot"
       ]
     },
@@ -2333,9 +2346,11 @@
             "udp",
             "tcp",
             "udp-tcp",
+            "ip",
             "serial",
             "usb",
             "bluetooth",
+            "wifi",
             "proprietary"
           ],
           "description": "Underlying transport layer."

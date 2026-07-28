@@ -1,0 +1,198 @@
+{
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "port-1",
+      "label": "HDMI 2.1",
+      "signal_type": "video/hdmi/2.1"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "bidirectional",
+      "id": "port-2",
+      "label": "Gigabit Ethernet",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "wireless",
+      "direction": "bidirectional",
+      "id": "port-3",
+      "label": "802.11ax Wi-Fi 6 with MIMO",
+      "signal_type": "network/wifi/6g"
+    },
+    {
+      "connector_type": "wireless",
+      "direction": "bidirectional",
+      "id": "port-4",
+      "label": "Bluetooth 5.0",
+      "signal_type": "network/bluetooth"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "in",
+      "id": "port-5",
+      "label": "USB 2.0 (for service and support)",
+      "signal_type": "network/usb/2.0"
+    }
+  ],
+  "tags": [
+    "4K, HDR, Dolby Vision, HLG, HEVC, A12 Bionic, Wi-Fi 6, Thread, Bluetooth 5.0"
+  ],
+  "capabilities": [
+    {
+      "ad_bit_depth": 24,
+      "supported_sample_rates_hz": [
+        48000
+      ],
+      "type": "audio-io"
+    },
+    {
+      "cpu_cores": 3,
+      "cpu_frequency_ghz": 2.49,
+      "cpu_model": "Apple A12 Bionic",
+      "ram_gb": 3,
+      "storage_os_gb": 64,
+      "type": "compute"
+    },
+    {
+      "hdr_formats": [
+        "HDR10"
+      ],
+      "native_resolution": {
+        "fps": 60,
+        "hdr": [],
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "type": "display"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "Thread",
+      "notes": "Compatible with HomeKit or Matter-enabled Thread accessories only.",
+      "transport": "wifi",
+      "version": "1.0"
+    },
+    {
+      "name": "CEC",
+      "notes": "Control your TV or receiver via IR or CEC",
+      "transport": "proprietary",
+      "version": "1.0"
+    }
+  ],
+  "category": "media-player",
+  "description": "The Apple TV (4k 2nd Gen) - MXH02LL/A was released in 2021 and features a 2.49GHz Apple A12 Bionic processor, 3GB of RAM, and 64GB of storage.",
+  "dimensions": {
+    "depth_mm": 98,
+    "height_mm": 35,
+    "width_mm": 96
+  },
+  "extensions": {
+    "conduit:unmapped": {
+      "/capabilities/hdr": true
+    }
+  },
+  "firmware": "tvOS 16.2",
+  "form_factor": "other",
+  "manufacturer": "Apple",
+  "model": "Apple TV 4K",
+  "model_variant": "2nd generation",
+  "notes": "Supports Dolby Atmos sound; includes Siri Remote with touch-enabled clickpad; supports private listening with up to two AirPods; functions as a Thread Border Router.",
+  "power": {
+    "connector_type": "iec-c13",
+    "max_wattage": 5,
+    "psu_type": "internal",
+    "standby_wattage": 1.5
+  },
+  "subcategory": "streaming device",
+  "weight_kg": 0.425,
+  "image_url": "https://i.ebayimg.com/images/g/F4AAAeSwimlqXRxX/s-l400.webp",
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.sellyourmac.com/mac-product-guides/apple-tv/mxh02ll-a-apple-tv-4k-2nd-gen-64gb.html",
+      "type": "tech-specs-page",
+      "title": "Apple TV (4k 2nd Gen) 64GB MXH02LL/A - Specifications - SellYourMac.com",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.sellyourmac.com/mac-product-guides/apple-tv/mxgy2ll-a-apple-tv-4k-2nd-gen-32gb.html",
+      "type": "tech-specs-page",
+      "title": "Apple TV (4k 2nd Gen) 32GB MXGY2LL/A - Specifications - SellYourMac.com",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://apple.techable.com/apple-tv-4k-6th-generation-a12-2021-silver-siri-remote/",
+      "type": "tech-specs-page",
+      "title": "Apple TV 4K (2021, A12, Silver Siri Remote) Specs, MXGY2LL/A, A2169, EMC 3111 | Techable",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.sellyourmac.com/mac-product-guides/apple-tv/mxh02ll-a-apple-tv-4k-2nd-gen-64gb.html",
+      "type": "tech-specs-page",
+      "title": "Apple TV (4k 2nd Gen) 64GB MXH02LL/A - Specifications - SellYourMac.com",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.matteralpha.com/apple/apple-tv-4k-2nd-gen-p3023",
+      "type": "tech-specs-page",
+      "title": "Apple TV 4K (2nd gen) Information, Specification, News & More | Matter Alpha",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://apple.techable.com/apple-tv-4k-6th-generation-a12-2021-silver-siri-remote/",
+      "type": "tech-specs-page",
+      "title": "Apple TV 4K (2021, A12, Silver Siri Remote) Specs, MXGY2LL/A, A2169, EMC 3111 | Techable",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.matteralpha.com/apple/apple-tv-4k-2nd-gen-p3023",
+      "type": "tech-specs-page",
+      "title": "Apple TV 4K (2nd gen) Information, Specification, News & More | Matter Alpha",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://support.apple.com/en-us/111922",
+      "type": "tech-specs-page",
+      "title": "Apple TV 4K (2nd generation) - Technical Specifications - Apple Support",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.flatpanelshd.com/review.php?subaction=showfull&id=1668063491",
+      "type": "tech-specs-page",
+      "title": "Apple TV 4K (2022) review - FlatpanelsHD",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.gsmarena.com/apple_announces_second_generation_apple_tv_4k-news-48754.php",
+      "type": "tech-specs-page",
+      "title": "Second generation Apple TV 4K with A12 Bionic announced - GSMArena.com news",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "http://archimago.blogspot.com/2021/07/apple-tv-4k-2nd-generation-2021-a12.html",
+      "type": "tech-specs-page",
+      "title": "Archimago's Musings: Apple TV 4K, 2nd Generation (2021, A12 Bionic SoC, 6th Gen Apple TV): A look and listen (to \"Spatial Audio\" on Apple Music)...",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.apple.com/environment/pdf/products/appletv/Apple_TV_4K_PER_Oct2022.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-23",
+      "notes": "Ingested via batch"
+    }
+  ]
+}

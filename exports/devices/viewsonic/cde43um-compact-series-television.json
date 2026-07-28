@@ -1,0 +1,126 @@
+{
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "hdmi-1",
+      "label": "HDMI 1",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "hdmi-2",
+      "label": "HDMI 2",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "hdmi-3",
+      "label": "HDMI 3",
+      "notes": "Supports ARC",
+      "signal_type": "video/hdmi/2.1"
+    },
+    {
+      "connector_type": "de-15",
+      "direction": "in",
+      "id": "vga-1",
+      "label": "VGA IN",
+      "notes": "1080p@60Hz",
+      "signal_type": "video/vga"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "in",
+      "id": "audio-in-1",
+      "label": "PC AUDIO IN",
+      "signal_type": "audio/analogue/unbalanced"
+    },
+    {
+      "connector_type": "de-15",
+      "direction": "bidirectional",
+      "id": "rs232-1",
+      "label": "RS232",
+      "signal_type": "control/rs232"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "out",
+      "id": "audio-out-1",
+      "label": "Audio out",
+      "signal_type": "audio/analogue/speaker"
+    },
+    {
+      "connector_type": "toslink",
+      "direction": "out",
+      "id": "spdif-1",
+      "label": "SPDIF",
+      "signal_type": "audio/spdif/optical"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "bidirectional",
+      "id": "lan-1",
+      "label": "LAN",
+      "notes": "Support WOL",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "bidirectional",
+      "id": "usb-a-1",
+      "label": "USB Type A 1",
+      "notes": "for system update & media playback",
+      "signal_type": "network/usb/2.0"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "bidirectional",
+      "id": "usb-a-2",
+      "label": "USB Type A 2",
+      "notes": "for system update & media playback",
+      "signal_type": "network/usb/2.0"
+    },
+    {
+      "connector_type": "usb-c",
+      "direction": "bidirectional",
+      "id": "usb-c-1",
+      "label": "TYPE C",
+      "notes": "with DP1.2/HDCP1.4/2.2 + Data2.0",
+      "signal_type": "video/usb-c-dp-alt"
+    }
+  ],
+  "category": "display",
+  "description": "OS-free 4K Commercial Display designed for secure, round-the-clock operation in mission-critical environments.",
+  "dimensions": {
+    "depth_mm": 84.6,
+    "height_mm": 558.3,
+    "width_mm": 969.9
+  },
+  "environment": {
+    "humidity_condensing": false,
+    "humidity_max_percent": 80,
+    "operating_temp_max_c": 40,
+    "operating_temp_min_c": 0
+  },
+  "manufacturer": "ViewSonic",
+  "model": "CDE43G3-1C",
+  "power": {
+    "max_wattage": 48.5,
+    "voltage_v": [
+      100,
+      240
+    ]
+  },
+  "weight_kg": 9.75,
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://images.visunextgroup.com/documents/manufacturer-1000036702-pdf-1-de-datasheet.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-22",
+      "notes": "Ingested via batch"
+    }
+  ]
+}

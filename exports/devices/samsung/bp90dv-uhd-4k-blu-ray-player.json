@@ -1,0 +1,61 @@
+{
+  "capabilities": [
+    {
+      "native_resolution": {
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "type": "display"
+    },
+    {
+      "cpu_cores": 4,
+      "type": "compute"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "Dolby Digital Plus",
+      "transport": "proprietary"
+    },
+    {
+      "name": "DTS Premium Sound 5.1",
+      "transport": "proprietary"
+    }
+  ],
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "count": 3,
+      "direction": "in",
+      "id": "hdmi_port",
+      "label": "HDMI",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "usb-a",
+      "count": 2,
+      "direction": "in",
+      "id": "usb_port",
+      "label": "USB",
+      "signal_type": "network/usb/2.0"
+    }
+  ],
+  "category": "media-player",
+  "description": "UHD 4K, Blu-ray Player variant",
+  "extensions": {
+    "conduit:unmapped": {
+      "/capabilities/hdr": true
+    }
+  },
+  "manufacturer": "Samsung",
+  "model": "BP90dv",
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://image-us.samsung.com/SamsungUS/home/televisions-and-home-theater/tvs/4k-uhd/pdp/un65mu6290fxza/pdf/TV_MU6290_071417_SpecSheet.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-22",
+      "notes": "Ingested via batch"
+    }
+  ]
+}

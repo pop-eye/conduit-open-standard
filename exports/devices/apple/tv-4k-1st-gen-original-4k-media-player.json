@@ -1,0 +1,152 @@
+{
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "direction": "out",
+      "id": "port-1",
+      "label": "HDMI",
+      "signal_type": "video/hdmi/2.1"
+    },
+    {
+      "connector_type": "wireless",
+      "direction": "bidirectional",
+      "id": "port-2",
+      "label": "Wi-Fi",
+      "signal_type": "network/wifi/5g"
+    },
+    {
+      "connector_type": "wireless",
+      "direction": "bidirectional",
+      "id": "port-3",
+      "label": "Bluetooth",
+      "signal_type": "network/bluetooth"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "in",
+      "id": "port-4",
+      "label": "IR Receiver",
+      "signal_type": "control/ir"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "bidirectional",
+      "id": "port-5",
+      "label": "Gigabit Ethernet",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "wireless",
+      "direction": "bidirectional",
+      "id": "port-6",
+      "label": "Thread Networking",
+      "signal_type": "network/thread"
+    }
+  ],
+  "tags": [
+    "4K, HDR, Apple TV, A15 Bionic, Wi-Fi 6, Thread"
+  ],
+  "capabilities": [
+    {
+      "cpu_model": "A15 Bionic chip",
+      "os": "tvOS (implied by Apple TV)",
+      "type": "compute"
+    },
+    {
+      "native_resolution": {
+        "fps": 60,
+        "hdr": [],
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "type": "display"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "HDMI CEC",
+      "notes": "Control your TV or receiver via IR or CEC",
+      "transport": "proprietary",
+      "version": "1.4+"
+    },
+    {
+      "name": "Wi-Fi 6",
+      "transport": "wifi",
+      "version": "802.11ax"
+    }
+  ],
+  "category": "media-player",
+  "datasheet_url": "http://www.recordere.dk/2015/11/test-apple-tv-4/",
+  "description": "Apple TV 4 Media player",
+  "dimensions": {
+    "depth_mm": 98,
+    "height_mm": 35,
+    "width_mm": 98
+  },
+  "environment": {
+    "altitude_max_m": 3000,
+    "humidity_condensing": false,
+    "humidity_max_percent": 95,
+    "operating_temp_max_c": 35,
+    "operating_temp_min_c": 0,
+    "storage_temp_max_c": 45,
+    "storage_temp_min_c": -20
+  },
+  "extensions": {
+    "conduit:unmapped": {
+      "/capabilities/confidence": 1.0,
+      "/capabilities/source_quote": "A10X Fusion chip with 64-bit architecture",
+      "/ports/confidence": 1.0,
+      "/ports/source_quote": "Bluetooth 5.0 wireless technology"
+    }
+  },
+  "form_factor": "other",
+  "manufacturer": "Apple",
+  "model": "Apple TV 4K",
+  "power": {
+    "connector_type": "internal",
+    "frequency_hz": [
+      50,
+      60
+    ],
+    "max_wattage": 4.0,
+    "psu_type": "internal",
+    "standby_wattage": 0.3,
+    "typical_wattage": 2.1,
+    "voltage_v": [
+      100,
+      240
+    ]
+  },
+  "weight_kg": 0.425,
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://fcc.report/FCC-ID/BCGA2843/6156832.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-23",
+      "notes": "Ingested via batch"
+    },
+    {
+      "url": "https://support.apple.com/en-us/111929",
+      "type": "tech-specs-page",
+      "title": "Apple TV 4K (1st generation) - Technical Specifications - Apple Support",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.apple.com/apple-tv-4k/specs/",
+      "type": "tech-specs-page",
+      "title": "Apple TV 4K - Technical Specifications - Apple",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.tpcdb.com/product.php?id=2261",
+      "type": "tech-specs-page",
+      "title": "Apple TV 4 (Media player) uses 2.1 watts",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    }
+  ]
+}

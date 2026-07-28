@@ -1,4 +1,14 @@
 {
+  "tags": [
+    "4K, Smart TV, QNED, webOS 25, AI Magic Remote, HDR10, HLG, VRR, ALLM, Game Optimizer"
+  ],
+  "protocols": [
+    {
+      "name": "Bluetooth",
+      "transport": "bluetooth",
+      "version": "5.0"
+    }
+  ],
   "ports": [
     {
       "connector_type": "hdmi-a",
@@ -50,16 +60,6 @@
       "signal_type": "rf/antenna/dvb-t2"
     }
   ],
-  "tags": [
-    "4K, Smart TV, QNED, webOS 25, AI Magic Remote, HDR10, HLG, VRR, ALLM, Game Optimizer"
-  ],
-  "protocols": [
-    {
-      "name": "Bluetooth",
-      "transport": "bluetooth",
-      "version": "5.0"
-    }
-  ],
   "category": "display",
   "description": "55 Inch Class LG QNED AI QNED70A 4K Smart TV",
   "dimensions": {
@@ -91,6 +91,20 @@
   "schema_version": "conduit/v1",
   "sources": [
     {
+      "url": "https://www.lg.com/uk/tvs-soundbars/qned/55qned70a6a/",
+      "type": "tech-specs-page",
+      "title": "55 inch LG QNED AI QNED70 4K Smart TV 2025 - 55QNED70A6A | LG UK",
+      "retrieved_date": "2026-07-20",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.lg.com/africa/tvs/lg-55qned70a6a",
+      "type": "tech-specs-page",
+      "title": "55 inch LG QNED AI QNED70 4K Smart TV AI Magic remote HDR10 webOS25 2025 - 55QNED70A6A | LG africa",
+      "retrieved_date": "2026-07-20",
+      "notes": "Sourced via source_device"
+    },
+    {
       "url": "https://www.lg.com/us/tvs/lg-55qned70aua-qned-4k-tv",
       "type": "tech-specs-page",
       "title": "55 Inch Class LG QNED AI QNED70A 4K Smart TV 2025 - 55QNED70AUA.AUS | LG USA",
@@ -101,13 +115,6 @@
       "url": "https://www.lg.com/us/tvs/lg-50qned70aua-qned-4k-tv",
       "type": "tech-specs-page",
       "title": "50 Inch Class LG QNED AI QNED70A 4K Smart TV 2025 - 50QNED70AUA.AUS | LG USA",
-      "retrieved_date": "2026-07-20",
-      "notes": "Sourced via source_device"
-    },
-    {
-      "url": "https://www.lg.com/uk/tvs-soundbars/qned/55qned70a6a/",
-      "type": "tech-specs-page",
-      "title": "55 inch LG QNED AI QNED70 4K Smart TV 2025 - 55QNED70A6A | LG UK",
       "retrieved_date": "2026-07-20",
       "notes": "Sourced via source_device"
     },
@@ -136,13 +143,6 @@
       "url": "https://www.lg.com/ca_en/tv-soundbars/qned/55qned70aua/",
       "type": "tech-specs-page",
       "title": "55 Inch LG QNED AI QNED70 4k Smart TV 2025 - 55QNED70AUA | LG Canada",
-      "retrieved_date": "2026-07-20",
-      "notes": "Sourced via source_device"
-    },
-    {
-      "url": "https://www.lg.com/africa/tvs/lg-55qned70a6a",
-      "type": "tech-specs-page",
-      "title": "55 inch LG QNED AI QNED70 4K Smart TV AI Magic remote HDR10 webOS25 2025 - 55QNED70A6A | LG africa",
       "retrieved_date": "2026-07-20",
       "notes": "Sourced via source_device"
     }

@@ -1,0 +1,219 @@
+{
+  "ports": [
+    {
+      "connector_type": "bnc",
+      "count": 1,
+      "direction": "in",
+      "id": "sdi-in-1",
+      "label": "SDI Video Input",
+      "notes": "Supports rates: 270Mb, 1.5G, 3G.",
+      "signal_type": "video/sdi"
+    },
+    {
+      "connector_type": "bnc",
+      "count": 1,
+      "direction": "out",
+      "id": "sdi-out-1",
+      "label": "SDI Video Output",
+      "notes": "Supports rates: 270Mb, 1.5G, 3G.",
+      "signal_type": "video/sdi"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "count": 1,
+      "direction": "out",
+      "id": "hdmi-out-1",
+      "label": "HDMI Video Output",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "bnc",
+      "count": 1,
+      "direction": "in",
+      "id": "bnc-in-1",
+      "label": "Timecode In",
+      "signal_type": "control/timecode/ltc"
+    },
+    {
+      "connector_type": "bnc",
+      "count": 1,
+      "direction": "out",
+      "id": "bnc-out-1",
+      "label": "Timecode Out",
+      "signal_type": "control/timecode/ltc"
+    },
+    {
+      "connector_type": "bnc",
+      "count": 1,
+      "direction": "in",
+      "id": "bnc-ref-in",
+      "label": "Reference In",
+      "notes": "Tri-Sync or Black Burst.",
+      "signal_type": "video/sync/analogue-bilevel"
+    },
+    {
+      "connector_type": "bnc",
+      "count": 1,
+      "direction": "out",
+      "id": "bnc-ref-out",
+      "label": "Reference Out",
+      "notes": "Tri-Sync or Black Burst.",
+      "signal_type": "video/sync/analogue-bilevel"
+    },
+    {
+      "connector_type": "de-9",
+      "count": 1,
+      "direction": "in",
+      "id": "rs422-in",
+      "label": "RS-422 In",
+      "signal_type": "control/rs422"
+    },
+    {
+      "connector_type": "usb-c",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "usb-c-1",
+      "label": "USB Type-C 3.0",
+      "notes": "Up to 5Gb/s for external drive recording, webcam out, software configuration and updates.",
+      "signal_type": "network/usb/3.2"
+    },
+    {
+      "connector_type": "sd",
+      "count": 2,
+      "direction": "in",
+      "id": "sd-slot-1",
+      "label": "SD Card Slot",
+      "notes": "UHS-I and UHS-II SD cards.",
+      "signal_type": "network/sdcard"
+    },
+    {
+      "connector_type": "dc-barrel",
+      "count": 1,
+      "direction": "power-in",
+      "id": "dc-in",
+      "label": "DC In",
+      "notes": "Locking 5.5mm barrel 12V DC In for external power supply or battery use.",
+      "signal_type": "power/dc"
+    }
+  ],
+  "tags": [
+    "broadcast-deck, sd-card-recorder, uhs-ii, 3g-sdi, hdmi-out, timecode-generator"
+  ],
+  "capabilities": [
+    {
+      "ad_bit_depth": 24,
+      "analogue_input_count": 0,
+      "analogue_output_count": 1,
+      "da_bit_depth": 24,
+      "supported_sample_rates_hz": [
+        48000
+      ],
+      "type": "audio-io"
+    },
+    {
+      "os": "Blackmagic OS",
+      "type": "compute"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "HyperDeck Ethernet Protocol",
+      "notes": "text based HyperDeck Ethernet Protocol can control Blackmagic HyperDecks including transport control, configuring and querying the state of the HyperDeck and even building a timeline",
+      "transport": "proprietary"
+    }
+  ],
+  "category": "video-capture",
+  "description": "A compact media recorder based on the Teranex Mini form factor, supporting 3G-SDI in/out, HDMI output, dual SD card media slots, and built-in sync and timecode generators.",
+  "dimensions": {
+    "height_mm": 44.45,
+    "width_mm": 127
+  },
+  "environment": {
+    "humidity_condensing": false,
+    "humidity_max_percent": 90,
+    "operating_temp_max_c": 40,
+    "operating_temp_min_c": 0,
+    "storage_temp_max_c": 60,
+    "storage_temp_min_c": -20
+  },
+  "extensions": {
+    "conduit:unmapped": {
+      "/capabilities/notes": "Supports recording of audio channels."
+    }
+  },
+  "firmware": "Blackmagic OS",
+  "form_factor": "other",
+  "manufacturer": "Blackmagic Design",
+  "model": "HyperDeck Studio HD Mini",
+  "notes": "The device supports recording closed caption data as a separate .MCC file when recording from sources containing such data.",
+  "power": {
+    "connector_type": "internal",
+    "frequency_hz": [
+      50,
+      60
+    ],
+    "max_wattage": 50,
+    "psu_type": "internal",
+    "voltage_v": [
+      100,
+      240
+    ]
+  },
+  "rack_units": 1,
+  "reliability": {
+    "warranty_years": 1
+  },
+  "subcategory": "media recorder",
+  "image_url": "https://cdn11.bigcommerce.com/s-2snnk3/images/stencil/500x659/products/25121/513536/BMD-HYPERD-ST-DAHM-1__57096.1763013414.jpg?c=2",
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://documents.blackmagicdesign.com/UserManuals/HyperDeckManual.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-23",
+      "notes": "Ingested via batch"
+    },
+    {
+      "url": "https://www.blackmagicdesign.com/products/hyperdeckstudio/techspecs",
+      "type": "tech-specs-page",
+      "title": "HyperDeck Studio – Tech Specs | Blackmagic Design",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.blackmagicdesign.com/products/hyperdeckstudio/models/",
+      "type": "tech-specs-page",
+      "title": "HyperDeck Studio – Models | Blackmagic Design",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.blackmagicdesign.com/products/hyperdeckstudio",
+      "type": "tech-specs-page",
+      "title": "HyperDeck Studio | Blackmagic Design",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.blackmagicdesign.com/products/hyperdeckstudio/blackmagicos",
+      "type": "tech-specs-page",
+      "title": "HyperDeck Studio – Blackmagic OS | Blackmagic Design",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.blackmagicdesign.com/uk/store/record-capture-playback/recording-disk-storage/W-HYD-11",
+      "type": "tech-specs-page",
+      "title": "HyperDeck Studio HD Mini | Blackmagic Design Store",
+      "retrieved_date": "2026-07-24",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.blackmagicdesign.com/developer/products/hyperdeck/resources",
+      "type": "tech-specs-page",
+      "title": "Developer | Blackmagic Design",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    }
+  ]
+}

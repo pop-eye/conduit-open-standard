@@ -1,0 +1,116 @@
+{
+  "capabilities": [
+    {
+      "storage_type": "microsd",
+      "type": "compute"
+    },
+    {
+      "analogue_output_count": 1,
+      "type": "audio-io"
+    }
+  ],
+  "tags": [
+    "4K, Dolby Vision, HDR10+, H.265, HEVC, HDMI 2.0a"
+  ],
+  "protocols": [
+    {
+      "name": "HTML5",
+      "transport": "proprietary",
+      "version": "Advanced"
+    },
+    {
+      "name": "IP Streaming",
+      "transport": "udp-tcp"
+    },
+    {
+      "name": "BrightBeaconTM",
+      "transport": "bluetooth"
+    }
+  ],
+  "ports": [
+    {
+      "connector_type": "dc-barrel",
+      "direction": "power-in",
+      "id": "port_1",
+      "label": "Locking Power Connector",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "microsd",
+      "direction": "bidirectional",
+      "id": "port_2",
+      "label": "External micro SD Slot",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "euroblock-5pin",
+      "direction": "bidirectional",
+      "id": "port_3",
+      "label": "12-pin Phoenix GPIO port",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "out",
+      "id": "port_4",
+      "label": "3.5mm Audio Out",
+      "signal_type": "audio/analogue/speaker"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "out",
+      "id": "port_5",
+      "label": "HDMI 2.0a Out",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "bidirectional",
+      "id": "port_6",
+      "label": "Ethernet (Gigabit)",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "bidirectional",
+      "id": "port_7",
+      "label": "M.2 Wi-Fi/Bluetooth Connector",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "sma",
+      "direction": "out",
+      "id": "port_8",
+      "label": "Wi-Fi External Antenna Connector",
+      "signal_type": "rf/antenna"
+    }
+  ],
+  "category": "media-player",
+  "description": "Enhanced graphics and html5 performance",
+  "manufacturer": "BrightSign, LLC.",
+  "model": "BrightSign XD2246",
+  "notes": "Series 6 player with extended I/O.",
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://virtualsets.com/docs/BrightSign-XD234-datasheet-11132018.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-22",
+      "notes": "Ingested via batch"
+    },
+    {
+      "url": "https://docs.brightsign.biz/hardware/model-and-series-reference",
+      "type": "tech-specs-page",
+      "title": "Model & Series Reference - Hardware",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://digitalsignage.com/digital_signage/docs/hardware/media-players/",
+      "type": "tech-specs-page",
+      "title": "Digital Signage Media Players: Complete 2026 Comparison Guide | Digital Signage Documentation | MediaSignage",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "capabilities": [
+    {
+      "analogue_output_count": 1,
+      "type": "audio-io"
+    },
+    {
+      "brightness_ansi_lm": 3800,
+      "built_in_blend": false,
+      "built_in_warp": false,
+      "contrast_ratio_full": 15000,
+      "display_technology": "dlp-1chip",
+      "keystone_v_degrees": 40,
+      "light_source_type": "other",
+      "native_resolution": {
+        "bit_depth": 30,
+        "fps": 60,
+        "hdr": [],
+        "height_px": 1080,
+        "width_px": 1920
+      },
+      "throw_ratio_max": 1.64,
+      "throw_ratio_min": 1.49,
+      "type": "display"
+    }
+  ],
+  "tags": [
+    "gaming, 3D, home cinema"
+  ],
+  "protocols": [
+    {
+      "name": "HDCP",
+      "notes": "Supported on HDMI-1 and HDMI-2",
+      "transport": "proprietary",
+      "version": "1.4"
+    }
+  ],
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "hdmi-1",
+      "label": "HDMI-1",
+      "notes": "HDCP 1.4",
+      "signal_type": "video/hdmi/1.4"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "hdmi-2",
+      "label": "HDMI-2",
+      "notes": "HDCP 1.4",
+      "signal_type": "video/hdmi/1.4"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "out",
+      "id": "usb-a-1",
+      "label": "USB Type A-1",
+      "notes": "Power Supply 1.5A",
+      "signal_type": "network/usb/2.0"
+    },
+    {
+      "connector_type": "usb-micro-b",
+      "direction": "in",
+      "id": "usb-mini-b-1",
+      "label": "USB Type Mini B-1",
+      "notes": "service",
+      "signal_type": "network/usb/2.0"
+    },
+    {
+      "connector_type": "db9",
+      "direction": "in",
+      "id": "rs232-in",
+      "label": "RS232 in (DB-9pin)",
+      "signal_type": "control/rs232"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "in",
+      "id": "audio-in",
+      "label": "Audio in (3.5mm Mini Jack)",
+      "signal_type": "audio/analogue/microphone"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "out",
+      "id": "audio-out",
+      "label": "Audio out (3.5mm Mini Jack)",
+      "signal_type": "audio/analogue/speaker"
+    }
+  ],
+  "category": "projector",
+  "description": "Digital Projector with 3,800 ANSI Lumen High Brightness for Gaming and Game Mode with 16.67ms Input Lag.",
+  "dimensions": {
+    "depth_mm": 221,
+    "height_mm": 120,
+    "width_mm": 296
+  },
+  "environment": {
+    "audible_noise_dba": 34,
+    "operating_temp_max_c": 40,
+    "operating_temp_min_c": 0
+  },
+  "form_factor": "desktop",
+  "manufacturer": "BenQ",
+  "model": "TH575",
+  "model_variant": "i",
+  "notes": "Features include: 1.1x zoom ratio; Rec. 709 coverage of 88%; Low input lag of 16.7ms at 1080p@60Hz; Auto Vertical Keystone; Supports full 3D formats including Frame Sequential (PC), Frame Packing (Blu-ray), Side by side and Top & Bottom (streaming) 3D formats.",
+  "power": {
+    "connector_type": "iec-c14",
+    "frequency_hz": [
+      50,
+      60
+    ],
+    "max_wattage": 295,
+    "psu_type": "internal",
+    "standby_wattage": 0.5,
+    "typical_wattage": 260,
+    "voltage_v": [
+      100,
+      240
+    ]
+  },
+  "reliability": {
+    "warranty_years": 3
+  },
+  "subcategory": "Home Cinema Projector",
+  "weight_kg": 2.5,
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://teksel.si/upload/catalog/product/6884/th575-19-specifikacije-benq-th575_63f87859015b5.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-20",
+      "notes": "Ingested via seek agent"
+    },
+    {
+      "url": "https://www.benq.com/en-ap/projector/cinema/th575i/spec.html",
+      "type": "tech-specs-page",
+      "title": "Specifications | BenQ Asia Pacific",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.benq.com/en-us/projector/cinema/th575/spec.html",
+      "type": "tech-specs-page",
+      "title": "TH575 Specifications | BenQ US",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.benq.com/en-us/projector/cinema/th575.html",
+      "type": "tech-specs-page",
+      "title": "TH575 | 1080p 3800lm Home Theater Projector | BenQ US",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.benq.com/en-me/projector/cinema/th575i.html",
+      "type": "tech-specs-page",
+      "title": "TH575i | 1080p 3,800lm High Brightness Home Projector with Google TV up to 120” | BenQ Middle East",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.benq.com/content/b2c/en-me/projector/cinema/th575/spec.html",
+      "type": "tech-specs-page",
+      "title": "TH575 Specifications | BenQ Middle East",
+      "retrieved_date": "2026-07-24",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.amazon.com/BenQ-TH575-Projector-Enhanced-Game-Mode/dp/B0B4QV9YV6",
+      "type": "tech-specs-page",
+      "title": "Amazon.com: BenQ TH575 1080p 3800 Lumens Home Entertainment Projector 16ms Low Latency | 3800 Lumens, 16.7ms Low Latency, Enhanced Game Mode, Dual HDMI, 1.1x Zoom, 3D Ready, Auto Vertical Keystone, 3 year warranty : Electronics",
+      "retrieved_date": "2026-07-24",
+      "notes": "Sourced via source_device"
+    }
+  ]
+}

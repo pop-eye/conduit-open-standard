@@ -1,0 +1,207 @@
+{
+  "control": {
+    "companion_software": [
+      {
+        "name": "ATEM Software Control",
+        "platform": [
+          "windows"
+        ]
+      }
+    ],
+    "web_ui": false
+  },
+  "protocols": [
+    {
+      "name": "Ethernet Streaming",
+      "notes": "Stream direct using the Ethernet connection.",
+      "transport": "udp-tcp",
+      "version": "N/A"
+    }
+  ],
+  "operational_modes": [
+    {
+      "active_port_ids": [
+        "hdmi_in_1",
+        "hdmi_in_2",
+        "hdmi_in_3",
+        "hdmi_in_4"
+      ],
+      "description": "Selecting any input will instantly switch to that source.",
+      "id": "cut-bus",
+      "label": "Cut Bus Mode"
+    },
+    {
+      "active_port_ids": [
+        "hdmi_out_program",
+        "hdmi_out_multiview"
+      ],
+      "description": "A source to be selected but it won't be put on air until you press the cut or auto buttons.",
+      "id": "program-preview",
+      "label": "Program/Preview Style"
+    }
+  ],
+  "capabilities": [
+    {
+      "ad_bit_depth": 0,
+      "ad_oversampling": 0,
+      "analogue_input_count": 2,
+      "analogue_output_count": 0,
+      "crosstalk_db": 0,
+      "da_bit_depth": 0,
+      "da_oversampling": 0,
+      "dante_channel_count_in": 0,
+      "dante_channel_count_out": 0,
+      "dynamic_range_db": 131,
+      "ein_dbu": 0,
+      "gain_compensation": false,
+      "residual_noise_dbu": -129,
+      "signal_delay_ms": 0,
+      "supported_sample_rates_hz": [],
+      "thd_percent": 0.002,
+      "type": "audio-io"
+    },
+    {
+      "hdr_support": true,
+      "type": "led-processor"
+    },
+    {
+      "managed": true,
+      "type": "network-switch"
+    }
+  ],
+  "tags": [
+    "live-streaming, multi-camera, broadcast-switcher, multiview, usb-webcam"
+  ],
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "input-1",
+      "label": "HDMI Input 1",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "input-2",
+      "label": "HDMI Input 2",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "input-3",
+      "label": "HDMI Input 3",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "input-4",
+      "label": "HDMI Input 4",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "in",
+      "id": "audio-input-1",
+      "label": "Mic Input 1",
+      "signal_type": "audio/analogue/microphone"
+    },
+    {
+      "connector_type": "xlr-3f",
+      "direction": "in",
+      "id": "audio-input-2",
+      "label": "Mic Input 2",
+      "signal_type": "audio/analogue/microphone"
+    },
+    {
+      "connector_type": "usb-c",
+      "direction": "out",
+      "id": "usb-webcam-out",
+      "label": "USB Webcam Out",
+      "signal_type": "video/usb-c-dp-alt"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "out",
+      "id": "hdmi-out-multiview",
+      "label": "HDMI Out (Multiview)",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "bidirectional",
+      "id": "ethernet-port",
+      "label": "Ethernet Port",
+      "signal_type": "network/ethernet/1g"
+    }
+  ],
+  "category": "video-switcher",
+  "description": "ATEM Mini Pro is fast to set up and easy to use. It includes 4 standards converted HDMI inputs, USB webcam out, HDMI out, Fairlight audio mixer with EQ and dynamics, DVE for picture in picture, transition effects, green screen chroma key, 20 stills media pool for titles and free ATEM Software Control. ATEM Mini Pro also includes direct recording to USB flash disks in H.264 and direct streaming via Ethernet to YouTube Live and more. There's also a multiview with 4 cameras, media, preview and program plus status of recording, streaming and audio.",
+  "dimensions": {
+    "depth_mm": 101.6,
+    "height_mm": 33.02,
+    "width_mm": 230.8
+  },
+  "environment": {
+    "humidity_condensing": false,
+    "humidity_max_percent": 90,
+    "operating_temp_max_c": 60,
+    "operating_temp_min_c": 5,
+    "storage_temp_max_c": 60,
+    "storage_temp_min_c": -10
+  },
+  "extensions": {
+    "conduit:unmapped": {
+      "/capabilities/notes": "Ethernet supports 10/100/1000 BaseT for live streaming, software control, software updates and direct or network panel connection."
+    }
+  },
+  "firmware": "ATEM Setup Utility",
+  "form_factor": "desktop",
+  "manufacturer": "Blackmagic Design",
+  "model": "ATEM Mini Pro",
+  "notes": "Includes DVE for picture in picture, transition effects, green screen chroma key, 20 stills media pool for titles. Supports direct recording to USB flash disks in H.264 and direct streaming via Ethernet to YouTube Live and more.",
+  "power": {
+    "connector_type": "dc-barrel",
+    "max_wattage": 30,
+    "psu_type": "external-brick",
+    "voltage_v": 12
+  },
+  "reliability": {
+    "warranty_years": 1
+  },
+  "subcategory": "video-switcher",
+  "image_url": "https://media.sweetwater.com/m/products/image/9b60245b71X2KVNR01xCPpnkweqFalAgTQoIyc1w.jpg?ha=9b60245b71a31139363dd830731fc28ab7dc3cae&quality=82&width=750",
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.blackmagicdesign.com/api/print/to-pdf/products/atemmini/techspecs/W-APS-14?filename=atem-mini-pro-techspecs.pdf",
+      "type": "datasheet",
+      "title": "atem-mini-pro-techspecs.pdf",
+      "retrieved_date": "2026-07-23",
+      "notes": "Discovered via search; source URL: https://www.blackmagicdesign.com/api/print/to-pdf/products/atemmini/techspecs/W-APS-14?filename=atem-mini-pro-techspecs.pdf"
+    },
+    {
+      "url": "https://www.blackmagicdesign.com/products/atemmini/techspecs/W-APS-17",
+      "type": "tech-specs-page",
+      "title": "ATEM Mini – Tech Specs | Blackmagic Design",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.blackmagicdesign.com/products/atemmini",
+      "type": "tech-specs-page",
+      "title": "ATEM Mini | Blackmagic Design",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.blackmagicdesign.com/products/atemmini/gettingstarted",
+      "type": "tech-specs-page",
+      "title": "ATEM Mini – Getting Started | Blackmagic Design",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    }
+  ]
+}

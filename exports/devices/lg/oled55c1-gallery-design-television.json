@@ -1,0 +1,263 @@
+{
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "hdmi_1",
+      "label": "HDMI 1",
+      "panel_side": "rear",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "hdmi_2",
+      "label": "HDMI 2 (eARC)",
+      "notes": "eARC (Audio Return Channel)",
+      "panel_side": "right",
+      "signal_type": "video/hdmi/2.1"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "hdmi_3",
+      "label": "HDMI 3",
+      "panel_side": "right",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "hdmi_4",
+      "label": "HDMI 4",
+      "panel_side": "right",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "in",
+      "id": "usb_1",
+      "label": "USB 1",
+      "panel_side": "rear",
+      "signal_type": "network/usb/3.2"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "in",
+      "id": "usb_2",
+      "label": "USB 2",
+      "panel_side": "rear",
+      "signal_type": "network/usb/3.2"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "in",
+      "id": "usb_3",
+      "label": "USB 3",
+      "panel_side": "right",
+      "signal_type": "network/usb/3.2"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "in",
+      "id": "lan",
+      "label": "LAN",
+      "panel_side": "rear",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "f-type",
+      "direction": "in",
+      "id": "rf_1",
+      "label": "RF In 1",
+      "panel_side": "right",
+      "signal_type": "rf/antenna/atsc"
+    },
+    {
+      "connector_type": "f-type",
+      "direction": "in",
+      "id": "rf_2",
+      "label": "RF In 2",
+      "panel_side": "right",
+      "signal_type": "rf/antenna/atsc"
+    },
+    {
+      "connector_type": "toslink",
+      "direction": "out",
+      "id": "spdif",
+      "label": "SPDIF (Optical Digital Audio Out)",
+      "panel_side": "rear",
+      "signal_type": "audio/spdif/optical"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "out",
+      "id": "headphone_out",
+      "label": "Headphone out",
+      "panel_side": "rear",
+      "signal_type": "audio/analogue/unbalanced"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "out",
+      "id": "line_out",
+      "label": "Line out",
+      "panel_side": "rear",
+      "signal_type": "audio/analogue/unbalanced"
+    }
+  ],
+  "tags": [
+    "4K, OLED, Cinema HDR, Dolby Vision IQ, webOS, ThinQ, AI Processor, G-Sync, FreeSync Premium, VRR, ALLM, HGIG"
+  ],
+  "capabilities": [
+    {
+      "analogue_input_count": 0,
+      "analogue_output_count": 2,
+      "type": "audio-io"
+    },
+    {
+      "cpu_model": "α9 Gen4 AI Processor 4K (O20)",
+      "os": "webOS Smart TV",
+      "type": "compute"
+    },
+    {
+      "colour_spaces": [
+        "Perfect Color"
+      ],
+      "display_technology": "oled",
+      "hdr_formats": [
+        "HLG"
+      ],
+      "light_source_type": "other",
+      "native_resolution": {
+        "fps": 120,
+        "hdr": [],
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "type": "display"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "Simplink",
+      "transport": "proprietary",
+      "version": "CEC"
+    },
+    {
+      "name": "Bluetooth",
+      "transport": "bluetooth",
+      "version": "5.0"
+    },
+    {
+      "name": "Wifi",
+      "transport": "wifi",
+      "version": "802.11ac"
+    }
+  ],
+  "category": "display",
+  "description": "Next Generation of LG AI TV",
+  "dimensions": {
+    "depth_mm": 46.9,
+    "height_mm": 706,
+    "width_mm": 1228
+  },
+  "extensions": {
+    "conduit:unmapped": {
+      "/capabilities/bit_depth": 10,
+      "/capabilities/fps": 100,
+      "/capabilities/hdr": true
+    }
+  },
+  "manufacturer": "LG",
+  "model": "OLED55C14LB",
+  "model_variant": "Gallery Design",
+  "notes": "Advanced α9 Gen4 AI processor 4K for ultimate picture & sound; Features include AI Picture Pro, AI Upscaling, HDR Dynamic Tone Mapping Pro (+ AI HDR Tone Mapping), and OLED Motion Pro.",
+  "power": {
+    "frequency_hz": [
+      50,
+      60
+    ],
+    "max_wattage": 109,
+    "notes": "Standby Power Consumption 0.5W↓",
+    "psu_type": "internal",
+    "standby_wattage": 0.5,
+    "voltage_v": [
+      100,
+      240
+    ]
+  },
+  "weight_kg": 18.9,
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.lg.com/uk/tvs-soundbars/smart-tvs/oled55c14lb/",
+      "type": "tech-specs-page",
+      "title": "LG OLED C1 55'' 4K Smart TV - OLED55C14LB | LG UK | LG UK",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.lg.com/bd/tvs/lg-oled55c1ptb",
+      "type": "tech-specs-page",
+      "title": "LG C1 55'' OLED 4K TV, Front view, OLED55C1PTB ...",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.lg.com/uk/tvs-soundbars/smart-tvs/oled55c15la/",
+      "type": "tech-specs-page",
+      "title": "LG C1 55 inch 4K Smart OLED TV - OLED55C15LA | LG UK",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.lg.com/eg_en/tv-soundbars/oled/oled55c1pvb/",
+      "type": "tech-specs-page",
+      "title": "LG OLED TV 55 Inch C1 Series, Cinema Screen Design 4K Cinema HDR WebOS Smart AI ThinQ Pixel Dimming - OLED55C1PVB | LG EG_EN",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.lg.com/uk/tvs/lg-oled55c14lb",
+      "type": "tech-specs-page",
+      "title": "LG OLED C1 55'' 4K Smart TV - OLED55C14LB | LG UK | LG UK",
+      "retrieved_date": "2026-07-26",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.lg.com/uk/tvs-soundbars/smart-tvs/oled55c16la/",
+      "type": "tech-specs-page",
+      "title": "LG OLED C1 55\" 4K Smart TV - OLED55C16LA | LG UK",
+      "retrieved_date": "2026-07-26",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.lg.com/eg_en/tvs/lg-oled55c1pvb",
+      "type": "tech-specs-page",
+      "title": "LG OLED TV 55 Inch C1 Series, Cinema Screen Design 4K Cinema HDR WebOS Smart AI ThinQ Pixel Dimming - OLED55C1PVB | LG EG_EN",
+      "retrieved_date": "2026-07-26",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.lg.com/ca_en/tv-soundbars/oled/oled55c1aub/",
+      "type": "tech-specs-page",
+      "title": "LG C1 55'' 4K Smart OLED TV - OLED55C1AUB | LG Canada",
+      "retrieved_date": "2026-07-26",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.lg.com/hk_en/tv-soundbars/oled/oled55c1pcb/",
+      "type": "tech-specs-page",
+      "title": "55'' LG OLED TV C1 - OLED55C1PCB | LG Hong Kong",
+      "retrieved_date": "2026-07-26",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.lg.com/content/dam/lge/in/migration/catalogue-2025/LG-OLEDevo-AI_Digital-Catalagoue-2025.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-22",
+      "notes": "Ingested via batch"
+    }
+  ]
+}

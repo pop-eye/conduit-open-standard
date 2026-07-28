@@ -1,0 +1,198 @@
+{
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "count": 4,
+      "direction": "in",
+      "id": "hdmi-in-1",
+      "label": "HDMI In",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "count": 1,
+      "direction": "out",
+      "id": "hdmi-out-1",
+      "label": "HDMI Out",
+      "notes": "4K Output",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "count": 1,
+      "direction": "out",
+      "id": "audio-out-35mm",
+      "label": "Audio Out",
+      "signal_type": "audio/analogue/unbalanced"
+    },
+    {
+      "connector_type": "toslink",
+      "count": 1,
+      "direction": "out",
+      "id": "spdif-out",
+      "label": "SPDIF Out",
+      "signal_type": "audio/spdif/optical"
+    },
+    {
+      "connector_type": "usb-a",
+      "count": 5,
+      "direction": "bidirectional",
+      "id": "usb-3-0-1",
+      "label": "USB 3.0",
+      "signal_type": "network/usb/3.2"
+    },
+    {
+      "connector_type": "usb-a",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "usb-2-0-1",
+      "label": "USB 2.0",
+      "signal_type": "network/usb/2.0"
+    },
+    {
+      "connector_type": "usb-c",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "usb-c-1",
+      "label": "USB 3.1 Type C",
+      "notes": "One Cable Solution",
+      "signal_type": "video/usb-c-dp-alt"
+    },
+    {
+      "connector_type": "slot",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "pc-slot",
+      "label": "Slot-in PC Slot",
+      "signal_type": "network/pcie/3.0"
+    },
+    {
+      "connector_type": "usb-b",
+      "count": 2,
+      "direction": "in",
+      "id": "touch-port-1",
+      "label": "USB B Touch Port",
+      "signal_type": "control/usb"
+    },
+    {
+      "connector_type": "db9",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "rs232-1",
+      "label": "RS232",
+      "signal_type": "control/rs232"
+    },
+    {
+      "connector_type": "rj45",
+      "count": 2,
+      "direction": "bidirectional",
+      "id": "ethernet-rj45-1",
+      "label": "Ethernet LAN (RJ45)",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "slot",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "wifi-slot",
+      "label": "WIFI Module Slot",
+      "signal_type": "network/wifi/5g"
+    },
+    {
+      "connector_type": "slot",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "ops-slot",
+      "label": "Intel® OPS Slot In (80-pin)",
+      "signal_type": "network/pcie/3.0"
+    }
+  ],
+  "tags": [
+    "projective capacitive",
+    "PCAP",
+    "4K Ultra HD",
+    "bezel-less"
+  ],
+  "capabilities": [
+    {
+      "analogue_output_count": 1,
+      "type": "audio-io"
+    },
+    {
+      "cpu_architecture": "ARM",
+      "cpu_cores": 4,
+      "cpu_frequency_ghz": 1.2,
+      "cpu_model": "ARM Quad Core Cortex A73",
+      "os": "Android 8.0",
+      "ram_gb": 3,
+      "storage_os_gb": 32,
+      "storage_type": "emmc",
+      "type": "compute"
+    },
+    {
+      "contrast_ratio_full": 1200,
+      "display_technology": "lcd",
+      "light_source_life_hours": 50000,
+      "light_source_type": "other",
+      "native_resolution": {
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "type": "display"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "myViewBoard Manager",
+      "notes": "Schedule updates and monitor device status with the built-in myViewBoard® Manager software"
+    }
+  ],
+  "category": "display",
+  "description": "A ViewBoard® 86\" 4K Interactive Display featuring Ultra Fine Touch Technology, myViewBoard® digital whiteboard software, and dual-pen writing capabilities.",
+  "dimensions": {
+    "depth_mm": 118,
+    "height_mm": 1189.1,
+    "width_mm": 2006.4
+  },
+  "environment": {
+    "humidity_condensing": false,
+    "humidity_max_percent": 80,
+    "operating_temp_max_c": 40,
+    "operating_temp_min_c": 0
+  },
+  "form_factor": "wall-mount",
+  "manufacturer": "ViewSonic",
+  "model": "IFP8630",
+  "power": {
+    "connector_type": "iec-c13",
+    "max_wattage": 580,
+    "standby_wattage": 0.5,
+    "typical_wattage": 160,
+    "voltage_v": [
+      100,
+      240
+    ]
+  },
+  "reliability": {
+    "warranty_notes": "3-year limited warranty on parts, labor and backlight, onsite warranty",
+    "warranty_years": 3
+  },
+  "subcategory": "interactive display",
+  "weight_kg": 79.8,
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.viewsonic.com/vsAssetFile/ap/file/pdf/ap/_viewboard/ap-ifp8630.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-22",
+      "notes": "Ingested via batch"
+    },
+    {
+      "url": "https://www.viewsonic.com/media/wysiwyg/press-room/Datasheet-IFP8662.pdf",
+      "type": "datasheet",
+      "title": "IFP8662 - 86\" 4K TOUCH ENABLED VIEWBOARD SMART DISPLAY Key Features",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    }
+  ]
+}

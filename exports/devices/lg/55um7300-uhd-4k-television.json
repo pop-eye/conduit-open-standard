@@ -1,0 +1,114 @@
+{
+  "capabilities": [
+    {
+      "analogue_input_count": 2,
+      "analogue_output_count": 1,
+      "type": "audio-io"
+    },
+    {
+      "display_technology": "lcd",
+      "light_source_type": "other",
+      "native_resolution": {
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "type": "display"
+    }
+  ],
+  "ports": [
+    {
+      "connector_type": "f-type",
+      "direction": "in",
+      "id": "rf-in",
+      "label": "RF In (Antenna/Cable)",
+      "panel_side": "rear",
+      "signal_type": "rf/antenna/dvb-t"
+    },
+    {
+      "connector_type": "rca",
+      "direction": "in",
+      "id": "component-in",
+      "label": "Component Video In",
+      "panel_side": "rear",
+      "signal_type": "video/component"
+    },
+    {
+      "connector_type": "rca-composite",
+      "direction": "in",
+      "id": "composite-in",
+      "label": "Composite In (AV)",
+      "panel_side": "rear",
+      "signal_type": "video/composite"
+    },
+    {
+      "connector_type": "toslink",
+      "direction": "out",
+      "id": "optical-out",
+      "label": "Optical Output",
+      "panel_side": "rear",
+      "signal_type": "audio/spdif/optical"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "hdmi-3",
+      "label": "HDMI 3",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "in",
+      "id": "usb-1",
+      "label": "USB 3.0/2.0 1",
+      "signal_type": "network/usb/3.2"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "in",
+      "id": "usb-2",
+      "label": "USB 3.0/2.0 2",
+      "signal_type": "network/usb/3.2"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "in",
+      "id": "lan-1",
+      "label": "LAN 1",
+      "panel_side": "rear",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "bidirectional",
+      "id": "rs232",
+      "label": "RS232",
+      "panel_side": "rear",
+      "signal_type": "control/rs232"
+    }
+  ],
+  "category": "display",
+  "description": "4K UHD LED Smart TV w/ webOS™ 2.0",
+  "form_factor": "wall-mount",
+  "manufacturer": "LG",
+  "model": "UF7300",
+  "power": {
+    "frequency_hz": [
+      50,
+      60
+    ],
+    "standby_wattage": 0.3,
+    "voltage_v": [
+      100,
+      240
+    ]
+  },
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.lg.com/us/support/products/documents/UF7300%20Spec%20Sheet.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-22",
+      "notes": "Ingested via batch"
+    }
+  ]
+}

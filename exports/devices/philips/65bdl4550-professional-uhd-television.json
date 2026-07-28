@@ -1,0 +1,156 @@
+{
+  "capabilities": [
+    {
+      "brightness_ansi_lm": 500,
+      "contrast_ratio_dynamic": 500000,
+      "contrast_ratio_full": 1200,
+      "display_technology": "lcd",
+      "native_resolution": {
+        "fps": 60,
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "type": "display",
+      "v_sync_range_hz": [
+        50,
+        60
+      ]
+    },
+    {
+      "cpu_model": "2 x A53 + 2 x A73",
+      "gpu_model": "ARM Mali G51",
+      "os": "Android 8.0",
+      "ram_gb": 3,
+      "storage_os_gb": 32,
+      "type": "compute"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "Android",
+      "transport": "proprietary",
+      "version": "8.0"
+    }
+  ],
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "count": 3,
+      "direction": "in",
+      "id": "hdmi_in_1",
+      "label": "HDMI Input",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "displayport-a",
+      "count": 1,
+      "direction": "in",
+      "id": "dp_in_1",
+      "label": "DisplayPort Input",
+      "signal_type": "video/displayport/1.2"
+    },
+    {
+      "connector_type": "dvi-i",
+      "count": 1,
+      "direction": "in",
+      "id": "dvi_in_1",
+      "label": "DVI-I Input",
+      "signal_type": "video/dvi-i"
+    },
+    {
+      "connector_type": "usb-a",
+      "count": 2,
+      "direction": "in",
+      "id": "usb_in_1",
+      "label": "USB 2.0",
+      "signal_type": "network/usb/2.0"
+    },
+    {
+      "connector_type": "displayport-a",
+      "count": 1,
+      "direction": "out",
+      "id": "dp_out_1",
+      "label": "DisplayPort Output",
+      "signal_type": "video/displayport/1.2"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "count": 1,
+      "direction": "out",
+      "id": "hdmi_out_1",
+      "label": "HDMI Output",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "in",
+      "id": "audio_in_1",
+      "label": "Audio Input",
+      "signal_type": "audio/analogue/microphone"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "out",
+      "id": "audio_out_1",
+      "label": "Audio Output",
+      "signal_type": "audio/analogue/speaker"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "bidirectional",
+      "id": "control_rj45",
+      "label": "RJ45 Control",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "bidirectional",
+      "id": "control_rs232",
+      "label": "RS232C (in/out)",
+      "signal_type": "control/rs232"
+    }
+  ],
+  "category": "display",
+  "description": "Smart, fast 24/7 professional 4K UHD display with ADS wide-view panel and Android 8.0 OS.",
+  "dimensions": {
+    "depth_mm": 89.9,
+    "height_mm": 837.3,
+    "width_mm": 1462.3
+  },
+  "environment": {
+    "altitude_max_m": 3000,
+    "humidity_condensing": false,
+    "humidity_max_percent": 80,
+    "operating_temp_max_c": 40,
+    "operating_temp_min_c": 0,
+    "storage_temp_max_c": 60,
+    "storage_temp_min_c": -20
+  },
+  "form_factor": "wall-mount",
+  "manufacturer": "Philips",
+  "model": "65BDL4550D",
+  "power": {
+    "frequency_hz": [
+      50,
+      60
+    ],
+    "max_wattage": 309,
+    "standby_wattage": 0.5,
+    "typical_wattage": 179,
+    "voltage_v": [
+      100,
+      240
+    ]
+  },
+  "subcategory": "Signage Display",
+  "weight_kg": 28.1,
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.documents.philips.com/assets/20230609/7f3e168cede949edbf53b01c00fbbcf8.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-22",
+      "notes": "Ingested via batch"
+    }
+  ]
+}

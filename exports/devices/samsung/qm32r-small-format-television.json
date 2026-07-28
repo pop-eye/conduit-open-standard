@@ -1,0 +1,119 @@
+{
+  "capabilities": [
+    {
+      "cpu_cores": 4,
+      "cpu_frequency_ghz": 1.7,
+      "cpu_model": "Cortex A72 1.7 GHz Quad-Core CPU",
+      "os": "Tizen 4.0 (VDLinux)",
+      "ram_gb": 2.5,
+      "storage_os_gb": 3.88,
+      "type": "compute"
+    },
+    {
+      "brightness_iso_lm": 400,
+      "contrast_ratio_full": 5000,
+      "native_resolution": {
+        "bit_depth": 10,
+        "height_px": 1080,
+        "width_px": 1920
+      },
+      "type": "display"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "HDCP",
+      "transport": "proprietary",
+      "version": "2.2"
+    }
+  ],
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "hdmi_in_1",
+      "label": "HDMI In 1 (ARC)",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "displayport-a",
+      "direction": "in",
+      "id": "dp_in",
+      "label": "DisplayPort 1.2",
+      "signal_type": "video/displayport/1.2"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "in",
+      "id": "usb_1",
+      "label": "USB 2.0",
+      "signal_type": "network/usb/2.0"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "in",
+      "id": "usb_2",
+      "label": "USB 2.0",
+      "signal_type": "network/usb/2.0"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "out",
+      "id": "hdmi_out",
+      "label": "HDMI 2.0 (Loop-Out)",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "in",
+      "id": "audio_jack_in",
+      "label": "Stereo Mini Jack",
+      "signal_type": "audio/analogue/unbalanced"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "out",
+      "id": "audio_jack_out",
+      "label": "Stereo Mini Jack",
+      "signal_type": "audio/analogue/unbalanced"
+    }
+  ],
+  "category": "display",
+  "description": "A high-quality yet affordable display with Full HD resolution and slim design for business messaging.",
+  "dimensions": {
+    "depth_mm": 35,
+    "height_mm": 420,
+    "width_mm": 725
+  },
+  "environment": {
+    "humidity_max_percent": 80,
+    "operating_temp_max_c": 40,
+    "operating_temp_min_c": 0
+  },
+  "manufacturer": "Samsung",
+  "model": "QM32R",
+  "power": {
+    "frequency_hz": [
+      50,
+      60
+    ],
+    "max_wattage": 72,
+    "psu_type": "internal",
+    "standby_wattage": 0.5,
+    "typical_wattage": 44,
+    "voltage_v": [
+      100,
+      240
+    ]
+  },
+  "weight_kg": 5.7,
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://image-us.samsung.com/SamsungUS/samsungbusiness/pdfs/datasheet/DIGSIG-QM32RDSHT-APR20T.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-22",
+      "notes": "Ingested via batch"
+    }
+  ]
+}

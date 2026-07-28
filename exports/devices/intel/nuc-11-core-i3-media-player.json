@@ -1,0 +1,94 @@
+{
+  "capabilities": [
+    {
+      "analogue_input_count": 1,
+      "analogue_output_count": 1,
+      "type": "audio-io"
+    },
+    {
+      "cpu_cores": 2,
+      "cpu_frequency_ghz": 3.0,
+      "cpu_model": "Intel Core i3-1115G4",
+      "gpu_model": "Intel UHD Graphics",
+      "os": "Microsoft Windows 10 Home",
+      "ram_gb": 8,
+      "ram_type": "DDR4-3200",
+      "storage_os_gb": 500,
+      "storage_type": "ssd-nvme",
+      "type": "compute"
+    },
+    {
+      "display_technology": "other",
+      "hdr_formats": [],
+      "native_resolution": {
+        "fps": 60,
+        "height_px": 2304,
+        "width_px": 4096
+      },
+      "type": "display"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "HDMI CEC",
+      "notes": "Built-in support for HDMI CEC is available on both HDMI ports",
+      "transport": "proprietary",
+      "version": "API"
+    }
+  ],
+  "ports": [
+    {
+      "connector_type": "usb-c",
+      "direction": "bidirectional",
+      "id": "front_usb_c",
+      "label": "Thunderbolt Port",
+      "signal_type": "video/thunderbolt/3"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "out",
+      "id": "back_hdmi",
+      "label": "HDMI 2.0b",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "displayport-a",
+      "direction": "out",
+      "id": "back_mdp",
+      "label": "mDP Port",
+      "signal_type": "video/displayport/1.4"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "bidirectional",
+      "id": "lan",
+      "label": "LAN Connector",
+      "signal_type": "network/ethernet/2.5g"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "bidirectional",
+      "id": "front_audio",
+      "label": "Audio Jack",
+      "signal_type": "audio/analogue/speaker"
+    }
+  ],
+  "category": "media-player",
+  "description": "Intel NUC 11 Performance Mini PC with Intel Core i3 processor.",
+  "form_factor": "desktop",
+  "manufacturer": "Intel",
+  "model": "NUC11PA[x]i3",
+  "power": {
+    "max_wattage": 28,
+    "voltage_v": 19
+  },
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.intel.com/content/dam/support/us/en/documents/intel-nuc/NUC11PA_TechProdSpec.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-23",
+      "notes": "Ingested via batch"
+    }
+  ]
+}

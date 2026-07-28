@@ -1,0 +1,311 @@
+{
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "hdmi-in-1",
+      "label": "HDMI 2.0",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "hdmi-in-2",
+      "label": "HDMI 2.0 x 1",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "hdmi-in-3",
+      "label": "HDMI 2.1 support ARC",
+      "signal_type": "video/hdmi/2.1"
+    },
+    {
+      "connector_type": "de-15",
+      "direction": "in",
+      "id": "vga",
+      "label": "RGB / VGA",
+      "signal_type": "video/vga"
+    },
+    {
+      "connector_type": "displayport-a",
+      "direction": "in",
+      "id": "displayport",
+      "label": "DisplayPort",
+      "signal_type": "video/displayport"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "in",
+      "id": "audio-in",
+      "label": "AUDIO-IN",
+      "signal_type": "audio/analogue/microphone"
+    },
+    {
+      "connector_type": "de-9",
+      "direction": "bidirectional",
+      "id": "rs232",
+      "label": "RS232",
+      "signal_type": "control/rs232"
+    },
+    {
+      "connector_type": "slot",
+      "direction": "bidirectional",
+      "id": "ops-slot",
+      "label": "OPS Slot",
+      "signal_type": "network/pcie/4.0"
+    },
+    {
+      "connector_type": "slot",
+      "direction": "bidirectional",
+      "id": "wifi-slot",
+      "label": "WIFI Slot",
+      "signal_type": "network/wifi/5g"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "out",
+      "id": "hdmi-out",
+      "label": "HDMI Out",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "out",
+      "id": "audio-out",
+      "label": "Earphone Out",
+      "signal_type": "audio/analogue/speaker"
+    },
+    {
+      "connector_type": "toslink",
+      "direction": "out",
+      "id": "spdif",
+      "label": "SPDIF",
+      "signal_type": "audio/spdif/optical"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "in",
+      "id": "lan-in",
+      "label": "LAN in",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "out",
+      "id": "lan-out",
+      "label": "LAN out",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "in",
+      "id": "usb-fw",
+      "label": "USB 2.0 (FW upgrade)",
+      "signal_type": "network/usb/2.0"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "in",
+      "id": "usb-3-1",
+      "label": "USB 3.0 (Rear)",
+      "signal_type": "network/usb/3.2"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "in",
+      "id": "usb-3-2",
+      "label": "USB 3.0 (Rear)",
+      "signal_type": "network/usb/3.2"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "in",
+      "id": "usb-3-3",
+      "label": "USB 3.0 (Front)",
+      "signal_type": "network/usb/3.2"
+    },
+    {
+      "connector_type": "usb-b",
+      "direction": "in",
+      "id": "usb-b-1",
+      "label": "USB Type B (Front)",
+      "signal_type": "network/usb/3.2"
+    },
+    {
+      "connector_type": "usb-b",
+      "direction": "in",
+      "id": "usb-b-2",
+      "label": "USB Type B (Bottom)",
+      "signal_type": "network/usb/3.2"
+    },
+    {
+      "connector_type": "usb-b",
+      "direction": "in",
+      "id": "usb-b-3",
+      "label": "USB Type B (Rear)",
+      "signal_type": "network/usb/3.2"
+    },
+    {
+      "connector_type": "usb-c",
+      "direction": "bidirectional",
+      "id": "usb-c-1",
+      "label": "USB Type C (Rear 1)",
+      "notes": "PD100W + DP1.2 + Touch + USB 3.0 & USB 2.0",
+      "signal_type": "video/usb-c-dp-alt"
+    },
+    {
+      "connector_type": "usb-c",
+      "direction": "bidirectional",
+      "id": "usb-c-2",
+      "label": "USB Type C (Rear 2)",
+      "notes": "USB 3.0 only",
+      "signal_type": "network/usb/3.2"
+    },
+    {
+      "connector_type": "usb-c",
+      "direction": "bidirectional",
+      "id": "usb-c-3",
+      "label": "USB Type C (Front)",
+      "notes": "PD65W + DP1.2 + Touch + 100M sharing, USB 3.0 & USB 2.0",
+      "signal_type": "video/usb-c-dp-alt"
+    }
+  ],
+  "tags": [
+    "4K, Interactive, Android 13, NFC, USB-C PD, EPEAT Silver"
+  ],
+  "capabilities": [
+    {
+      "analogue_input_count": 1,
+      "analogue_output_count": 0,
+      "gain_compensation": false,
+      "type": "audio-io"
+    },
+    {
+      "cpu_cores": 8,
+      "cpu_model": "Octa-Core CPU (A73*4 + A53*4)",
+      "gpu_api_support": [],
+      "gpu_model": "Mali-G52",
+      "os": "ViewBoard OS",
+      "ram_gb": 8,
+      "ram_type": "LPDDR",
+      "rtc": false,
+      "storage_os_gb": 128,
+      "storage_type": "emmc",
+      "type": "compute"
+    },
+    {
+      "brightness_iso_lm": 400,
+      "contrast_ratio_full": 1200,
+      "display_technology": "led-direct",
+      "light_source_type": "other",
+      "native_resolution": {
+        "fps": 120,
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "type": "display"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "vCast",
+      "notes": "Allows six-device simultaneous casting.",
+      "transport": "wifi"
+    },
+    {
+      "name": "Display",
+      "notes": "Built-in service for instant sharing from compatible web browsers.",
+      "transport": "proprietary"
+    }
+  ],
+  "category": "display",
+  "control": {
+    "nfc": true,
+    "web_ui": true
+  },
+  "description": "A massive 110\" touchscreen with 4K Ultra HD resolution, making it one of the largest and most immersive displays on the market. Perfect as an interactive video wall for large-scale presentations in museums, showrooms and training centers.",
+  "dimensions": {
+    "depth_mm": 96.8,
+    "height_mm": 1474.8,
+    "width_mm": 2507.1
+  },
+  "environment": {
+    "altitude_max_m": 3000,
+    "humidity_max_percent": 80,
+    "operating_temp_max_c": 40,
+    "operating_temp_min_c": 0
+  },
+  "extensions": {
+    "conduit:unmapped": {
+      "/capabilities/notes": "Integrated 8-array microphone and speakers with subwoofer.",
+      "/capabilities/response_time_ms": 8,
+      "/capabilities/viewing_angles": {
+        "h": 178,
+        "v": 178
+      }
+    }
+  },
+  "form_factor": "wall-mount",
+  "manufacturer": "ViewSonic",
+  "model": "IFP110",
+  "notes": "Features an integrated 8-array microphone and supports Google, Microsoft, and Apple single-service sign-in options.",
+  "power": {
+    "connector_type": "iec-c14",
+    "frequency_hz": [
+      50,
+      60
+    ],
+    "max_wattage": 175.46,
+    "psu_type": "internal",
+    "standby_wattage": 0.5,
+    "typical_wattage": 175.46,
+    "voltage_v": [
+      100,
+      240
+    ]
+  },
+  "reliability": {
+    "warranty_years": 3
+  },
+  "subcategory": "interactive display",
+  "weight_kg": 129.5,
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.viewsonic.com/media/wysiwyg/press-room/infocomm-2024/Datasheet-IFP110.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-22",
+      "notes": "Ingested via batch"
+    },
+    {
+      "url": "https://www.viewsonic.com/global/products/viewboard/ViewBoard%20IFP110",
+      "type": "tech-specs-page",
+      "title": "ViewBoard IFP110 ViewBoard® 110” 4K Interactive Display - ViewSonic Global",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://protechprojection.com/products/viewsonic-ifp110-viewboard-110-4k-interactive-display",
+      "type": "tech-specs-page",
+      "title": "ViewSonic IFP110 ViewBoard® 110” 4K Interactive Display - Protech",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://officewonderland.com/products/viewsonic-viewboard-ifp110-110-4k-interactive-display",
+      "type": "tech-specs-page",
+      "title": "ViewSonic ViewBoard® IFP110 110” 4K Interactive Display",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://avlgear.com/products/viewsonic-ifp110-interactive-flat-panel-display",
+      "type": "tech-specs-page",
+      "title": "ViewSonic IFP110 Interactive Flat Panel Display – AVLGEAR",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "hdmi-input",
+      "label": "HDMI Input",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "out",
+      "id": "hdmi-output",
+      "label": "HDMI Output",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "bidirectional",
+      "id": "ethernet-1",
+      "label": "Ethernet 1",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "bidirectional",
+      "id": "ethernet-2",
+      "label": "Ethernet 2",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "bidirectional",
+      "id": "ethernet-3",
+      "label": "Ethernet 3 (10/100)",
+      "signal_type": "network/ethernet/100m"
+    },
+    {
+      "connector_type": "sfp",
+      "direction": "bidirectional",
+      "id": "ethernet-4",
+      "label": "Ethernet 4",
+      "signal_type": "network/sfp"
+    },
+    {
+      "connector_type": "usb-c",
+      "direction": "in",
+      "id": "usb-device",
+      "label": "USB Device",
+      "signal_type": "network/usb/2.0"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "out",
+      "id": "usb-host",
+      "label": "USB Host",
+      "signal_type": "network/usb/2.0"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "out",
+      "id": "usb-hid",
+      "label": "USB HID",
+      "signal_type": "network/usb/2.0"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "bidirectional",
+      "id": "audio-i-o",
+      "label": "Audio I/O",
+      "signal_type": "audio/analogue/balanced"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "bidirectional",
+      "id": "com",
+      "label": "COM",
+      "signal_type": "control/rs232"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "out",
+      "id": "ir-1-2",
+      "label": "IR 1 – 2",
+      "signal_type": "control/ir"
+    }
+  ],
+  "tags": [
+    "4K60",
+    "4:4:4",
+    "HDR",
+    "AV over IP",
+    "AES67",
+    "USB 2.0",
+    "KVM"
+  ],
+  "capabilities": [
+    {
+      "ad_bit_depth": 24,
+      "analogue_input_count": 1,
+      "analogue_output_count": 1,
+      "da_bit_depth": 24,
+      "gain_compensation": true,
+      "supported_sample_rates_hz": [
+        48000
+      ],
+      "type": "audio-io"
+    },
+    {
+      "type": "compute"
+    },
+    {
+      "type": "display"
+    },
+    {
+      "managed": true,
+      "type": "network-switch"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "802.1x",
+      "transport": "proprietary"
+    },
+    {
+      "name": "Active Directory",
+      "transport": "tcp"
+    },
+    {
+      "name": "AES-128",
+      "transport": "proprietary"
+    },
+    {
+      "name": "SSL",
+      "transport": "tcp"
+    },
+    {
+      "name": "SSH",
+      "transport": "tcp"
+    },
+    {
+      "name": "HTTPS",
+      "transport": "tcp"
+    }
+  ],
+  "category": "media-player",
+  "control": {
+    "rest_api": true,
+    "snmp": false,
+    "web_ui": true
+  },
+  "description": "A standards-based AV-over-IP solution that delivers flawless video, audio, USB and control over standard gigabit networks with Pixel Perfect Processing.",
+  "dimensions": {
+    "depth_mm": 32,
+    "height_mm": 219,
+    "width_mm": 236
+  },
+  "environment": {
+    "audible_noise_dba": 33,
+    "heat_dissipation_btu_hr": 74,
+    "humidity_condensing": false,
+    "humidity_max_percent": 90,
+    "operating_temp_max_c": 40,
+    "operating_temp_min_c": 0
+  },
+  "extensions": {
+    "conduit:unmapped": {
+      "/capabilities/hdr": true
+    }
+  },
+  "manufacturer": "Crestron Electronics, Inc.",
+  "model": "NVX-100",
+  "notes": "Supports video up to 5K resolution; lossless audio up to 512 channels over a standard 1Gb network; USB 2.0 switching; image overlay (logos, text, images); control-over-IP.",
+  "power": {
+    "connector_type": "rj45",
+    "frequency_hz": [
+      50,
+      60
+    ],
+    "max_wattage": 25.5,
+    "poe_budget_w": 25.5,
+    "psu_type": "poe-plus",
+    "typical_wattage": 20
+  },
+  "subcategory": "AV over IP encoder/decoder",
+  "weight_kg": 0.91,
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.crestron.com/getmedia/56e93259-ca22-4019-80af-a11d8cae36d9/pb_brochure_DM_NVX_2_0",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-23",
+      "notes": "Ingested via batch"
+    },
+    {
+      "url": "https://www.crestron.com/News/Blog/July-2025/DM-NVX-AV-over-IP-Technology-Now-with-Multiview",
+      "type": "tech-specs-page",
+      "title": "DM NVX AV-over-IP Technology — Now with Multiview [Crestron Electronics, Inc.]",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.crestron.com/Products/Catalog/AV-Over-IP/DM-NVX-AV-Over-IP/Video-Endpoint/DM-NVX-360",
+      "type": "tech-specs-page",
+      "title": "DM-NVX-360 [Crestron Electronics, Inc.]",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.crestron.com/getmedia/154731bd-b79d-45b1-8b58-33feda6fa802/mg_design_guide_dm_nvx",
+      "type": "datasheet",
+      "title": "DM NVX Application Design Guide",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.crestron.com/Products/Featured-Solutions/DigitalMedia-NVX-Series",
+      "type": "tech-specs-page",
+      "title": "DM NVX [Crestron Electronics, Inc.]",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.crestron.com/getmedia/fe0cf130-9884-42c7-bb62-7900148e619b/mg_dg_dm_nvx_system",
+      "type": "datasheet",
+      "title": "DM NVX® AV-over-IP System Design Guide Crestron Electronics, Inc.",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    }
+  ]
+}

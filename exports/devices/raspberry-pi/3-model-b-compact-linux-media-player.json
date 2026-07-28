@@ -1,0 +1,117 @@
+{
+  "capabilities": [
+    {
+      "analogue_output_count": 2,
+      "type": "audio-io"
+    },
+    {
+      "cpu_architecture": "ARMv8 64bit",
+      "cpu_cores": 4,
+      "cpu_frequency_ghz": 1.4,
+      "cpu_model": "BCM2837B0",
+      "gpu_model": "VideoCore IV",
+      "os": "Snappy Ubuntu Core, Raspbian, Fedora, Arch Linux, Microsoft Windows 10 IoT Core",
+      "ram_gb": 1,
+      "storage_type": "microsd",
+      "type": "compute"
+    }
+  ],
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "port_hdmi",
+      "label": "full size HDMI",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "usb-a",
+      "count": 4,
+      "direction": "bidirectional",
+      "id": "usb_1",
+      "label": "USB 2.0 interface",
+      "signal_type": "network/usb/2.0"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "bidirectional",
+      "id": "port_eth",
+      "label": "Gigabit Ethernet over USB 2.0",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "wireless",
+      "direction": "bidirectional",
+      "id": "port_wifi",
+      "label": "dual-band wireless LAN",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "wireless",
+      "direction": "bidirectional",
+      "id": "port_bt",
+      "label": "Bluetooth 4.2, BLE",
+      "signal_type": "network/bluetooth"
+    },
+    {
+      "connector_type": "microsd",
+      "direction": "bidirectional",
+      "id": "port_sd",
+      "label": "Micro SD format",
+      "signal_type": "network/sdcard"
+    },
+    {
+      "connector_type": "usb-micro-b",
+      "direction": "power-in",
+      "id": "port_power_usb",
+      "label": "micro USB connector",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "gpio-header-40pin",
+      "direction": "power-in",
+      "id": "port_power_gpio",
+      "label": "GPIO header",
+      "signal_type": "power/dc"
+    }
+  ],
+  "category": "media-player",
+  "description": "A credit card-sized computer with an ARM processor that can run Linux.",
+  "dimensions": {
+    "depth_mm": 56.08,
+    "height_mm": 20.32,
+    "width_mm": 85.09
+  },
+  "environment": {
+    "operating_temp_max_c": 50,
+    "operating_temp_min_c": 0
+  },
+  "form_factor": "other",
+  "manufacturer": "Raspberry Pi Ltd",
+  "model": "Raspberry Pi 3 Model B+",
+  "power": {
+    "connector_type": "usb-micro-b",
+    "max_wattage": 12.5,
+    "voltage_v": 5
+  },
+  "reliability": {
+    "mtbf_hours": 378000
+  },
+  "weight_kg": 0.05,
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://datasheets.raspberrypi.com/rpi3/raspberry-pi-3-b-plus-product-brief.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-23",
+      "notes": "Ingested via batch"
+    },
+    {
+      "url": "https://www.pololu.com/product/2797",
+      "type": "tech-specs-page",
+      "title": "Pololu - Raspberry Pi 3 Model B+",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    }
+  ]
+}

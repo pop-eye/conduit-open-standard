@@ -1,22 +1,4 @@
 {
-  "protocols": [
-    {
-      "name": "Bluetooth Audio",
-      "transport": "bluetooth"
-    },
-    {
-      "name": "Bluetooth Low Energy",
-      "transport": "bluetooth"
-    },
-    {
-      "name": "Anynet+ (HDMI-CEC)",
-      "transport": "proprietary"
-    },
-    {
-      "name": "WiFi Direct",
-      "transport": "proprietary"
-    }
-  ],
   "ports": [
     {
       "connector_type": "hdmi-a",
@@ -97,6 +79,23 @@
       "type": "display"
     }
   ],
+  "protocols": [
+    {
+      "name": "HDMI-CEC",
+      "transport": "proprietary",
+      "version": "1.4"
+    },
+    {
+      "name": "WiFi",
+      "transport": "wifi",
+      "version": "5"
+    },
+    {
+      "name": "Bluetooth",
+      "transport": "bluetooth",
+      "version": "4.2"
+    }
+  ],
   "category": "display",
   "description": "55\" AU9000 Crystal UHD 4K Smart TV (2021)",
   "dimensions": {
@@ -132,17 +131,17 @@
   "schema_version": "conduit/v1",
   "sources": [
     {
-      "url": "https://www.samsung.com/latin_en/tvs/uhd-4k-tv/55--au9000-crystal-uhd-4k-smart-tv--2021--55-inch-un55au9000pxpa/",
-      "type": "tech-specs-page",
-      "title": "55\" AU9000 Crystal UHD 4K Smart TV (2021) UN55AU9000PXPA | Samsung Caribbean",
-      "retrieved_date": "2026-07-19"
-    },
-    {
       "url": "https://images.samsung.com/is/content/samsung/p5/au/tvs/specs/2020/TU8000-Crystal-UHD-4K-Smart-TV-2020-Product-Specifications.pdf",
       "type": "datasheet",
       "title": "TU8000 Crystal UHD 4K Smart TV (2020) Exceptional. Elegant. Effortless.",
       "retrieved_date": "2026-07-19",
       "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.samsung.com/latin_en/tvs/uhd-4k-tv/55--au9000-crystal-uhd-4k-smart-tv--2021--55-inch-un55au9000pxpa/",
+      "type": "tech-specs-page",
+      "title": "55\" AU9000 Crystal UHD 4K Smart TV (2021) UN55AU9000PXPA | Samsung Caribbean",
+      "retrieved_date": "2026-07-19"
     }
   ]
 }

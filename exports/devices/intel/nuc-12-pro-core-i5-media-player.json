@@ -1,0 +1,103 @@
+{
+  "capabilities": [
+    {
+      "type": "audio-io"
+    },
+    {
+      "cpu_architecture": "Alder Lake-P",
+      "cpu_cores": 12,
+      "cpu_frequency_ghz": 4.4,
+      "cpu_model": "Intel Core i5-1240P",
+      "gpu_model": "Intel Iris Xe Graphics G7 80EUs",
+      "os": "Microsoft Windows 11 Pro",
+      "ram_gb": 16,
+      "ram_type": "DDR4-3200",
+      "storage_media_tb": 0.512,
+      "storage_os_gb": 512,
+      "storage_type": "ssd-nvme",
+      "type": "compute"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "Thunderbolt 4",
+      "transport": "usb",
+      "version": "4.0"
+    }
+  ],
+  "ports": [
+    {
+      "connector_type": "rj45",
+      "direction": "bidirectional",
+      "id": "port_lan_1",
+      "label": "Dual LAN Port",
+      "signal_type": "network/ethernet/10g"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "bidirectional",
+      "id": "port_lan_2",
+      "label": "Dual LAN Port",
+      "signal_type": "network/ethernet/10g"
+    }
+  ],
+  "category": "media-player",
+  "description": "Intel® NUC Board/Kit/Mini PC NUC12WS series.",
+  "dimensions": {
+    "depth_mm": 112,
+    "height_mm": 33,
+    "width_mm": 117
+  },
+  "environment": {
+    "operating_temp_max_c": 40,
+    "operating_temp_min_c": 0
+  },
+  "form_factor": "desktop",
+  "manufacturer": "Intel",
+  "model": "Intel NUC 12 Pro",
+  "model_variant": "NUC12WSHi5/v5/v5L",
+  "notes": "Includes a second M.2 drive bay (SATA 3 speeds) and a 2.5-inch drive bay in the base.",
+  "power": {
+    "max_wattage": 120,
+    "psu_type": "external-brick",
+    "typical_wattage": 40,
+    "voltage_v": [
+      12,
+      20
+    ]
+  },
+  "reliability": {
+    "warranty_years": 3
+  },
+  "weight_kg": 0.549,
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.snuc.media/wp-content/uploads/2023/03/Wall-Street-i5-Tall-NUC12WSHi5-v1.2.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-23",
+      "notes": "Ingested via batch"
+    },
+    {
+      "url": "https://www.intel.com/content/dam/support/us/en/documents/intel-nuc/NUC12WS-TechProdSpec.pdf",
+      "type": "datasheet",
+      "title": "Intel® NUC Board/Kit/Mini PC NUC12WSi3 / NUC12WSi5 / NUC12WSv5 / NUC12WSi7 /",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.tomsguide.com/reviews/intel-nuc-12",
+      "type": "tech-specs-page",
+      "title": "Intel NUC 12 Pro review | Tom's Guide",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.notebookcheck.net/Intel-NUC-12-Pro-Kit-Core-i5-1240P-mini-PC-review-Snappy-with-great-connectivity.692362.0.html",
+      "type": "tech-specs-page",
+      "title": "Intel NUC 12 Pro Kit (Core i5-1240P) mini PC review: Snappy with great connectivity - Notebookcheck Review",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    }
+  ]
+}

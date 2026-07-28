@@ -1,0 +1,50 @@
+{
+  "ports": [
+    {
+      "connector_type": "usb-a",
+      "count": 1,
+      "direction": "in",
+      "id": "usb_front",
+      "label": "USB 2.0 Input",
+      "panel_side": "front",
+      "signal_type": "network/usb/2.0"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "count": 1,
+      "direction": "out",
+      "id": "hdmi_rear",
+      "label": "HDMI Output",
+      "panel_side": "rear",
+      "signal_type": "video/hdmi"
+    }
+  ],
+  "category": "media-player",
+  "description": "A slim Blu-ray player with a carbon fibre look that supports Blu-ray, DVD, Audio CD, and USB media playback.",
+  "dimensions": {
+    "depth_mm": 270,
+    "height_mm": 43,
+    "width_mm": 195
+  },
+  "form_factor": "desktop",
+  "manufacturer": "LG",
+  "model": "BP250",
+  "notes": "Features include 1080p Full HD up-scaling, Deep Colour (xvYCC), NTSC <-> PAL conversion, and Noise Reduction. Supports USB External HDD playback with NTFS/FAT file systems.",
+  "power": {
+    "psu_type": "external-brick"
+  },
+  "reliability": {
+    "warranty_notes": "Parts & Labour",
+    "warranty_years": 1
+  },
+  "weight_kg": 0.95,
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.lg.com/content/dam/channel/wcms/au/support/products/documents/BP250_Spec_150410.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-22",
+      "notes": "Ingested via batch"
+    }
+  ]
+}
