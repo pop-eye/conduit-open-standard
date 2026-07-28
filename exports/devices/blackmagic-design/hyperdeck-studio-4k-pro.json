@@ -1,27 +1,4 @@
 {
-  "capabilities": [
-    {
-      "ad_bit_depth": 24,
-      "analogue_input_count": 0,
-      "analogue_output_count": 1,
-      "da_bit_depth": 24,
-      "supported_sample_rates_hz": [
-        48000
-      ],
-      "type": "audio-io"
-    },
-    {
-      "os": "HFS+",
-      "type": "compute"
-    }
-  ],
-  "protocols": [
-    {
-      "name": "Blackmagic HyperDeck Ethernet Protocol",
-      "notes": "Includes Blackmagic HyperDeck Ethernet Protocol.",
-      "transport": "tcp"
-    }
-  ],
   "control": {
     "custom_commands": [
       {
@@ -145,6 +122,29 @@
       "id": "power-xlr",
       "label": "External Power In",
       "signal_type": "power/dc"
+    }
+  ],
+  "capabilities": [
+    {
+      "ad_bit_depth": 24,
+      "analogue_input_count": 0,
+      "analogue_output_count": 1,
+      "da_bit_depth": 24,
+      "supported_sample_rates_hz": [
+        48000
+      ],
+      "type": "audio-io"
+    },
+    {
+      "os": "HFS+",
+      "type": "compute"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "Blackmagic HyperDeck Ethernet Protocol",
+      "notes": "Includes Blackmagic HyperDeck Ethernet Protocol.",
+      "transport": "tcp"
     }
   ],
   "tags": [
