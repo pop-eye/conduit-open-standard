@@ -111,7 +111,16 @@
       "$ref": "#/$defs/ReliabilitySpec"
     },
     "power": {
-      "$ref": "#/$defs/PowerRequirements"
+      "$ref": "#/$defs/PowerRequirements",
+      "description": "The device's primary power supply. For a device with several independent inputs (an internal AC PSU alongside a 12V DC jack, redundant PSUs), describe each one in `power_inputs`."
+    },
+    "power_inputs": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Independent power inputs, one entry each, when a device has more than one (e.g. an internal AC PSU alongside a 12V DC jack, or redundant PSUs). Name each with `label`. `power` remains the primary/aggregate supply.",
+      "items": {
+        "$ref": "#/$defs/PowerRequirements"
+      }
     },
     "ports": {
       "type": "array",
@@ -478,9 +487,14 @@
     },
     "PowerRequirements": {
       "type": "object",
-      "description": "Power supply and consumption requirements for this device.",
+      "description": "Power supply and consumption requirements for this device. When a device exposes several independent inputs, use one entry per input and name each with `label`.",
       "additionalProperties": false,
       "properties": {
+        "label": {
+          "type": "string",
+          "description": "Human-readable name for this supply when a device has more than one (e.g. 'AC mains inlet', '12V DC input', 'PSU 2').",
+          "examples": ["AC mains inlet", "12V DC input"]
+        },
         "voltage_v": {
           "oneOf": [
             {
