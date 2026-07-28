@@ -94,10 +94,25 @@
       "label": "DC In",
       "notes": "Locking 5.5mm barrel 12V DC In for external power supply or battery use.",
       "signal_type": "power/dc"
+    },
+    {
+      "connector_type": "iec-c14",
+      "direction": "power-in",
+      "id": "ac-in",
+      "label": "AC Power Input",
+      "notes": "Internal universal PSU, 100-240V 50/60Hz.",
+      "signal_type": "power/mains/ac/universal"
     }
   ],
   "tags": [
     "broadcast-deck, sd-card-recorder, uhs-ii, 3g-sdi, hdmi-out, timecode-generator"
+  ],
+  "protocols": [
+    {
+      "name": "HyperDeck Ethernet Protocol",
+      "notes": "text based HyperDeck Ethernet Protocol can control Blackmagic HyperDecks including transport control, configuring and querying the state of the HyperDeck and even building a timeline",
+      "transport": "proprietary"
+    }
   ],
   "capabilities": [
     {
@@ -113,13 +128,6 @@
     {
       "os": "Blackmagic OS",
       "type": "compute"
-    }
-  ],
-  "protocols": [
-    {
-      "name": "HyperDeck Ethernet Protocol",
-      "notes": "text based HyperDeck Ethernet Protocol can control Blackmagic HyperDecks including transport control, configuring and querying the state of the HyperDeck and even building a timeline",
-      "transport": "proprietary"
     }
   ],
   "category": "video-capture",

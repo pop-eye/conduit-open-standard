@@ -103,7 +103,7 @@
       "subcategory": "media recorder",
       "form_factor": "other",
       "description": "A compact media recorder based on the Teranex Mini form factor, supporting 3G-SDI in/out, HDMI output, dual SD card media slots, and built-in sync and timecode generators.",
-      "port_count": 11,
+      "port_count": 12,
       "tags": [
         "broadcast-deck, sd-card-recorder, uhs-ii, 3g-sdi, hdmi-out, timecode-generator"
       ]
