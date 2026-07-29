@@ -1,7 +1,7 @@
 {
   "schema_version": "conduit/v1",
   "generated_at": "2026-07-29",
-  "count": 47,
+  "count": 46,
   "devices": [
     {
       "id": "apple/tv-4k-1st-gen-original-4k-media-player",
@@ -58,27 +58,6 @@
       "port_count": 7,
       "tags": [
         "gaming, 3D, home cinema"
-      ]
-    },
-    {
-      "id": "blackmagic-design/atem-mini",
-      "path": "blackmagic-design/atem-mini.json",
-      "manufacturer": "Blackmagic Design",
-      "model": "ATEM Mini",
-      "category": "video-switcher",
-      "subcategory": "live switcher",
-      "form_factor": "desktop",
-      "description": "ATEM Mini features 4HDMI inputs and has an intuitive, easy to use design that makes it possible for anyone to live stream multi camera productions online via services and software such as YouTube Facebook Live or even Skype. Simply connect 4high quality HDMI inputs that can be used for live switching cameras, computers or even game consoles. Youget abuilt in DVE for exciting picture in picture effects, broadcast quality transitions, upstream keyers for removing blue and green screen background, adownstream keyer for superimposing custom graphics, audio inputs amixer, and more.",
-      "port_count": 7,
-      "tags": [
-        "live streaming",
-        "multi camera production",
-        "DVE",
-        "picture in picture",
-        "broadcast quality transitions",
-        "upstream keyers",
-        "downstream keyer",
-        "webcam"
       ]
     },
     {
