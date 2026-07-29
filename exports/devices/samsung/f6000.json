@@ -1,4 +1,10 @@
 {
+  "protocols": [
+    {
+      "name": "Tizen OS",
+      "notes": "Smart TV Operating System"
+    }
+  ],
   "capabilities": [
     {
       "display_technology": "lcd",
@@ -10,12 +16,6 @@
         "width_px": 1920
       },
       "type": "display"
-    }
-  ],
-  "protocols": [
-    {
-      "name": "Tizen OS",
-      "notes": "Smart TV Operating System"
     }
   ],
   "ports": [
