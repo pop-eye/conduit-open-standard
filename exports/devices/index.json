@@ -61,6 +61,20 @@
       ]
     },
     {
+      "id": "blackmagic-design/atem-mini-pro",
+      "path": "blackmagic-design/atem-mini-pro.json",
+      "manufacturer": "Blackmagic Design",
+      "model": "ATEM Mini Pro",
+      "category": "video-switcher",
+      "subcategory": "video-switcher",
+      "form_factor": "desktop",
+      "description": "ATEM Mini Pro is fast to set up and easy to use. It includes 4 standards converted HDMI inputs, USB webcam out, HDMI out, Fairlight audio mixer with EQ and dynamics, DVE for picture in picture, transition effects, green screen chroma key, 20 stills media pool for titles and free ATEM Software Control. ATEM Mini Pro also includes direct recording to USB flash disks in H.264 and direct streaming via Ethernet to YouTube Live and more. There's also a multiview with 4 cameras, media, preview and program plus status of recording, streaming and audio.",
+      "port_count": 9,
+      "tags": [
+        "live-streaming, multi-camera, broadcast-switcher, multiview, usb-webcam"
+      ]
+    },
+    {
       "id": "blackmagic-design/hyperdeck-studio-4k-pro",
       "path": "blackmagic-design/hyperdeck-studio-4k-pro.json",
       "manufacturer": "Blackmagic Design",
@@ -85,20 +99,6 @@
       "port_count": 12,
       "tags": [
         "broadcast-deck, sd-card-recorder, uhs-ii, 3g-sdi, hdmi-out, timecode-generator"
-      ]
-    },
-    {
-      "id": "blackmagic/atem-mini-pro",
-      "path": "blackmagic/atem-mini-pro.json",
-      "manufacturer": "Blackmagic Design",
-      "model": "ATEM Mini Pro",
-      "category": "video-switcher",
-      "subcategory": "video-switcher",
-      "form_factor": "desktop",
-      "description": "ATEM Mini Pro is fast to set up and easy to use. It includes 4 standards converted HDMI inputs, USB webcam out, HDMI out, Fairlight audio mixer with EQ and dynamics, DVE for picture in picture, transition effects, green screen chroma key, 20 stills media pool for titles and free ATEM Software Control. ATEM Mini Pro also includes direct recording to USB flash disks in H.264 and direct streaming via Ethernet to YouTube Live and more. There's also a multiview with 4 cameras, media, preview and program plus status of recording, streaming and audio.",
-      "port_count": 9,
-      "tags": [
-        "live-streaming, multi-camera, broadcast-switcher, multiview, usb-webcam"
       ]
     },
     {
