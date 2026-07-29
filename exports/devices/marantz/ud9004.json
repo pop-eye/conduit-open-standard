@@ -1,0 +1,175 @@
+{
+  "capabilities": [
+    {
+      "ad_bit_depth": 32,
+      "analogue_input_count": 3,
+      "analogue_output_count": 3,
+      "da_bit_depth": 32,
+      "dynamic_range_db": 110,
+      "supported_sample_rates_hz": [
+        48000,
+        96000,
+        192000
+      ],
+      "thd_percent": 0.0,
+      "type": "audio-io"
+    }
+  ],
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "count": 2,
+      "direction": "in",
+      "id": "hdmi-in-1",
+      "label": "HDMI Input 1",
+      "notes": "HDMI: inputs / outputs 1.3a (2x)",
+      "signal_type": "video/hdmi/1.4"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "count": 2,
+      "direction": "out",
+      "id": "hdmi-out-1",
+      "label": "HDMI Output",
+      "notes": "HDMI: inputs / outputs 1.3a (2x)",
+      "signal_type": "video/hdmi/1.4"
+    },
+    {
+      "connector_type": "rca",
+      "count": 3,
+      "direction": "out",
+      "id": "analog-out-cinch",
+      "label": "Analog Out (Cinch)",
+      "notes": "analog Out: 2ch / 5.1ch / 7.1ch (Cinch)",
+      "signal_type": "audio/analogue/unbalanced"
+    },
+    {
+      "connector_type": "xlr-3m",
+      "count": 2,
+      "direction": "out",
+      "id": "xlr-out",
+      "label": "XLR Analog Out",
+      "notes": "XLR analog out (L/R)",
+      "signal_type": "audio/analogue/balanced"
+    },
+    {
+      "connector_type": "rca",
+      "count": 1,
+      "direction": "out",
+      "id": "digital-out-coax",
+      "label": "Digital Out Coaxial",
+      "notes": "Digital Out: Coax/ Optical",
+      "signal_type": "audio/spdif/coax"
+    },
+    {
+      "connector_type": "toslink",
+      "count": 1,
+      "direction": "out",
+      "id": "digital-out-optical",
+      "label": "Digital Out Optical",
+      "notes": "Digital Out: Coax/ Optical",
+      "signal_type": "audio/spdif/optical"
+    },
+    {
+      "connector_type": "sd",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "sd-card-reader",
+      "label": "SD Card Reader",
+      "notes": "SD Card reader",
+      "signal_type": "network/sdcard"
+    },
+    {
+      "connector_type": "rj45",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "ethernet-port",
+      "label": "Ethernet Port",
+      "notes": "Ethernet",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "db9",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "rs232-port",
+      "label": "RS232 Port",
+      "notes": "RS232",
+      "signal_type": "control/rs232"
+    },
+    {
+      "connector_type": "rca-composite",
+      "count": 1,
+      "direction": "in",
+      "id": "composite-in",
+      "label": "Composite Input",
+      "notes": "Composite / S-Video / Component",
+      "signal_type": "video/composite"
+    },
+    {
+      "connector_type": "db15",
+      "count": 1,
+      "direction": "in",
+      "id": "svideo-in",
+      "label": "S-Video Input",
+      "notes": "Composite / S-Video / Component",
+      "signal_type": "video/smpte2110"
+    },
+    {
+      "connector_type": "rca-composite",
+      "count": 1,
+      "direction": "in",
+      "id": "component-in",
+      "label": "Component Input",
+      "notes": "Composite / S-Video / Component",
+      "signal_type": "video/component"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "RS-232C",
+      "notes": "Marantz BD Player Common RS-232C Spec. Sheet",
+      "transport": "serial",
+      "version": "Common"
+    }
+  ],
+  "tags": [
+    "Blu-ray, High Grade Audio, Realta Optix HQV, Toroidal Transformer"
+  ],
+  "category": "media-player",
+  "control": {
+    "web_ui": true
+  },
+  "description": "A high-grade Blu-ray player featuring a dedicated audio power supply and Realta Optix HQV video processing.",
+  "dimensions": {
+    "depth_mm": 409,
+    "height_mm": 164,
+    "width_mm": 440
+  },
+  "extensions": {
+    "conduit:unmapped": {
+      "/capabilities/frequency_response_hz": [
+        2,
+        20000
+      ],
+      "/capabilities/notes": "Audio D/A conversion: 192 kHz / 32-bit; Chip: AK4399"
+    }
+  },
+  "form_factor": "desktop",
+  "manufacturer": "Marantz",
+  "model": "UD9004",
+  "power": {
+    "max_wattage": 88,
+    "standby_wattage": 0.3
+  },
+  "weight_kg": 19.2,
+  "image_url": "https://images.crutchfieldonline.com/ImageHandler/fixedscale/90/90/products/2009/38/642/x642UD9004-f.jpeg",
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.marantz.com/en-gb/product/archive-blu-ray/ud9004/UD9004.html",
+      "type": "tech-specs-page",
+      "retrieved_date": "2026-07-29"
+    }
+  ]
+}

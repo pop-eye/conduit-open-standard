@@ -1,6 +1,6 @@
 {
   "schema_version": "conduit/v1",
-  "generated_at": "2026-07-28",
+  "generated_at": "2026-07-29",
   "count": 45,
   "devices": [
     {
@@ -336,18 +336,11 @@
       "manufacturer": "Marantz",
       "model": "UD9004",
       "category": "media-player",
-      "subcategory": "Universal Blu-ray/SACD Player",
       "form_factor": "desktop",
-      "description": "Flagship universal player supporting Blu-ray, SACD, DVD, and various audio/video formats, featuring Realta Optix HQV video processing and audiophile-grade analogue audio circuitry.",
-      "port_count": 22,
-      "verified": false,
-      "confidence": "high",
+      "description": "A high-grade Blu-ray player featuring a dedicated audio power supply and Realta Optix HQV video processing.",
+      "port_count": 12,
       "tags": [
-        "Blu-ray",
-        "SACD",
-        "DVD",
-        "HD Audio",
-        "Audiophile"
+        "Blu-ray, High Grade Audio, Realta Optix HQV, Toroidal Transformer"
       ]
     },
     {
