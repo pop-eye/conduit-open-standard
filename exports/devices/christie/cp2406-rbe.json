@@ -1,0 +1,287 @@
+{
+  "protocols": [
+    {
+      "name": "Serial-over-Ethernet",
+      "notes": "based automation",
+      "transport": "tcp"
+    }
+  ],
+  "ports": [
+    {
+      "connector_type": "internal",
+      "direction": "in",
+      "id": "t3",
+      "label": "GPI1_POS",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "in",
+      "id": "t4",
+      "label": "GPI1_NEG",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "in",
+      "id": "t5",
+      "label": "GPI2_POS",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "in",
+      "id": "t6",
+      "label": "GPI2_NEG",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "in",
+      "id": "t7",
+      "label": "GPI3_POS",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "in",
+      "id": "t8",
+      "label": "GPI3_NEG",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "bidirectional",
+      "id": "b1-to-b8",
+      "label": "Serial Communications",
+      "signal_type": "control/rs232"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "out",
+      "id": "t1",
+      "label": "GPO1_SRC",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "out",
+      "id": "t2",
+      "label": "GPO1_RTN",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "out",
+      "id": "t3",
+      "label": "GPO2_SRC",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "out",
+      "id": "t4",
+      "label": "GPO2_RTN",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "out",
+      "id": "t5",
+      "label": "GPO3_SRC",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "out",
+      "id": "t6",
+      "label": "GPO3_RTN",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "out",
+      "id": "t7",
+      "label": "GPO4_SRC",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "out",
+      "id": "t8",
+      "label": "GPO4_RTN",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "out",
+      "id": "b1",
+      "label": "GPO5_SRC",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "out",
+      "id": "b2",
+      "label": "GPO5_RTN",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "out",
+      "id": "b3",
+      "label": "GPO6_SRC",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "out",
+      "id": "b4",
+      "label": "GPO6_RTN",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "out",
+      "id": "b5",
+      "label": "GPO7_SRC",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "out",
+      "id": "b6",
+      "label": "GPO7_RTN",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "out",
+      "id": "b7",
+      "label": "Health_SRC",
+      "signal_type": "control/gpio"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "out",
+      "id": "b8",
+      "label": "Health_RTN",
+      "signal_type": "control/gpio"
+    }
+  ],
+  "tags": [
+    "Small-screen auditoriums",
+    "Boutique cinema",
+    "Screening rooms"
+  ],
+  "capabilities": [
+    {
+      "brightness_iso_lm": 6000,
+      "contrast_ratio_full": 2000,
+      "display_technology": "dlp-3chip",
+      "light_source_life_condition": "<25C ambient",
+      "light_source_life_hours": 50000,
+      "light_source_type": "laser-phosphor",
+      "native_resolution": {
+        "height_px": 1080,
+        "width_px": 2048
+      },
+      "type": "display"
+    }
+  ],
+  "category": "projector",
+  "control": {
+    "web_ui": true
+  },
+  "description": "Advanced, yet affordable, DCI-compliant cinema projection with laser illumination for screens up to 36' (10.9m)",
+  "dimensions": {
+    "depth_mm": 696,
+    "height_mm": 404,
+    "width_mm": 688
+  },
+  "environment": {
+    "audible_noise_dba": 49
+  },
+  "extensions": {
+    "conduit:unmapped": {
+      "/capabilities/hdr": true
+    }
+  },
+  "form_factor": "other",
+  "manufacturer": "Christie Digital Systems USA, Inc.",
+  "model": "CP2406-RBe",
+  "model_variant": "CP2406-RBe",
+  "notes": "The projector contains a Class 4 laser module and is classified as Risk Group 3. It is intended for use in a cinema environment.",
+  "power": {
+    "max_wattage": 559,
+    "notes": "Typical power consumption. May be impacted by environmental conditions.",
+    "phases": 1,
+    "psu_type": "internal",
+    "standby_wattage": 3,
+    "typical_wattage": 1169,
+    "voltage_v": [
+      200,
+      240
+    ]
+  },
+  "reliability": {
+    "warranty_notes": "Products are accompanied by Christie's standard limited warranty; the details of which are available at https://www.christiedigital.com/help-center/"
+  },
+  "subcategory": "cinema projector",
+  "weight_kg": 62,
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.christiedigital.com/globalassets/resources/public/cp2406-rbe-data-sheet.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-28",
+      "notes": "Ingested via seek agent"
+    },
+    {
+      "url": "https://www.christiedigital.com/globalassets/resources/public/christie-cinema-projector-information-cards-cp2406-rbe.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-28",
+      "notes": "Gap-fill via seek agent"
+    },
+    {
+      "url": "https://www.christiedigital.com/globalassets/resources/public/020-103907-06-Christie-LIT-GUID-SET-Cinema-2K-RBe.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-28",
+      "notes": "Gap-fill via seek agent"
+    },
+    {
+      "url": "https://www.christiedigital.com/globalassets/resources/public/020-103949-03-Christie-LIT-MAN-USR-CineLifePlus2K.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-28",
+      "notes": "Gap-fill via seek agent"
+    },
+    {
+      "url": "https://www.christiedigital.com/products/cinema/projection/cinelife-plus-series/christie-cp2406-rbe/",
+      "type": "tech-specs-page",
+      "title": "Christie CP2406-RBe 2K laser projector",
+      "retrieved_date": "2026-07-29",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.christiedigital.com/products/cinema/projection/cinelife-plus-series/christie-cp2409-rbe/",
+      "type": "tech-specs-page",
+      "title": "Christie CP2409-RBe 2K laser projector",
+      "retrieved_date": "2026-07-29",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.christiedigital.com/products/cinema/projection/cinelife-plus-series/christie-cp2411-rbe/",
+      "type": "tech-specs-page",
+      "title": "Christie CP2411-RBe 2K laser projector",
+      "retrieved_date": "2026-07-29",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.christiedigital.com/press-releases/2024-rbe-projectors/",
+      "type": "tech-specs-page",
+      "title": "CineLife+ RBe laser projectors",
+      "retrieved_date": "2026-07-29",
+      "notes": "Sourced via source_device"
+    }
+  ]
+}

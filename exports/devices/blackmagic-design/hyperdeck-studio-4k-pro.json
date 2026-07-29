@@ -1,127 +1,9 @@
 {
-  "control": {
-    "custom_commands": [
-      {
-        "action": "play",
-        "command": "play",
-        "notes": "Remote deck control via text based protocol (e.g. Telnet)",
-        "transport": "tcp"
-      }
-    ],
-    "web_ui": true
-  },
-  "ports": [
+  "protocols": [
     {
-      "connector_type": "bnc",
-      "direction": "in",
-      "id": "sd-in-1",
-      "label": "SDI Video Input",
-      "signal_type": "video/sdi"
-    },
-    {
-      "connector_type": "bnc",
-      "direction": "out",
-      "id": "sd-out-1",
-      "label": "SDI Video Output 1",
-      "signal_type": "video/sdi"
-    },
-    {
-      "connector_type": "bnc",
-      "direction": "out",
-      "id": "sd-out-2",
-      "label": "SDI Video Output 2",
-      "signal_type": "video/sdi"
-    },
-    {
-      "connector_type": "bnc",
-      "direction": "out",
-      "id": "sd-mon-1",
-      "label": "SDI Monitor Output",
-      "signal_type": "video/sdi"
-    },
-    {
-      "connector_type": "hdmi-a",
-      "direction": "in",
-      "id": "hdmi-in-1",
-      "label": "HDMI 2.0 Video Input",
-      "signal_type": "video/hdmi/2.0"
-    },
-    {
-      "connector_type": "hdmi-a",
-      "direction": "out",
-      "id": "hdmi-out-1",
-      "label": "HDMI 2.0 Video Output",
-      "signal_type": "video/hdmi/2.0"
-    },
-    {
-      "connector_type": "trs-3.5mm",
-      "direction": "out",
-      "id": "audio-out-1",
-      "label": "Audio Output",
-      "signal_type": "audio/analogue/speaker"
-    },
-    {
-      "connector_type": "xlr-3f",
-      "direction": "in",
-      "id": "timecode-in-1",
-      "label": "Timecode In",
-      "signal_type": "control/timecode/ltc"
-    },
-    {
-      "connector_type": "xlr-3m",
-      "direction": "out",
-      "id": "timecode-out-1",
-      "label": "Timecode Out",
-      "signal_type": "control/timecode/ltc"
-    },
-    {
-      "connector_type": "bnc",
-      "direction": "in",
-      "id": "ref-in-1",
-      "label": "Reference Input",
-      "signal_type": "video/sync/analogue-bilevel"
-    },
-    {
-      "connector_type": "bnc",
-      "direction": "out",
-      "id": "ref-out-1",
-      "label": "Reference Output",
-      "signal_type": "video/sync/analogue-bilevel"
-    },
-    {
-      "connector_type": "db9",
-      "direction": "in",
-      "id": "rs422-in-1",
-      "label": "RS-422 In",
-      "signal_type": "control/rs422"
-    },
-    {
-      "connector_type": "db9",
-      "direction": "out",
-      "id": "rs422-out-1",
-      "label": "RS-422 Out",
-      "signal_type": "control/rs422"
-    },
-    {
-      "connector_type": "rj45",
-      "direction": "bidirectional",
-      "id": "ethernet-1",
-      "label": "Ethernet",
-      "signal_type": "network/ethernet/10g"
-    },
-    {
-      "connector_type": "usb-c",
-      "direction": "bidirectional",
-      "id": "usb-c-1",
-      "label": "USB Type-C 3.1 Gen 2",
-      "signal_type": "network/usb/3.2"
-    },
-    {
-      "connector_type": "xlr-3f",
-      "direction": "power-in",
-      "id": "power-xlr",
-      "label": "External Power In",
-      "signal_type": "power/dc"
+      "name": "Blackmagic HyperDeck Ethernet Protocol",
+      "notes": "Includes Blackmagic HyperDeck Ethernet Protocol.",
+      "transport": "tcp"
     }
   ],
   "capabilities": [
@@ -140,16 +22,162 @@
       "type": "compute"
     }
   ],
-  "protocols": [
+  "ports": [
     {
-      "name": "Blackmagic HyperDeck Ethernet Protocol",
-      "notes": "Includes Blackmagic HyperDeck Ethernet Protocol.",
-      "transport": "tcp"
+      "connector_type": "internal",
+      "direction": "out",
+      "id": "port-1",
+      "label": "Front Speaker",
+      "signal_type": "audio/analogue/speaker"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "out",
+      "id": "port-2",
+      "label": "Media Status",
+      "signal_type": "video/composite"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "bidirectional",
+      "id": "port-3",
+      "label": "Transport",
+      "signal_type": "control/rs422"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "out",
+      "id": "port-4",
+      "label": "LCD Display",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "bidirectional",
+      "id": "port-5",
+      "label": "Search Buttons",
+      "signal_type": "control/rs422"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "out",
+      "id": "port-6",
+      "label": "Headphones",
+      "signal_type": "audio/analogue/speaker"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "bidirectional",
+      "id": "port-7",
+      "label": "SSD Slots",
+      "signal_type": "network/usb/3.2"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "bidirectional",
+      "id": "port-8",
+      "label": "SD Card Slots",
+      "signal_type": "network/sdcard"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "bidirectional",
+      "id": "port-9",
+      "label": "Menu Buttons",
+      "signal_type": "control/rs422"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "bidirectional",
+      "id": "port-10",
+      "label": "Search Dial",
+      "signal_type": "control/rs422"
+    },
+    {
+      "connector_type": "iec-c14",
+      "direction": "power-in",
+      "id": "port-11",
+      "label": "AC Power Inputs",
+      "signal_type": "power/mains/ac/universal"
+    },
+    {
+      "connector_type": "db9",
+      "direction": "bidirectional",
+      "id": "port-12",
+      "label": "Remote In/Out",
+      "signal_type": "control/rs422"
+    },
+    {
+      "connector_type": "internal",
+      "direction": "bidirectional",
+      "id": "port-13",
+      "label": "Reference In/Out",
+      "signal_type": "control/timecode/ptp"
+    },
+    {
+      "connector_type": "xlr-3f",
+      "direction": "bidirectional",
+      "id": "port-14",
+      "label": "Timecode In/Out",
+      "signal_type": "control/timecode/ltc"
+    },
+    {
+      "connector_type": "xlr-3f",
+      "direction": "bidirectional",
+      "id": "port-15",
+      "label": "12G-SDI Video",
+      "signal_type": "video/sdi/12g"
+    },
+    {
+      "connector_type": "speakon-nl2",
+      "direction": "power-in",
+      "id": "port-16",
+      "label": "DC Power Input",
+      "signal_type": "power/dc"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "bidirectional",
+      "id": "port-17",
+      "label": "10G Ethernet",
+      "signal_type": "network/ethernet/10g"
+    },
+    {
+      "connector_type": "usb-c",
+      "direction": "bidirectional",
+      "id": "port-18",
+      "label": "USB-C",
+      "signal_type": "network/usb/3.2"
+    },
+    {
+      "connector_type": "xlr-3f",
+      "direction": "out",
+      "id": "port-19",
+      "label": "SDI Monitor Out",
+      "signal_type": "video/sdi/3g"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "bidirectional",
+      "id": "port-20",
+      "label": "HDMI In and Out",
+      "signal_type": "video/hdmi/2.1"
     }
   ],
   "tags": [
     "12G-SDI, Ultra HD, ProRes 4444, H.265, Redundant PSU"
   ],
+  "control": {
+    "custom_commands": [
+      {
+        "action": "play",
+        "command": "play",
+        "notes": "Remote deck control via text based protocol (e.g. Telnet)",
+        "transport": "tcp"
+      }
+    ],
+    "web_ui": true
+  },
   "category": "video-capture",
   "description": "For extreme power, the HyperDeck Studio 4K Pro has all the features of the HD models, combined with incredible processing for working in Ultra HD. This model’s SDI has been upgraded to full 12G-SDI with a loop 12G-SDI output.",
   "dimensions": {

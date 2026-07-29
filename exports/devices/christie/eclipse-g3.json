@@ -1,0 +1,156 @@
+{
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "hdmi_in_1_2",
+      "label": "HDMI 2.0 IN 1 & IN 2",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "hdmi_in_3",
+      "label": "HDMI 2.1 IN 3",
+      "signal_type": "video/hdmi/2.1"
+    },
+    {
+      "connector_type": "displayport-a",
+      "direction": "in",
+      "id": "dp_in_3_4",
+      "label": "DP 1.4 IN 3 & IN 4",
+      "signal_type": "video/displayport/1.4"
+    },
+    {
+      "connector_type": "db25",
+      "direction": "in",
+      "id": "sdi_in",
+      "label": "SDI (12G)",
+      "signal_type": "video/sdi/12g"
+    },
+    {
+      "connector_type": "qsfp-plus",
+      "direction": "bidirectional",
+      "id": "christie_link_1",
+      "label": "Christie Link 1 (QSFP+)",
+      "signal_type": "network/qsfp-plus"
+    },
+    {
+      "connector_type": "qsfp-plus",
+      "direction": "bidirectional",
+      "id": "christie_link_2",
+      "label": "Christie Link 2 (QSFP+)",
+      "signal_type": "network/qsfp-plus"
+    },
+    {
+      "connector_type": "sfp-plus",
+      "direction": "in",
+      "id": "sdvoe_in",
+      "label": "Input SDVOE (SFP+)",
+      "signal_type": "network/sfp-plus"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "bidirectional",
+      "id": "usb_3-0",
+      "label": "USB 3.0",
+      "signal_type": "network/usb/3.0"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "bidirectional",
+      "id": "gige_aux",
+      "label": "GigE AUX",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "xlr-3f",
+      "direction": "out",
+      "id": "aes3_out",
+      "label": "AES3 OUT",
+      "signal_type": "audio/aes3"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "bidirectional",
+      "id": "rs232_rs485",
+      "label": "RS-485 / RS232C",
+      "signal_type": "control/rs485"
+    }
+  ],
+  "tags": [
+    "6DLP",
+    "RGB pure laser",
+    "True HDR"
+  ],
+  "capabilities": [
+    {
+      "brightness_ansi_lm": 30000,
+      "built_in_warp": true,
+      "colour_spaces": [
+        "Rec. 2020"
+      ],
+      "contrast_ratio_full": 20000000,
+      "light_source_life_hours": 50000,
+      "light_source_type": "rgb-laser",
+      "native_resolution": {
+        "height_px": 2160,
+        "width_px": 4096
+      },
+      "type": "display"
+    }
+  ],
+  "category": "projector",
+  "description": "The ultimate projector for immersive experiences, Christie Eclipse G3 delivers a degree of detail and depth of color not possible with any other projector.",
+  "dimensions": {
+    "depth_mm": 711,
+    "height_mm": 627,
+    "width_mm": 1397
+  },
+  "environment": {
+    "altitude_max_m": 1000,
+    "humidity_condensing": false,
+    "humidity_max_percent": 70,
+    "operating_temp_max_c": 40,
+    "operating_temp_min_c": 5
+  },
+  "form_factor": "floor-standing",
+  "manufacturer": "Christie",
+  "model": "Eclipse G3",
+  "model_variant": "152-018100-01",
+  "power": {
+    "connector_type": "iec-c14",
+    "frequency_hz": [
+      50,
+      60
+    ],
+    "max_wattage": 5350,
+    "notes": "Dual power supply inputs: Input A (200-240V AC, 50/60Hz, 24A) and Input B (100-240V AC, 50/60Hz, 6.5A).",
+    "phases": 1,
+    "typical_wattage": 3367,
+    "voltage_v": [
+      100,
+      240
+    ]
+  },
+  "reliability": {
+    "warranty_years": 3
+  },
+  "weight_kg": 188,
+  "image_url": "https://www.av-views.com/wp-content/uploads/2025/11/Christie_Eclipse_G3_1030-678x381.png",
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.christiedigital.com/globalassets/resources/public/eclipse-g3-data-sheet.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-28",
+      "notes": "Ingested via seek agent"
+    },
+    {
+      "url": "https://www.christiedigital.com/globalassets/resources/interconnect-drawings/020-104052-01-dwg-interconnect-christie-eclipse-g3_rev1.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-28",
+      "notes": "Gap-fill via seek agent"
+    }
+  ]
+}

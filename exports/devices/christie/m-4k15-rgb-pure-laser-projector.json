@@ -1,0 +1,249 @@
+{
+  "protocols": [
+    {
+      "name": "Web UI",
+      "notes": "Access all projector menus and controls via our Ethernet web interface",
+      "transport": "tcp",
+      "version": "1.0"
+    },
+    {
+      "name": "RS232",
+      "notes": "Serial control",
+      "transport": "serial",
+      "version": "1.0"
+    }
+  ],
+  "capabilities": [
+    {
+      "brightness_ansi_lm": 14000,
+      "brightness_iso_lm": 15750,
+      "built_in_blend": true,
+      "built_in_warp": true,
+      "colour_spaces": [
+        "Rec. 709",
+        "P3",
+        "Rec. 2020"
+      ],
+      "contrast_ratio_dynamic": 4900,
+      "contrast_ratio_full": 2200,
+      "display_technology": "dlp-3chip",
+      "light_source_life_condition": "to 50% brightness when operated at 60% brightness",
+      "light_source_life_hours": 50000,
+      "light_source_type": "rgb-laser",
+      "native_resolution": {
+        "height_px": 2400,
+        "width_px": 3840
+      },
+      "type": "display",
+      "v_sync_range_hz": [
+        24,
+        60
+      ]
+    }
+  ],
+  "order_codes": [
+    {
+      "code": "163-066103-XX",
+      "notes": "TAA-compliant",
+      "region": "US"
+    },
+    {
+      "code": "163-065102-XX",
+      "notes": "TAA-compliant",
+      "region": "US"
+    }
+  ],
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "count": 1,
+      "direction": "in",
+      "id": "port-1",
+      "label": "HDMI 2.1",
+      "signal_type": "video/hdmi/2.1"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "count": 2,
+      "direction": "in",
+      "id": "port-2",
+      "label": "HDMI 2.0",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "displayport-a",
+      "count": 2,
+      "direction": "in",
+      "id": "port-3",
+      "label": "DisplayPort 1.4",
+      "signal_type": "video/displayport/1.4"
+    },
+    {
+      "connector_type": "bnc",
+      "count": 4,
+      "direction": "in",
+      "id": "port-4",
+      "label": "12G-SDI",
+      "signal_type": "video/sdi/12g"
+    },
+    {
+      "connector_type": "qsfp-plus",
+      "count": 1,
+      "direction": "in",
+      "id": "port-5",
+      "label": "SDVoE Christie Link 1 input",
+      "signal_type": "network/sfp-plus"
+    },
+    {
+      "connector_type": "qsfp-plus",
+      "count": 1,
+      "direction": "out",
+      "id": "port-6",
+      "label": "SDVoE Christie Link 1 output",
+      "signal_type": "network/sfp-plus"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "count": 1,
+      "direction": "in",
+      "id": "port-7",
+      "label": "3D Sync input",
+      "signal_type": "video/3d-sync"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "count": 1,
+      "direction": "out",
+      "id": "port-8",
+      "label": "3D Sync output",
+      "signal_type": "video/3d-sync"
+    },
+    {
+      "connector_type": "rj45",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "port-9",
+      "label": "Ethernet - Control and Web UI",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "db9",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "port-10",
+      "label": "RS232 (Serial)",
+      "signal_type": "control/rs232"
+    },
+    {
+      "connector_type": "internal",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "port-11",
+      "label": "GPIO",
+      "signal_type": "control/gpio"
+    }
+  ],
+  "tags": [
+    "4K UHD",
+    "4K UHD+",
+    "RGB pure laser",
+    "TruLife+",
+    "LiteLOC"
+  ],
+  "category": "projector",
+  "control": {
+    "rest_api": false,
+    "snmp": false,
+    "web_ui": true
+  },
+  "description": "A rugged and reliable high-performance 3DLP projector with solid-state RGB pure laser illumination and a sealed optical engine, designed for stable operation, long service life, and energy efficiency.",
+  "dimensions": {
+    "depth_mm": 525,
+    "height_mm": 270,
+    "width_mm": 617
+  },
+  "environment": {
+    "audible_noise_dba": 43.8,
+    "heat_dissipation_btu_hr": 2822,
+    "humidity_condensing": false,
+    "humidity_max_percent": 80,
+    "operating_temp_max_c": 40,
+    "operating_temp_min_c": 5
+  },
+  "extensions": {
+    "conduit:unmapped": {
+      "/capabilities/color_performance": "~98% coverage of the Rec. 2020 color gamut"
+    }
+  },
+  "form_factor": "other",
+  "manufacturer": "Christie",
+  "model": "M 4K15 RGB",
+  "notes": "Compatible with legacy M, J, and Crimson Series lenses and M Series rigging frame.",
+  "power": {
+    "connector_type": "iec-c13",
+    "frequency_hz": [
+      50,
+      60
+    ],
+    "max_wattage": 1200,
+    "notes": "Full brightness at 120V or 220V.",
+    "phases": 1,
+    "psu_type": "internal",
+    "typical_wattage": 827,
+    "voltage_v": [
+      100,
+      240
+    ]
+  },
+  "reliability": {
+    "warranty_notes": "Reference the Christie Standard Limited Warranty document for details Or contact an authorized Christie representative for full details of our limited warranty",
+    "warranty_years": 3
+  },
+  "subcategory": "laser projector",
+  "weight_kg": 38.1,
+  "image_url": "https://i.vimeocdn.com/video/1230426044-afeb54983c3f9466011464706e8a2ca451621184c507b830139829fd6332ba41-d_360x203?&r=pad&region=us",
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.christiedigital.com/globalassets/resources/public/M-4K15-RGB-data_sheet.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-28",
+      "notes": "Ingested via seek agent"
+    },
+    {
+      "url": "https://www.christiedigital.com/globalassets/resources/public/christie-m-4k25-rgb-faq.pdf",
+      "type": "datasheet",
+      "title": "1 Christie M 4K RGB Series Frequently asked questions (FAQ)",
+      "retrieved_date": "2026-07-29",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.christiedigital.com/products/projectors/all-projectors/m4k-rgb-series/m-4k15-rgb/",
+      "type": "tech-specs-page",
+      "title": "M 4K15 RGB pure laser projector",
+      "retrieved_date": "2026-07-29",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.christiedigital.com/products/projectors/all-projectors/m4k-rgb-series/m-4k-plus-15-rgb/",
+      "type": "tech-specs-page",
+      "title": "M 4K+15 RGB pure laser projector",
+      "retrieved_date": "2026-07-29",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.christiedigital.com/press-releases/15000-lumen-4K-laser-projectors-m-4k15-rgb/",
+      "type": "tech-specs-page",
+      "title": "Christie introduces new RGB pure laser projectors for stunning visual experiences",
+      "retrieved_date": "2026-07-29",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.christiedigital.com/products/projectors/all-projectors/m4k-rgb-series/",
+      "type": "tech-specs-page",
+      "title": "Christie M 4K RGB Series pure laser projectors",
+      "retrieved_date": "2026-07-29",
+      "notes": "Sourced via source_device"
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "tags": [
+    "DCI compliant, RealLaser technology, 4K, 35K, 89 feet wide"
+  ],
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "count": 2,
+      "direction": "in",
+      "id": "port-1",
+      "label": "HDMI Input 1",
+      "notes": "Supports HDMI 2.0",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "rj45",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "port-2",
+      "label": "1G Ethernet",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "bnc",
+      "count": 4,
+      "direction": "in",
+      "id": "port-3",
+      "label": "12G SDI Input",
+      "signal_type": "video/sdi/12g"
+    },
+    {
+      "connector_type": "displayport-a",
+      "count": 2,
+      "direction": "in",
+      "id": "port-4",
+      "label": "DisplayPort Input",
+      "signal_type": "video/displayport/1.2"
+    },
+    {
+      "connector_type": "rj45",
+      "direction": "bidirectional",
+      "id": "port-5",
+      "label": "Remote UI",
+      "signal_type": "control/tcp-ip"
+    }
+  ],
+  "power_inputs": [
+    {
+      "connector_type": "iec-c13",
+      "frequency_hz": [
+        50,
+        60
+      ],
+      "label": "Input A",
+      "max_wattage": 10,
+      "phases": 1,
+      "voltage_v": 240
+    },
+    {
+      "connector_type": "iec-c13",
+      "frequency_hz": [
+        50,
+        60
+      ],
+      "label": "Input B (UPS input)",
+      "max_wattage": 10,
+      "phases": 1,
+      "voltage_v": 240
+    }
+  ],
+  "capabilities": [
+    {
+      "analogue_output_count": 1,
+      "type": "audio-io"
+    },
+    {
+      "brightness_ansi_lm": 26000,
+      "contrast_ratio_full": 6000,
+      "display_technology": "dlp-3chip",
+      "light_source_life_hours": 50000,
+      "light_source_type": "rgb-laser",
+      "native_resolution": {
+        "fps": 120,
+        "height_px": 2160,
+        "width_px": 4096
+      },
+      "throw_ratio_max": 7.69,
+      "throw_ratio_min": 1.13,
+      "type": "display"
+    }
+  ],
+  "category": "projector",
+  "control": {
+    "web_ui": true
+  },
+  "description": "Advanced, yet affordable, DCI compliant cinema projection featuring Christie RealLaser™ technology for screens up to 89 feet wide.",
+  "dimensions": {
+    "depth_mm": 711,
+    "height_mm": 525,
+    "width_mm": 944
+  },
+  "environment": {
+    "audible_noise_dba": 56,
+    "heat_dissipation_btu_hr": 4400,
+    "operating_temp_max_c": 40,
+    "operating_temp_min_c": 0
+  },
+  "form_factor": "floor-standing",
+  "manufacturer": "Christie",
+  "model": "CP4435-RGB",
+  "notes": "Supports legacy Series 2 IMBs. With VDR, brightness can reach up to 75,000 hours and operational efficiency increases to up to 17 lumens per watt.",
+  "power": {
+    "connector_type": "iec-c13",
+    "frequency_hz": [
+      50,
+      60
+    ],
+    "max_wattage": 2394,
+    "notes": "Input A: 200-240 VAC @ 50-60Hz, 17A max. Input B (UPS input): 100-240VAC @ 50-60Hz, 10A max.",
+    "phases": 1,
+    "psu_type": "internal",
+    "typical_wattage": 1295,
+    "voltage_v": [
+      100,
+      240
+    ]
+  },
+  "reliability": {
+    "mtbf_hours": 50000,
+    "warranty_years": 8
+  },
+  "subcategory": "cinema projector",
+  "weight_kg": 121,
+  "image_url": "https://www.projector-database.com/pro/christiecp4435rgb.jpg",
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.christiedigital.com/globalassets/resources/public/christie-cp4435-rgb-datasheet.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-28",
+      "notes": "Ingested via seek agent"
+    },
+    {
+      "url": "https://www.christiedigital.com/globalassets/resources/public/020-103765-03-christie-lit-guid-set-cp4425-35-rgb.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-28",
+      "notes": "Gap-fill via seek agent"
+    },
+    {
+      "url": "https://www.christiedigital.com/globalassets/resources/public/christie-cp4425-rgb-datasheet.pdf",
+      "type": "datasheet",
+      "title": "Christie CP4425-RGB Datasheet",
+      "retrieved_date": "2026-07-29",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.christiedigital.com/products/cinema/projection/cinelife-plus-series/cp4435-rgb/",
+      "type": "tech-specs-page",
+      "title": "Christie CP4435-RGB pure laser cinema projector",
+      "retrieved_date": "2026-07-29",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.christiedigital.com/globalassets/resources/public/christie-cp4415-rgb-data-sheet.pdf",
+      "type": "datasheet",
+      "title": "Advanced laser light source for accurate reproduction of DCI content",
+      "retrieved_date": "2026-07-29",
+      "notes": "Sourced via source_device"
+    }
+  ]
+}

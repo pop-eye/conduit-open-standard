@@ -1,7 +1,7 @@
 {
   "schema_version": "conduit/v1",
   "generated_at": "2026-07-29",
-  "count": 42,
+  "count": 47,
   "devices": [
     {
       "id": "apple/tv-4k-1st-gen-original-4k-media-player",
@@ -89,7 +89,7 @@
       "category": "video-capture",
       "form_factor": "rackmount",
       "description": "For extreme power, the HyperDeck Studio 4K Pro has all the features of the HD models, combined with incredible processing for working in Ultra HD. This model’s SDI has been upgraded to full 12G-SDI with a loop 12G-SDI output.",
-      "port_count": 16,
+      "port_count": 20,
       "tags": [
         "12G-SDI, Ultra HD, ProRes 4444, H.265, Redundant PSU"
       ]
@@ -159,6 +159,71 @@
       "port_count": 10,
       "tags": [
         "4K, Dolby Vision, HDR10+, H.265, HEVC, HDMI 2.0a"
+      ]
+    },
+    {
+      "id": "christie/cp2406-rbe",
+      "path": "christie/cp2406-rbe.json",
+      "manufacturer": "Christie Digital Systems USA, Inc.",
+      "model": "CP2406-RBe",
+      "model_variant": "CP2406-RBe",
+      "category": "projector",
+      "subcategory": "cinema projector",
+      "form_factor": "other",
+      "description": "Advanced, yet affordable, DCI-compliant cinema projection with laser illumination for screens up to 36' (10.9m)",
+      "port_count": 23,
+      "tags": [
+        "Small-screen auditoriums",
+        "Boutique cinema",
+        "Screening rooms"
+      ]
+    },
+    {
+      "id": "christie/cp4435-rgb",
+      "path": "christie/cp4435-rgb.json",
+      "manufacturer": "Christie",
+      "model": "CP4435-RGB",
+      "category": "projector",
+      "subcategory": "cinema projector",
+      "form_factor": "floor-standing",
+      "description": "Advanced, yet affordable, DCI compliant cinema projection featuring Christie RealLaser™ technology for screens up to 89 feet wide.",
+      "port_count": 5,
+      "tags": [
+        "DCI compliant, RealLaser technology, 4K, 35K, 89 feet wide"
+      ]
+    },
+    {
+      "id": "christie/eclipse-g3",
+      "path": "christie/eclipse-g3.json",
+      "manufacturer": "Christie",
+      "model": "Eclipse G3",
+      "model_variant": "152-018100-01",
+      "category": "projector",
+      "form_factor": "floor-standing",
+      "description": "The ultimate projector for immersive experiences, Christie Eclipse G3 delivers a degree of detail and depth of color not possible with any other projector.",
+      "port_count": 11,
+      "tags": [
+        "6DLP",
+        "RGB pure laser",
+        "True HDR"
+      ]
+    },
+    {
+      "id": "christie/m-4k15-rgb-pure-laser-projector",
+      "path": "christie/m-4k15-rgb-pure-laser-projector.json",
+      "manufacturer": "Christie",
+      "model": "M 4K15 RGB",
+      "category": "projector",
+      "subcategory": "laser projector",
+      "form_factor": "other",
+      "description": "A rugged and reliable high-performance 3DLP projector with solid-state RGB pure laser illumination and a sealed optical engine, designed for stable operation, long service life, and energy efficiency.",
+      "port_count": 11,
+      "tags": [
+        "4K UHD",
+        "4K UHD+",
+        "RGB pure laser",
+        "TruLife+",
+        "LiteLOC"
       ]
     },
     {
@@ -282,6 +347,26 @@
       "port_count": 13,
       "tags": [
         "4K, OLED, Cinema HDR, Dolby Vision IQ, webOS, ThinQ, AI Processor, G-Sync, FreeSync Premium, VRR, ALLM, HGIG"
+      ]
+    },
+    {
+      "id": "lg/oled65c2-evo-series-television",
+      "path": "lg/oled65c2-evo-series-television.json",
+      "manufacturer": "LG",
+      "model": "OLED65C2PUA",
+      "model_variant": "evo Series",
+      "category": "display",
+      "subcategory": "Television",
+      "form_factor": "wall-mount",
+      "description": "LG C2 65-inch evo OLED TV with ThinQ AI.",
+      "port_count": 14,
+      "tags": [
+        "4K",
+        "OLED",
+        "Smart TV",
+        "AI ThinQ",
+        "Dolby Vision IQ",
+        "Dolby Atmos"
       ]
     },
     {
