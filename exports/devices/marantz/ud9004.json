@@ -1,30 +1,5 @@
 {
-  "capabilities": [
-    {
-      "ad_bit_depth": 32,
-      "analogue_input_count": 3,
-      "analogue_output_count": 3,
-      "da_bit_depth": 32,
-      "dynamic_range_db": 110,
-      "supported_sample_rates_hz": [
-        48000,
-        96000,
-        192000
-      ],
-      "thd_percent": 0.0,
-      "type": "audio-io"
-    }
-  ],
   "ports": [
-    {
-      "connector_type": "hdmi-a",
-      "count": 2,
-      "direction": "in",
-      "id": "hdmi-in-1",
-      "label": "HDMI Input 1",
-      "notes": "HDMI: inputs / outputs 1.3a (2x)",
-      "signal_type": "video/hdmi/1.4"
-    },
     {
       "connector_type": "hdmi-a",
       "count": 2,
@@ -32,7 +7,7 @@
       "id": "hdmi-out-1",
       "label": "HDMI Output",
       "notes": "HDMI: inputs / outputs 1.3a (2x)",
-      "signal_type": "video/hdmi/1.4"
+      "signal_type": "video/hdmi"
     },
     {
       "connector_type": "rca",
@@ -100,27 +75,27 @@
     {
       "connector_type": "rca-composite",
       "count": 1,
-      "direction": "in",
+      "direction": "out",
       "id": "composite-in",
-      "label": "Composite Input",
+      "label": "Composite Output",
       "notes": "Composite / S-Video / Component",
       "signal_type": "video/composite"
     },
     {
-      "connector_type": "db15",
+      "connector_type": "mini-din-4",
       "count": 1,
-      "direction": "in",
+      "direction": "out",
       "id": "svideo-in",
-      "label": "S-Video Input",
+      "label": "S-Video Output",
       "notes": "Composite / S-Video / Component",
-      "signal_type": "video/smpte2110"
+      "signal_type": "video/svideo"
     },
     {
-      "connector_type": "rca-composite",
+      "connector_type": "rca",
       "count": 1,
-      "direction": "in",
+      "direction": "out",
       "id": "component-in",
-      "label": "Component Input",
+      "label": "Component Output",
       "notes": "Composite / S-Video / Component",
       "signal_type": "video/component"
     }
@@ -131,6 +106,22 @@
       "notes": "Marantz BD Player Common RS-232C Spec. Sheet",
       "transport": "serial",
       "version": "Common"
+    }
+  ],
+  "capabilities": [
+    {
+      "ad_bit_depth": 32,
+      "analogue_input_count": 3,
+      "analogue_output_count": 3,
+      "da_bit_depth": 32,
+      "dynamic_range_db": 110,
+      "supported_sample_rates_hz": [
+        48000,
+        96000,
+        192000
+      ],
+      "thd_percent": 0.0,
+      "type": "audio-io"
     }
   ],
   "tags": [
