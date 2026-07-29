@@ -102,8 +102,8 @@
       ]
     },
     {
-      "id": "blackmagic/hyperdeck-studio-hd-pro",
-      "path": "blackmagic/hyperdeck-studio-hd-pro.json",
+      "id": "blackmagic-design/hyperdeck-studio-hd-pro",
+      "path": "blackmagic-design/hyperdeck-studio-hd-pro.json",
       "manufacturer": "Blackmagic Design",
       "model": "HyperDeck Studio HD Pro",
       "category": "media-player",
