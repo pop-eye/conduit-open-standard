@@ -1,4 +1,20 @@
 {
+  "capabilities": [
+    {
+      "ad_bit_depth": 32,
+      "analogue_input_count": 3,
+      "analogue_output_count": 3,
+      "da_bit_depth": 32,
+      "dynamic_range_db": 110,
+      "supported_sample_rates_hz": [
+        48000,
+        96000,
+        192000
+      ],
+      "thd_percent": 0.0,
+      "type": "audio-io"
+    }
+  ],
   "ports": [
     {
       "connector_type": "hdmi-a",
@@ -76,7 +92,7 @@
       "connector_type": "rca-composite",
       "count": 1,
       "direction": "out",
-      "id": "composite-in",
+      "id": "composite-out",
       "label": "Composite Output",
       "notes": "Composite / S-Video / Component",
       "signal_type": "video/composite"
@@ -85,7 +101,7 @@
       "connector_type": "mini-din-4",
       "count": 1,
       "direction": "out",
-      "id": "svideo-in",
+      "id": "svideo-out",
       "label": "S-Video Output",
       "notes": "Composite / S-Video / Component",
       "signal_type": "video/svideo"
@@ -94,11 +110,14 @@
       "connector_type": "rca",
       "count": 1,
       "direction": "out",
-      "id": "component-in",
+      "id": "component-out",
       "label": "Component Output",
       "notes": "Composite / S-Video / Component",
       "signal_type": "video/component"
     }
+  ],
+  "tags": [
+    "Blu-ray, High Grade Audio, Realta Optix HQV, Toroidal Transformer"
   ],
   "protocols": [
     {
@@ -107,25 +126,6 @@
       "transport": "serial",
       "version": "Common"
     }
-  ],
-  "capabilities": [
-    {
-      "ad_bit_depth": 32,
-      "analogue_input_count": 3,
-      "analogue_output_count": 3,
-      "da_bit_depth": 32,
-      "dynamic_range_db": 110,
-      "supported_sample_rates_hz": [
-        48000,
-        96000,
-        192000
-      ],
-      "thd_percent": 0.0,
-      "type": "audio-io"
-    }
-  ],
-  "tags": [
-    "Blu-ray, High Grade Audio, Realta Optix HQV, Toroidal Transformer"
   ],
   "category": "media-player",
   "control": {
