@@ -267,6 +267,8 @@
         "video-capture",
         "video-encoder",
         "video-decoder",
+        "signal-extender",
+        "signal-distribution",
         "camera",
         "lighting-fixture",
         "lighting-console",
