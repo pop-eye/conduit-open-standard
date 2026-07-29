@@ -50,13 +50,49 @@
     },
     "model_variant": {
       "type": "string",
-      "description": "Optional variant, revision, or regional suffix that distinguishes this profile from the base model.",
+      "description": "Optional variant, revision, or regional suffix that distinguishes this profile from the base model. Use it only when the SPECIFICATIONS differ (a 55\" and a 65\" screen, a Rev B with different ports). An order code or part number that identifies the same physical device — a TAA-compliant procurement SKU, a regional pack — is NOT a variant: record it in `order_codes` and keep one profile.",
       "examples": [
         "EU",
         "Rev B",
         "4K",
         "IP"
       ]
+    },
+    "order_codes": {
+      "type": "array",
+      "description": "Manufacturer order codes / part numbers that all refer to THIS device. Several codes commonly identify one physical product (standard vs TAA-compliant procurement, regional packs, bundles), so they belong here rather than forking the profile into near-duplicates.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "code"
+        ],
+        "properties": {
+          "code": {
+            "type": "string",
+            "description": "The order code or part number as published.",
+            "examples": [
+              "163-047102",
+              "163-050106"
+            ]
+          },
+          "notes": {
+            "type": "string",
+            "description": "What distinguishes this code, when anything does (e.g. 'TAA compliant', 'EU power cord', 'lens not included').",
+            "examples": [
+              "TAA compliant"
+            ]
+          },
+          "region": {
+            "type": "string",
+            "description": "Region or market this code is sold in, if it is region-specific.",
+            "examples": [
+              "US",
+              "EMEA"
+            ]
+          }
+        }
+      }
     },
     "category": {
       "$ref": "#/$defs/DeviceCategory"
