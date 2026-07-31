@@ -2183,7 +2183,7 @@
     },
     "ConnectorType": {
       "type": "string",
-      "description": "Physical connector type. Parsers encountering unknown values MUST treat them as opaque strings and must not error.",
+      "description": "Physical connector type. Parsers encountering unknown values MUST treat them as opaque strings and must not error. Use 'unspecified' ONLY when the source documents the port but not its connector — never as a default for a connector you have not looked up.",
       "enum": [
         "xlr-3f",
         "xlr-3m",
@@ -2283,7 +2283,8 @@
         "cacombo",
         "pigtail-sma",
         "rp-sma",
-        "slot"
+        "slot",
+        "unspecified"
       ]
     },
     "VideoResolution": {
