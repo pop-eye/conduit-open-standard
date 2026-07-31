@@ -1205,6 +1205,15 @@
             12000
           ]
         },
+        "brightness_led_lm": {
+          "type": "number",
+          "description": "Peak brightness in LED lumens (also marketed as 'light source lumens' or 'LED brightness'). NOT comparable to ANSI or ISO lumens and MUST NOT be recorded in those fields: LED lumens weight the measurement for the eye's response to colour and typically read two to three times higher than the ANSI figure for the same projector. Record the number exactly as the manufacturer states it, in the field matching the unit they used, and never convert between units.",
+          "minimum": 0,
+          "examples": [
+            2900,
+            3600
+          ]
+        },
         "contrast_ratio_full": {
           "type": "number",
           "description": "Full on/off contrast ratio.",
