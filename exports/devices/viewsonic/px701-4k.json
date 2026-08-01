@@ -1,0 +1,105 @@
+{
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "port_1",
+      "label": "HDMI 2.0 In",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "port_2",
+      "label": "HDMI 2.0 In",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "in",
+      "id": "port_3",
+      "label": "USB 2.0 Type A",
+      "signal_type": "control/usb"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "out",
+      "id": "port_4",
+      "label": "3.5mm Audio Out",
+      "signal_type": "audio/analogue/unbalanced"
+    },
+    {
+      "connector_type": "unspecified",
+      "direction": "out",
+      "id": "port_5",
+      "label": "RS232 Out",
+      "signal_type": "control/rs232"
+    }
+  ],
+  "capabilities": [
+    {
+      "brightness_ansi_lm": 3200,
+      "built_in_warp": true,
+      "contrast_ratio_dynamic": 12000,
+      "display_technology": "dlp-1chip",
+      "keystone_h_degrees": 40,
+      "keystone_v_degrees": 40,
+      "light_source_type": "other",
+      "native_resolution": {
+        "bit_depth": 10,
+        "fps": 240,
+        "hdr": [],
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "throw_ratio_max": 1.65,
+      "throw_ratio_min": 1.5,
+      "type": "display"
+    }
+  ],
+  "category": "projector",
+  "description": "ViewSonic 4K UHD 3,200 Lumens Projector with 240Hz and 4.2ms for Home Theater and Gaming.",
+  "dimensions": {
+    "depth_mm": 222.0,
+    "height_mm": 108.0,
+    "width_mm": 312.0
+  },
+  "environment": {
+    "humidity_max_percent": 90,
+    "operating_temp_max_c": 40,
+    "operating_temp_min_c": 0
+  },
+  "firmware": "vColorTuner",
+  "form_factor": "ceiling-mount",
+  "manufacturer": "ViewSonic",
+  "model": "PX701-4K",
+  "notes": "Features include 1.1x optical zoom, 0.8x-2.0x digital zoom, H/V keystone, curved screen projection, 4-corner adjustment, and auto keystone.",
+  "power": {
+    "frequency_hz": [
+      50,
+      60
+    ],
+    "max_wattage": 290,
+    "standby_wattage": 0.5,
+    "typical_wattage": 290,
+    "voltage_v": [
+      100,
+      240
+    ]
+  },
+  "reliability": {
+    "warranty_notes": "Three-year limited warranty on parts and labor, 1-year limited warranty on lamp, 1st year free Express Exchange® service.",
+    "warranty_years": 3
+  },
+  "weight_kg": 2.8,
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.viewsonic.com/us/px701-4k-4k-uhd-projector-with-3200-lumens-240hz-4-2ms-for-home-theater-and-gaming.html",
+      "type": "tech-specs-page",
+      "title": "ok",
+      "retrieved_date": "2026-07-31",
+      "notes": "ingested from the console chat"
+    }
+  ]
+}
