@@ -1,0 +1,211 @@
+{
+  "ports": [
+    {
+      "connector_type": "db15",
+      "count": 1,
+      "direction": "in",
+      "id": "port_1",
+      "label": "Computer in (share with component)",
+      "signal_type": "video/vga"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "count": 4,
+      "direction": "in",
+      "id": "port_2",
+      "label": "HDMI",
+      "notes": "HDCP 1.4/2.2",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "count": 1,
+      "direction": "in",
+      "id": "port_3",
+      "label": "Audio-in (3.5mm)",
+      "signal_type": "audio/analogue/microphone"
+    },
+    {
+      "connector_type": "usb-a",
+      "count": 2,
+      "direction": "in",
+      "id": "port_4",
+      "label": "USB Type A (Reader)",
+      "notes": "USB3.0 Reader x1,, USB2.0 Reader x1",
+      "signal_type": "control/usb"
+    },
+    {
+      "connector_type": "rj45",
+      "count": 1,
+      "direction": "in",
+      "id": "port_5",
+      "label": "RJ45 Input (Internet)",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "wireless",
+      "count": 1,
+      "direction": "in",
+      "id": "port_6",
+      "label": "Wifi Input",
+      "notes": "5Gn",
+      "signal_type": "network/wifi/5g"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "count": 1,
+      "direction": "out",
+      "id": "port_7",
+      "label": "Audio out (3.5mm)",
+      "signal_type": "audio/analogue/speaker"
+    },
+    {
+      "connector_type": "toslink",
+      "count": 1,
+      "direction": "out",
+      "id": "port_8",
+      "label": "S/PDIF",
+      "signal_type": "audio/spdif/optical"
+    },
+    {
+      "connector_type": "internal",
+      "count": 2,
+      "direction": "out",
+      "id": "port_9",
+      "label": "Speaker",
+      "notes": "20W Cube x2",
+      "signal_type": "audio/analogue/speaker"
+    },
+    {
+      "connector_type": "usb-a",
+      "count": 2,
+      "direction": "out",
+      "id": "port_10",
+      "label": "USB Type A (Power)",
+      "notes": "USB3.0 - 5V/2A x1,, USB2.0 - 5V/900mA x1,, share with USB A Input",
+      "signal_type": "control/usb"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "count": 2,
+      "direction": "out",
+      "id": "port_11",
+      "label": "12V Trigger (3.5mm)",
+      "signal_type": "control/rs485"
+    },
+    {
+      "connector_type": "db9",
+      "count": 1,
+      "direction": "in",
+      "id": "port_12",
+      "label": "RS232 (DB 9-pin male)",
+      "notes": "Female",
+      "signal_type": "control/rs232"
+    },
+    {
+      "connector_type": "rj45",
+      "count": 1,
+      "direction": "in",
+      "id": "port_13",
+      "label": "RJ45 (LAN control)",
+      "signal_type": "control/tcp-ip"
+    },
+    {
+      "connector_type": "usb-micro-b",
+      "count": 1,
+      "direction": "in",
+      "id": "port_14",
+      "label": "USB Micro B-2.0 (Services)",
+      "signal_type": "control/usb"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "HDCP",
+      "notes": "Supported via HDMI 2.0 ports",
+      "transport": "proprietary",
+      "version": "1.4/2.2"
+    }
+  ],
+  "capabilities": [
+    {
+      "brightness_led_lm": 2900,
+      "built_in_blend": false,
+      "built_in_warp": false,
+      "colour_spaces": [],
+      "contrast_ratio_full": 3000000,
+      "display_technology": "led-direct",
+      "h_sync_range_khz": [
+        15000,
+        135000
+      ],
+      "hdr_formats": [],
+      "keystone_v_degrees": 40,
+      "lens_shift_h_percent": -25,
+      "lens_shift_v_percent": 65,
+      "light_source_life_condition": "Normal Mode",
+      "light_source_life_hours": 30000,
+      "light_source_type": "other",
+      "native_resolution": {
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "throw_ratio_max": 1.44,
+      "throw_ratio_min": 1.2,
+      "type": "display",
+      "v_sync_range_hz": [
+        23,
+        120
+      ]
+    }
+  ],
+  "category": "projector",
+  "description": "4K UHD Home Cinema LED Projector with Harman Kardon® Speakers featuring True 4K UHD visual experience and Cinema SuperColor+™ Technology.",
+  "dimensions": {
+    "depth_mm": 463,
+    "height_mm": 183,
+    "width_mm": 416
+  },
+  "environment": {
+    "operating_temp_max_c": 40,
+    "operating_temp_min_c": 0
+  },
+  "extensions": {
+    "conduit:unmapped": {
+      "/capabilities/vertical_scan_rate_hz": [
+        23,
+        120
+      ]
+    }
+  },
+  "form_factor": "other",
+  "manufacturer": "ViewSonic",
+  "model": "X100-4K",
+  "power": {
+    "connector_type": "iec-c14",
+    "frequency_hz": [
+      50,
+      60
+    ],
+    "max_wattage": 200,
+    "psu_type": "internal",
+    "standby_wattage": 0.5,
+    "typical_wattage": 200,
+    "voltage_v": [
+      100,
+      240
+    ]
+  },
+  "weight_kg": 7.6,
+  "image_url": "https://cdn.mos.cms.futurecdn.net/kUJ8PJPcStAP8g47pnZvWK.jpg",
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.viewsonic.com/uk/products/projectors/X100-4K",
+      "type": "tech-specs-page",
+      "title": "ok",
+      "retrieved_date": "2026-07-30",
+      "notes": "ingested from the console chat"
+    }
+  ]
+}
