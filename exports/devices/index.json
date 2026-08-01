@@ -1,7 +1,7 @@
 {
   "schema_version": "conduit/v1",
-  "generated_at": "2026-07-29",
-  "count": 46,
+  "generated_at": "2026-08-01",
+  "count": 50,
   "devices": [
     {
       "id": "apple/tv-4k-1st-gen-original-4k-media-player",
@@ -596,6 +596,52 @@
         "4K Ultra HD",
         "bezel-less"
       ]
+    },
+    {
+      "id": "viewsonic/lx700-4ke-rgb",
+      "path": "viewsonic/lx700-4ke-rgb.json",
+      "manufacturer": "ViewSonic",
+      "model": "LX700-4KE RGB",
+      "category": "projector",
+      "description": "A 4K HDR RGB laser home cinema projector featuring 5,200 RGB Laser Lumens, 100% BT.2020 color gamut coverage, and a Texas Instruments 0.65-inch DMD chip.",
+      "port_count": 8
+    },
+    {
+      "id": "viewsonic/m2",
+      "path": "viewsonic/m2.json",
+      "manufacturer": "ViewSonic",
+      "model": "M2",
+      "category": "projector",
+      "form_factor": "portable",
+      "description": "A compact, portable smart LED projector featuring Full HD 1080p resolution, Cinema SuperColor+™ Technology, and dual Harman Kardon speakers.",
+      "port_count": 14,
+      "tags": [
+        "portable",
+        "smart",
+        "harman kardon",
+        "full hd",
+        "led projector"
+      ]
+    },
+    {
+      "id": "viewsonic/px701-4k",
+      "path": "viewsonic/px701-4k.json",
+      "manufacturer": "ViewSonic",
+      "model": "PX701-4K",
+      "category": "projector",
+      "form_factor": "ceiling-mount",
+      "description": "ViewSonic 4K UHD 3,200 Lumens Projector with 240Hz and 4.2ms for Home Theater and Gaming.",
+      "port_count": 5
+    },
+    {
+      "id": "viewsonic/x100-4k",
+      "path": "viewsonic/x100-4k.json",
+      "manufacturer": "ViewSonic",
+      "model": "X100-4K",
+      "category": "projector",
+      "form_factor": "other",
+      "description": "4K UHD Home Cinema LED Projector with Harman Kardon® Speakers featuring True 4K UHD visual experience and Cinema SuperColor+™ Technology.",
+      "port_count": 14
     }
   ]
 }
