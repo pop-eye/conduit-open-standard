@@ -1,0 +1,216 @@
+{
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "count": 1,
+      "direction": "in",
+      "id": "port-1",
+      "label": "HDMI",
+      "notes": "HDCP 1.4/2.2",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "usb-c",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "port-2",
+      "label": "USB Type C",
+      "notes": "5V/2A; supports direct content display and charging",
+      "signal_type": "video/usb-c-dp-alt"
+    },
+    {
+      "connector_type": "usb-a",
+      "count": 1,
+      "direction": "in",
+      "id": "port-3",
+      "label": "USB Type A (Reader)",
+      "notes": "USB 3.0 Reader x1",
+      "signal_type": "network/usb/3.0"
+    },
+    {
+      "connector_type": "usb-a",
+      "count": 1,
+      "direction": "in",
+      "id": "port-4",
+      "label": "USB Type A (Reader)",
+      "notes": "USB 2.0 Reader x1; share with power",
+      "signal_type": "network/usb/2.0"
+    },
+    {
+      "connector_type": "sd",
+      "count": 1,
+      "direction": "in",
+      "id": "port-5",
+      "label": "SD Card",
+      "notes": "Micro SD (64GB, SDXC)",
+      "signal_type": "network/sdcard"
+    },
+    {
+      "connector_type": "wireless",
+      "count": 1,
+      "direction": "in",
+      "id": "port-6",
+      "label": "Wifi Input",
+      "notes": "5Gn",
+      "signal_type": "network/wifi/5g"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "count": 1,
+      "direction": "out",
+      "id": "port-7",
+      "label": "Audio out (3.5mm)",
+      "signal_type": "audio/analogue/speaker"
+    },
+    {
+      "connector_type": "wireless",
+      "count": 1,
+      "direction": "out",
+      "id": "port-8",
+      "label": "Audio-out (Bluetooth)",
+      "notes": "BT4.0",
+      "signal_type": "audio/bluetooth"
+    },
+    {
+      "connector_type": "internal",
+      "count": 2,
+      "direction": "out",
+      "id": "port-9",
+      "label": "Speaker",
+      "notes": "3W cube x2; dual Harman Kardon speakers",
+      "signal_type": "audio/analogue/speaker"
+    },
+    {
+      "connector_type": "usb-a",
+      "count": 1,
+      "direction": "out",
+      "id": "port-10",
+      "label": "USB Type A (Power)",
+      "notes": "5V/2A; share with USB reader",
+      "signal_type": "network/usb/3.0"
+    },
+    {
+      "connector_type": "usb-a",
+      "count": 1,
+      "direction": "out",
+      "id": "port-11",
+      "label": "USB Type A (Power)",
+      "notes": "5V/0.5A; share with USB reader",
+      "signal_type": "network/usb/2.0"
+    },
+    {
+      "connector_type": "usb-micro-b",
+      "count": 1,
+      "direction": "in",
+      "id": "port-12",
+      "label": "USB Micro B (Services)",
+      "notes": "Service port",
+      "signal_type": "control/usb"
+    },
+    {
+      "connector_type": "dc-barrel",
+      "count": 1,
+      "direction": "power-in",
+      "id": "port-13",
+      "label": "DC In",
+      "signal_type": "power/dc"
+    },
+    {
+      "connector_type": "internal",
+      "count": 1,
+      "direction": "in",
+      "id": "port-14",
+      "label": "IR",
+      "signal_type": "control/ir"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "Bluetooth",
+      "notes": "Audio output to headphones or soundbar",
+      "transport": "bluetooth",
+      "version": "4.0"
+    }
+  ],
+  "tags": [
+    "portable",
+    "smart",
+    "harman kardon",
+    "full hd",
+    "led projector"
+  ],
+  "capabilities": [
+    {
+      "built_in_blend": false,
+      "built_in_warp": false,
+      "colour_spaces": [
+        "Rec.709"
+      ],
+      "contrast_ratio_full": 3000000,
+      "display_technology": "dlp-1chip",
+      "h_sync_range_khz": [
+        30000,
+        97000
+      ],
+      "hdr_formats": [
+        "HDR10"
+      ],
+      "keystone_h_degrees": 30,
+      "keystone_v_degrees": 40,
+      "light_source_life_condition": "Normal",
+      "light_source_life_hours": 30000,
+      "light_source_type": "rgb-led",
+      "native_resolution": {
+        "hdr": [],
+        "height_px": 1080,
+        "width_px": 1920
+      },
+      "throw_ratio_max": 1.23,
+      "throw_ratio_min": 1.23,
+      "type": "display",
+      "v_sync_range_hz": [
+        24,
+        120
+      ]
+    }
+  ],
+  "category": "projector",
+  "description": "A compact, portable smart LED projector featuring Full HD 1080p resolution, Cinema SuperColor+™ Technology, and dual Harman Kardon speakers.",
+  "dimensions": {
+    "depth_mm": 224,
+    "height_mm": 51,
+    "width_mm": 224
+  },
+  "environment": {
+    "operating_temp_max_c": 40,
+    "operating_temp_min_c": 0
+  },
+  "form_factor": "portable",
+  "manufacturer": "ViewSonic",
+  "model": "M2",
+  "power": {
+    "connector_type": "dc-barrel",
+    "frequency_hz": [
+      100,
+      240
+    ],
+    "max_wattage": 74,
+    "notes": "The power bank should be 45W (15V/3A) at least, and support Power Delivery (PD) protocol output.",
+    "psu_type": "external-brick",
+    "standby_wattage": 0.5,
+    "typical_wattage": 74,
+    "voltage_v": 19
+  },
+  "weight_kg": 1.32,
+  "image_url": "https://www.projectorreviews.com/wp-content/uploads/2021/03/Viewsonic-M2-pic-1-1.jpg",
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.viewsonic.com/np/products/projectors/M2",
+      "type": "tech-specs-page",
+      "title": "ok",
+      "retrieved_date": "2026-07-30",
+      "notes": "ingested from the console chat"
+    }
+  ]
+}
