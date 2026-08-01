@@ -1,0 +1,120 @@
+{
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "hdmi_1",
+      "label": "HDMI 1-Xbox",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "in",
+      "id": "hdmi_2",
+      "label": "HDMI 2-eARC",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "out",
+      "id": "usb_power_1",
+      "label": "USB Type A (Power) - 5V/1.5A",
+      "signal_type": "control/usb"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "out",
+      "id": "usb_power_2",
+      "label": "USB Type A (Power) - 5V/0.5A",
+      "signal_type": "control/usb"
+    },
+    {
+      "connector_type": "trs-3.5mm",
+      "direction": "out",
+      "id": "audio_out",
+      "label": "Audio Out",
+      "signal_type": "audio/analogue/speaker"
+    },
+    {
+      "connector_type": "db9",
+      "direction": "bidirectional",
+      "id": "rs232",
+      "label": "RS232",
+      "signal_type": "control/rs232"
+    },
+    {
+      "connector_type": "usb-a",
+      "direction": "bidirectional",
+      "id": "usb_service",
+      "label": "USB Type A (Services)",
+      "signal_type": "control/usb"
+    },
+    {
+      "connector_type": "dc-barrel",
+      "direction": "power-in",
+      "id": "dc_in",
+      "label": "DC In",
+      "signal_type": "power/dc"
+    }
+  ],
+  "capabilities": [
+    {
+      "colour_spaces": [
+        "BT.2020"
+      ],
+      "display_technology": "dlp-1chip",
+      "hdr_formats": [
+        "HLG"
+      ],
+      "light_source_life_hours": 20000,
+      "light_source_type": "rgb-laser",
+      "native_resolution": {
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "type": "display"
+    }
+  ],
+  "category": "projector",
+  "description": "A 4K HDR RGB laser home cinema projector featuring 5,200 RGB Laser Lumens, 100% BT.2020 color gamut coverage, and a Texas Instruments 0.65-inch DMD chip.",
+  "dimensions": {
+    "depth_mm": 216,
+    "height_mm": 129,
+    "width_mm": 286
+  },
+  "environment": {
+    "audible_noise_dba": 30,
+    "operating_temp_max_c": 40,
+    "operating_temp_min_c": 0
+  },
+  "manufacturer": "ViewSonic",
+  "model": "LX700-4KE RGB",
+  "notes": "The projector is designed to be installed in one of the following locations: Desk Front, Ceiling Front, Desk Rear, Ceiling Rear.",
+  "power": {
+    "max_wattage": 145,
+    "psu_type": "external-brick",
+    "standby_wattage": 0.5,
+    "voltage_v": [
+      100,
+      240
+    ]
+  },
+  "weight_kg": 2.7,
+  "image_url": "https://www.viewsonic.com/vsAssetFile/eu/img/resize/slides/0projector/LX700-4K_RGB/scaled/GPG-24-PRJ-LX700-4K%20RGB-Product%20Photo_RF01_pc_l.webp",
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.projectorcentral.com/pdf/projector_manual_12436.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-31",
+      "notes": "Ingested via seek agent"
+    },
+    {
+      "url": "https://www.viewsonic.com/uk/products/projectors/LX700-4KE%20RGB",
+      "type": "tech-specs-page",
+      "title": "ok",
+      "retrieved_date": "2026-07-31",
+      "notes": "ingested from the console chat"
+    }
+  ]
+}
