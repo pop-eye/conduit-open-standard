@@ -1,4 +1,32 @@
 {
+  "capabilities": [
+    {
+      "brightness_led_lm": 5200,
+      "built_in_blend": false,
+      "built_in_warp": false,
+      "colour_spaces": [
+        "BT.2020"
+      ],
+      "contrast_ratio_full": 3500000,
+      "display_technology": "rgb-laser",
+      "hdr_formats": [
+        "HLG"
+      ],
+      "keystone_h_degrees": 30,
+      "keystone_v_degrees": 30,
+      "lens_shift_v_percent": -15,
+      "light_source_life_condition": "SuperEco Mode",
+      "light_source_life_hours": 30000,
+      "light_source_type": "rgb-laser",
+      "native_resolution": {
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "throw_ratio_max": 2.24,
+      "throw_ratio_min": 1.4,
+      "type": "display"
+    }
+  ],
   "ports": [
     {
       "connector_type": "hdmi-a",
@@ -55,24 +83,6 @@
       "id": "dc_in",
       "label": "DC In",
       "signal_type": "power/dc"
-    }
-  ],
-  "capabilities": [
-    {
-      "colour_spaces": [
-        "BT.2020"
-      ],
-      "display_technology": "dlp-1chip",
-      "hdr_formats": [
-        "HLG"
-      ],
-      "light_source_life_hours": 20000,
-      "light_source_type": "rgb-laser",
-      "native_resolution": {
-        "height_px": 2160,
-        "width_px": 3840
-      },
-      "type": "display"
     }
   ],
   "category": "projector",
