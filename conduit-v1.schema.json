@@ -531,7 +531,10 @@
         "label": {
           "type": "string",
           "description": "Human-readable name for this supply when a device has more than one (e.g. 'AC mains inlet', '12V DC input', 'PSU 2').",
-          "examples": ["AC mains inlet", "12V DC input"]
+          "examples": [
+            "AC mains inlet",
+            "12V DC input"
+          ]
         },
         "voltage_v": {
           "oneOf": [
@@ -602,7 +605,7 @@
           ]
         },
         "connector_type": {
-          "$ref": "#/$defs/ConnectorType"
+          "$ref": "#/$defs/PowerConnectorType"
         },
         "psu_type": {
           "type": "string",
@@ -2003,7 +2006,7 @@
     },
     "SignalType": {
       "type": "string",
-      "description": "Hierarchical signal type namespace. Use the most specific subtype available. Parsers encountering unknown values MUST treat them as opaque strings and must not error.",
+      "description": "Hierarchical signal type namespace. Use the most specific subtype available. Parsers encountering unknown values MUST treat them as opaque strings and must not error. Use 'unspecified' ONLY when the source documents the port but not a standard transport for it — a vendor-proprietary link, for example. signal_type is REQUIRED, so this is the honest answer where omission is unavailable; never use it as a shortcut when a listed value applies.",
       "$comment": "Format: domain/protocol[/subtype]. Unknown future subtypes are valid — the enum is a known-good reference set, not an exhaustive list.",
       "enum": [
         "video/hdmi",
@@ -2178,7 +2181,8 @@
         "audio/intercom/partyline",
         "audio/intercom/voip",
         "audio/madi/aes10",
-        "network/fibre/ring"
+        "network/fibre/ring",
+        "unspecified"
       ]
     },
     "ConnectorType": {
@@ -2957,6 +2961,36 @@
         }
       },
       "additionalProperties": false
+    },
+    "PowerConnectorType": {
+      "type": "string",
+      "description": "Physical connector on a power inlet. A SUBSET of the signal connector vocabulary plus mains-specific values: the full list is dominated by audio/video connectors, and offering those for a power inlet produced advice like 'try hdmi-a' for a mains socket. The cee-* values ARE IEC 60309 connectors (cee-16a and cee-32a are the 16 A and 32 A ratings under their common trade name); iec-60309-30a is the 30 A rating, which has no CEE trade name. usb-* and rj45 are included deliberately — USB-PD and PoE are real ways to power a device. Use 'unspecified' ONLY when the source documents the power input but not its connector; the field is optional, so where the source says nothing at all, omit it instead.",
+      "enum": [
+        "iec-c13",
+        "iec-c14",
+        "iec-c19",
+        "iec-c20",
+        "powercon-true1",
+        "powercon-true1-top",
+        "schuko",
+        "nema-5-15",
+        "nema-5-20",
+        "nema-l6-20",
+        "nema-l21-30",
+        "cee-16a",
+        "cee-32a",
+        "iec-60309-30a",
+        "dc-barrel",
+        "usb-a",
+        "usb-b",
+        "usb-c",
+        "usb-micro-b",
+        "usb-mini-b",
+        "rj45",
+        "ethercon-rj45",
+        "internal",
+        "unspecified"
+      ]
     }
   }
 }
