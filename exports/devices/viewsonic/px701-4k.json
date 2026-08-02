@@ -1,4 +1,29 @@
 {
+  "capabilities": [
+    {
+      "brightness_ansi_lm": 3200,
+      "contrast_ratio_dynamic": 12000,
+      "display_technology": "dlp-1chip",
+      "hdr_formats": [
+        "HLG"
+      ],
+      "keystone_h_degrees": 40,
+      "keystone_v_degrees": 40,
+      "light_source_life_condition": "Normal",
+      "light_source_life_hours": 6000,
+      "native_resolution": {
+        "bit_depth": 10,
+        "fps": 240,
+        "hdr": [],
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "throw_ratio_max": 1.65,
+      "throw_ratio_min": 1.5,
+      "type": "display",
+      "light_source_type": "other"
+    }
+  ],
   "ports": [
     {
       "connector_type": "hdmi-a",
@@ -34,27 +59,6 @@
       "id": "port_5",
       "label": "RS232 Out",
       "signal_type": "control/rs232"
-    }
-  ],
-  "capabilities": [
-    {
-      "brightness_ansi_lm": 3200,
-      "built_in_warp": true,
-      "contrast_ratio_dynamic": 12000,
-      "display_technology": "dlp-1chip",
-      "keystone_h_degrees": 40,
-      "keystone_v_degrees": 40,
-      "light_source_type": "other",
-      "native_resolution": {
-        "bit_depth": 10,
-        "fps": 240,
-        "hdr": [],
-        "height_px": 2160,
-        "width_px": 3840
-      },
-      "throw_ratio_max": 1.65,
-      "throw_ratio_min": 1.5,
-      "type": "display"
     }
   ],
   "category": "projector",
