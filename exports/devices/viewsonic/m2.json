@@ -1,4 +1,52 @@
 {
+  "protocols": [
+    {
+      "name": "Bluetooth",
+      "notes": "Audio output to headphones or soundbar",
+      "transport": "bluetooth",
+      "version": "4.0"
+    }
+  ],
+  "capabilities": [
+    {
+      "analogue_output_count": 1,
+      "type": "audio-io"
+    },
+    {
+      "built_in_blend": false,
+      "built_in_warp": false,
+      "colour_spaces": [
+        "Rec.709"
+      ],
+      "contrast_ratio_full": 3000000,
+      "display_technology": "dlp-1chip",
+      "h_sync_range_khz": [
+        30000,
+        97000
+      ],
+      "hdr_formats": [
+        "HDR10"
+      ],
+      "keystone_h_degrees": 30,
+      "keystone_v_degrees": 40,
+      "light_source_life_condition": "Normal",
+      "light_source_life_hours": 30000,
+      "light_source_type": "rgb-led",
+      "native_resolution": {
+        "hdr": [],
+        "height_px": 1080,
+        "width_px": 1920
+      },
+      "throw_ratio_max": 1.23,
+      "throw_ratio_min": 1.23,
+      "type": "display",
+      "v_sync_range_hz": [
+        24,
+        120
+      ],
+      "brightness_led_lm": 1200
+    }
+  ],
   "ports": [
     {
       "connector_type": "hdmi-a",
@@ -124,55 +172,12 @@
       "signal_type": "control/ir"
     }
   ],
-  "protocols": [
-    {
-      "name": "Bluetooth",
-      "notes": "Audio output to headphones or soundbar",
-      "transport": "bluetooth",
-      "version": "4.0"
-    }
-  ],
   "tags": [
     "portable",
     "smart",
     "harman kardon",
     "full hd",
     "led projector"
-  ],
-  "capabilities": [
-    {
-      "built_in_blend": false,
-      "built_in_warp": false,
-      "colour_spaces": [
-        "Rec.709"
-      ],
-      "contrast_ratio_full": 3000000,
-      "display_technology": "dlp-1chip",
-      "h_sync_range_khz": [
-        30000,
-        97000
-      ],
-      "hdr_formats": [
-        "HDR10"
-      ],
-      "keystone_h_degrees": 30,
-      "keystone_v_degrees": 40,
-      "light_source_life_condition": "Normal",
-      "light_source_life_hours": 30000,
-      "light_source_type": "rgb-led",
-      "native_resolution": {
-        "hdr": [],
-        "height_px": 1080,
-        "width_px": 1920
-      },
-      "throw_ratio_max": 1.23,
-      "throw_ratio_min": 1.23,
-      "type": "display",
-      "v_sync_range_hz": [
-        24,
-        120
-      ]
-    }
   ],
   "category": "projector",
   "description": "A compact, portable smart LED projector featuring Full HD 1080p resolution, Cinema SuperColor+™ Technology, and dual Harman Kardon speakers.",
