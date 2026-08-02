@@ -4,27 +4,26 @@
       "cpu_cores": 4,
       "cpu_frequency_ghz": 1.7,
       "cpu_model": "Cortex A72 1.7 GHz Quad-Core CPU",
+      "gpu_api_support": [],
       "os": "Tizen 4.0 (VDLinux)",
       "ram_gb": 2.5,
+      "ram_type": "LPDDR4",
       "storage_os_gb": 3.88,
+      "storage_type": "emmc",
       "type": "compute"
     },
     {
-      "brightness_iso_lm": 400,
-      "contrast_ratio_full": 5000,
+      "colour_spaces": [
+        "72%"
+      ],
+      "contrast_ratio_dynamic": 5000,
+      "display_technology": "led-direct",
+      "light_source_type": "other",
       "native_resolution": {
-        "bit_depth": 10,
         "height_px": 1080,
         "width_px": 1920
       },
       "type": "display"
-    }
-  ],
-  "protocols": [
-    {
-      "name": "HDCP",
-      "transport": "proprietary",
-      "version": "2.2"
     }
   ],
   "ports": [
@@ -76,6 +75,13 @@
       "id": "audio_jack_out",
       "label": "Stereo Mini Jack",
       "signal_type": "audio/analogue/unbalanced"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "HDCP",
+      "transport": "proprietary",
+      "version": "2.2"
     }
   ],
   "category": "display",
