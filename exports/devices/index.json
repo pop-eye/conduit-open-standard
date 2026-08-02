@@ -1,7 +1,7 @@
 {
   "schema_version": "conduit/v1",
-  "generated_at": "2026-08-01",
-  "count": 50,
+  "generated_at": "2026-08-02",
+  "count": 49,
   "devices": [
     {
       "id": "apple/tv-4k-1st-gen-original-4k-media-player",
@@ -112,19 +112,6 @@
       "port_count": 15,
       "tags": [
         "broadcast-deck, recording, media-player, rackmount"
-      ]
-    },
-    {
-      "id": "brightsign/ls423-standard-edition-media-player",
-      "path": "brightsign/ls423-standard-edition-media-player.json",
-      "manufacturer": "BrightSign",
-      "model": "LS423",
-      "category": "media-player",
-      "form_factor": "other",
-      "description": "Entry-Level Player... perfect for simple streaming applications, menu boards, video walls and large deployments of common content.",
-      "port_count": 6,
-      "tags": [
-        "entry-level, h265, html5, ip-streaming"
       ]
     },
     {

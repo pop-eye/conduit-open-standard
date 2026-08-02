@@ -1,4 +1,36 @@
 {
+  "capabilities": [
+    {
+      "analogue_input_count": 0,
+      "analogue_output_count": 2,
+      "type": "audio-io"
+    },
+    {
+      "cpu_model": "α9 Gen4 AI Processor 4K (O20)",
+      "os": "webOS Smart TV",
+      "type": "compute"
+    },
+    {
+      "colour_spaces": [
+        "Perfect Color"
+      ],
+      "display_technology": "oled",
+      "hdr_formats": [
+        "HLG"
+      ],
+      "light_source_type": "other",
+      "native_resolution": {
+        "fps": 120,
+        "hdr": [],
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "type": "display"
+    }
+  ],
+  "tags": [
+    "4K, OLED, Cinema HDR, Dolby Vision IQ, webOS, ThinQ, AI Processor, G-Sync, FreeSync Premium, VRR, ALLM, HGIG"
+  ],
   "ports": [
     {
       "connector_type": "hdmi-a",
@@ -106,53 +138,26 @@
       "signal_type": "audio/analogue/unbalanced"
     }
   ],
-  "tags": [
-    "4K, OLED, Cinema HDR, Dolby Vision IQ, webOS, ThinQ, AI Processor, G-Sync, FreeSync Premium, VRR, ALLM, HGIG"
-  ],
-  "capabilities": [
-    {
-      "analogue_input_count": 0,
-      "analogue_output_count": 2,
-      "type": "audio-io"
-    },
-    {
-      "cpu_model": "α9 Gen4 AI Processor 4K (O20)",
-      "os": "webOS Smart TV",
-      "type": "compute"
-    },
-    {
-      "colour_spaces": [
-        "Perfect Color"
-      ],
-      "display_technology": "oled",
-      "hdr_formats": [
-        "HLG"
-      ],
-      "light_source_type": "other",
-      "native_resolution": {
-        "fps": 120,
-        "hdr": [],
-        "height_px": 2160,
-        "width_px": 3840
-      },
-      "type": "display"
-    }
-  ],
   "protocols": [
     {
-      "name": "Simplink",
+      "name": "Simplink (HDMI CEC)",
       "transport": "proprietary",
-      "version": "CEC"
+      "version": "1.4"
     },
     {
-      "name": "Bluetooth",
-      "transport": "bluetooth",
-      "version": "5.0"
+      "name": "Dolby Atmos",
+      "transport": "proprietary",
+      "version": "null"
     },
     {
-      "name": "Wifi",
-      "transport": "wifi",
-      "version": "802.11ac"
+      "name": "WiSA 2.1ch",
+      "transport": "proprietary",
+      "version": "2.1"
+    },
+    {
+      "name": "Airplay2",
+      "transport": "ip",
+      "version": "null"
     }
   ],
   "category": "display",
