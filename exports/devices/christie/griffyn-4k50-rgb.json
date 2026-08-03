@@ -1,0 +1,210 @@
+{
+  "order_codes": [
+    {
+      "code": "163-050106-XX",
+      "notes": "Standard model"
+    },
+    {
+      "code": "163-047102-XX",
+      "notes": "TAA-compliant"
+    }
+  ],
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "count": 2,
+      "direction": "in",
+      "id": "p1",
+      "label": "HDMI 2.0 (x2)",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "bnc",
+      "count": 4,
+      "direction": "in",
+      "id": "p2",
+      "label": "Micro BNC (12G-SDI) (x4)",
+      "signal_type": "video/sdi/12g"
+    },
+    {
+      "connector_type": "displayport-a",
+      "count": 2,
+      "direction": "in",
+      "id": "p3",
+      "label": "DisplayPort (DP) 1.2 (x2)",
+      "signal_type": "video/displayport/1.2"
+    },
+    {
+      "connector_type": "unspecified",
+      "count": 2,
+      "direction": "bidirectional",
+      "id": "p4",
+      "label": "Christie Link (1x Input, 1x Output)",
+      "signal_type": "unspecified"
+    },
+    {
+      "connector_type": "unspecified",
+      "count": 1,
+      "direction": "in",
+      "id": "p5",
+      "label": "Wired keypad (x1)",
+      "signal_type": "control/rs485"
+    },
+    {
+      "connector_type": "rj45",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "p6",
+      "label": "Ethernet (x1)",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "de-9",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "p7",
+      "label": "RS232 (x1)",
+      "signal_type": "control/rs232"
+    },
+    {
+      "connector_type": "rj45",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "p8",
+      "label": "HDBaseT (x1)",
+      "signal_type": "video/hdbaset/class-c"
+    },
+    {
+      "connector_type": "usb-c",
+      "count": 1,
+      "direction": "in",
+      "id": "p9",
+      "label": "USB-C (x1)",
+      "signal_type": "control/usb"
+    },
+    {
+      "connector_type": "usb-a",
+      "count": 1,
+      "direction": "in",
+      "id": "p10",
+      "label": "USB Type A (x1)",
+      "signal_type": "control/usb"
+    },
+    {
+      "connector_type": "unspecified",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "p11",
+      "label": "3D Sync In and Out (x1)",
+      "signal_type": "video/sync/analogue-bilevel"
+    },
+    {
+      "connector_type": "unspecified",
+      "count": 1,
+      "direction": "out",
+      "id": "p12",
+      "label": "Audio Out (x1)",
+      "signal_type": "audio/analogue/speaker"
+    }
+  ],
+  "control": {
+    "companion_software": [
+      {
+        "name": "Christie Conductor",
+        "platform": []
+      },
+      {
+        "name": "Mystique Essentials",
+        "platform": []
+      },
+      {
+        "name": "Mystique Pro",
+        "platform": []
+      },
+      {
+        "name": "Christie Guardian",
+        "platform": []
+      }
+    ],
+    "web_ui": true
+  },
+  "capabilities": [
+    {
+      "brightness_ansi_lm": 44500,
+      "brightness_iso_lm": 50000,
+      "colour_spaces": [
+        "Rec. 709",
+        "P3",
+        "Rec. 2020"
+      ],
+      "contrast_ratio_full": 2000,
+      "display_technology": "dlp-3chip",
+      "light_source_life_condition": "to 50% brightness when operated at 60% brightness",
+      "light_source_life_hours": 50000,
+      "light_source_type": "rgb-laser",
+      "native_resolution": {
+        "height_px": 2160,
+        "width_px": 4096
+      },
+      "type": "display"
+    }
+  ],
+  "category": "projector",
+  "description": "The smallest, lightest 50,000-lumen projector on the market with a compact, all-in-one design (no external chiller required) and omnidirectional installation capability. Features native 4K resolution, Rec. 2020 color, RGB pure laser technology, and Electronic Color Convergence via remote control.",
+  "dimensions": {
+    "depth_mm": 635,
+    "height_mm": 380,
+    "width_mm": 922
+  },
+  "environment": {
+    "audible_noise_dba": 46,
+    "humidity_condensing": false,
+    "humidity_max_percent": 80,
+    "operating_temp_max_c": 40,
+    "operating_temp_min_c": 5
+  },
+  "extensions": {
+    "conduit:unmapped": {
+      "/capabilities/colour_space": [
+        "Rec. 2020"
+      ],
+      "/capabilities/fps": 60
+    }
+  },
+  "form_factor": "other",
+  "manufacturer": "Christie",
+  "model": "Griffyn 4K50-RGB",
+  "notes": "The Mirage option (Firmware – 163-163101-01) enables 120Hz at 4K resolution and 3D content at 60Hz per eye. The Mirage Pro option (Firmware – 163-160108-01) adds 2K-resolution 2D content at 240-480Hz (scaled), 2K-resolution 3D content at 120Hz per eye, and Christie View (simultaneous multi-content viewer).",
+  "power": {
+    "connector_type": "iec-60309-30a",
+    "frequency_hz": [
+      50,
+      60
+    ],
+    "label": "AC mains inlet",
+    "max_wattage": 3800,
+    "phases": 1,
+    "psu_type": "internal",
+    "typical_wattage": 2800
+  },
+  "reliability": {
+    "warranty_notes": "Three years parts and labor",
+    "warranty_years": 3
+  },
+  "weight_kg": 89.3,
+  "image_url": "https://blooloop.com/media-library/christie-griffyn-4k50-rgb.jpg?id=60269585&width=1245&height=700&quality=95&coordinates=0,175,0,175",
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.christiedigital.com/globalassets/resources/public/griffyn-4k50-rgb-faq.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-28",
+      "notes": "Ingested via seek agent"
+    },
+    {
+      "url": "https://www.christiedigital.com/globalassets/resources/public/Griffyn-4K50-RGB-data-sheet.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-08-02"
+    }
+  ]
+}
