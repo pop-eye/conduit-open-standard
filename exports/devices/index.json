@@ -1,6 +1,6 @@
 {
   "schema_version": "conduit/v1",
-  "generated_at": "2026-08-02",
+  "generated_at": "2026-08-03",
   "count": 49,
   "devices": [
     {
@@ -109,7 +109,7 @@
       "category": "media-player",
       "form_factor": "rackmount",
       "description": "A professional recording and media player device that supports various video standards including SD, HD, 2K DCI, Ultra HD, and 4K DCI.",
-      "port_count": 15,
+      "port_count": 19,
       "tags": [
         "broadcast-deck, recording, media-player, rackmount"
       ]
