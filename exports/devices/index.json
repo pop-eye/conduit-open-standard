@@ -1,7 +1,7 @@
 {
   "schema_version": "conduit/v1",
   "generated_at": "2026-08-03",
-  "count": 49,
+  "count": 50,
   "devices": [
     {
       "id": "apple/tv-4k-1st-gen-original-4k-media-player",
@@ -173,6 +173,16 @@
         "RGB pure laser",
         "True HDR"
       ]
+    },
+    {
+      "id": "christie/griffyn-4k50-rgb",
+      "path": "christie/griffyn-4k50-rgb.json",
+      "manufacturer": "Christie",
+      "model": "Griffyn 4K50-RGB",
+      "category": "projector",
+      "form_factor": "other",
+      "description": "The smallest, lightest 50,000-lumen projector on the market with a compact, all-in-one design (no external chiller required) and omnidirectional installation capability. Features native 4K resolution, Rec. 2020 color, RGB pure laser technology, and Electronic Color Convergence via remote control.",
+      "port_count": 12
     },
     {
       "id": "christie/m-4k15-rgb-pure-laser-projector",
