@@ -287,11 +287,19 @@
       "id": "lg/55um7300-uhd-4k-television",
       "path": "lg/55um7300-uhd-4k-television.json",
       "manufacturer": "LG",
-      "model": "UF7300",
+      "model": "55UM7300AUE",
+      "model_variant": "AUE",
       "category": "display",
       "form_factor": "wall-mount",
-      "description": "4K UHD LED Smart TV w/ webOS™ 2.0",
-      "port_count": 9
+      "description": "LG 55 inch Class 4K Smart UHD TV w/ AI ThinQ®",
+      "port_count": 7,
+      "tags": [
+        "UHD",
+        "4K",
+        "ThinQ AI",
+        "webOS 4.5",
+        "IPS Display"
+      ]
     },
     {
       "id": "lg/65uh75lr-professional-uhd-television",
