@@ -1,7 +1,7 @@
 {
   "schema_version": "conduit/v1",
-  "generated_at": "2026-08-03",
-  "count": 50,
+  "generated_at": "2026-08-04",
+  "count": 51,
   "devices": [
     {
       "id": "apple/tv-4k-1st-gen-original-4k-media-player",
@@ -540,6 +540,23 @@
       "category": "display",
       "description": "A high-quality yet affordable display with Full HD resolution and slim design for business messaging.",
       "port_count": 7
+    },
+    {
+      "id": "viewsonic/cde4330",
+      "path": "viewsonic/cde4330.json",
+      "manufacturer": "ViewSonic",
+      "model": "CDE4330",
+      "category": "display",
+      "form_factor": "wall-mount",
+      "description": "Streamline your presentations, enhance collaboration, and succeed with the ViewSonic CDE4330 digital display. Whether your employees are in office or working remotely, they will enjoy fast and easy ways to communicate thanks to ViewBoard Cast™ screen sharing software and the myViewBoard® Display app that allows up to four participants to connect and share content.",
+      "port_count": 11,
+      "tags": [
+        "4K Ultra HD resolution",
+        "high brightness",
+        "25% high haze anti-glare screen",
+        "all-in-one displays",
+        "secured embedded platform"
+      ]
     },
     {
       "id": "viewsonic/cde43um-compact-series-television",

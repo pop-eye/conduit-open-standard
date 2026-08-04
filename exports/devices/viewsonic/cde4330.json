@@ -1,0 +1,190 @@
+{
+  "tags": [
+    "4K Ultra HD resolution",
+    "high brightness",
+    "25% high haze anti-glare screen",
+    "all-in-one displays",
+    "secured embedded platform"
+  ],
+  "capabilities": [
+    {
+      "cpu_cores": 4,
+      "cpu_frequency_ghz": 1.5,
+      "cpu_model": "Amlogic T982 / 1.9GHz CPU",
+      "gpu_model": "G52MP2",
+      "os": "Android 11.0",
+      "type": "compute"
+    },
+    {
+      "contrast_ratio_dynamic": 5000,
+      "display_technology": "lcd",
+      "light_source_type": "other",
+      "native_resolution": {
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "type": "display"
+    }
+  ],
+  "ports": [
+    {
+      "connector_type": "hdmi-a",
+      "count": 2,
+      "direction": "in",
+      "id": "port-1",
+      "label": "HDMI In",
+      "notes": "HDMI 2.1 (HDCP 2.2) In",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "count": 1,
+      "direction": "out",
+      "id": "port-2",
+      "label": "HDMI Out",
+      "notes": "HDMI 2.0 Out",
+      "signal_type": "video/hdmi/2.0"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "count": 1,
+      "direction": "out",
+      "id": "port-3",
+      "label": "Audio-out (HDMI ARC)",
+      "notes": "Audio-out (HDMI ARC)",
+      "signal_type": "audio/embedded/hdmi"
+    },
+    {
+      "connector_type": "unspecified",
+      "count": 1,
+      "direction": "out",
+      "id": "port-4",
+      "label": "SPDIF Audio Out",
+      "notes": "SPDIF Audio Out",
+      "signal_type": "audio/spdif/optical"
+    },
+    {
+      "connector_type": "usb-a",
+      "count": 1,
+      "direction": "in",
+      "id": "port-5",
+      "label": "USB 3.0",
+      "notes": "USB 3.0",
+      "signal_type": "network/usb/3.0"
+    },
+    {
+      "connector_type": "usb-a",
+      "count": 1,
+      "direction": "in",
+      "id": "port-6",
+      "label": "USB 2.0",
+      "notes": "USB 2.0",
+      "signal_type": "network/usb/2.0"
+    },
+    {
+      "connector_type": "usb-c",
+      "count": 1,
+      "direction": "in",
+      "id": "port-7",
+      "label": "USB Type C",
+      "notes": "USB Type C",
+      "signal_type": "network/usb/3.2"
+    },
+    {
+      "connector_type": "de-9",
+      "count": 1,
+      "direction": "bidirectional",
+      "id": "port-8",
+      "label": "RS232",
+      "notes": "RS232",
+      "signal_type": "control/rs232"
+    },
+    {
+      "connector_type": "rj45",
+      "count": 1,
+      "direction": "in",
+      "id": "port-9",
+      "label": "Ethernet LAN (RJ45)",
+      "notes": "Ethernet LAN (RJ45)",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "unspecified",
+      "count": 1,
+      "direction": "in",
+      "id": "port-10",
+      "label": "WIFI Module Slot",
+      "notes": "WIFI Module Slot",
+      "signal_type": "network/wifi/5g"
+    },
+    {
+      "connector_type": "unspecified",
+      "count": 1,
+      "direction": "in",
+      "id": "port-11",
+      "label": "Intel OPS Slot In (80-pin)",
+      "notes": "Intel® OPS Slot In (80-pin)",
+      "signal_type": "unspecified"
+    }
+  ],
+  "category": "display",
+  "description": "Streamline your presentations, enhance collaboration, and succeed with the ViewSonic CDE4330 digital display. Whether your employees are in office or working remotely, they will enjoy fast and easy ways to communicate thanks to ViewBoard Cast™ screen sharing software and the myViewBoard® Display app that allows up to four participants to connect and share content.",
+  "dimensions": {
+    "depth_mm": 71.4,
+    "height_mm": 552.5,
+    "width_mm": 964.6
+  },
+  "environment": {
+    "humidity_max_percent": 80,
+    "operating_temp_max_c": 40,
+    "operating_temp_min_c": 0
+  },
+  "extensions": {
+    "conduit:unmapped": {
+      "/capabilities/aspect_ratio": "16:9",
+      "/capabilities/brightness_cdm2": 450,
+      "/capabilities/contrast_ratio_static": 1200,
+      "/capabilities/memory_gb": 4,
+      "/capabilities/panel_surface": "Anti-Glare type, Hard-coating (3H), Haze 25%",
+      "/capabilities/panel_type": "mva",
+      "/capabilities/refresh_rate_hz": 60,
+      "/capabilities/response_time_ms": 8,
+      "/capabilities/storage_gb": 32,
+      "/capabilities/viewing_angles": {
+        "horizontal": 178,
+        "vertical": 178
+      }
+    }
+  },
+  "form_factor": "wall-mount",
+  "manufacturer": "ViewSonic",
+  "model": "CDE4330",
+  "power": {
+    "connector_type": "unspecified",
+    "frequency_hz": [
+      50,
+      60
+    ],
+    "max_wattage": 215,
+    "standby_wattage": 0.5,
+    "typical_wattage": 115,
+    "voltage_v": [
+      100,
+      240
+    ]
+  },
+  "reliability": {
+    "warranty_notes": "Three-year limited warranty on parts, labor and backlight",
+    "warranty_years": 3
+  },
+  "weight_kg": 6.6,
+  "image_url": "https://creationnetworks.net/cdn/shop/files/viewsonic-cde30-series-43-uhd-4k-commercial-monitor-cde4330-creation-networks-19858.jpg?v=1749264131&width=112",
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://www.viewsonic.com/media/wysiwyg/press-room/Datasheet-CDE4330.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-08-04"
+    }
+  ]
+}
