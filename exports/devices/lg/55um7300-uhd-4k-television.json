@@ -1,12 +1,27 @@
 {
+  "tags": [
+    "UHD",
+    "4K",
+    "ThinQ AI",
+    "webOS 4.5",
+    "IPS Display"
+  ],
   "capabilities": [
     {
-      "analogue_input_count": 2,
-      "analogue_output_count": 1,
+      "analogue_output_count": 2,
       "type": "audio-io"
     },
     {
+      "cpu_model": "Quad Core Processor",
+      "os": "webOS",
+      "type": "compute"
+    },
+    {
       "display_technology": "lcd",
+      "hdr_formats": [
+        "HDR10",
+        "HLG"
+      ],
       "light_source_type": "other",
       "native_resolution": {
         "height_px": 2160,
@@ -17,98 +32,178 @@
   ],
   "ports": [
     {
-      "connector_type": "f-type",
+      "connector_type": "hdmi-a",
+      "count": 3,
       "direction": "in",
-      "id": "rf-in",
-      "label": "RF In (Antenna/Cable)",
-      "panel_side": "rear",
-      "signal_type": "rf/antenna/dvb-t"
-    },
-    {
-      "connector_type": "rca",
-      "direction": "in",
-      "id": "component-in",
-      "label": "Component Video In",
-      "panel_side": "rear",
-      "signal_type": "video/component"
-    },
-    {
-      "connector_type": "rca-composite",
-      "direction": "in",
-      "id": "composite-in",
-      "label": "Composite In (AV)",
-      "panel_side": "rear",
-      "signal_type": "video/composite"
-    },
-    {
-      "connector_type": "toslink",
-      "direction": "out",
-      "id": "optical-out",
-      "label": "Optical Output",
-      "panel_side": "rear",
-      "signal_type": "audio/spdif/optical"
+      "id": "hdmi-1",
+      "label": "HDMI Input (HDCP 2.2)",
+      "notes": "1 rear, 2 side",
+      "signal_type": "video/hdmi/2.0"
     },
     {
       "connector_type": "hdmi-a",
-      "direction": "in",
-      "id": "hdmi-3",
-      "label": "HDMI 3",
-      "signal_type": "video/hdmi"
+      "count": 1,
+      "direction": "out",
+      "id": "hdmi-arc",
+      "label": "HDMI Audio Return Channel (ARC)",
+      "notes": "ARC (HDMI 2)",
+      "signal_type": "audio/embedded/hdmi"
     },
     {
       "connector_type": "usb-a",
+      "count": 2,
       "direction": "in",
       "id": "usb-1",
-      "label": "USB 3.0/2.0 1",
-      "signal_type": "network/usb/3.2"
+      "label": "USB Ports (v 2.0)",
+      "notes": "1 rear, 1 side",
+      "signal_type": "control/usb"
     },
     {
-      "connector_type": "usb-a",
+      "connector_type": "f-type",
+      "count": 1,
       "direction": "in",
-      "id": "usb-2",
-      "label": "USB 3.0/2.0 2",
-      "signal_type": "network/usb/3.2"
+      "id": "rf-input",
+      "label": "RF Connection Input (Antenna/Cable)",
+      "notes": "rear",
+      "signal_type": "rf/cable"
+    },
+    {
+      "connector_type": "rca-composite",
+      "count": 1,
+      "direction": "in",
+      "id": "composite-input",
+      "label": "Composite Input (AV)",
+      "notes": "rear",
+      "signal_type": "video/composite"
     },
     {
       "connector_type": "rj45",
+      "count": 1,
       "direction": "in",
-      "id": "lan-1",
-      "label": "LAN 1",
-      "panel_side": "rear",
+      "id": "ethernet-input",
+      "label": "Ethernet Input",
+      "notes": "rear",
       "signal_type": "network/ethernet/1g"
     },
     {
-      "connector_type": "trs-3.5mm",
-      "direction": "bidirectional",
-      "id": "rs232",
-      "label": "RS232",
-      "panel_side": "rear",
-      "signal_type": "control/rs232"
+      "connector_type": "toslink",
+      "count": 1,
+      "direction": "out",
+      "id": "optical-audio",
+      "label": "Digital Audio Output (Optical)",
+      "notes": "rear",
+      "signal_type": "audio/spdif/optical"
+    }
+  ],
+  "protocols": [
+    {
+      "name": "Wi-Fi",
+      "notes": "Wi-Fi Certified 802.11ac",
+      "transport": "wifi",
+      "version": "802.11ac"
+    },
+    {
+      "name": "Bluetooth",
+      "notes": "Bluetooth Support Version 5.0",
+      "transport": "bluetooth",
+      "version": "5.0"
     }
   ],
   "category": "display",
-  "description": "4K UHD LED Smart TV w/ webOS™ 2.0",
+  "control": {
+    "web_ui": true
+  },
+  "datasheet_url": "https://www.lg.com/ca/tv/55um7300-uhd-4k-television",
+  "description": "LG 55 inch Class 4K Smart UHD TV w/ AI ThinQ®",
+  "dimensions": {
+    "depth_mm": 231,
+    "height_mm": 786,
+    "width_mm": 1244
+  },
+  "extensions": {
+    "conduit:unmapped": {
+      "/capabilities/hdr": true
+    }
+  },
+  "firmware": "05.40.97",
   "form_factor": "wall-mount",
   "manufacturer": "LG",
-  "model": "UF7300",
+  "model": "55UM7300AUE",
+  "model_variant": "AUE",
+  "notes": "DISCONTINUED",
   "power": {
+    "connector_type": "iec-c13",
     "frequency_hz": [
       50,
       60
     ],
-    "standby_wattage": 0.3,
-    "voltage_v": [
-      100,
-      240
-    ]
+    "max_wattage": 76.5,
+    "psu_type": "internal",
+    "standby_wattage": 0.5,
+    "voltage_v": 120
   },
+  "reliability": {
+    "warranty_notes": "LG Electronics warrants against defects in materials or workmanship with your new LG Product(s) under normal and proper use.",
+    "warranty_years": 1
+  },
+  "weight_kg": 14.2,
   "schema_version": "conduit/v1",
   "sources": [
     {
-      "url": "https://www.lg.com/us/support/products/documents/UF7300%20Spec%20Sheet.pdf",
-      "type": "datasheet",
-      "retrieved_date": "2026-07-22",
-      "notes": "Ingested via batch"
+      "url": "https://www.lg.com/us/tvs/lg-55UM7300AUE-4k-uhd-tv",
+      "type": "tech-specs-page",
+      "title": "LG 55UM7300AUE: 55 Inch Class 4K HDR Smart LED UHD TV w/ AI ThinQ® | LG USA",
+      "retrieved_date": "2026-08-02",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.lg.com/us/tvs/lg-55UM7300PUA-4k-uhd-tv",
+      "type": "tech-specs-page",
+      "title": "LG 55UM7300PUA: 55 Inch Class 4K HDR Smart LED UHD TV w/ AI ThinQ® | LG USA",
+      "retrieved_date": "2026-08-02",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.lg.com/ca_en/tv-soundbars/4k-uhd-tvs/55um7300aue/",
+      "type": "tech-specs-page",
+      "title": "55” LG UHD TV UM7300 ThinQ AI - 55UM7300AUE | LG Canada",
+      "retrieved_date": "2026-08-02",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.lg.com/my/tv-soundbars/uhd-4k-tvs/55um7300pta/",
+      "type": "tech-specs-page",
+      "title": "55\" UM73 Series HDR Smart UHD TV with AI ThinQ® - 55UM7300PTA | LG Malaysia",
+      "retrieved_date": "2026-08-04",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.lg.com/ca_en/tvs/lg-55UM7300AUE?bvstate=pg:4/ct:r",
+      "type": "tech-specs-page",
+      "title": "LG 55” LG UHD TV UM7300 ThinQ AI | LG Canada",
+      "retrieved_date": "2026-08-04",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.lg.com/us/support/product/lg-55UM7300PUA.AUS",
+      "type": "tech-specs-page",
+      "title": "LG 55UM7300PUA.AUS<!-- -->: Support, Manuals, Warranty & More | LG USA Product Support Page",
+      "retrieved_date": "2026-08-04",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.lg.com/us/support/product/lg-55UM7300AUE.AUS",
+      "type": "tech-specs-page",
+      "title": "LG 55UM7300AUE.AUS<!-- -->: Support, Manuals, Warranty & More | LG USA Product Support Page",
+      "retrieved_date": "2026-08-04",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.lg.com/us/support/product/lg-55UM7300PUA.AUSD",
+      "type": "tech-specs-page",
+      "title": "LG 55UM7300PUA.AUSD<!-- -->: Support, Manuals, Warranty & More | LG USA Product Support Page",
+      "retrieved_date": "2026-08-04",
+      "notes": "Sourced via source_device"
     }
   ]
 }
