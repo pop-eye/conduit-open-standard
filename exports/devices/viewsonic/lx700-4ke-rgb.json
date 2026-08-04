@@ -99,26 +99,15 @@
   },
   "manufacturer": "ViewSonic",
   "model": "LX700-4KE RGB",
-  "notes": "The projector is designed to be installed in one of the following locations: Desk Front, Ceiling Front, Desk Rear, Ceiling Rear.",
   "power": {
     "max_wattage": 145,
     "psu_type": "external-brick",
-    "standby_wattage": 0.5,
-    "voltage_v": [
-      100,
-      240
-    ]
+    "standby_wattage": 0.5
   },
   "weight_kg": 2.7,
   "image_url": "https://www.viewsonic.com/vsAssetFile/eu/img/resize/slides/0projector/LX700-4K_RGB/scaled/GPG-24-PRJ-LX700-4K%20RGB-Product%20Photo_RF01_pc_l.webp",
   "schema_version": "conduit/v1",
   "sources": [
-    {
-      "url": "https://www.projectorcentral.com/pdf/projector_manual_12436.pdf",
-      "type": "datasheet",
-      "retrieved_date": "2026-07-31",
-      "notes": "Ingested via seek agent"
-    },
     {
       "url": "https://www.viewsonic.com/uk/products/projectors/LX700-4KE%20RGB",
       "type": "tech-specs-page",
