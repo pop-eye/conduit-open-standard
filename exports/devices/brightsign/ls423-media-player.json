@@ -1,0 +1,124 @@
+{
+  "power_inputs": [
+    {
+      "connector_type": "usb-micro-b",
+      "label": "power connector"
+    }
+  ],
+  "ports": [
+    {
+      "connector_type": "rj45",
+      "direction": "bidirectional",
+      "id": "port_lan",
+      "label": "rj45 lan",
+      "signal_type": "network/ethernet/1g"
+    },
+    {
+      "connector_type": "hdmi-a",
+      "direction": "out",
+      "id": "port_hdmi",
+      "label": "hdmi out",
+      "signal_type": "video/hdmi"
+    },
+    {
+      "connector_type": "usb-c",
+      "direction": "bidirectional",
+      "id": "port_usb",
+      "label": "usb 2.0",
+      "signal_type": "control/usb"
+    },
+    {
+      "connector_type": "microsd",
+      "direction": "bidirectional",
+      "id": "port_sd",
+      "label": "microsd card slot",
+      "signal_type": "network/sdcard"
+    },
+    {
+      "connector_type": "unspecified",
+      "direction": "out",
+      "id": "port_wifi_antenna",
+      "label": "wifi antenna connector",
+      "signal_type": "rf/antenna"
+    }
+  ],
+  "tags": [
+    "H.265",
+    "1080p60",
+    "HTML5"
+  ],
+  "protocols": [
+    {
+      "name": "Interactivity",
+      "notes": "Entry-level HTML5 support and USB 2.0 (type C) interactivity",
+      "transport": "usb",
+      "version": "USB, UDP"
+    }
+  ],
+  "capabilities": [
+    {
+      "analogue_input_count": 0,
+      "analogue_output_count": 1,
+      "type": "audio-io"
+    },
+    {
+      "rtc": true,
+      "type": "compute"
+    },
+    {
+      "native_resolution": {
+        "fps": 60,
+        "height_px": 1080,
+        "width_px": 1920
+      },
+      "type": "display"
+    }
+  ],
+  "category": "media-player",
+  "description": "Entry-Level Player, network connected and featuring H.265, 1080p60 video playback, entry-level HTML5 support and USB 2.0 (type C) interactivity. Perfect for simple streaming applications, menu boards, video walls and large deployments of common content.",
+  "dimensions": {
+    "depth_mm": 144.3,
+    "height_mm": 23.7,
+    "width_mm": 96.8
+  },
+  "extensions": {
+    "conduit:unmapped": {
+      "/capabilities/notes": "Analog Stereo Audio (requires USB adapter cable)"
+    }
+  },
+  "form_factor": "other",
+  "manufacturer": "BrightSign",
+  "model": "LS423",
+  "notes": "Supports H.265 decoding, entry-level HTML5 support, and IP Streaming. Analog Stereo Audio requires a USB adapter cable.",
+  "power": {
+    "connector_type": "usb-c",
+    "max_wattage": 10,
+    "notes": "USB compatible power",
+    "psu_type": "usb-pd",
+    "typical_wattage": 10,
+    "voltage_v": 5
+  },
+  "weight_kg": 0.159,
+  "image_url": "https://i.ebayimg.com/images/g/vSYAAeSwtztqKQR6/s-l225.jpg",
+  "schema_version": "conduit/v1",
+  "sources": [
+    {
+      "url": "https://avt-global.com/product/flWN2sUyBz6HNShcD5Qz.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-22",
+      "notes": "Ingested via batch"
+    },
+    {
+      "url": "https://docs.brightsign.biz/hardware/ls423",
+      "type": "tech-specs-page",
+      "title": "LS423 - Hardware",
+      "retrieved_date": "2026-08-01"
+    },
+    {
+      "url": "https://docs.brightsign.biz/hardware/ls423#",
+      "type": "datasheet",
+      "title": "LS423 - Hardware",
+      "retrieved_date": "2026-08-05"
+    }
+  ]
+}
