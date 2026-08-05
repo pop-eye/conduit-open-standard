@@ -1158,7 +1158,9 @@
             "network-switch",
             "led-processor",
             "audio-io",
-            "intercom"
+            "intercom",
+            "panel",
+            "video-output"
           ]
         }
       },
@@ -1180,12 +1182,18 @@
         },
         {
           "$ref": "#/$defs/IntercomCapability"
+        },
+        {
+          "$ref": "#/$defs/PanelCapability"
+        },
+        {
+          "$ref": "#/$defs/VideoOutputCapability"
         }
       ]
     },
     "DisplayCapability": {
       "type": "object",
-      "description": "Capability block for projection and display devices (projectors, LED walls, monitors). Required type: 'display'.",
+      "description": "PROJECTION capability — throw ratio, lens shift, keystone, edge blend and light-source life. Despite the name it describes a projector, not a flat panel; use `panel` for a screen and `video-output` for a source device. The name is retained because renaming an in-use type would invalidate every published profile that carries one.",
       "required": [
         "type"
       ],
@@ -1248,19 +1256,7 @@
           ]
         },
         "display_technology": {
-          "type": "string",
-          "enum": [
-            "dlp-1chip",
-            "dlp-3chip",
-            "lcd",
-            "lcos",
-            "laser-phosphor",
-            "rgb-laser",
-            "led-direct",
-            "oled",
-            "microled",
-            "other"
-          ],
+          "$ref": "#/$defs/DisplayTechnology",
           "description": "Core display or projection technology."
         },
         "light_source_type": {
@@ -3051,6 +3047,295 @@
         "internal",
         "unspecified"
       ]
+    },
+    "DisplayTechnology": {
+      "type": "string",
+      "description": "Imaging technology. Spans projection (dlp-*, lcos, laser-phosphor, rgb-laser) and panels (lcd, oled, micro-led, led-direct); a block uses only the values that apply to its kind of device.",
+      "enum": [
+        "dlp-1chip",
+        "dlp-3chip",
+        "lcd",
+        "lcos",
+        "laser-phosphor",
+        "rgb-laser",
+        "led-direct",
+        "oled",
+        "microled",
+        "other"
+      ]
+    },
+    "PanelCapability": {
+      "type": "object",
+      "description": "A flat emissive or transmissive screen — television, monitor, signage panel or interactive display. Use this rather than `display` for any device whose image is produced BY the device itself; `display` describes projection (throw ratio, lens shift, light source life).",
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "panel"
+          ]
+        },
+        "native_resolution": {
+          "$ref": "#/$defs/VideoResolution",
+          "description": "Native resolution of the panel itself, independent of the input signal resolution."
+        },
+        "display_technology": {
+          "$ref": "#/$defs/DisplayTechnology",
+          "description": "Underlying imaging technology. A panel never uses the projection values (dlp-*, lcos, *-laser)."
+        },
+        "panel_type": {
+          "type": "string",
+          "enum": [
+            "ips",
+            "va",
+            "tn",
+            "oled",
+            "qled",
+            "qd-oled",
+            "mini-led",
+            "micro-led",
+            "plasma",
+            "e-paper",
+            "other"
+          ],
+          "description": "Panel construction, as distinct from the broader imaging technology: an LCD may be IPS, VA or TN, and they behave very differently for viewing angle and response."
+        },
+        "panel_surface": {
+          "type": "string",
+          "enum": [
+            "matte",
+            "glossy",
+            "semi-gloss",
+            "anti-glare",
+            "anti-reflective",
+            "other"
+          ],
+          "description": "Surface finish. Decides whether a screen is usable opposite a window, which is a siting constraint rather than a nicety."
+        },
+        "brightness_cdm2": {
+          "type": "number",
+          "description": "Peak or typical luminance in cd/m² (nits) — the unit every panel datasheet quotes. Projector brightness is measured in lumens and belongs on `display` instead; the two are not convertible.",
+          "exclusiveMinimum": 0,
+          "examples": [
+            350,
+            500,
+            700,
+            1000
+          ]
+        },
+        "contrast_ratio_static": {
+          "type": "number",
+          "description": "Static (native) contrast ratio, measured without local dimming or backlight modulation.",
+          "minimum": 1,
+          "examples": [
+            1200,
+            3000,
+            5000
+          ]
+        },
+        "contrast_ratio_dynamic": {
+          "type": "number",
+          "description": "Dynamic contrast ratio, with backlight modulation.",
+          "minimum": 1,
+          "examples": [
+            6000,
+            50000
+          ]
+        },
+        "refresh_rate_hz": {
+          "type": "number",
+          "description": "Native panel refresh rate. NOT the same as a projector's `v_sync_range_hz`, which is the range of input timings it will lock to; this is what the panel itself does with them.",
+          "exclusiveMinimum": 0,
+          "examples": [
+            50,
+            60,
+            120,
+            144
+          ]
+        },
+        "response_time_ms": {
+          "type": "number",
+          "description": "Pixel response time. Meaningless without `response_time_measure` — an 8 ms GtG panel and an 8 ms MPRT panel are not comparable.",
+          "exclusiveMinimum": 0,
+          "examples": [
+            1,
+            5,
+            8
+          ]
+        },
+        "response_time_measure": {
+          "type": "string",
+          "enum": [
+            "gtg",
+            "mprt",
+            "bwb",
+            "other"
+          ],
+          "description": "How `response_time_ms` was measured: grey-to-grey, moving-picture response time, or black-white-black."
+        },
+        "viewing_angle_h_degrees": {
+          "type": "number",
+          "description": "Horizontal viewing angle, total.",
+          "exclusiveMinimum": 0,
+          "maximum": 180,
+          "examples": [
+            178
+          ]
+        },
+        "viewing_angle_v_degrees": {
+          "type": "number",
+          "description": "Vertical viewing angle, total.",
+          "exclusiveMinimum": 0,
+          "maximum": 180,
+          "examples": [
+            178
+          ]
+        },
+        "aspect_ratio": {
+          "type": "string",
+          "description": "Aspect ratio as the manufacturer writes it.",
+          "pattern": "^\\d+(\\.\\d+)?:\\d+(\\.\\d+)?$",
+          "examples": [
+            "16:9",
+            "21:9",
+            "32:9",
+            "4:3"
+          ]
+        },
+        "bit_depth": {
+          "type": "integer",
+          "description": "Panel colour depth in bits per component.",
+          "minimum": 1,
+          "examples": [
+            8,
+            10,
+            12
+          ]
+        },
+        "colour_spaces": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Colour spaces the panel covers.",
+          "examples": [
+            [
+              "Rec.709",
+              "DCI-P3"
+            ]
+          ]
+        },
+        "hdr_formats": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "HDR10",
+              "HDR10+",
+              "HLG",
+              "Dolby-Vision",
+              "HDR-Vivid"
+            ]
+          },
+          "description": "Supported HDR formats."
+        },
+        "operating_hours_per_day": {
+          "type": "number",
+          "description": "Duty cycle the manufacturer rates the panel for — 16/7 and 24/7 signage ratings. A usage rating, not a lifetime.",
+          "exclusiveMinimum": 0,
+          "maximum": 24,
+          "examples": [
+            16,
+            24
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "description": "Free-text qualifier for the figures in this block — the condition a value was measured under, a caveat, or a restriction. Display and projector datasheets qualify almost every headline number (\"20,000 hours in eco mode\", \"1200:1 native, 4000:1 dynamic\"), and the number without its qualifier is misleading. NOT a place to restate values that have fields of their own.",
+          "examples": [
+            "Brightness measured at 100% lamp power, centre screen.",
+            "Contrast quoted full on/off; native figure not published."
+          ]
+        }
+      }
+    },
+    "VideoOutputCapability": {
+      "type": "object",
+      "description": "What a SOURCE device can emit. A media player or scaler has no screen of its own; before this block, nine such devices in the catalogue were describing their output through `display`, a block built for projection.",
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "video-output"
+          ]
+        },
+        "max_resolution": {
+          "$ref": "#/$defs/VideoResolution",
+          "description": "Highest resolution this device can output."
+        },
+        "max_refresh_rate_hz": {
+          "type": "number",
+          "description": "Highest refresh rate at `max_resolution`. State a lower resolution's higher rate in `notes`.",
+          "exclusiveMinimum": 0,
+          "examples": [
+            30,
+            60,
+            120
+          ]
+        },
+        "bit_depth": {
+          "type": "integer",
+          "description": "Output colour depth in bits per component.",
+          "minimum": 1,
+          "examples": [
+            8,
+            10,
+            12
+          ]
+        },
+        "colour_spaces": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Colour spaces this device can output.",
+          "examples": [
+            [
+              "Rec.709",
+              "DCI-P3"
+            ]
+          ]
+        },
+        "hdr_formats": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "HDR10",
+              "HDR10+",
+              "HLG",
+              "Dolby-Vision",
+              "HDR-Vivid"
+            ]
+          },
+          "description": "Supported HDR formats."
+        },
+        "notes": {
+          "type": "string",
+          "description": "Free-text qualifier for the figures in this block — the condition a value was measured under, a caveat, or a restriction. Display and projector datasheets qualify almost every headline number (\"20,000 hours in eco mode\", \"1200:1 native, 4000:1 dynamic\"), and the number without its qualifier is misleading. NOT a place to restate values that have fields of their own.",
+          "examples": [
+            "Brightness measured at 100% lamp power, centre screen.",
+            "Contrast quoted full on/off; native figure not published."
+          ]
+        }
+      }
     }
   }
 }
