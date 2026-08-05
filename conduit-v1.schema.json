@@ -1153,7 +1153,7 @@
           "type": "string",
           "description": "Capability block type identifier.",
           "enum": [
-            "display",
+            "projector",
             "compute",
             "network-switch",
             "led-processor",
@@ -1167,7 +1167,7 @@
       },
       "oneOf": [
         {
-          "$ref": "#/$defs/DisplayCapability"
+          "$ref": "#/$defs/ProjectorCapability"
         },
         {
           "$ref": "#/$defs/ComputeCapability"
@@ -1194,245 +1194,6 @@
           "$ref": "#/$defs/PlaybackCapability"
         }
       ]
-    },
-    "DisplayCapability": {
-      "type": "object",
-      "description": "PROJECTION capability — throw ratio, lens shift, keystone, edge blend and light-source life. Despite the name it describes a projector, not a flat panel; use `panel` for a screen and `video-output` for a source device. The name is retained because renaming an in-use type would invalidate every published profile that carries one.",
-      "required": [
-        "type"
-      ],
-      "additionalProperties": false,
-      "properties": {
-        "type": {
-          "type": "string",
-          "enum": [
-            "display"
-          ]
-        },
-        "native_resolution": {
-          "$ref": "#/$defs/VideoResolution",
-          "description": "Native panel or DMD resolution of the display, independent of input signal resolution."
-        },
-        "brightness_iso_lm": {
-          "type": "number",
-          "description": "Peak brightness in ISO lumens (measured to ISO 21118).",
-          "minimum": 0,
-          "examples": [
-            8400,
-            15000,
-            30000
-          ]
-        },
-        "brightness_ansi_lm": {
-          "type": "number",
-          "description": "Peak brightness in ANSI lumens.",
-          "minimum": 0,
-          "examples": [
-            7500,
-            12000
-          ]
-        },
-        "brightness_led_lm": {
-          "type": "number",
-          "description": "Peak brightness in LED lumens (also marketed as 'light source lumens' or 'LED brightness'). NOT comparable to ANSI or ISO lumens and MUST NOT be recorded in those fields: LED lumens weight the measurement for the eye's response to colour and typically read two to three times higher than the ANSI figure for the same projector. Record the number exactly as the manufacturer states it, in the field matching the unit they used, and never convert between units.",
-          "minimum": 0,
-          "examples": [
-            2900,
-            3600
-          ]
-        },
-        "contrast_ratio_full": {
-          "type": "number",
-          "description": "Full on/off contrast ratio.",
-          "minimum": 1,
-          "examples": [
-            300000,
-            1000000
-          ]
-        },
-        "contrast_ratio_dynamic": {
-          "type": "number",
-          "description": "Dynamic contrast ratio.",
-          "minimum": 1,
-          "examples": [
-            6000,
-            50000
-          ]
-        },
-        "display_technology": {
-          "$ref": "#/$defs/DisplayTechnology",
-          "description": "Core display or projection technology."
-        },
-        "light_source_type": {
-          "type": "string",
-          "enum": [
-            "laser-phosphor",
-            "rgb-laser",
-            "rgbb-led",
-            "rgb-led",
-            "uhp-lamp",
-            "xenon-lamp",
-            "other"
-          ],
-          "description": "Light source type."
-        },
-        "light_source_life_hours": {
-          "type": "number",
-          "description": "Rated light source life in hours, typically to 50% brightness.",
-          "minimum": 0,
-          "examples": [
-            20000,
-            30000,
-            50000
-          ]
-        },
-        "light_source_life_condition": {
-          "type": "string",
-          "description": "Condition at which light source life is rated (e.g. 'to 50% brightness', 'L70').",
-          "examples": [
-            "to 50% brightness",
-            "L70",
-            "normal mode"
-          ]
-        },
-        "throw_ratio_min": {
-          "type": "number",
-          "description": "Minimum throw ratio (shortest throw lens). Lower = wider angle / shorter distance.",
-          "minimum": 0,
-          "examples": [
-            0.36,
-            0.75
-          ]
-        },
-        "throw_ratio_max": {
-          "type": "number",
-          "description": "Maximum throw ratio (longest throw lens).",
-          "minimum": 0,
-          "examples": [
-            5.5,
-            7
-          ]
-        },
-        "lens_shift_v_percent": {
-          "type": "number",
-          "description": "Vertical lens shift range as a percentage of image height (±).",
-          "examples": [
-            100,
-            50
-          ]
-        },
-        "lens_shift_h_percent": {
-          "type": "number",
-          "description": "Horizontal lens shift range as a percentage of image width (±).",
-          "examples": [
-            30,
-            50
-          ]
-        },
-        "keystone_v_degrees": {
-          "type": "number",
-          "description": "Vertical keystone correction range in degrees (±).",
-          "examples": [
-            40,
-            15
-          ]
-        },
-        "keystone_h_degrees": {
-          "type": "number",
-          "description": "Horizontal keystone correction range in degrees (±).",
-          "examples": [
-            40,
-            15
-          ]
-        },
-        "built_in_warp": {
-          "type": "boolean",
-          "description": "Whether the device has built-in geometric warp processing (no external warper needed)."
-        },
-        "built_in_blend": {
-          "type": "boolean",
-          "description": "Whether the device has built-in edge blending."
-        },
-        "pixel_clock_mhz": {
-          "type": "number",
-          "description": "Maximum pixel clock in MHz.",
-          "minimum": 0,
-          "examples": [
-            162,
-            600
-          ]
-        },
-        "h_sync_range_khz": {
-          "type": "array",
-          "description": "Horizontal sync frequency range as [min_kHz, max_kHz].",
-          "items": {
-            "type": "number"
-          },
-          "minItems": 2,
-          "maxItems": 2,
-          "examples": [
-            [
-              15,
-              91
-            ]
-          ]
-        },
-        "v_sync_range_hz": {
-          "type": "array",
-          "description": "Vertical sync / frame rate range as [min_Hz, max_Hz].",
-          "items": {
-            "type": "number"
-          },
-          "minItems": 2,
-          "maxItems": 2,
-          "examples": [
-            [
-              24,
-              120
-            ],
-            [
-              24,
-              250
-            ]
-          ]
-        },
-        "hdr_formats": {
-          "type": "array",
-          "items": {
-            "type": "string",
-            "enum": [
-              "HDR10",
-              "HDR10+",
-              "HLG",
-              "Dolby-Vision",
-              "HDR-Vivid"
-            ]
-          },
-          "description": "Supported HDR formats."
-        },
-        "colour_spaces": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "Supported colour spaces.",
-          "examples": [
-            [
-              "Rec.709",
-              "DCI-P3",
-              "Rec.2020"
-            ]
-          ]
-        },
-        "notes": {
-          "type": "string",
-          "description": "Free-text qualifier for the figures in this block — the condition a value was measured under, a caveat, or a restriction. Display and projector datasheets qualify almost every headline number (\"20,000 hours in eco mode\", \"1200:1 native, 4000:1 dynamic\"), and the number without its qualifier is misleading. NOT a place to restate values that have fields of their own.",
-          "examples": [
-            "Brightness measured at 100% lamp power, centre screen.",
-            "Contrast quoted full on/off; native figure not published."
-          ]
-        }
-      }
     },
     "ComputeCapability": {
       "type": "object",
@@ -3140,6 +2901,15 @@
             5000
           ]
         },
+        "contrast_ratio_full": {
+          "type": "number",
+          "description": "Full on/off contrast ratio — a whole-field measurement, quoted for panels as well as projectors, and not the same as the static (native) figure.",
+          "minimum": 1,
+          "examples": [
+            3000,
+            150000
+          ]
+        },
         "contrast_ratio_dynamic": {
           "type": "number",
           "description": "Dynamic contrast ratio, with backlight modulation.",
@@ -3590,6 +3360,245 @@
             ]
           },
           "description": "Removable media the device plays from. A BrightSign plays from an SD card and a NUC from an SSD; that is a real difference in how the room is loaded."
+        },
+        "notes": {
+          "type": "string",
+          "description": "Free-text qualifier for the figures in this block — the condition a value was measured under, a caveat, or a restriction. Display and projector datasheets qualify almost every headline number (\"20,000 hours in eco mode\", \"1200:1 native, 4000:1 dynamic\"), and the number without its qualifier is misleading. NOT a place to restate values that have fields of their own.",
+          "examples": [
+            "Brightness measured at 100% lamp power, centre screen.",
+            "Contrast quoted full on/off; native figure not published."
+          ]
+        }
+      }
+    },
+    "ProjectorCapability": {
+      "type": "object",
+      "description": "PROJECTION capability — throw ratio, lens shift, keystone, edge blend, light-source life and brightness in LUMENS. For a flat panel use `panel`; for a source device that emits video but has no screen use `video-output`.",
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "projector"
+          ]
+        },
+        "native_resolution": {
+          "$ref": "#/$defs/VideoResolution",
+          "description": "Native panel or DMD resolution of the display, independent of input signal resolution."
+        },
+        "brightness_iso_lm": {
+          "type": "number",
+          "description": "Peak brightness in ISO lumens (measured to ISO 21118).",
+          "minimum": 0,
+          "examples": [
+            8400,
+            15000,
+            30000
+          ]
+        },
+        "brightness_ansi_lm": {
+          "type": "number",
+          "description": "Peak brightness in ANSI lumens.",
+          "minimum": 0,
+          "examples": [
+            7500,
+            12000
+          ]
+        },
+        "brightness_led_lm": {
+          "type": "number",
+          "description": "Peak brightness in LED lumens (also marketed as 'light source lumens' or 'LED brightness'). NOT comparable to ANSI or ISO lumens and MUST NOT be recorded in those fields: LED lumens weight the measurement for the eye's response to colour and typically read two to three times higher than the ANSI figure for the same projector. Record the number exactly as the manufacturer states it, in the field matching the unit they used, and never convert between units.",
+          "minimum": 0,
+          "examples": [
+            2900,
+            3600
+          ]
+        },
+        "contrast_ratio_full": {
+          "type": "number",
+          "description": "Full on/off contrast ratio.",
+          "minimum": 1,
+          "examples": [
+            300000,
+            1000000
+          ]
+        },
+        "contrast_ratio_dynamic": {
+          "type": "number",
+          "description": "Dynamic contrast ratio.",
+          "minimum": 1,
+          "examples": [
+            6000,
+            50000
+          ]
+        },
+        "display_technology": {
+          "$ref": "#/$defs/DisplayTechnology",
+          "description": "Core display or projection technology."
+        },
+        "light_source_type": {
+          "type": "string",
+          "enum": [
+            "laser-phosphor",
+            "rgb-laser",
+            "rgbb-led",
+            "rgb-led",
+            "uhp-lamp",
+            "xenon-lamp",
+            "other"
+          ],
+          "description": "Light source type."
+        },
+        "light_source_life_hours": {
+          "type": "number",
+          "description": "Rated light source life in hours, typically to 50% brightness.",
+          "minimum": 0,
+          "examples": [
+            20000,
+            30000,
+            50000
+          ]
+        },
+        "light_source_life_condition": {
+          "type": "string",
+          "description": "Condition at which light source life is rated (e.g. 'to 50% brightness', 'L70').",
+          "examples": [
+            "to 50% brightness",
+            "L70",
+            "normal mode"
+          ]
+        },
+        "throw_ratio_min": {
+          "type": "number",
+          "description": "Minimum throw ratio (shortest throw lens). Lower = wider angle / shorter distance.",
+          "minimum": 0,
+          "examples": [
+            0.36,
+            0.75
+          ]
+        },
+        "throw_ratio_max": {
+          "type": "number",
+          "description": "Maximum throw ratio (longest throw lens).",
+          "minimum": 0,
+          "examples": [
+            5.5,
+            7
+          ]
+        },
+        "lens_shift_v_percent": {
+          "type": "number",
+          "description": "Vertical lens shift range as a percentage of image height (±).",
+          "examples": [
+            100,
+            50
+          ]
+        },
+        "lens_shift_h_percent": {
+          "type": "number",
+          "description": "Horizontal lens shift range as a percentage of image width (±).",
+          "examples": [
+            30,
+            50
+          ]
+        },
+        "keystone_v_degrees": {
+          "type": "number",
+          "description": "Vertical keystone correction range in degrees (±).",
+          "examples": [
+            40,
+            15
+          ]
+        },
+        "keystone_h_degrees": {
+          "type": "number",
+          "description": "Horizontal keystone correction range in degrees (±).",
+          "examples": [
+            40,
+            15
+          ]
+        },
+        "built_in_warp": {
+          "type": "boolean",
+          "description": "Whether the device has built-in geometric warp processing (no external warper needed)."
+        },
+        "built_in_blend": {
+          "type": "boolean",
+          "description": "Whether the device has built-in edge blending."
+        },
+        "pixel_clock_mhz": {
+          "type": "number",
+          "description": "Maximum pixel clock in MHz.",
+          "minimum": 0,
+          "examples": [
+            162,
+            600
+          ]
+        },
+        "h_sync_range_khz": {
+          "type": "array",
+          "description": "Horizontal sync frequency range as [min_kHz, max_kHz].",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2,
+          "examples": [
+            [
+              15,
+              91
+            ]
+          ]
+        },
+        "v_sync_range_hz": {
+          "type": "array",
+          "description": "Vertical sync / frame rate range as [min_Hz, max_Hz].",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2,
+          "examples": [
+            [
+              24,
+              120
+            ],
+            [
+              24,
+              250
+            ]
+          ]
+        },
+        "hdr_formats": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "HDR10",
+              "HDR10+",
+              "HLG",
+              "Dolby-Vision",
+              "HDR-Vivid"
+            ]
+          },
+          "description": "Supported HDR formats."
+        },
+        "colour_spaces": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Supported colour spaces.",
+          "examples": [
+            [
+              "Rec.709",
+              "DCI-P3",
+              "Rec.2020"
+            ]
+          ]
         },
         "notes": {
           "type": "string",

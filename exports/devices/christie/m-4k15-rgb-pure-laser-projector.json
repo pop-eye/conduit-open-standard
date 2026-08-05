@@ -34,11 +34,11 @@
         "height_px": 2400,
         "width_px": 3840
       },
-      "type": "display",
       "v_sync_range_hz": [
         24,
         60
-      ]
+      ],
+      "type": "projector"
     }
   ],
   "order_codes": [

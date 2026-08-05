@@ -86,7 +86,7 @@
       },
       "throw_ratio_max": 7.69,
       "throw_ratio_min": 1.13,
-      "type": "display"
+      "type": "projector"
     }
   ],
   "category": "projector",

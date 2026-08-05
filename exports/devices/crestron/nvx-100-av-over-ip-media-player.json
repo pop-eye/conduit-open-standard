@@ -110,7 +110,7 @@
       "type": "compute"
     },
     {
-      "type": "display"
+      "type": "video-output"
     },
     {
       "managed": true,

@@ -152,11 +152,11 @@
       },
       "throw_ratio_max": 1.44,
       "throw_ratio_min": 1.2,
-      "type": "display",
       "v_sync_range_hz": [
         23,
         120
-      ]
+      ],
+      "type": "projector"
     }
   ],
   "category": "projector",

@@ -66,12 +66,12 @@
       "type": "compute"
     },
     {
-      "native_resolution": {
+      "max_resolution": {
         "fps": 60,
         "height_px": 1080,
         "width_px": 1920
       },
-      "type": "display"
+      "type": "video-output"
     }
   ],
   "category": "media-player",

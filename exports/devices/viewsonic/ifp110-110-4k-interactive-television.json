@@ -196,16 +196,14 @@
       "type": "compute"
     },
     {
-      "brightness_iso_lm": 400,
       "contrast_ratio_full": 1200,
       "display_technology": "led-direct",
-      "light_source_type": "other",
       "native_resolution": {
         "fps": 120,
         "height_px": 2160,
         "width_px": 3840
       },
-      "type": "display"
+      "type": "panel"
     }
   ],
   "protocols": [

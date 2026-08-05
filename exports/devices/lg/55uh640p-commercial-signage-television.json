@@ -11,7 +11,6 @@
   ],
   "capabilities": [
     {
-      "brightness_iso_lm": 400,
       "display_technology": "lcd",
       "hdr_formats": [
         "HLG"
@@ -20,7 +19,7 @@
         "height_px": 2160,
         "width_px": 3840
       },
-      "type": "display"
+      "type": "panel"
     }
   ],
   "tags": [

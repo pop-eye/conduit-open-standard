@@ -18,12 +18,11 @@
     {
       "contrast_ratio_dynamic": 5000,
       "display_technology": "lcd",
-      "light_source_type": "other",
       "native_resolution": {
         "height_px": 2160,
         "width_px": 3840
       },
-      "type": "display"
+      "type": "panel"
     }
   ],
   "ports": [

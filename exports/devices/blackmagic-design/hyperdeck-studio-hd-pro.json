@@ -180,7 +180,7 @@
       "type": "compute"
     },
     {
-      "type": "display"
+      "type": "video-output"
     }
   ],
   "category": "media-player",

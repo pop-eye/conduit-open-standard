@@ -22,12 +22,11 @@
         "HDR10",
         "HLG"
       ],
-      "light_source_type": "other",
       "native_resolution": {
         "height_px": 2160,
         "width_px": 3840
       },
-      "type": "display"
+      "type": "panel"
     }
   ],
   "ports": [

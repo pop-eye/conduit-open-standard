@@ -123,7 +123,7 @@
       },
       "throw_ratio_max": 2.0,
       "throw_ratio_min": 1.25,
-      "type": "display"
+      "type": "projector"
     }
   ],
   "protocols": [

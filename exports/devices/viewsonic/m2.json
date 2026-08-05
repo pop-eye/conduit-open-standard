@@ -39,12 +39,12 @@
       },
       "throw_ratio_max": 1.23,
       "throw_ratio_min": 1.23,
-      "type": "display",
       "v_sync_range_hz": [
         24,
         120
       ],
-      "brightness_led_lm": 1200
+      "brightness_led_lm": 1200,
+      "type": "projector"
     }
   ],
   "ports": [

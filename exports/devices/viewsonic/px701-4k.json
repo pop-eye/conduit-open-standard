@@ -20,8 +20,8 @@
       },
       "throw_ratio_max": 1.65,
       "throw_ratio_min": 1.5,
-      "type": "display",
-      "light_source_type": "other"
+      "light_source_type": "other",
+      "type": "projector"
     }
   ],
   "ports": [

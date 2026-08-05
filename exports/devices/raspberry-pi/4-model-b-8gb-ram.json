@@ -16,14 +16,12 @@
       "type": "compute"
     },
     {
-      "display_technology": "other",
-      "light_source_type": "other",
-      "native_resolution": {
+      "max_resolution": {
         "fps": 60,
         "height_px": 2160,
         "width_px": 3840
       },
-      "type": "display"
+      "type": "video-output"
     }
   ],
   "tags": [

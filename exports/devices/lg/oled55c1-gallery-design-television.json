@@ -18,14 +18,13 @@
       "hdr_formats": [
         "HLG"
       ],
-      "light_source_type": "other",
       "native_resolution": {
         "fps": 120,
         "hdr": [],
         "height_px": 2160,
         "width_px": 3840
       },
-      "type": "display"
+      "type": "panel"
     }
   ],
   "tags": [

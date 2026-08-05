@@ -14,7 +14,7 @@
       },
       "throw_ratio_max": 1.92,
       "throw_ratio_min": 1.2,
-      "type": "display"
+      "type": "projector"
     }
   ],
   "ports": [

@@ -12,13 +12,12 @@
       ],
       "contrast_ratio_full": 1200,
       "display_technology": "lcd",
-      "light_source_type": "other",
       "native_resolution": {
         "fps": 60,
         "height_px": 2160,
         "width_px": 3840
       },
-      "type": "display"
+      "type": "panel"
     }
   ],
   "ports": [

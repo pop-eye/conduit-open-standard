@@ -13,15 +13,11 @@
       "type": "compute"
     },
     {
-      "built_in_blend": false,
-      "built_in_warp": false,
       "colour_spaces": [],
       "contrast_ratio_dynamic": 5000,
       "contrast_ratio_full": 1200,
       "display_technology": "led-direct",
       "hdr_formats": [],
-      "light_source_life_hours": 50000,
-      "light_source_type": "other",
       "native_resolution": {
         "bit_depth": 8,
         "fps": 60,
@@ -29,7 +25,7 @@
         "height_px": 2160,
         "width_px": 3840
       },
-      "type": "display"
+      "type": "panel"
     }
   ],
   "tags": [

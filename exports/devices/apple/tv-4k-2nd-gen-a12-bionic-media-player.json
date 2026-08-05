@@ -59,13 +59,13 @@
       "hdr_formats": [
         "HDR10"
       ],
-      "native_resolution": {
+      "max_resolution": {
         "fps": 60,
         "hdr": [],
         "height_px": 2160,
         "width_px": 3840
       },
-      "type": "display"
+      "type": "video-output"
     }
   ],
   "protocols": [

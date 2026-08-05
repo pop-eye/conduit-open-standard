@@ -1,7 +1,6 @@
 {
   "capabilities": [
     {
-      "brightness_ansi_lm": 500,
       "contrast_ratio_dynamic": 500000,
       "contrast_ratio_full": 1200,
       "display_technology": "lcd",
@@ -10,11 +9,7 @@
         "height_px": 2160,
         "width_px": 3840
       },
-      "type": "display",
-      "v_sync_range_hz": [
-        50,
-        60
-      ]
+      "type": "panel"
     },
     {
       "cpu_model": "2 x A53 + 2 x A73",

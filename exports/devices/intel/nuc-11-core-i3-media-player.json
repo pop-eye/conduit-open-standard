@@ -18,14 +18,13 @@
       "type": "compute"
     },
     {
-      "display_technology": "other",
       "hdr_formats": [],
-      "native_resolution": {
+      "max_resolution": {
         "fps": 60,
         "height_px": 2304,
         "width_px": 4096
       },
-      "type": "display"
+      "type": "video-output"
     }
   ],
   "protocols": [

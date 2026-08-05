@@ -1,7 +1,6 @@
 {
   "capabilities": [
     {
-      "brightness_iso_lm": 500,
       "colour_spaces": [
         "BT709"
       ],
@@ -11,7 +10,7 @@
         "height_px": 2160,
         "width_px": 3840
       },
-      "type": "display"
+      "type": "panel"
     },
     {
       "os": "webOS 6.0",

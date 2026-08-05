@@ -2,12 +2,11 @@
   "capabilities": [
     {
       "display_technology": "lcd",
-      "light_source_type": "other",
       "native_resolution": {
         "height_px": 1080,
         "width_px": 1920
       },
-      "type": "display"
+      "type": "panel"
     }
   ],
   "tags": [

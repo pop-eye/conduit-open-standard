@@ -18,12 +18,11 @@
       ],
       "contrast_ratio_dynamic": 5000,
       "display_technology": "led-direct",
-      "light_source_type": "other",
       "native_resolution": {
         "height_px": 1080,
         "width_px": 1920
       },
-      "type": "display"
+      "type": "panel"
     }
   ],
   "ports": [
