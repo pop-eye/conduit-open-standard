@@ -1423,6 +1423,14 @@
               "Rec.2020"
             ]
           ]
+        },
+        "notes": {
+          "type": "string",
+          "description": "Free-text qualifier for the figures in this block — the condition a value was measured under, a caveat, or a restriction. Display and projector datasheets qualify almost every headline number (\"20,000 hours in eco mode\", \"1200:1 native, 4000:1 dynamic\"), and the number without its qualifier is misleading. NOT a place to restate values that have fields of their own.",
+          "examples": [
+            "Brightness measured at 100% lamp power, centre screen.",
+            "Contrast quoted full on/off; native figure not published."
+          ]
         }
       }
     },
@@ -1579,6 +1587,14 @@
         "rtc": {
           "type": "boolean",
           "description": "Whether the device has a hardware real-time clock (RTC)."
+        },
+        "notes": {
+          "type": "string",
+          "description": "Free-text qualifier for the figures in this block — the condition a value was measured under, a caveat, or a restriction. Display and projector datasheets qualify almost every headline number (\"20,000 hours in eco mode\", \"1200:1 native, 4000:1 dynamic\"), and the number without its qualifier is misleading. NOT a place to restate values that have fields of their own.",
+          "examples": [
+            "Brightness measured at 100% lamp power, centre screen.",
+            "Contrast quoted full on/off; native figure not published."
+          ]
         }
       }
     },
@@ -1738,6 +1754,14 @@
             8,
             16
           ]
+        },
+        "notes": {
+          "type": "string",
+          "description": "Free-text qualifier for the figures in this block — the condition a value was measured under, a caveat, or a restriction. Display and projector datasheets qualify almost every headline number (\"20,000 hours in eco mode\", \"1200:1 native, 4000:1 dynamic\"), and the number without its qualifier is misleading. NOT a place to restate values that have fields of their own.",
+          "examples": [
+            "Brightness measured at 100% lamp power, centre screen.",
+            "Contrast quoted full on/off; native figure not published."
+          ]
         }
       }
     },
@@ -1850,6 +1874,14 @@
         "redundancy_support": {
           "type": "boolean",
           "description": "Whether the processor supports hot-standby redundancy configuration."
+        },
+        "notes": {
+          "type": "string",
+          "description": "Free-text qualifier for the figures in this block — the condition a value was measured under, a caveat, or a restriction. Display and projector datasheets qualify almost every headline number (\"20,000 hours in eco mode\", \"1200:1 native, 4000:1 dynamic\"), and the number without its qualifier is misleading. NOT a place to restate values that have fields of their own.",
+          "examples": [
+            "Brightness measured at 100% lamp power, centre screen.",
+            "Contrast quoted full on/off; native figure not published."
+          ]
         }
       }
     },
@@ -2013,6 +2045,14 @@
         "gain_compensation": {
           "type": "boolean",
           "description": "Whether the device supports automatic digital gain compensation when analogue gain is adjusted remotely (e.g. Yamaha Gain Compensation)."
+        },
+        "notes": {
+          "type": "string",
+          "description": "Free-text qualifier for the figures in this block — the condition a value was measured under, a caveat, or a restriction. Display and projector datasheets qualify almost every headline number (\"20,000 hours in eco mode\", \"1200:1 native, 4000:1 dynamic\"), and the number without its qualifier is misleading. NOT a place to restate values that have fields of their own.",
+          "examples": [
+            "Brightness measured at 100% lamp power, centre screen.",
+            "Contrast quoted full on/off; native figure not published."
+          ]
         }
       }
     },
@@ -2905,6 +2945,14 @@
             "type": "string"
           },
           "description": "Intercom/audio protocols this matrix supports (e.g. AES67, MADI, Dante, AVB, VoIP, 4-wire)."
+        },
+        "notes": {
+          "type": "string",
+          "description": "Free-text qualifier for the figures in this block — the condition a value was measured under, a caveat, or a restriction. Display and projector datasheets qualify almost every headline number (\"20,000 hours in eco mode\", \"1200:1 native, 4000:1 dynamic\"), and the number without its qualifier is misleading. NOT a place to restate values that have fields of their own.",
+          "examples": [
+            "Brightness measured at 100% lamp power, centre screen.",
+            "Contrast quoted full on/off; native figure not published."
+          ]
         }
       },
       "additionalProperties": false
