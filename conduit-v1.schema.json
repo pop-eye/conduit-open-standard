@@ -3252,6 +3252,62 @@
             24
           ]
         },
+        "touch": {
+          "type": "boolean",
+          "description": "True when the panel is interactive. Stated explicitly rather than inferred from the presence of the fields below, so \"we know it is not a touchscreen\" and \"we never checked\" stay distinguishable."
+        },
+        "touch_points": {
+          "type": "integer",
+          "description": "Simultaneous touch contacts the panel tracks.",
+          "minimum": 1,
+          "examples": [
+            10,
+            20,
+            40
+          ]
+        },
+        "touch_technology": {
+          "type": "string",
+          "enum": [
+            "infrared",
+            "capacitive",
+            "optical",
+            "electromagnetic",
+            "resistive",
+            "ultrasonic",
+            "other"
+          ],
+          "description": "How touch is sensed. Decides whether a glove or a passive stylus works, which is a real operational difference."
+        },
+        "stylus_supported": {
+          "type": "boolean",
+          "description": "The panel accepts a stylus or pen."
+        },
+        "stylus_count": {
+          "type": "integer",
+          "description": "Pens usable at once. Dual-pen with distinct colours is a specified feature on classroom and boardroom panels.",
+          "minimum": 1,
+          "examples": [
+            1,
+            2
+          ]
+        },
+        "palm_rejection": {
+          "type": "boolean",
+          "description": "The panel ignores a resting palm while writing."
+        },
+        "touch_ports": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "IDs of the ports carrying touch back to a source, matching `id` in `ports`. An interactive panel's USB-B upstream port exists solely for this and otherwise reads as an anonymous USB port.",
+          "examples": [
+            [
+              "usb_b_touch_1"
+            ]
+          ]
+        },
         "notes": {
           "type": "string",
           "description": "Free-text qualifier for the figures in this block — the condition a value was measured under, a caveat, or a restriction. Display and projector datasheets qualify almost every headline number (\"20,000 hours in eco mode\", \"1200:1 native, 4000:1 dynamic\"), and the number without its qualifier is misleading. NOT a place to restate values that have fields of their own.",
