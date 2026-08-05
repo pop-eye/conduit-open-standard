@@ -129,6 +129,18 @@
         0.85
       ]
     },
+    "screen_size_in": {
+      "type": "number",
+      "description": "Nominal diagonal of the ACTIVE IMAGE AREA, in inches, as the manufacturer states it. This is the marketed size (a \"55-inch\" panel typically measures 54.6\"); record the stated nominal figure, not a measured one, and never derive it from `dimensions` — bezels and stands vary. Omit for a device with no screen of its own, such as a projector or a media player.",
+      "exclusiveMinimum": 0,
+      "examples": [
+        43,
+        55,
+        65,
+        86,
+        110
+      ]
+    },
     "rack_units": {
       "type": "integer",
       "description": "Rack height in U (rack units), if the device is rack-mountable.",
