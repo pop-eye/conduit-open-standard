@@ -1160,7 +1160,8 @@
             "audio-io",
             "intercom",
             "panel",
-            "video-output"
+            "video-output",
+            "playback"
           ]
         }
       },
@@ -1188,6 +1189,9 @@
         },
         {
           "$ref": "#/$defs/VideoOutputCapability"
+        },
+        {
+          "$ref": "#/$defs/PlaybackCapability"
         }
       ]
     },
@@ -3382,6 +3386,210 @@
             ]
           },
           "description": "Supported HDR formats."
+        },
+        "notes": {
+          "type": "string",
+          "description": "Free-text qualifier for the figures in this block — the condition a value was measured under, a caveat, or a restriction. Display and projector datasheets qualify almost every headline number (\"20,000 hours in eco mode\", \"1200:1 native, 4000:1 dynamic\"), and the number without its qualifier is misleading. NOT a place to restate values that have fields of their own.",
+          "examples": [
+            "Brightness measured at 100% lamp power, centre screen.",
+            "Contrast quoted full on/off; native figure not published."
+          ]
+        }
+      }
+    },
+    "PlaybackCapability": {
+      "type": "object",
+      "description": "What this device can DECODE and play. Distinct from `video-output`, which is what it can emit: a player may output 4K60 and still be unable to decode HEVC at that rate. This is the capability a media player is bought for, and until now it had nowhere to go.",
+      "required": [
+        "type"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "playback"
+          ]
+        },
+        "video_codecs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "h264",
+              "h265-hevc",
+              "vp8",
+              "vp9",
+              "av1",
+              "mpeg2",
+              "mpeg4-part2",
+              "prores",
+              "dnxhd",
+              "jpeg2000",
+              "other"
+            ]
+          },
+          "description": "Video codecs this device can decode.",
+          "examples": [
+            [
+              "h264",
+              "h265-hevc"
+            ]
+          ]
+        },
+        "audio_codecs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "aac",
+              "mp3",
+              "ac3",
+              "eac3",
+              "dts",
+              "dts-hd",
+              "truehd",
+              "flac",
+              "pcm",
+              "opus",
+              "vorbis",
+              "other"
+            ]
+          },
+          "description": "Audio codecs this device can decode."
+        },
+        "containers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "mp4",
+              "mov",
+              "mkv",
+              "ts",
+              "m2ts",
+              "avi",
+              "webm",
+              "mxf",
+              "other"
+            ]
+          },
+          "description": "Container/wrapper formats this device can read."
+        },
+        "max_decode_resolution": {
+          "$ref": "#/$defs/VideoResolution",
+          "description": "Highest resolution this device can decode. Not necessarily what it can output."
+        },
+        "max_decode_framerate_fps": {
+          "type": "number",
+          "description": "Highest frame rate at `max_decode_resolution`.",
+          "exclusiveMinimum": 0,
+          "examples": [
+            30,
+            60
+          ]
+        },
+        "max_bitrate_mbps": {
+          "type": "number",
+          "description": "Highest stream bitrate this device can sustain.",
+          "exclusiveMinimum": 0,
+          "examples": [
+            40,
+            100
+          ]
+        },
+        "simultaneous_streams": {
+          "type": "integer",
+          "description": "Streams decodable at once. A video-wall controller decoding four is a different device from one decoding one, and nothing else distinguishes them.",
+          "minimum": 1,
+          "examples": [
+            1,
+            2,
+            4
+          ]
+        },
+        "hdr_playback": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "HDR10",
+              "HDR10+",
+              "HLG",
+              "Dolby-Vision",
+              "HDR-Vivid"
+            ]
+          },
+          "description": "HDR formats this device can DECODE. Deliberately separate from a panel's `hdr_formats`: a player may decode HDR10 while its output is SDR."
+        },
+        "streaming_protocols": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "hls",
+              "dash",
+              "rtsp",
+              "rtmp",
+              "srt",
+              "ndi",
+              "smpte-2110",
+              "mjpeg-http",
+              "other"
+            ]
+          },
+          "description": "Streaming transports this device can receive.",
+          "examples": [
+            [
+              "hls",
+              "rtsp"
+            ]
+          ]
+        },
+        "drm": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "widevine",
+              "playready",
+              "fairplay",
+              "hdcp-only",
+              "none",
+              "other"
+            ]
+          },
+          "description": "Content protection this device can satisfy. Whether a protected source will play is a hard commissioning constraint."
+        },
+        "local_storage": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "internal-flash",
+              "ssd",
+              "hdd",
+              "emmc",
+              "none",
+              "other"
+            ]
+          },
+          "description": "Where content can be stored on the device itself."
+        },
+        "removable_media": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "sd",
+              "microsd",
+              "usb-mass-storage",
+              "optical-disc",
+              "none",
+              "other"
+            ]
+          },
+          "description": "Removable media the device plays from. A BrightSign plays from an SD card and a NUC from an SSD; that is a real difference in how the room is loaded."
         },
         "notes": {
           "type": "string",
