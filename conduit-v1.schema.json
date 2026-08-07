@@ -225,6 +225,16 @@
       "format": "uri",
       "description": "URL to a primary product image (photograph or render) of the device."
     },
+    "drawing_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to a dimensioned mechanical drawing, usually a 2D PDF. Distinct from image_url: a drawing carries measurements, a photograph does not."
+    },
+    "cad_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL to a 3D CAD model of the device (STEP/.stp, IGES, SKP, Revit). Used for rack elevations, sightline studies and clash detection when designing a system around the device."
+    },
     "gdtf_fixture_type": {
       "oneOf": [
         {
@@ -2742,6 +2752,8 @@
             "api-docs",
             "firmware-notes",
             "errata",
+            "dimensional-drawing",
+            "cad-model",
             "third-party",
             "physical-inspection"
           ],
