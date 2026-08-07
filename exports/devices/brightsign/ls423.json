@@ -1,8 +1,10 @@
 {
-  "power_inputs": [
+  "protocols": [
     {
-      "connector_type": "usb-micro-b",
-      "label": "power connector"
+      "name": "Interactivity",
+      "notes": "Entry-level HTML5 support and USB 2.0 (type C) interactivity",
+      "transport": "usb",
+      "version": "USB, UDP"
     }
   ],
   "ports": [
@@ -47,14 +49,6 @@
     "1080p60",
     "HTML5"
   ],
-  "protocols": [
-    {
-      "name": "Interactivity",
-      "notes": "Entry-level HTML5 support and USB 2.0 (type C) interactivity",
-      "transport": "usb",
-      "version": "USB, UDP"
-    }
-  ],
   "capabilities": [
     {
       "analogue_input_count": 0,
@@ -72,6 +66,12 @@
         "width_px": 1920
       },
       "type": "video-output"
+    }
+  ],
+  "power_inputs": [
+    {
+      "connector_type": "usb-micro-b",
+      "label": "power connector"
     }
   ],
   "category": "media-player",

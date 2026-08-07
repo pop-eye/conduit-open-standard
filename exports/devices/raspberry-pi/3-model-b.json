@@ -1,4 +1,24 @@
 {
+  "tags": [
+    "Compact Linux, Media Player variant"
+  ],
+  "capabilities": [
+    {
+      "analogue_output_count": 2,
+      "type": "audio-io"
+    },
+    {
+      "cpu_architecture": "ARMv8 64bit",
+      "cpu_cores": 4,
+      "cpu_frequency_ghz": 1.4,
+      "cpu_model": "BCM2837B0",
+      "gpu_model": "VideoCore IV",
+      "os": "Snappy Ubuntu Core, Raspbian, Fedora, Arch Linux, Microsoft Windows 10 IoT Core",
+      "ram_gb": 1,
+      "storage_type": "microsd",
+      "type": "compute"
+    }
+  ],
   "ports": [
     {
       "connector_type": "hdmi-a",
@@ -66,26 +86,6 @@
       "signal_type": "power/dc"
     }
   ],
-  "capabilities": [
-    {
-      "analogue_output_count": 2,
-      "type": "audio-io"
-    },
-    {
-      "cpu_architecture": "ARMv8 64bit",
-      "cpu_cores": 4,
-      "cpu_frequency_ghz": 1.4,
-      "cpu_model": "BCM2837B0",
-      "gpu_model": "VideoCore IV",
-      "os": "Snappy Ubuntu Core, Raspbian, Fedora, Arch Linux, Microsoft Windows 10 IoT Core",
-      "ram_gb": 1,
-      "storage_type": "microsd",
-      "type": "compute"
-    }
-  ],
-  "tags": [
-    "Compact Linux, Media Player variant"
-  ],
   "category": "media-player",
   "description": "A credit card-sized computer with an ARM processor that can run Linux.",
   "dimensions": {
@@ -99,7 +99,7 @@
   },
   "firmware": "October 2025",
   "form_factor": "other",
-  "manufacturer": "Raspberry Pi Ltd",
+  "manufacturer": "Raspberry Pi",
   "model": "Raspberry Pi 3 Model B+",
   "notes": "Length and width measurements are for the PCB only; several of the connectors extend past the edge of the board.",
   "power": {

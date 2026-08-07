@@ -1,4 +1,26 @@
 {
+  "protocols": [
+    {
+      "name": "Simplink (HDMI CEC)",
+      "transport": "proprietary",
+      "version": "1.4"
+    },
+    {
+      "name": "Dolby Atmos",
+      "transport": "proprietary",
+      "version": "null"
+    },
+    {
+      "name": "WiSA 2.1ch",
+      "transport": "proprietary",
+      "version": "2.1"
+    },
+    {
+      "name": "Airplay2",
+      "transport": "ip",
+      "version": "null"
+    }
+  ],
   "capabilities": [
     {
       "analogue_input_count": 0,
@@ -12,23 +34,20 @@
     },
     {
       "colour_spaces": [
-        "Perfect Color"
+        "OLED Color"
       ],
       "display_technology": "oled",
       "hdr_formats": [
+        "HDR10",
         "HLG"
       ],
       "native_resolution": {
         "fps": 120,
-        "hdr": [],
         "height_px": 2160,
         "width_px": 3840
       },
       "type": "panel"
     }
-  ],
-  "tags": [
-    "4K, OLED, Cinema HDR, Dolby Vision IQ, webOS, ThinQ, AI Processor, G-Sync, FreeSync Premium, VRR, ALLM, HGIG"
   ],
   "ports": [
     {
@@ -137,27 +156,8 @@
       "signal_type": "audio/analogue/unbalanced"
     }
   ],
-  "protocols": [
-    {
-      "name": "Simplink (HDMI CEC)",
-      "transport": "proprietary",
-      "version": "1.4"
-    },
-    {
-      "name": "Dolby Atmos",
-      "transport": "proprietary",
-      "version": "null"
-    },
-    {
-      "name": "WiSA 2.1ch",
-      "transport": "proprietary",
-      "version": "2.1"
-    },
-    {
-      "name": "Airplay2",
-      "transport": "ip",
-      "version": "null"
-    }
+  "tags": [
+    "4K, OLED, Cinema HDR, Dolby Vision IQ, webOS, ThinQ, AI Processor, G-Sync, FreeSync Premium, VRR, ALLM, HGIG"
   ],
   "category": "display",
   "description": "Next Generation of LG AI TV",
@@ -174,7 +174,7 @@
     }
   },
   "manufacturer": "LG",
-  "model": "OLED55C14LB",
+  "model": "OLED55C1",
   "model_variant": "Gallery Design",
   "notes": "Advanced α9 Gen4 AI processor 4K for ultimate picture & sound; Features include AI Picture Pro, AI Upscaling, HDR Dynamic Tone Mapping Pro (+ AI HDR Tone Mapping), and OLED Motion Pro.",
   "power": {
@@ -195,10 +195,45 @@
   "schema_version": "conduit/v1",
   "sources": [
     {
+      "url": "https://www.lg.com/eg_en/tv-soundbars/oled/oled55c1pvb/",
+      "type": "tech-specs-page",
+      "title": "LG OLED TV 55 Inch C1 Series, Cinema Screen Design 4K Cinema HDR WebOS Smart AI ThinQ Pixel Dimming - OLED55C1PVB | LG EG_EN",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.lg.com/uk/tvs-soundbars/smart-tvs/oled55c16la/",
+      "type": "tech-specs-page",
+      "title": "LG OLED C1 55\" 4K Smart TV - OLED55C16LA | LG UK",
+      "retrieved_date": "2026-07-26",
+      "notes": "Sourced via source_device"
+    },
+    {
       "url": "https://www.lg.com/uk/tvs-soundbars/smart-tvs/oled55c14lb/",
       "type": "tech-specs-page",
       "title": "LG OLED C1 55'' 4K Smart TV - OLED55C14LB | LG UK | LG UK",
       "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.lg.com/uk/tvs/lg-oled55c14lb",
+      "type": "tech-specs-page",
+      "title": "LG OLED C1 55'' 4K Smart TV - OLED55C14LB | LG UK | LG UK",
+      "retrieved_date": "2026-07-26",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.lg.com/ca_en/tv-soundbars/oled/oled55c1aub/",
+      "type": "tech-specs-page",
+      "title": "LG C1 55'' 4K Smart OLED TV - OLED55C1AUB | LG Canada",
+      "retrieved_date": "2026-07-26",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.lg.com/hk_en/tv-soundbars/oled/oled55c1pcb/",
+      "type": "tech-specs-page",
+      "title": "55'' LG OLED TV C1 - OLED55C1PCB | LG Hong Kong",
+      "retrieved_date": "2026-07-26",
       "notes": "Sourced via source_device"
     },
     {
@@ -216,44 +251,9 @@
       "notes": "Sourced via source_device"
     },
     {
-      "url": "https://www.lg.com/eg_en/tv-soundbars/oled/oled55c1pvb/",
-      "type": "tech-specs-page",
-      "title": "LG OLED TV 55 Inch C1 Series, Cinema Screen Design 4K Cinema HDR WebOS Smart AI ThinQ Pixel Dimming - OLED55C1PVB | LG EG_EN",
-      "retrieved_date": "2026-07-23",
-      "notes": "Sourced via source_device"
-    },
-    {
-      "url": "https://www.lg.com/uk/tvs/lg-oled55c14lb",
-      "type": "tech-specs-page",
-      "title": "LG OLED C1 55'' 4K Smart TV - OLED55C14LB | LG UK | LG UK",
-      "retrieved_date": "2026-07-26",
-      "notes": "Sourced via source_device"
-    },
-    {
-      "url": "https://www.lg.com/uk/tvs-soundbars/smart-tvs/oled55c16la/",
-      "type": "tech-specs-page",
-      "title": "LG OLED C1 55\" 4K Smart TV - OLED55C16LA | LG UK",
-      "retrieved_date": "2026-07-26",
-      "notes": "Sourced via source_device"
-    },
-    {
       "url": "https://www.lg.com/eg_en/tvs/lg-oled55c1pvb",
       "type": "tech-specs-page",
       "title": "LG OLED TV 55 Inch C1 Series, Cinema Screen Design 4K Cinema HDR WebOS Smart AI ThinQ Pixel Dimming - OLED55C1PVB | LG EG_EN",
-      "retrieved_date": "2026-07-26",
-      "notes": "Sourced via source_device"
-    },
-    {
-      "url": "https://www.lg.com/ca_en/tv-soundbars/oled/oled55c1aub/",
-      "type": "tech-specs-page",
-      "title": "LG C1 55'' 4K Smart OLED TV - OLED55C1AUB | LG Canada",
-      "retrieved_date": "2026-07-26",
-      "notes": "Sourced via source_device"
-    },
-    {
-      "url": "https://www.lg.com/hk_en/tv-soundbars/oled/oled55c1pcb/",
-      "type": "tech-specs-page",
-      "title": "55'' LG OLED TV C1 - OLED55C1PCB | LG Hong Kong",
       "retrieved_date": "2026-07-26",
       "notes": "Sourced via source_device"
     },

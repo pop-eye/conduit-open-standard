@@ -1,4 +1,53 @@
 {
+  "protocols": [
+    {
+      "name": "802.1x",
+      "transport": "proprietary"
+    },
+    {
+      "name": "Active Directory",
+      "transport": "tcp"
+    },
+    {
+      "name": "AES-128",
+      "transport": "proprietary"
+    },
+    {
+      "name": "SSL",
+      "transport": "tcp"
+    },
+    {
+      "name": "SSH",
+      "transport": "tcp"
+    },
+    {
+      "name": "HTTPS",
+      "transport": "tcp"
+    }
+  ],
+  "capabilities": [
+    {
+      "ad_bit_depth": 24,
+      "analogue_input_count": 1,
+      "analogue_output_count": 1,
+      "da_bit_depth": 24,
+      "gain_compensation": true,
+      "supported_sample_rates_hz": [
+        48000
+      ],
+      "type": "audio-io"
+    },
+    {
+      "type": "compute"
+    },
+    {
+      "managed": true,
+      "type": "network-switch"
+    },
+    {
+      "type": "video-output"
+    }
+  ],
   "ports": [
     {
       "connector_type": "hdmi-a",
@@ -94,55 +143,6 @@
     "USB 2.0",
     "KVM"
   ],
-  "capabilities": [
-    {
-      "ad_bit_depth": 24,
-      "analogue_input_count": 1,
-      "analogue_output_count": 1,
-      "da_bit_depth": 24,
-      "gain_compensation": true,
-      "supported_sample_rates_hz": [
-        48000
-      ],
-      "type": "audio-io"
-    },
-    {
-      "type": "compute"
-    },
-    {
-      "type": "video-output"
-    },
-    {
-      "managed": true,
-      "type": "network-switch"
-    }
-  ],
-  "protocols": [
-    {
-      "name": "802.1x",
-      "transport": "proprietary"
-    },
-    {
-      "name": "Active Directory",
-      "transport": "tcp"
-    },
-    {
-      "name": "AES-128",
-      "transport": "proprietary"
-    },
-    {
-      "name": "SSL",
-      "transport": "tcp"
-    },
-    {
-      "name": "SSH",
-      "transport": "tcp"
-    },
-    {
-      "name": "HTTPS",
-      "transport": "tcp"
-    }
-  ],
   "category": "media-player",
   "control": {
     "rest_api": true,
@@ -168,7 +168,7 @@
       "/capabilities/hdr": true
     }
   },
-  "manufacturer": "Crestron Electronics, Inc.",
+  "manufacturer": "Crestron",
   "model": "NVX-100",
   "notes": "Supports video up to 5K resolution; lossless audio up to 512 channels over a standard 1Gb network; USB 2.0 switching; image overlay (logos, text, images); control-over-IP.",
   "power": {
@@ -186,12 +186,6 @@
   "weight_kg": 0.91,
   "schema_version": "conduit/v1",
   "sources": [
-    {
-      "url": "https://www.crestron.com/getmedia/56e93259-ca22-4019-80af-a11d8cae36d9/pb_brochure_DM_NVX_2_0",
-      "type": "datasheet",
-      "retrieved_date": "2026-07-23",
-      "notes": "Ingested via batch"
-    },
     {
       "url": "https://www.crestron.com/News/Blog/July-2025/DM-NVX-AV-over-IP-Technology-Now-with-Multiview",
       "type": "tech-specs-page",
@@ -212,6 +206,12 @@
       "title": "DM NVX Application Design Guide",
       "retrieved_date": "2026-07-23",
       "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.crestron.com/getmedia/56e93259-ca22-4019-80af-a11d8cae36d9/pb_brochure_DM_NVX_2_0",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-23",
+      "notes": "Ingested via batch"
     },
     {
       "url": "https://www.crestron.com/Products/Featured-Solutions/DigitalMedia-NVX-Series",

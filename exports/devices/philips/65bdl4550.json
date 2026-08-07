@@ -1,4 +1,11 @@
 {
+  "protocols": [
+    {
+      "name": "Android",
+      "transport": "proprietary",
+      "version": "8.0"
+    }
+  ],
   "capabilities": [
     {
       "contrast_ratio_dynamic": 500000,
@@ -18,13 +25,6 @@
       "ram_gb": 3,
       "storage_os_gb": 32,
       "type": "compute"
-    }
-  ],
-  "protocols": [
-    {
-      "name": "Android",
-      "transport": "proprietary",
-      "version": "8.0"
     }
   ],
   "ports": [
@@ -123,7 +123,7 @@
   },
   "form_factor": "wall-mount",
   "manufacturer": "Philips",
-  "model": "65BDL4550D",
+  "model": "65BDL4550",
   "power": {
     "frequency_hz": [
       50,

@@ -1,4 +1,48 @@
 {
+  "protocols": [
+    {
+      "name": "vCast",
+      "notes": "Allows six-device simultaneous casting.",
+      "transport": "wifi"
+    },
+    {
+      "name": "Display",
+      "notes": "Built-in service for instant sharing from compatible web browsers.",
+      "transport": "proprietary"
+    }
+  ],
+  "capabilities": [
+    {
+      "analogue_input_count": 1,
+      "analogue_output_count": 0,
+      "gain_compensation": false,
+      "type": "audio-io"
+    },
+    {
+      "cpu_cores": 8,
+      "cpu_model": "Octa-Core CPU (A73*4 + A53*4)",
+      "gpu_api_support": [],
+      "gpu_model": "Mali-G52",
+      "os": "ViewBoard OS",
+      "ram_gb": 8,
+      "ram_type": "LPDDR",
+      "rtc": false,
+      "storage_os_gb": 128,
+      "storage_type": "emmc",
+      "type": "compute"
+    },
+    {
+      "contrast_ratio_dynamic": 5000,
+      "contrast_ratio_full": 1200,
+      "display_technology": "led-direct",
+      "native_resolution": {
+        "fps": 60,
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "type": "panel"
+    }
+  ],
   "ports": [
     {
       "connector_type": "hdmi-a",
@@ -175,49 +219,6 @@
   "tags": [
     "4K, Interactive, Android 13, NFC, USB-C PD, EPEAT Silver"
   ],
-  "capabilities": [
-    {
-      "analogue_input_count": 1,
-      "analogue_output_count": 0,
-      "gain_compensation": false,
-      "type": "audio-io"
-    },
-    {
-      "cpu_cores": 8,
-      "cpu_model": "Octa-Core CPU (A73*4 + A53*4)",
-      "gpu_api_support": [],
-      "gpu_model": "Mali-G52",
-      "os": "ViewBoard OS",
-      "ram_gb": 8,
-      "ram_type": "LPDDR",
-      "rtc": false,
-      "storage_os_gb": 128,
-      "storage_type": "emmc",
-      "type": "compute"
-    },
-    {
-      "contrast_ratio_full": 1200,
-      "display_technology": "led-direct",
-      "native_resolution": {
-        "fps": 120,
-        "height_px": 2160,
-        "width_px": 3840
-      },
-      "type": "panel"
-    }
-  ],
-  "protocols": [
-    {
-      "name": "vCast",
-      "notes": "Allows six-device simultaneous casting.",
-      "transport": "wifi"
-    },
-    {
-      "name": "Display",
-      "notes": "Built-in service for instant sharing from compatible web browsers.",
-      "transport": "proprietary"
-    }
-  ],
   "category": "display",
   "control": {
     "nfc": true,
@@ -272,6 +273,13 @@
   "schema_version": "conduit/v1",
   "sources": [
     {
+      "url": "https://protechprojection.com/products/viewsonic-ifp110-viewboard-110-4k-interactive-display",
+      "type": "tech-specs-page",
+      "title": "ViewSonic IFP110 ViewBoard® 110” 4K Interactive Display - Protech",
+      "retrieved_date": "2026-07-23",
+      "notes": "Sourced via source_device"
+    },
+    {
       "url": "https://www.viewsonic.com/media/wysiwyg/press-room/infocomm-2024/Datasheet-IFP110.pdf",
       "type": "datasheet",
       "retrieved_date": "2026-07-22",
@@ -281,13 +289,6 @@
       "url": "https://www.viewsonic.com/global/products/viewboard/ViewBoard%20IFP110",
       "type": "tech-specs-page",
       "title": "ViewBoard IFP110 ViewBoard® 110” 4K Interactive Display - ViewSonic Global",
-      "retrieved_date": "2026-07-23",
-      "notes": "Sourced via source_device"
-    },
-    {
-      "url": "https://protechprojection.com/products/viewsonic-ifp110-viewboard-110-4k-interactive-display",
-      "type": "tech-specs-page",
-      "title": "ViewSonic IFP110 ViewBoard® 110” 4K Interactive Display - Protech",
       "retrieved_date": "2026-07-23",
       "notes": "Sourced via source_device"
     },

@@ -1,4 +1,11 @@
 {
+  "protocols": [
+    {
+      "name": "HDCP",
+      "transport": "proprietary",
+      "version": "2.2"
+    }
+  ],
   "capabilities": [
     {
       "cpu_cores": 4,
@@ -22,7 +29,8 @@
         "height_px": 1080,
         "width_px": 1920
       },
-      "type": "panel"
+      "type": "panel",
+      "contrast_ratio_full": 5000
     }
   ],
   "ports": [
@@ -74,13 +82,6 @@
       "id": "audio_jack_out",
       "label": "Stereo Mini Jack",
       "signal_type": "audio/analogue/unbalanced"
-    }
-  ],
-  "protocols": [
-    {
-      "name": "HDCP",
-      "transport": "proprietary",
-      "version": "2.2"
     }
   ],
   "category": "display",

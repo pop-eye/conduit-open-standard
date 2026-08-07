@@ -1,4 +1,36 @@
 {
+  "protocols": [
+    {
+      "name": "myViewBoard Manager",
+      "notes": "Schedule updates and monitor device status with the built-in myViewBoard® Manager software"
+    }
+  ],
+  "capabilities": [
+    {
+      "analogue_output_count": 1,
+      "type": "audio-io"
+    },
+    {
+      "cpu_architecture": "ARM",
+      "cpu_cores": 4,
+      "cpu_frequency_ghz": 1.2,
+      "cpu_model": "ARM Quad Core Cortex A73",
+      "os": "Android 8.0",
+      "ram_gb": 3,
+      "storage_os_gb": 32,
+      "storage_type": "emmc",
+      "type": "compute"
+    },
+    {
+      "contrast_ratio_full": 1200,
+      "display_technology": "lcd",
+      "native_resolution": {
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "type": "panel"
+    }
+  ],
   "ports": [
     {
       "connector_type": "hdmi-a",
@@ -113,38 +145,6 @@
     "4K Ultra HD",
     "bezel-less"
   ],
-  "capabilities": [
-    {
-      "analogue_output_count": 1,
-      "type": "audio-io"
-    },
-    {
-      "cpu_architecture": "ARM",
-      "cpu_cores": 4,
-      "cpu_frequency_ghz": 1.2,
-      "cpu_model": "ARM Quad Core Cortex A73",
-      "os": "Android 8.0",
-      "ram_gb": 3,
-      "storage_os_gb": 32,
-      "storage_type": "emmc",
-      "type": "compute"
-    },
-    {
-      "contrast_ratio_full": 1200,
-      "display_technology": "lcd",
-      "native_resolution": {
-        "height_px": 2160,
-        "width_px": 3840
-      },
-      "type": "panel"
-    }
-  ],
-  "protocols": [
-    {
-      "name": "myViewBoard Manager",
-      "notes": "Schedule updates and monitor device status with the built-in myViewBoard® Manager software"
-    }
-  ],
   "category": "display",
   "description": "A ViewBoard® 86\" 4K Interactive Display featuring Ultra Fine Touch Technology, myViewBoard® digital whiteboard software, and dual-pen writing capabilities.",
   "dimensions": {
@@ -160,7 +160,7 @@
   },
   "form_factor": "wall-mount",
   "manufacturer": "ViewSonic",
-  "model": "IFP8630",
+  "model": "IFP86",
   "power": {
     "connector_type": "iec-c13",
     "max_wattage": 580,
@@ -180,17 +180,17 @@
   "schema_version": "conduit/v1",
   "sources": [
     {
-      "url": "https://www.viewsonic.com/vsAssetFile/ap/file/pdf/ap/_viewboard/ap-ifp8630.pdf",
-      "type": "datasheet",
-      "retrieved_date": "2026-07-22",
-      "notes": "Ingested via batch"
-    },
-    {
       "url": "https://www.viewsonic.com/media/wysiwyg/press-room/Datasheet-IFP8662.pdf",
       "type": "datasheet",
       "title": "IFP8662 - 86\" 4K TOUCH ENABLED VIEWBOARD SMART DISPLAY Key Features",
       "retrieved_date": "2026-07-23",
       "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.viewsonic.com/vsAssetFile/ap/file/pdf/ap/_viewboard/ap-ifp8630.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-22",
+      "notes": "Ingested via batch"
     }
   ]
 }

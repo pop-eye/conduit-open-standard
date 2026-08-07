@@ -1,4 +1,12 @@
 {
+  "protocols": [
+    {
+      "name": "HDMI CEC",
+      "notes": "Built-in support for HDMI CEC is available on both HDMI ports",
+      "transport": "proprietary",
+      "version": "API"
+    }
+  ],
   "capabilities": [
     {
       "analogue_input_count": 1,
@@ -25,14 +33,6 @@
         "width_px": 4096
       },
       "type": "video-output"
-    }
-  ],
-  "protocols": [
-    {
-      "name": "HDMI CEC",
-      "notes": "Built-in support for HDMI CEC is available on both HDMI ports",
-      "transport": "proprietary",
-      "version": "API"
     }
   ],
   "ports": [
@@ -76,7 +76,7 @@
   "description": "Intel NUC 11 Performance Mini PC with Intel Core i3 processor.",
   "form_factor": "desktop",
   "manufacturer": "Intel",
-  "model": "NUC11PA[x]i3",
+  "model": "NUC 11",
   "power": {
     "max_wattage": 28,
     "voltage_v": 19

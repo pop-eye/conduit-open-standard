@@ -1,17 +1,4 @@
 {
-  "capabilities": [
-    {
-      "display_technology": "lcd",
-      "native_resolution": {
-        "height_px": 1080,
-        "width_px": 1920
-      },
-      "type": "panel"
-    }
-  ],
-  "tags": [
-    "4K UHD, OLED, QNED, High Brightness, Smart TV, Gaming Ready"
-  ],
   "protocols": [
     {
       "name": "NVIDIA G-SYNC",
@@ -26,6 +13,20 @@
       "version": "1.0"
     }
   ],
+  "capabilities": [
+    {
+      "colour_spaces": [],
+      "display_technology": "oled",
+      "hdr_formats": [],
+      "native_resolution": {
+        "fps": 120,
+        "hdr": [],
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "type": "panel"
+    }
+  ],
   "ports": [
     {
       "connector_type": "hdmi-a",
@@ -36,6 +37,9 @@
       "notes": "Supports HDMI 2.1 for gaming features like G-SYNC and FreeSync.",
       "signal_type": "video/hdmi/2.1"
     }
+  ],
+  "tags": [
+    "4K UHD, OLED, QNED, High Brightness, Smart TV, Gaming Ready"
   ],
   "category": "display",
   "description": "Standard Performance Digital Signage - SM5KD Series with Smart Platform and Quad Core SoC.",

@@ -1,4 +1,18 @@
 {
+  "protocols": [
+    {
+      "name": "HDMI 2.0",
+      "notes": "Supports CEC and HDMI 2.0 with resolutions up to 4Kp60.",
+      "transport": "usb",
+      "version": "2.0"
+    },
+    {
+      "name": "PoE",
+      "notes": "Supports PoE with add-on PoE HAT.",
+      "transport": "proprietary",
+      "version": "1.0"
+    }
+  ],
   "capabilities": [
     {
       "analogue_output_count": 2,
@@ -13,34 +27,21 @@
       "ram_gb": 8,
       "ram_type": "LPDDR4 SDRAM",
       "storage_type": "sd",
-      "type": "compute"
+      "type": "compute",
+      "os": "Raspberry Pi OS (implied by Raspberry Pi Imager)",
+      "rtc": true,
+      "gpu_api_support": [
+        "OpenGL ES 3.0"
+      ]
     },
     {
       "max_resolution": {
         "fps": 60,
+        "hdr": [],
         "height_px": 2160,
         "width_px": 3840
       },
       "type": "video-output"
-    }
-  ],
-  "tags": [
-    "Raspberry Pi",
-    "Single Board Computer",
-    "P4B"
-  ],
-  "protocols": [
-    {
-      "name": "HDMI 2.0",
-      "notes": "Supports CEC and HDMI 2.0 with resolutions up to 4Kp60.",
-      "transport": "usb",
-      "version": "2.0"
-    },
-    {
-      "name": "PoE",
-      "notes": "Supports PoE with add-on PoE HAT.",
-      "transport": "proprietary",
-      "version": "1.0"
     }
   ],
   "ports": [
@@ -152,6 +153,11 @@
       "notes": "Raspberry Pi 2-lane MIPI DSI Display.",
       "signal_type": "network/mipi/dsi"
     }
+  ],
+  "tags": [
+    "Raspberry Pi",
+    "Single Board Computer",
+    "P4B"
   ],
   "category": "media-player",
   "description": "High-performance 64-bit quad-core processor, dual-display support at resolutions up to 4K via a pair of micro HDMI ports, hardware video decode at up to 4Kp60, up to 8GB of RAM, dual-band 2.4/5.0 GHz wireless LAN, Bluetooth 5.0, Gigabit Ethernet, USB 3.0, and PoE capability (via a separate PoE HAT add-on).",

@@ -1,4 +1,11 @@
 {
+  "protocols": [
+    {
+      "name": "Thunderbolt 4",
+      "transport": "usb",
+      "version": "4.0"
+    }
+  ],
   "capabilities": [
     {
       "type": "audio-io"
@@ -18,27 +25,13 @@
       "type": "compute"
     }
   ],
-  "protocols": [
-    {
-      "name": "Thunderbolt 4",
-      "transport": "usb",
-      "version": "4.0"
-    }
-  ],
   "ports": [
     {
-      "connector_type": "rj45",
-      "direction": "bidirectional",
-      "id": "port_lan_1",
-      "label": "Dual LAN Port",
-      "signal_type": "network/ethernet/10g"
-    },
-    {
-      "connector_type": "rj45",
-      "direction": "bidirectional",
-      "id": "port_lan_2",
-      "label": "Dual LAN Port",
-      "signal_type": "network/ethernet/10g"
+      "connector_type": "displayport-a",
+      "direction": "out",
+      "id": "port_dp",
+      "label": "DisplayPort",
+      "signal_type": "video/displayport/1.4"
     }
   ],
   "category": "media-player",
@@ -54,7 +47,7 @@
   },
   "form_factor": "desktop",
   "manufacturer": "Intel",
-  "model": "Intel NUC 12 Pro",
+  "model": "NUC 12 Pro",
   "model_variant": "NUC12WSHi5/v5/v5L",
   "notes": "Includes a second M.2 drive bay (SATA 3 speeds) and a 2.5-inch drive bay in the base.",
   "power": {

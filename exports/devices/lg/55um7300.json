@@ -1,20 +1,29 @@
 {
-  "tags": [
-    "UHD",
-    "4K",
-    "ThinQ AI",
-    "webOS 4.5",
-    "IPS Display"
+  "protocols": [
+    {
+      "name": "Wi-Fi",
+      "notes": "Wi-Fi Certified 802.11ac",
+      "transport": "wifi",
+      "version": "802.11ac"
+    },
+    {
+      "name": "Bluetooth",
+      "notes": "Bluetooth Support Version 5.0",
+      "transport": "bluetooth",
+      "version": "5.0"
+    }
   ],
   "capabilities": [
     {
-      "analogue_output_count": 2,
+      "analogue_input_count": 2,
+      "analogue_output_count": 1,
       "type": "audio-io"
     },
     {
       "cpu_model": "Quad Core Processor",
       "os": "webOS",
-      "type": "compute"
+      "type": "compute",
+      "cpu_cores": 4
     },
     {
       "display_technology": "lcd",
@@ -94,19 +103,12 @@
       "signal_type": "audio/spdif/optical"
     }
   ],
-  "protocols": [
-    {
-      "name": "Wi-Fi",
-      "notes": "Wi-Fi Certified 802.11ac",
-      "transport": "wifi",
-      "version": "802.11ac"
-    },
-    {
-      "name": "Bluetooth",
-      "notes": "Bluetooth Support Version 5.0",
-      "transport": "bluetooth",
-      "version": "5.0"
-    }
+  "tags": [
+    "UHD",
+    "4K",
+    "ThinQ AI",
+    "webOS 4.5",
+    "IPS Display"
   ],
   "category": "display",
   "control": {
@@ -127,7 +129,7 @@
   "firmware": "05.40.97",
   "form_factor": "wall-mount",
   "manufacturer": "LG",
-  "model": "55UM7300AUE",
+  "model": "55UM7300",
   "model_variant": "AUE",
   "notes": "DISCONTINUED",
   "power": {
@@ -149,16 +151,15 @@
   "schema_version": "conduit/v1",
   "sources": [
     {
+      "url": "https://www.lg.com/us/support/products/documents/UF7300%20Spec%20Sheet.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-22",
+      "notes": "Ingested via batch"
+    },
+    {
       "url": "https://www.lg.com/us/tvs/lg-55UM7300AUE-4k-uhd-tv",
       "type": "tech-specs-page",
       "title": "LG 55UM7300AUE: 55 Inch Class 4K HDR Smart LED UHD TV w/ AI ThinQ® | LG USA",
-      "retrieved_date": "2026-08-02",
-      "notes": "Sourced via source_device"
-    },
-    {
-      "url": "https://www.lg.com/us/tvs/lg-55UM7300PUA-4k-uhd-tv",
-      "type": "tech-specs-page",
-      "title": "LG 55UM7300PUA: 55 Inch Class 4K HDR Smart LED UHD TV w/ AI ThinQ® | LG USA",
       "retrieved_date": "2026-08-02",
       "notes": "Sourced via source_device"
     },
@@ -181,6 +182,13 @@
       "type": "tech-specs-page",
       "title": "LG 55” LG UHD TV UM7300 ThinQ AI | LG Canada",
       "retrieved_date": "2026-08-04",
+      "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://www.lg.com/us/tvs/lg-55UM7300PUA-4k-uhd-tv",
+      "type": "tech-specs-page",
+      "title": "LG 55UM7300PUA: 55 Inch Class 4K HDR Smart LED UHD TV w/ AI ThinQ® | LG USA",
+      "retrieved_date": "2026-08-02",
       "notes": "Sourced via source_device"
     },
     {

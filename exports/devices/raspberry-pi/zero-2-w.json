@@ -1,4 +1,32 @@
 {
+  "protocols": [
+    {
+      "name": "WLAN",
+      "notes": "2.4 GHz only",
+      "transport": "wifi",
+      "version": "802.11 b/g/n"
+    },
+    {
+      "name": "Bluetooth",
+      "transport": "bluetooth",
+      "version": "4.2 / BLE"
+    }
+  ],
+  "capabilities": [
+    {
+      "cpu_architecture": "ARMv8-A (64-bit)",
+      "cpu_cores": 4,
+      "cpu_frequency_ghz": 1.0,
+      "cpu_model": "BCM2710A1",
+      "gpu_model": "VideoCore IV",
+      "os": "Raspberry Pi OS",
+      "ram_gb": 0.512,
+      "ram_type": "LPDDR2",
+      "rtc": true,
+      "type": "compute",
+      "storage_type": "microsd"
+    }
+  ],
   "ports": [
     {
       "connector_type": "usb-a",
@@ -55,33 +83,6 @@
       "signal_type": "video/composite"
     }
   ],
-  "capabilities": [
-    {
-      "cpu_architecture": "ARMv8-A (64-bit)",
-      "cpu_cores": 4,
-      "cpu_frequency_ghz": 1.0,
-      "cpu_model": "BCM2710A1",
-      "gpu_model": "VideoCore IV",
-      "os": "Raspberry Pi OS",
-      "ram_gb": 0.512,
-      "ram_type": "LPDDR2",
-      "rtc": true,
-      "type": "compute"
-    }
-  ],
-  "protocols": [
-    {
-      "name": "WLAN",
-      "notes": "2.4 GHz only",
-      "transport": "wifi",
-      "version": "802.11 b/g/n"
-    },
-    {
-      "name": "Bluetooth",
-      "transport": "bluetooth",
-      "version": "4.2 / BLE"
-    }
-  ],
   "category": "media-player",
   "description": "A compact single-board computer and successor to the Raspberry Pi Zero W.",
   "dimensions": {
@@ -94,7 +95,7 @@
     "operating_temp_min_c": -20
   },
   "form_factor": "other",
-  "manufacturer": "Raspberry Pi Ltd",
+  "manufacturer": "Raspberry Pi",
   "model": "Raspberry Pi Zero 2 W",
   "notes": "The device does not support wired networking (Ethernet) out of the box. RAM is limited to 512MB, which may hamper web browsing and high-memory applications like Chromium.",
   "power": {

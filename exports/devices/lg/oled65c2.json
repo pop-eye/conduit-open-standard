@@ -11,6 +11,37 @@
       "version": "5.0"
     }
   ],
+  "capabilities": [
+    {
+      "analogue_input_count": 0,
+      "analogue_output_count": 2,
+      "dante_channel_count_in": 0,
+      "dante_channel_count_out": 0,
+      "type": "audio-io"
+    },
+    {
+      "cpu_cores": 4,
+      "cpu_model": "â Gen5 AI Processor 4K",
+      "os": "webOS Smart TV",
+      "type": "compute"
+    },
+    {
+      "colour_spaces": [
+        "Perfect Color"
+      ],
+      "display_technology": "oled",
+      "hdr_formats": [
+        "HLG"
+      ],
+      "native_resolution": {
+        "fps": 120,
+        "hdr": [],
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "type": "panel"
+    }
+  ],
   "ports": [
     {
       "connector_type": "hdmi-a",
@@ -120,35 +151,6 @@
     "Dolby Vision IQ",
     "Dolby Atmos"
   ],
-  "capabilities": [
-    {
-      "analogue_input_count": 0,
-      "analogue_output_count": 2,
-      "dante_channel_count_in": 0,
-      "dante_channel_count_out": 0,
-      "type": "audio-io"
-    },
-    {
-      "cpu_cores": 4,
-      "cpu_model": "â Gen5 AI Processor 4K",
-      "os": "webOS Smart TV",
-      "type": "compute"
-    },
-    {
-      "display_technology": "oled",
-      "hdr_formats": [
-        "HDR10",
-        "HLG"
-      ],
-      "native_resolution": {
-        "fps": 120,
-        "hdr": [],
-        "height_px": 2160,
-        "width_px": 3840
-      },
-      "type": "panel"
-    }
-  ],
   "category": "display",
   "description": "LG C2 65-inch evo OLED TV with ThinQ AI.",
   "dimensions": {
@@ -163,7 +165,7 @@
   },
   "form_factor": "wall-mount",
   "manufacturer": "LG",
-  "model": "OLED65C2PUA",
+  "model": "OLED65C2",
   "model_variant": "evo Series",
   "notes": "The provided document describes the OLED65C5PUA (2025 model), while the device hint specifies the LG OLED65C2. Key features include Alpha 9 AI Processor Gen8, Brightness Booster, and Bright Room Ready.",
   "power": {
@@ -180,6 +182,13 @@
   "image_url": "https://i.ebayimg.com/images/g/5S8AAeSweAFn2w28/s-l500.webp",
   "schema_version": "conduit/v1",
   "sources": [
+    {
+      "url": "https://www.lg.com/my/tv-soundbars/oled-evo/oled65c2psa/",
+      "type": "tech-specs-page",
+      "title": "LG 65 Inch C2 Series 4K Smart SELF-LIT OLED evo TV with AI ThinQ® (2022) - OLED65C2PSA | LG MY",
+      "retrieved_date": "2026-07-28",
+      "notes": "Sourced via source_device"
+    },
     {
       "url": "https://www.lg.com/content/dam/lge/in/migration/catalogue-2022/pdf/oled_digital_catalogue_compressed.pdf",
       "type": "datasheet",
@@ -201,9 +210,9 @@
       "notes": "Sourced via source_device"
     },
     {
-      "url": "https://www.lg.com/my/tv-soundbars/oled-evo/oled65c2psa/",
+      "url": "https://www.lg.com/hk_en/tv/lg-oled65c2pcc",
       "type": "tech-specs-page",
-      "title": "LG 65 Inch C2 Series 4K Smart SELF-LIT OLED evo TV with AI ThinQ® (2022) - OLED65C2PSA | LG MY",
+      "title": "65\" LG OLED evo C2 - OLED65C2PCC | LG Hong Kong",
       "retrieved_date": "2026-07-28",
       "notes": "Sourced via source_device"
     },
@@ -211,13 +220,6 @@
       "url": "https://www.lg.com/us/tvs/lg-oled65c5pua-oled-4k-tv",
       "type": "tech-specs-page",
       "title": "65 inch Class LG OLED evo AI C5 4K Smart TV 2025 - OLED65C5PUA | LG USA",
-      "retrieved_date": "2026-07-28",
-      "notes": "Sourced via source_device"
-    },
-    {
-      "url": "https://www.lg.com/hk_en/tv/lg-oled65c2pcc",
-      "type": "tech-specs-page",
-      "title": "65\" LG OLED evo C2 - OLED65C2PCC | LG Hong Kong",
       "retrieved_date": "2026-07-28",
       "notes": "Sourced via source_device"
     }

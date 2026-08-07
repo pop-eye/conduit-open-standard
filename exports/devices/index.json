@@ -1,13 +1,13 @@
 {
   "schema_version": "conduit/v1",
-  "generated_at": "2026-08-05",
-  "count": 52,
+  "generated_at": "2026-08-07",
+  "count": 47,
   "devices": [
     {
-      "id": "apple/tv-4k-1st-gen-original-4k-media-player",
-      "path": "apple/tv-4k-1st-gen-original-4k-media-player.json",
+      "id": "apple/tv-4k-1st-gen",
+      "path": "apple/tv-4k-1st-gen.json",
       "manufacturer": "Apple",
-      "model": "Apple TV 4K",
+      "model": "TV 4K (1st Gen)",
       "category": "media-player",
       "form_factor": "other",
       "description": "Apple TV 4 Media player",
@@ -32,10 +32,10 @@
       ]
     },
     {
-      "id": "apple/tv-hd-standard-hdmi-media-player",
-      "path": "apple/tv-hd-standard-hdmi-media-player.json",
+      "id": "apple/tv-hd",
+      "path": "apple/tv-hd.json",
       "manufacturer": "Apple",
-      "model": "Apple TV HD",
+      "model": "TV HD",
       "model_variant": "MQD22",
       "category": "media-player",
       "form_factor": "other",
@@ -115,8 +115,8 @@
       ]
     },
     {
-      "id": "brightsign/ls423-media-player",
-      "path": "brightsign/ls423-media-player.json",
+      "id": "brightsign/ls423",
+      "path": "brightsign/ls423.json",
       "manufacturer": "BrightSign",
       "model": "LS423",
       "category": "media-player",
@@ -127,19 +127,6 @@
         "H.265",
         "1080p60",
         "HTML5"
-      ]
-    },
-    {
-      "id": "brightsign/xd2246-high-performance-media-player",
-      "path": "brightsign/xd2246-high-performance-media-player.json",
-      "manufacturer": "BrightSign, LLC.",
-      "model": "BrightSign XD2246",
-      "category": "media-player",
-      "form_factor": "other",
-      "description": "Enhanced graphics and html5 performance",
-      "port_count": 10,
-      "tags": [
-        "4K, Dolby Vision, HDR10+, H.265, HEVC, HDMI 2.0a"
       ]
     },
     {
@@ -218,9 +205,9 @@
       ]
     },
     {
-      "id": "crestron/nvx-100-av-over-ip-media-player",
-      "path": "crestron/nvx-100-av-over-ip-media-player.json",
-      "manufacturer": "Crestron Electronics, Inc.",
+      "id": "crestron/nvx-100",
+      "path": "crestron/nvx-100.json",
+      "manufacturer": "Crestron",
       "model": "NVX-100",
       "category": "media-player",
       "subcategory": "AV over IP encoder/decoder",
@@ -237,39 +224,29 @@
       ]
     },
     {
-      "id": "intel/nuc-11-core-i3-media-player",
-      "path": "intel/nuc-11-core-i3-media-player.json",
+      "id": "intel/nuc-11",
+      "path": "intel/nuc-11.json",
       "manufacturer": "Intel",
-      "model": "NUC11PA[x]i3",
+      "model": "NUC 11",
       "category": "media-player",
       "form_factor": "desktop",
       "description": "Intel NUC 11 Performance Mini PC with Intel Core i3 processor.",
       "port_count": 5
     },
     {
-      "id": "intel/nuc-12-pro-core-i5-media-player",
-      "path": "intel/nuc-12-pro-core-i5-media-player.json",
+      "id": "intel/nuc-12-pro",
+      "path": "intel/nuc-12-pro.json",
       "manufacturer": "Intel",
-      "model": "Intel NUC 12 Pro",
+      "model": "NUC 12 Pro",
       "model_variant": "NUC12WSHi5/v5/v5L",
       "category": "media-player",
       "form_factor": "desktop",
       "description": "Intel® NUC Board/Kit/Mini PC NUC12WS series.",
-      "port_count": 2
+      "port_count": 1
     },
     {
-      "id": "lg/32sm5km-compact-signage-television",
-      "path": "lg/32sm5km-compact-signage-television.json",
-      "manufacturer": "LG Electronics USA, Inc.",
-      "model": "32SM5J",
-      "category": "display",
-      "form_factor": "wall-mount",
-      "description": "LG webOS Standard Signage display with built-in speakers and smart platform.",
-      "port_count": 9
-    },
-    {
-      "id": "lg/55sm5km-high-brightness-television",
-      "path": "lg/55sm5km-high-brightness-television.json",
+      "id": "lg/55sm5km",
+      "path": "lg/55sm5km.json",
       "manufacturer": "LG Electronics Inc.",
       "model": "SM5KD",
       "model_variant": "55SM5KD",
@@ -282,27 +259,10 @@
       ]
     },
     {
-      "id": "lg/55uh640p-commercial-signage-television",
-      "path": "lg/55uh640p-commercial-signage-television.json",
+      "id": "lg/55um7300",
+      "path": "lg/55um7300.json",
       "manufacturer": "LG",
-      "model": "UR640S9UD Series",
-      "model_variant": "55UR640S9UD",
-      "category": "display",
-      "subcategory": "commercial signage",
-      "form_factor": "wall-mount",
-      "description": "Commercial signage monitor with webOS and SuperSign software support.",
-      "port_count": 10,
-      "tags": [
-        "Ultra HD",
-        "Signage",
-        "Smart TV"
-      ]
-    },
-    {
-      "id": "lg/55um7300-uhd-4k-television",
-      "path": "lg/55um7300-uhd-4k-television.json",
-      "manufacturer": "LG",
-      "model": "55UM7300AUE",
+      "model": "55UM7300",
       "model_variant": "AUE",
       "category": "display",
       "form_factor": "wall-mount",
@@ -326,8 +286,8 @@
       "port_count": 11
     },
     {
-      "id": "lg/bp250-basic-playback-blu-ray-player",
-      "path": "lg/bp250-basic-playback-blu-ray-player.json",
+      "id": "lg/bp250",
+      "path": "lg/bp250.json",
       "manufacturer": "LG",
       "model": "BP250",
       "category": "media-player",
@@ -336,10 +296,10 @@
       "port_count": 2
     },
     {
-      "id": "lg/oled55c1-gallery-design-television",
-      "path": "lg/oled55c1-gallery-design-television.json",
+      "id": "lg/oled55c1",
+      "path": "lg/oled55c1.json",
       "manufacturer": "LG",
-      "model": "OLED55C14LB",
+      "model": "OLED55C1",
       "model_variant": "Gallery Design",
       "category": "display",
       "description": "Next Generation of LG AI TV",
@@ -349,10 +309,10 @@
       ]
     },
     {
-      "id": "lg/oled65c2-evo-series-television",
-      "path": "lg/oled65c2-evo-series-television.json",
+      "id": "lg/oled65c2",
+      "path": "lg/oled65c2.json",
       "manufacturer": "LG",
-      "model": "OLED65C2PUA",
+      "model": "OLED65C2",
       "model_variant": "evo Series",
       "category": "display",
       "subcategory": "Television",
@@ -435,19 +395,10 @@
       "port_count": 3
     },
     {
-      "id": "philips/43bdl4520-slim-bezel-television",
-      "path": "philips/43bdl4520-slim-bezel-television.json",
+      "id": "philips/55bdl4510",
+      "path": "philips/55bdl4510.json",
       "manufacturer": "Philips",
-      "model": "BDM4350UC/00",
-      "category": "display",
-      "description": "4K Ultra HD LCD display, 43-inch class professional Philips display.",
-      "port_count": 7
-    },
-    {
-      "id": "philips/55bdl4510-business-display-television",
-      "path": "philips/55bdl4510-business-display-television.json",
-      "manufacturer": "Philips",
-      "model": "55BDL4550D",
+      "model": "55BDL4510",
       "model_variant": "Business Display",
       "category": "display",
       "subcategory": "Commercial Display",
@@ -463,10 +414,10 @@
       ]
     },
     {
-      "id": "philips/65bdl4550-professional-uhd-television",
-      "path": "philips/65bdl4550-professional-uhd-television.json",
+      "id": "philips/65bdl4550",
+      "path": "philips/65bdl4550.json",
       "manufacturer": "Philips",
-      "model": "65BDL4550D",
+      "model": "65BDL4550",
       "category": "display",
       "subcategory": "Signage Display",
       "form_factor": "wall-mount",
@@ -474,9 +425,9 @@
       "port_count": 10
     },
     {
-      "id": "raspberry-pi/3-model-b-compact-linux-media-player",
-      "path": "raspberry-pi/3-model-b-compact-linux-media-player.json",
-      "manufacturer": "Raspberry Pi Ltd",
+      "id": "raspberry-pi/3-model-b",
+      "path": "raspberry-pi/3-model-b.json",
+      "manufacturer": "Raspberry Pi",
       "model": "Raspberry Pi 3 Model B+",
       "category": "media-player",
       "form_factor": "other",
@@ -487,8 +438,8 @@
       ]
     },
     {
-      "id": "raspberry-pi/4-model-b-8gb-ram",
-      "path": "raspberry-pi/4-model-b-8gb-ram.json",
+      "id": "raspberry-pi/4-model-b-8gb",
+      "path": "raspberry-pi/4-model-b-8gb.json",
       "manufacturer": "Raspberry Pi",
       "model": "Raspberry Pi 4 Model B",
       "model_variant": "8GB RAM, Media Player variant",
@@ -503,9 +454,9 @@
       ]
     },
     {
-      "id": "raspberry-pi/zero-2-w-ultra-small-media-player",
-      "path": "raspberry-pi/zero-2-w-ultra-small-media-player.json",
-      "manufacturer": "Raspberry Pi Ltd",
+      "id": "raspberry-pi/zero-2-w",
+      "path": "raspberry-pi/zero-2-w.json",
+      "manufacturer": "Raspberry Pi",
       "model": "Raspberry Pi Zero 2 W",
       "category": "media-player",
       "form_factor": "other",
@@ -556,8 +507,8 @@
       ]
     },
     {
-      "id": "samsung/qm32r-small-format-television",
-      "path": "samsung/qm32r-small-format-television.json",
+      "id": "samsung/qm32r",
+      "path": "samsung/qm32r.json",
       "manufacturer": "Samsung",
       "model": "QM32R",
       "category": "display",
@@ -591,21 +542,8 @@
       "port_count": 12
     },
     {
-      "id": "viewsonic/cde65um-commercial-uhd-television",
-      "path": "viewsonic/cde65um-commercial-uhd-television.json",
-      "manufacturer": "ViewSonic",
-      "model": "CDE65UM",
-      "category": "display",
-      "form_factor": "wall-mount",
-      "description": "Commercial Display",
-      "port_count": 12,
-      "tags": [
-        "4K, UHD, Commercial Display, Portrait Mode, Android 11, USB-C PD 65W, 24/7 Operation"
-      ]
-    },
-    {
-      "id": "viewsonic/ifp110-110-4k-interactive-television",
-      "path": "viewsonic/ifp110-110-4k-interactive-television.json",
+      "id": "viewsonic/ifp110",
+      "path": "viewsonic/ifp110.json",
       "manufacturer": "ViewSonic",
       "model": "IFP110",
       "category": "display",
@@ -618,10 +556,10 @@
       ]
     },
     {
-      "id": "viewsonic/ifp86-interactive-display-television",
-      "path": "viewsonic/ifp86-interactive-display-television.json",
+      "id": "viewsonic/ifp86",
+      "path": "viewsonic/ifp86.json",
       "manufacturer": "ViewSonic",
-      "model": "IFP8630",
+      "model": "IFP86",
       "category": "display",
       "subcategory": "interactive display",
       "form_factor": "wall-mount",

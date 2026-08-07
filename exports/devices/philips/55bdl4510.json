@@ -1,4 +1,66 @@
 {
+  "protocols": [
+    {
+      "name": "AAC",
+      "transport": "proprietary"
+    },
+    {
+      "name": "HEAAC",
+      "transport": "proprietary"
+    },
+    {
+      "name": "MPEG",
+      "transport": "proprietary"
+    },
+    {
+      "name": "BMP",
+      "transport": "proprietary"
+    },
+    {
+      "name": "JPEG",
+      "transport": "proprietary"
+    },
+    {
+      "name": "PNG",
+      "transport": "proprietary"
+    },
+    {
+      "name": "MPEG",
+      "transport": "proprietary"
+    },
+    {
+      "name": "H.263",
+      "transport": "proprietary"
+    },
+    {
+      "name": "H.264",
+      "transport": "proprietary"
+    },
+    {
+      "name": "H.265",
+      "transport": "proprietary"
+    },
+    {
+      "name": "VP8",
+      "transport": "proprietary"
+    }
+  ],
+  "capabilities": [
+    {
+      "os": "Android",
+      "type": "compute"
+    },
+    {
+      "contrast_ratio_full": 5000,
+      "display_technology": "lcd",
+      "native_resolution": {
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "type": "panel",
+      "contrast_ratio_dynamic": 500000
+    }
+  ],
   "ports": [
     {
       "connector_type": "displayport-a",
@@ -96,67 +158,6 @@
     "CMND & Control",
     "SmartPower"
   ],
-  "capabilities": [
-    {
-      "os": "Android",
-      "type": "compute"
-    },
-    {
-      "contrast_ratio_full": 5000,
-      "display_technology": "lcd",
-      "native_resolution": {
-        "height_px": 2160,
-        "width_px": 3840
-      },
-      "type": "panel"
-    }
-  ],
-  "protocols": [
-    {
-      "name": "AAC",
-      "transport": "proprietary"
-    },
-    {
-      "name": "HEAAC",
-      "transport": "proprietary"
-    },
-    {
-      "name": "MPEG",
-      "transport": "proprietary"
-    },
-    {
-      "name": "BMP",
-      "transport": "proprietary"
-    },
-    {
-      "name": "JPEG",
-      "transport": "proprietary"
-    },
-    {
-      "name": "PNG",
-      "transport": "proprietary"
-    },
-    {
-      "name": "MPEG",
-      "transport": "proprietary"
-    },
-    {
-      "name": "H.263",
-      "transport": "proprietary"
-    },
-    {
-      "name": "H.264",
-      "transport": "proprietary"
-    },
-    {
-      "name": "H.265",
-      "transport": "proprietary"
-    },
-    {
-      "name": "VP8",
-      "transport": "proprietary"
-    }
-  ],
   "category": "display",
   "description": "Professional Display Solutions D Line Business Display.",
   "dimensions": {
@@ -175,7 +176,7 @@
   },
   "form_factor": "other",
   "manufacturer": "Philips",
-  "model": "55BDL4550D",
+  "model": "55BDL4510",
   "model_variant": "Business Display",
   "notes": "Features CMND & Control for LAN-based monitoring and input control, FailOver for automatic input switching, and SmartPlayer for USB content scheduling.",
   "power": {

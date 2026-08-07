@@ -1,4 +1,36 @@
 {
+  "protocols": [
+    {
+      "name": "HDMI CEC",
+      "transport": "proprietary"
+    }
+  ],
+  "capabilities": [
+    {
+      "type": "audio-io"
+    },
+    {
+      "cpu_architecture": "64-bit architecture",
+      "cpu_model": "A8 chip",
+      "os": "tvOS (implied by Apple TV)",
+      "storage_os_gb": 32,
+      "type": "compute",
+      "gpu_model": "A10X Fusion"
+    },
+    {
+      "hdr_formats": [
+        "HDR10+",
+        "HDR10",
+        "HLG"
+      ],
+      "max_resolution": {
+        "fps": 60,
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "type": "video-output"
+    }
+  ],
   "ports": [
     {
       "connector_type": "hdmi-a",
@@ -43,37 +75,6 @@
       "signal_type": "network/thread"
     }
   ],
-  "capabilities": [
-    {
-      "type": "audio-io"
-    },
-    {
-      "cpu_architecture": "64-bit architecture",
-      "cpu_model": "A8 chip",
-      "os": "tvOS (implied by Apple TV)",
-      "storage_os_gb": 32,
-      "type": "compute"
-    },
-    {
-      "hdr_formats": [
-        "HDR10+",
-        "HDR10",
-        "HLG"
-      ],
-      "max_resolution": {
-        "fps": 60,
-        "height_px": 2160,
-        "width_px": 3840
-      },
-      "type": "video-output"
-    }
-  ],
-  "protocols": [
-    {
-      "name": "HDMI CEC",
-      "transport": "proprietary"
-    }
-  ],
   "tags": [
     "4K, HDR, Wi-Fi 6, Bluetooth 5.0, A15 Bionic"
   ],
@@ -101,7 +102,7 @@
   "firmware": "tvOS 11.2",
   "form_factor": "other",
   "manufacturer": "Apple",
-  "model": "Apple TV HD",
+  "model": "TV HD",
   "model_variant": "MQD22",
   "notes": "The document describes both Apple TV 4K and Apple TV HD. Features specific to the 4K model (such as eARC and Dolby Atmos) were excluded from this profile.",
   "power": {
@@ -137,16 +138,16 @@
       "notes": "Sourced via source_device"
     },
     {
-      "url": "https://www.flatpanelshd.com/review.php?subaction=showfull&id=1507035457",
+      "url": "https://support.apple.com/en-us/112428",
       "type": "tech-specs-page",
-      "title": "Apple TV 4K review - FlatpanelsHD",
+      "title": "Apple TV (2nd generation) - Technical Specifications - Apple Support",
       "retrieved_date": "2026-07-23",
       "notes": "Sourced via source_device"
     },
     {
-      "url": "https://support.apple.com/en-us/112428",
+      "url": "https://www.flatpanelshd.com/review.php?subaction=showfull&id=1507035457",
       "type": "tech-specs-page",
-      "title": "Apple TV (2nd generation) - Technical Specifications - Apple Support",
+      "title": "Apple TV 4K review - FlatpanelsHD",
       "retrieved_date": "2026-07-23",
       "notes": "Sourced via source_device"
     },

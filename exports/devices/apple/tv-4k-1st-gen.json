@@ -1,4 +1,34 @@
 {
+  "protocols": [
+    {
+      "name": "HDMI CEC",
+      "notes": "Control your TV or receiver via IR or CEC",
+      "transport": "proprietary",
+      "version": "1.4+"
+    },
+    {
+      "name": "Wi-Fi 6",
+      "transport": "wifi",
+      "version": "802.11ax"
+    }
+  ],
+  "capabilities": [
+    {
+      "cpu_model": "A15 Bionic chip",
+      "os": "tvOS (implied by Apple TV)",
+      "type": "compute",
+      "cpu_architecture": "64-bit"
+    },
+    {
+      "max_resolution": {
+        "fps": 60,
+        "hdr": [],
+        "height_px": 2160,
+        "width_px": 3840
+      },
+      "type": "video-output"
+    }
+  ],
   "ports": [
     {
       "connector_type": "hdmi-a",
@@ -46,35 +76,6 @@
   "tags": [
     "4K, HDR, Apple TV, A15 Bionic, Wi-Fi 6, Thread"
   ],
-  "capabilities": [
-    {
-      "cpu_model": "A15 Bionic chip",
-      "os": "tvOS (implied by Apple TV)",
-      "type": "compute"
-    },
-    {
-      "max_resolution": {
-        "fps": 60,
-        "hdr": [],
-        "height_px": 2160,
-        "width_px": 3840
-      },
-      "type": "video-output"
-    }
-  ],
-  "protocols": [
-    {
-      "name": "HDMI CEC",
-      "notes": "Control your TV or receiver via IR or CEC",
-      "transport": "proprietary",
-      "version": "1.4+"
-    },
-    {
-      "name": "Wi-Fi 6",
-      "transport": "wifi",
-      "version": "802.11ax"
-    }
-  ],
   "category": "media-player",
   "datasheet_url": "http://www.recordere.dk/2015/11/test-apple-tv-4/",
   "description": "Apple TV 4 Media player",
@@ -102,7 +103,7 @@
   },
   "form_factor": "other",
   "manufacturer": "Apple",
-  "model": "Apple TV 4K",
+  "model": "TV 4K (1st Gen)",
   "power": {
     "connector_type": "internal",
     "frequency_hz": [
@@ -122,17 +123,17 @@
   "schema_version": "conduit/v1",
   "sources": [
     {
-      "url": "https://fcc.report/FCC-ID/BCGA2843/6156832.pdf",
-      "type": "datasheet",
-      "retrieved_date": "2026-07-23",
-      "notes": "Ingested via batch"
-    },
-    {
       "url": "https://support.apple.com/en-us/111929",
       "type": "tech-specs-page",
       "title": "Apple TV 4K (1st generation) - Technical Specifications - Apple Support",
       "retrieved_date": "2026-07-23",
       "notes": "Sourced via source_device"
+    },
+    {
+      "url": "https://fcc.report/FCC-ID/BCGA2843/6156832.pdf",
+      "type": "datasheet",
+      "retrieved_date": "2026-07-23",
+      "notes": "Ingested via batch"
     },
     {
       "url": "https://www.apple.com/apple-tv-4k/specs/",
